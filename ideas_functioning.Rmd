@@ -1,0 +1,107 @@
+---
+title: "Ideas_ntw_function"
+author: "I. Bartomeus, A. Magrach"
+date: "6/14/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+-------------------------------------
+IDEAS
+-------------------------------------
+
+
+I'll start by 
+  - showing the relationship between ntw structure (defined as? Niche complementariety?) and overall functioning (defined as mean rep success of plants?)
+  - showing the relationship between node position and plant species functioning
+  - showing the relationship between ntw structure and functioning maximization (eveness of fucntioning, well, not evenness, you want equity (that is, even and high))
+
+We can use data on both visitation rates (quantity), pollen deposition (quality), its product (pollen delivered) and fruit set and seed set.
+
+AINHOA: We could look at
+1) how do perturbations (in this case fragmentation) affect species specialization? in this setting are specialization and 
+link conservatism or opportunism (how regional interaction richness of a species differs from what could be expected if species interacted randomly with the available set of partners, see Carstensen et al 2017) constant through time? Carstensen et al also find that specialization is conserved from local to regional levels (correlation between specialization levels), is this the case in a fragmented setting? 
+2) are these changes a consequence of turnover in species composition across fragments or interaction composition (rewiring)? or is it temporal turnover?
+3) changes in node position in plants with perturbation. what are the consequences for functioning? seed set
+
+
+
+
+-----------------------------------------
+ABSTRACT
+-----------------------------------------
+
+-----------------------------------------
+METHODS
+-----------------------------------------
+
+```{r}
+setwd("C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun")
+
+all_interactions
+summary(all_interactions)
+
+d<-all_interactions
+str(d)
+
+
+library(bipartite)
+
+##1st create a bipartite matrix for each site and round and extract a set of metrics at the network level
+
+
+sites <- unique(d$Site_ID)
+rounds <- unique(d$Round)
+
+out <- data.frame(Site_id = NA, Round = NA, #year= NA,
+                  links_sps = NA, num_compartments = NA,NODF  = NA,
+                  link_dens=NA, weigh_connectance=NA, Shannon=NA,
+                  int_evenness=NA, Alatalo_int_evenness=NA, H2=NA, 
+                  species.poll=NA, species.pl=NA, 
+                  niche.overlap.poll=NA, niche.overlap.plant=NA,
+                  functional.comp.poll=NA, functional.comp.plant=NA,
+                  modularity=NA, z=NA)
+webs <- list()
+for(i in 1:length(sites)){
+  temp <- subset(d, Site_ID == sites[i])
+  for(j in 1:length(rounds)){
+    temp2 <- subset(temp, Round == rounds[j])
+      
+        web <- table(temp2$Plant_gen_sp, temp2$Pollinator_gen_sp)
+        #p1<-plotweb(web)
+        ntw <- networklevel(web)
+        #para calcular modularity de la red
+        mod<-try(computeModules(web), TRUE)
+        #null model for modularity
+        nulls <- try(nullmodel(web, N=100, method="r2d"), TRUE)
+        modules.nulls <- try(sapply(nulls, computeModules), TRUE)
+        like.nulls <- try(sapply(modules.nulls, function(x) x@likelihood), TRUE)
+        z <- try((mod@likelihood - mean(like.nulls))/sd(like.nulls), TRUE)
+        
+        
+        n <- nrow(out)
+        webs[[n]] <- web
+        
+        out[n + 1,1] <- as.character(sites[i])
+        out[n + 1,2] <- as.character(rounds[j])
+        out[n + 1,3:17] <- c(ntw[3:4],ntw[9], ntw[12:13], ntw[15:20],
+                             ntw[27:28], ntw[41:42])
+        out[n + 1,18] <- try(mod@likelihood, TRUE)#esto sirve para pasar del error cuando no se puede computar la modularidad para una red
+        out[n + 1,19] <- try(z, TRUE)
+      }  
+    }  
+  
+
+
+##sacar la tabla con todas las metrics del network y añadirle el landscape_type
+#primero hay que crear una columna con landscape_type y año jutnos porque el tipo
+#de landscape varia en algunos años
+#especie de iferror(vlookup)
+str(out)
+tablenetwork<-out[2:61,]
+
+
+```
