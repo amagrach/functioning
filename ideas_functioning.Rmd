@@ -53,6 +53,11 @@ library(bipartite)
 ##1st create a bipartite matrix for each site and round and extract a set of metrics at the network level
 
 
+
+#############################################################################
+#####################NETWORK LEVEL METRICS ##############################
+#############################################################################
+
 sites <- unique(d$Site_ID)
 rounds <- unique(d$Round)
 
@@ -94,7 +99,9 @@ for(i in 1:length(sites)){
       }  
     }  
   
-
+str(out)
+head(out)
+out[2:30,]
 
 ##sacar la tabla con todas las metrics del network y añadirle el landscape_type
 #primero hay que crear una columna con landscape_type y año jutnos porque el tipo
@@ -104,4 +111,79 @@ str(out)
 tablenetwork<-out[2:61,]
 
 
+
+
+#############################################################################
+#####################SPECIES LEVEL NETWORK METRICS ##############################
+#############################################################################
+
+## super importante cargar primero igraph antes que network porque se sobrescriben partes de las librerias
+## y el script no funcionaria bien.
+
+require(igraph)
+require(network)
+require(sna)
+require(ggplot2)
+require(sna)
+require(ergm)
+require(bipartite)
+require(dplyr)
+require(reshape)
+require(wesanderson)
+
+
+
+
+
+sites <- unique(d$Site_ID)
+rounds <- unique(d$Round)
+
+out <- data.frame(Site_id = NA, Round = NA, #year= NA,
+                 links_sps = NA, num_compartments = NA,NODF  = NA,
+                link_dens=NA, weigh_connectance=NA, Shannon=NA,
+               int_evenness=NA, Alatalo_int_evenness=NA, H2=NA)
+
+
+outsp <- data.frame(Site_id = NA, Round = NA, #year= NA,
+                species=NA,  norm_degree = NA,strength= NA, nestedra= NA,weigh_betweeness  = NA, 
+                weigh_closeness=NA, d=NA, c=NA, z=NA, specificity=NA)
+webs <- list()
+for(i in 1:length(sites)){
+  temp <- subset(sp, Site_ID == sites[i])
+  for(j in 1:length(rounds)){
+    temp2 <- subset(temp, Round == rounds[j])
+      
+        web <- table(temp2$Plant_gen_sp, temp2$Pollinator_gen_sp)
+        #p1<-plotweb(web)
+         spntw <- try(specieslevel(web), TRUE)
+         ntw<-try(networklevel(web), TRUE)
+         n <- nrow(out)
+          webs[[n]] <- web
+          mod<-try(computeModules(web), TRUE)
+          cz<-try(czvalues(mod, level="lower", weighted=TRUE), TRUE)
+          spec<-getspe(web)
+          
+          n2 <- nrow(outsp)
+          out[n + 1,1] <- as.character(sites[l])
+          out[n + 1,2] <- as.character(rounds[j])
+          out[n + 1,3:11] <- c(ntw[3:4],ntw[9], ntw[12:13], ntw[15:18])   
+          
+          
+        
+        outsp[n2+seq(nrow(web)),1] <- as.character(sites[l])
+        outsp[n2+seq(nrow(web)),2] <- as.character(rounds[j])
+        outsp[n2+seq(nrow(web)),3] <- try(as.character(rownames(web)), TRUE)
+        outsp[n2+seq(nrow(web)),4:9] <- try(c(spntw$`lower level`[2:3], spntw$`lower level`[5],
+              spntw$`lower level`[12], spntw$`lower level`[14],
+              spntw$`lower level`[20]), TRUE)
+        outsp[n2+seq(nrow(web)),10:11] <- try(c(cz$c,
+                                              cz$z), TRUE)
+        outsp[n2+seq(nrow(web)),12] <- spec
+        
+      }  
+    }  
+  
+
+
+str(outsp)
 ```
