@@ -1,0 +1,1122 @@
+"Site_id","Round","species","norm_degree","strength","nestedra","weigh_betweeness","weigh_closeness","d","c","z"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Aznalcazar","1","Asphodelus fistulosus",0.727272727272727,6.25,0,0.8,0.344332855093257,0.197283731327121,"0.169244444444444",NA
+"Aznalcazar","1","Cistus albidus",0.181818181818182,0.458333333333333,0.75,0,0.177383592017738,0,"0","-0.277350098112615"
+"Aznalcazar","1","Cistus ladanifer",0.0909090909090909,0.125,1,0,0.121951219512195,0,"0","-0.832050294337844"
+"Aznalcazar","1","Rosmarinus officinalis",0.272727272727273,1.58333333333333,0.5,0.2,0.292682926829268,0.22105705434887,"0","1.10940039245046"
+"Aznalcazar","1","Teucrium fruticans",0.363636363636364,2.58333333333333,0.25,0,0.266075388026608,0.316399783384157,"0.374609781477627",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Aznalcazar","2","Asphodelus fistulosus",0.333333333333333,2.4,0.25,0,0.274509803921569,0.430676558073393,"0",NA
+"Aznalcazar","2","Cistus ladanifer",0.333333333333333,1.7,0.5,1,0.205882352941176,0.231378213159759,"0.207612456747405","0.707106781186547"
+"Aznalcazar","2","Cistus salvifolius",0.111111111111111,0.5,1,0,0.117647058823529,0.569323441926607,"0","-0.707106781186547"
+"Aznalcazar","2","Lavandula stoechas",0.222222222222222,1.2,0.75,0,0.164705882352941,0.462756426319518,"0.277777777777778",NA
+"Aznalcazar","2","Teucrium fruticans",0.444444444444444,3.2,0,0,0.164705882352941,0.5,"0.1171875",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Aznalcazar","3","Asphodelus fistulosus",0.0909090909090909,1,0.666666666666667,0,NA,1,"0",NA
+"Aznalcazar","3","Cistus crispus",0.0909090909090909,0.5,0.833333333333333,0,0.0814814814814815,0.643792812891978,"0","-0.707106781186547"
+"Aznalcazar","3","Cistus ladanifer",0.363636363636364,3.28571428571429,0,0,0.20952380952381,0.225504059597259,"0.158790170132325",NA
+"Aznalcazar","3","Cistus salvifolius",0.181818181818182,1.14285714285714,0.5,0,0.122222222222222,0.262649535037194,"0","0.707106781186547"
+"Aznalcazar","3","Halimium commutatum",0.0909090909090909,0.142857142857143,1,0,0.122222222222222,0,"0","-0.707106781186547"
+"Aznalcazar","3","Lavandula stoechas",0.272727272727273,2.28571428571429,0.333333333333333,0,0.20952380952381,0.225504059597259,"0.21875",NA
+"Aznalcazar","3","Teucrium fruticans",0.363636363636364,2.64285714285714,0.166666666666667,1,0.146666666666667,0.184227487689874,"0.102264426588751","0.707106781186547"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Aznalcazar","4","Asphodelus fistulosus",0.166666666666667,1,0.333333333333333,0,NA,1,"0",NA
+"Aznalcazar","4","Lavandula pedunculata",0.166666666666667,0.5,0.666666666666667,0,1,0.369070246428542,"0",NA
+"Aznalcazar","4","Lavandula stoechas",0.166666666666667,1,1,0,NA,1,"0",NA
+"Aznalcazar","4","Teucrium fruticans",0.666666666666667,3.5,0,0,1,0.684535123214271,"0.244897959183674",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Aznalcazar","5","Andryala integrifolia",0.0625,1,0.666666666666667,0,NA,1,"0",NA
+"Aznalcazar","5","Cistus crispus",0.5,6,0,0.631578947368421,0.244514106583072,0.190046883357967,"0.290123456790123",NA
+"Aznalcazar","5","Cistus ladanifer",0.0625,0.166666666666667,0.833333333333333,0,0.107438016528926,0,"0","0"
+"Aznalcazar","5","Cistus monspeliensis",0.1875,0.833333333333333,0.333333333333333,0,0.168831168831169,0,"0.32","-0.707106781186548"
+"Aznalcazar","5","Cistus salvifolius",0.125,1.33333333333333,0.5,0,0.168831168831169,0.486229573179367,"0","0.707106781186547"
+"Aznalcazar","5","Lavandula stoechas",0.0625,0.166666666666667,1,0,0.107438016528926,0,"0","0"
+"Aznalcazar","5","Teucrium fruticans",0.5,6.5,0.166666666666667,0.368421052631579,0.20855614973262,0.309953116642033,"0.144641683103221",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Aznalcazar","6","Cistus crispus",0.571428571428571,7.5,0,0,1,0.666666666666667,"0.124444444444444",NA
+"Aznalcazar","6","Cistus monspeliensis",0.357142857142857,4.5,0.5,0,1,0.666666666666667,"0",NA
+"Aznalcazar","6","Echium plantagineum",0.142857142857143,2,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Aznalcazar","7","Cistus crispus",0.464285714285714,11.8333333333333,0,1,0.4,0.730310629746682,"0.0809363221583018","0.707106781186548"
+"Aznalcazar","7","Echium plantagineum",0.0357142857142857,1,0.8,0,NA,1,"0",NA
+"Aznalcazar","7","Lavatera cretica",0.0714285714285714,1.5,0.6,0,0.266666666666667,0.72105705434887,"0",NA
+"Aznalcazar","7","Mirtus communis",0.392857142857143,10.6666666666667,0.2,0,0.4,0.877941619348611,"0","-0.707106781186548"
+"Aznalcazar","7","NA NA",0.0714285714285714,2,0.4,NA,NA,1,"0",NA
+"Aznalcazar","7","Scolymus hispanicus",0.0357142857142857,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Villamanriquesur","2","Cistus ladanifer",1,2.5,0,0,1,0,"0.32",NA
+"Villamanriquesur","2","Rosmarinus officinalis",0.333333333333333,0.5,1,0,1,0,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Villamanriquesur","3","Cistus salvifolius",0.5,7.5,0,0,1,0.333333333333333,"0.124444444444444",NA
+"Villamanriquesur","3","Halimium commutatum",0.1875,3,1,0,NA,1,"0",NA
+"Villamanriquesur","3","Lavandula stoechas",0.375,5.5,0.5,0,1,0.333333333333333,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Villamanriquesur","4","Cistus ladanifer",0.25,3.5,0.666666666666667,0,NA,0.857142857142857,"0",NA
+"Villamanriquesur","4","Cistus salvifolius",0.3125,4.5,0.333333333333333,0,NA,0.9,"0.197530864197531",NA
+"Villamanriquesur","4","Halimium commutatum",0.125,1.25,1,0,0.5,0.5,"0.32",NA
+"Villamanriquesur","4","Lavandula stoechas",0.4375,6.75,0,0,1.5,0.875488750216346,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Villamanriquesur","5","Cistus crispus",0.428571428571429,2.33333333333333,0.5,0,0.5,0,"0.244897959183674",NA
+"Villamanriquesur","5","Cistus salvifolius",0.714285714285714,4.33333333333333,0,0,0.5,0,"0.142011834319526",NA
+"Villamanriquesur","5","Genista hirsuta",0.142857142857143,0.333333333333333,1,0,0.5,0,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Villamanriquesur","6","Armeria velutina",0.2,0.5,0.666666666666667,0,1,0,"0","0"
+"Villamanriquesur","6","Cistus crispus",0.6,2.5,0,0,NA,0.5,"0.32",NA
+"Villamanriquesur","6","Cistus salvifolius",0.4,1.5,0.333333333333333,0,NA,0.5,"0",NA
+"Villamanriquesur","6","Halimium halimifolium",0.2,0.5,1,0,1,0,"0","0"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Villamanriquesur","7","Andryala integrifolia",0.285714285714286,4,0.2,0,NA,1,"0",NA
+"Villamanriquesur","7","Armeria velutina",0.142857142857143,1.5,0.6,0,0.266666666666667,0.684535123214271,"0","0"
+"Villamanriquesur","7","Cistus crispus",0.0714285714285714,1,0.8,0,NA,1,"0",NA
+"Villamanriquesur","7","Convolvulus arvensis",0.0714285714285714,1,1,0,NA,1,"0",NA
+"Villamanriquesur","7","Halimium halimifolium",0.214285714285714,1.83333333333333,0.4,1,0.4,0.456356748809514,"0.297520661157025","0"
+"Villamanriquesur","7","Mirtus communis",0.357142857142857,4.66666666666667,0,0,0.4,0.796707580990507,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Villamanriqueeste","1","Cistus ladanifer",0.5,3,1,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Villamanriqueeste","1","Rosmarinus officinalis",0.5,3,0,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Villamanriqueeste","2","Cistus ladanifer",0.666666666666667,5.4,0,0,0.6,0,"0.137174211248285",NA
+"Villamanriqueeste","2","Cistus salvifolius",0.111111111111111,1,1,0,NA,1,"0",NA
+"Villamanriqueeste","2","Lavandula stoechas",0.222222222222222,1.4,0.333333333333333,0,0.6,0,"0",NA
+"Villamanriqueeste","2","Rosmarinus officinalis",0.222222222222222,1.2,0.666666666666667,0,0.3,0.121764601316985,"0.277777777777778",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Villamanriqueeste","3","Cistus ladanifer",0.538461538461538,7,0,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Villamanriqueeste","3","Cistus salvifolius",0.461538461538462,6,1,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Villamanriqueeste","4","Cistus crispus",0.0476190476190476,1,0.2,0,NA,1,"0",NA
+"Villamanriqueeste","4","Cistus ladanifer",0.0476190476190476,1,0.4,0,NA,1,"0",NA
+"Villamanriqueeste","4","Cistus salvifolius",0.904761904761905,18,0,1,0.355555555555556,0.529048870864855,"0.106310013717421",NA
+"Villamanriqueeste","4","Genista hirsuta",0.0476190476190476,0.333333333333333,0.6,0,0.253968253968254,0,"0","0"
+"Villamanriqueeste","4","Rosmarinus officinalis",0.0476190476190476,0.333333333333333,0.8,0,0.177777777777778,0,"0",NA
+"Villamanriqueeste","4","Spartium junceum",0.0476190476190476,0.333333333333333,1,0,0.253968253968254,0,"0","0"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Villamanriqueeste","7","Asphodelus fistulosus",0.05,1,1,0,NA,1,"0",NA
+"Villamanriqueeste","7","Cistus crispus",0.45,8.25,0.5,0,0.5,0.666666666666667,"0.0587695133149677",NA
+"Villamanriqueeste","7","Mirtus communis",0.55,10.75,0,0,1.5,0.792481250360578,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"PinaresdeHinojos","1","Cistus salvifolius",0.5,1,0,NA,NA,NA,"0",NA
+"PinaresdeHinojos","1","Ulex australis",0.5,1,1,NA,NA,NA,"0",NA
+"PinaresdeHinojos","2","Diplotaxis virgata",0.25,1,0.5,NA,NA,NA,"0",NA
+"PinaresdeHinojos","2","Rosmarinus officinalis",0.25,1,1,NA,NA,NA,"0",NA
+"PinaresdeHinojos","2","Spartium junceum",0.5,2,0,NA,NA,NA,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"PinaresdeHinojos","3","Anchusa azurea",0.0714285714285714,1,0.5,0,NA,1,"0",NA
+"PinaresdeHinojos","3","Armeria velutina",0.0714285714285714,1,0.666666666666667,0,NA,1,"0",NA
+"PinaresdeHinojos","3","Cistus crispus",0.0714285714285714,0.5,0.833333333333333,0,0.333333333333333,0,"0",NA
+"PinaresdeHinojos","3","Cistus libanotis",0.142857142857143,2,0.333333333333333,0,NA,1,"0",NA
+"PinaresdeHinojos","3","Cistus salvifolius",0.5,6,0,1,0.5,0.333333333333333,"0.291666666666667",NA
+"PinaresdeHinojos","3","Diplotaxis virgata",0.214285714285714,2.5,0.166666666666667,0,0.333333333333333,0.666666666666667,"0",NA
+"PinaresdeHinojos","3","Spartium junceum",0.0714285714285714,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"PinaresdeHinojos","4","Andryala integrifolia",0.111111111111111,1,0.5,0,NA,1,"0",NA
+"PinaresdeHinojos","4","Cistus crispus",0.111111111111111,1,0.25,0,NA,1,"0",NA
+"PinaresdeHinojos","4","Cistus libanotis",0.111111111111111,1,0.75,0,NA,1,"0",NA
+"PinaresdeHinojos","4","Cistus salvifolius",0.666666666666667,5.5,0,0,1,0.5,"0.165289256198347",NA
+"PinaresdeHinojos","4","Spartium junceum",0.111111111111111,0.5,1,0,1,0,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"PinaresdeHinojos","5","Cistus libanotis",0.428571428571429,3,1,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"PinaresdeHinojos","5","Cistus salvifolius",0.571428571428571,4,0,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"PinaresdeHinojos","6","Cistus libanotis",0.5,3,0,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"PinaresdeHinojos","6","Cistus salvifolius",0.5,3,1,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"PinaresdeHinojos","7","Anchusa azurea",0.117647058823529,2,0.6,0,NA,1,"0",NA
+"PinaresdeHinojos","7","Armeria velutina",0.117647058823529,2,0.4,0,NA,0.999999999999999,"0",NA
+"PinaresdeHinojos","7","Halimium halimifolium",0.117647058823529,1.5,0.8,0,1,0.72105705434887,"0",NA
+"PinaresdeHinojos","7","Mentha pulegium",0.470588235294118,7.5,0,0,1,0.837923475606878,"0.124444444444444",NA
+"PinaresdeHinojos","7","Mirtus communis",0.176470588235294,3,0.2,NA,NA,1,"0",NA
+"PinaresdeHinojos","7","Retama sphaerocarpa",0.0588235294117647,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Esparragal","2","Cistus salvifolius",0.333333333333333,2,0,NA,NA,NA,"0",NA
+"Esparragal","2","Halimium commutatum",0.333333333333333,2,0.5,NA,NA,NA,"0",NA
+"Esparragal","2","Lavandula stoechas",0.333333333333333,2,1,NA,NA,NA,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Esparragal","4","Cistus salvifolius",0.636363636363636,7,0,0,NA,1,"0",NA
+"Esparragal","4","Diplotaxis virgata",0.0909090909090909,1,1,0,NA,1,"0",NA
+"Esparragal","4","Lavandula pedunculata",0.181818181818182,1.5,0.333333333333333,0,1,0.613147192765458,"0","0"
+"Esparragal","4","Lavandula stoechas",0.181818181818182,1.5,0.666666666666667,0,1,0.613147192765458,"0","0"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Esparragal","5","Cistus crispus",0.266666666666667,3.66666666666667,0.25,0,0.4,0.812175460617048,"0",NA
+"Esparragal","5","Cistus salvifolius",0.466666666666667,7,0,0,NA,1,"0",NA
+"Esparragal","5","Halimium commutatum",0.0666666666666667,0.5,0.75,0,0.266666666666667,0.569323441926607,"0","-0.707106781186547"
+"Esparragal","5","Halimium halimifolium",0.266666666666667,2.83333333333333,0.5,1,0.4,0.562381855752847,"0.207612456747405","0.707106781186547"
+"Esparragal","5","Lavandula pedunculata",0.0666666666666667,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Esparragal","6","Cistus libanotis",0.222222222222222,2,0.666666666666667,NA,NA,1,"0",NA
+"Esparragal","6","Cistus salvifolius",0.222222222222222,2,0.333333333333333,NA,NA,0.999999999999999,"0",NA
+"Esparragal","6","Lavandula pedunculata",0.222222222222222,2,1,NA,NA,1,"0",NA
+"Esparragal","6","Linaria viscosa",0.333333333333333,3,0,NA,NA,0.999999999999999,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Esparragal","7","Armeria velutina",0.875,6.5,0,0,1,0,"0.142011834319526",NA
+"Esparragal","7","Chamaemelum fuscatum",0.125,1,0.5,0,NA,1,"0",NA
+"Esparragal","7","Scabiosa atropurpurea",0.125,0.5,1,0,1,0,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaCunya","1","Halimium commutatum",0.428571428571429,3,1,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"LaCunya","1","Rosmarinus officinalis",0.571428571428571,4,0,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaCunya","2","Halimium commutatum",0.2,0.5,0.5,0,1,0,"0",NA
+"LaCunya","2","Rosmarinus officinalis",0.8,3.5,0,0,1,0,"0.244897959183674",NA
+"LaCunya","2","Ulex australis",0.2,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaCunya","3","Cerinthe gymnandra",0.111111111111111,1,0.333333333333333,0,NA,1,"0",NA
+"LaCunya","3","Cistus salvifolius",0.777777777777778,6.5,0,0,1,0,"0.142011834319526",NA
+"LaCunya","3","Halimium commutatum",0.111111111111111,0.5,0.666666666666667,0,1,0,"0",NA
+"LaCunya","3","Rosmarinus officinalis",0.111111111111111,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaCunya","4","Cistus salvifolius",0.857142857142857,4.2,0,1,0.178571428571429,0.0693234419266069,"0.459183673469388",NA
+"LaCunya","4","Convolvulus arvensis",0.142857142857143,1,0.4,0,NA,1,"0",NA
+"LaCunya","4","Echium plantagineum",0.142857142857143,0.5,0.6,0,0.102040816326531,0.569323441926607,"0",NA
+"LaCunya","4","Lavandula pedunculata",0.142857142857143,0.2,0.8,0,0.119047619047619,0,"0","-0.707106781186547"
+"LaCunya","4","Rosmarinus officinalis",0.142857142857143,0.6,0.2,0,0.214285714285714,0.488446652984809,"0","0.707106781186547"
+"LaCunya","4","Tuberaria guttata",0.142857142857143,0.5,1,0,0.102040816326531,0.569323441926607,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaCunya","5","Cistus salvifolius",0.555555555555556,5,0,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"LaCunya","5","Lavandula pedunculata",0.222222222222222,2,0.5,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"LaCunya","5","Raphanus raphanistrum",0.222222222222222,2,1,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaCunya","6","Cistus salvifolius",0.666666666666667,3.5,0,0,1,0,"0.244897959183674",NA
+"LaCunya","6","Erica ciliaris",0.166666666666667,1,0.333333333333333,0,NA,1,"0",NA
+"LaCunya","6","Lavandula pedunculata",0.166666666666667,0.5,0.666666666666667,0,1,0,"0",NA
+"LaCunya","6","Leontodon longirostris",0.166666666666667,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaCunya","7","Andryala integrifolia",0.5,1.5,1,0,1,0,"0",NA
+"LaCunya","7","Echium plantagineum",0.75,2.5,0,0,1,0,"0.32",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaRocina","1","Halimium commutatum",0.75,6,0,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"LaRocina","1","Rosmarinus officinalis",0.25,2,1,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaRocina","2","Anchusa azurea",0.25,4,0.25,0,NA,1,"0",NA
+"LaRocina","2","Cistus ladanifer",0.0625,0.5,1,0,0.16,0.5,"0","-0.707106781186547"
+"LaRocina","2","Halimium commutatum",0.1875,2.25,0.5,0,0.2,0.5,"0.197530864197531",NA
+"LaRocina","2","Rosmarinus officinalis",0.5625,8.5,0,0,0.32,0.5,"0.110726643598616",NA
+"LaRocina","2","Ulex australis",0.125,0.75,0.75,1,0.266666666666667,0,"0","0.707106781186547"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaRocina","3","Anchusa azurea",0.545454545454545,5.5,0,0,0.266666666666667,0.760187533431869,"0.165289256198347",NA
+"LaRocina","3","Cistus ladanifer",0.0909090909090909,1,1,0,NA,1,"0",NA
+"LaRocina","3","Halimium commutatum",0.363636363636364,3.66666666666667,0.333333333333333,0,0.4,0.719437399704394,"0",NA
+"LaRocina","3","Rosmarinus officinalis",0.181818181818182,0.833333333333333,0.666666666666667,1,0.4,0.184535123214271,"0.48",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaRocina","4","Anchusa azurea",0.533333333333333,8,0,0,NA,1,"0",NA
+"LaRocina","4","Diplotaxis virgata",0.0666666666666667,0.5,0.75,0,NA,0,"0","-0.707106781186547"
+"LaRocina","4","Halimium commutatum",0.0666666666666667,0.5,1,0,1,0,"0","-0.707106781186547"
+"LaRocina","4","Lavandula pedunculata",0.333333333333333,4.5,0.25,0,NA,0.75,"0","0.707106781186547"
+"LaRocina","4","Rosmarinus officinalis",0.133333333333333,1.5,0.5,0,1,0.5,"0","0.707106781186547"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaRocina","5","Anchusa azurea",0.56,12.8333333333333,0,1,0.333333333333333,0.505631643831963,"0.123460954629786",NA
+"LaRocina","5","Cistus salvifolius",0.04,1,0.666666666666667,0,NA,1,"0",NA
+"LaRocina","5","Diplotaxis virgata",0.08,2,0.5,0,NA,1,"0",NA
+"LaRocina","5","Erodium sp",0.12,2.5,0.333333333333333,0,0.2,0.796204952909494,"0",NA
+"LaRocina","5","Lavandula pedunculata",0.24,5.33333333333333,0.166666666666667,0,0.25,0.696879430223493,"0","0.707106781186547"
+"LaRocina","5","Malva sp",0.04,1,0.833333333333333,0,NA,1,"0",NA
+"LaRocina","5","Spartium junceum",0.04,0.333333333333333,1,0,0.25,0.317393805514015,"0","-0.707106781186547"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaRocina","6","Anchusa azurea",0.611111111111111,9.75,0,0,0.25,0.5,"0.142011834319526",NA
+"LaRocina","6","Cistus salvifolius",0.0555555555555556,1,0.5,0,NA,1,"0",NA
+"LaRocina","6","Lavandula pedunculata",0.388888888888889,5.75,0.25,1,0.4,0.459147917027245,"0.158790170132325",NA
+"LaRocina","6","Linaria viscosa",0.0555555555555556,1,0.75,0,NA,1,"0",NA
+"LaRocina","6","Rosmarinus officinalis",0.0555555555555556,0.5,1,0,0.222222222222222,0.5,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"LaRocina","7","Anchusa azurea",0.157894736842105,2.5,0.4,0,1,0.613147192765458,"0","0.707106781186547"
+"LaRocina","7","Andryala integrifolia",0.0526315789473684,1,0.6,0,NA,1,"0",NA
+"LaRocina","7","Halimium halimifolium",0.0526315789473684,0.5,0.8,0,1,0.369070246428543,"0","-0.707106781186547"
+"LaRocina","7","Lavandula pedunculata",0.368421052631579,6.33333333333333,0.2,0,NA,0.386852807234542,"0.0997229916897506",NA
+"LaRocina","7","Lavandula stoechas",0.0526315789473684,1,1,0,NA,1,"0",NA
+"LaRocina","7","Mirtus communis",0.421052631578947,7.66666666666667,0,0,NA,0.547411228938166,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Lasmulas","1","Cistus ladanifer",0.714285714285714,4.25,0,0,0.5,0,"0.110726643598616",NA
+"Lasmulas","1","Cistus salvifolius",0.142857142857143,1,0.666666666666667,0,NA,1,"0",NA
+"Lasmulas","1","Halimium commutatum",0.142857142857143,1,1,0,NA,1,"0",NA
+"Lasmulas","1","Rosmarinus officinalis",0.142857142857143,0.75,0.333333333333333,0,1.5,0.377443751081734,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Lasmulas","2","Cistus ladanifer",0.333333333333333,2,0.5,0,NA,1,"0",NA
+"Lasmulas","2","Lavandula stoechas",0.5,2.66666666666667,0,0,1.33333333333333,0.261859507142915,"0",NA
+"Lasmulas","2","Rosmarinus officinalis",0.333333333333333,1.33333333333333,1,0,0.666666666666667,0,"0.375",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Lasmulas","3","Cistus ladanifer",0.444444444444444,4,0.5,0,NA,1,"0",NA
+"Lasmulas","3","Lavandula stoechas",0.555555555555556,4.5,0,0,1,0.280562600295606,"0.197530864197531",NA
+"Lasmulas","3","Rosmarinus officinalis",0.111111111111111,0.5,1,0,1,0.280562600295606,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Lasmulas","4","Andryala integrifolia",0.0588235294117647,0.5,0.833333333333333,0,NA,0.613147192765458,"0","-0.707106781186547"
+"Lasmulas","4","Cistus ladanifer",0.352941176470588,4.33333333333333,0.166666666666667,0.666666666666667,0.242424242424242,0.27894294565113,"0.328402366863905",NA
+"Lasmulas","4","Cistus monspeliensis",0.0588235294117647,1,1,0,NA,1,"0",NA
+"Lasmulas","4","Cistus salvifolius",0.176470588235294,2.5,0.333333333333333,0,0.115942028985507,0.781895708014468,"0",NA
+"Lasmulas","4","Lavandula stoechas",0.352941176470588,4.5,0,0.333333333333333,0.253968253968254,0.302642635872175,"0.197530864197531","0.707106781186547"
+"Lasmulas","4","Ranunculus sp",0.176470588235294,2.5,0.5,0,NA,0.781895708014468,"0","0.707106781186547"
+"Lasmulas","4","Rosmarinus officinalis",0.176470588235294,1.66666666666667,0.666666666666667,0,0.148148148148148,0.218104291985532,"0","-0.707106781186547"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Lasmulas","5","Cistus crispus",0.416666666666667,5,0,0,NA,1,"0",NA
+"Lasmulas","5","Cistus ladanifer",0.25,2.25,0.25,0,0.375,0,"0.197530864197531",NA
+"Lasmulas","5","Cistus salvifolius",0.0833333333333333,0.25,1,0,0.375,0,"0","-0.707106781186547"
+"Lasmulas","5","Lavandula stoechas",0.166666666666667,1.5,0.75,0,0.75,0,"0","0.707106781186548"
+"Lasmulas","5","Ranunculus sp",0.25,3,0.5,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Lasmulas","6","Cistus crispus",0.2,0.5,0.25,0,1,0,"0","0"
+"Lasmulas","6","Cistus monspeliensis",0.4,2,0,0,NA,1,"0",NA
+"Lasmulas","6","Cistus salvifolius",0.2,1,0.5,0,NA,1,"0",NA
+"Lasmulas","6","Echium plantagineum",0.2,1,0.75,0,NA,1,"0",NA
+"Lasmulas","6","Lavandula stoechas",0.2,0.5,1,0,1,0,"0","0"
+"Lasmulas","7","Cistus crispus",0.636363636363636,6.33333333333333,0,0,0.5,0.766775262013632,"0.0997229916897506",NA
+"Lasmulas","7","Mirtus communis",0.454545454545455,4.33333333333333,0.5,0,0.5,0.780743912860203,"0.142011834319526",NA
+"Lasmulas","7","Thapsia villosa",0.0909090909090909,0.333333333333333,1,0,0.5,0.317393805514015,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Elpozo","1","Cistus ladanifer",0.142857142857143,1,1,0,NA,1,"0",NA
+"Elpozo","1","Erica scoparia",0.571428571428571,2.9,0.5,0,0.857142857142857,0,"0.237812128418549",NA
+"Elpozo","1","Rosmarinus officinalis",0.571428571428571,3.1,0,0,1.14285714285714,0.118819016099226,"0.270551508844953",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Elpozo","2","Cistus ladanifer",0.166666666666667,0.5,0.5,0,0.173913043478261,0.5,"0",NA
+"Elpozo","2","Erica scoparia",0.5,1.5,0.25,1,0.363636363636364,0,"0.666666666666667","0.707106781186547"
+"Elpozo","2","Rosmarinus officinalis",0.666666666666667,2.75,0,0,0.222222222222222,0.25,"0.165289256198347",NA
+"Elpozo","2","Spartium junceum",0.166666666666667,0.25,0.75,0,0.166666666666667,0,"0","-0.707106781186548"
+"Elpozo","2","Ulex australis",0.166666666666667,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Elpozo","3","Cistus ladanifer",0.5,2.4,0.5,0,0.6,0.494368356168037,"0.277777777777778",NA
+"Elpozo","3","Rosmarinus officinalis",0.666666666666667,3.2,0,0,0.3,0.555936391692488,"0.1171875",NA
+"Elpozo","3","Spartium junceum",0.166666666666667,0.4,1,0,0.6,0.323283791784057,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Elpozo","4","Cistus ladanifer",0.5,4.25,0.333333333333333,0,0.333333333333333,0.563791416028937,"0.110726643598616",NA
+"Elpozo","4","Cistus salvifolius",0.6,5.25,0,0,0.333333333333333,0.563791416028937,"0.090702947845805",NA
+"Elpozo","4","Erica scoparia",0.1,0.25,0.666666666666667,0,0.333333333333333,0,"0","0"
+"Elpozo","4","Rosmarinus officinalis",0.1,0.25,1,0,0.333333333333333,0,"0","0"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Elpozo","5","Chamaemelum fuscatum",0.0769230769230769,1,0.666666666666667,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Elpozo","5","Cistus salvifolius",0.692307692307692,9,0,NA,NA,0,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Elpozo","5","Erica umbellata",0.0769230769230769,1,1,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Elpozo","5","Lavandula stoechas",0.153846153846154,2,0.333333333333333,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Elpozo","6","Cistus crispus",0.333333333333333,1,0,NA,NA,NA,"0",NA
+"Elpozo","6","Cistus salvifolius",0.333333333333333,1,0.5,NA,NA,NA,"0",NA
+"Elpozo","6","Erica umbellata",0.333333333333333,1,1,NA,NA,NA,"0",NA
+"Pinodelcuervo","1","Cistus ladanifer",0.25,2.5,0.333333333333333,0,1,0.666666666666666,"0",NA
+"Pinodelcuervo","1","Halimium commutatum",0.25,3,0.666666666666667,0,NA,1,"0",NA
+"Pinodelcuervo","1","Rosmarinus officinalis",0.416666666666667,5,0,0,NA,1,"0",NA
+"Pinodelcuervo","1","Ulex australis",0.166666666666667,1.5,1,0,1,0.666666666666666,"0.444444444444444",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Pinodelcuervo","2","Cistus ladanifer",0.166666666666667,1,0.75,0,NA,1,"0",NA
+"Pinodelcuervo","2","Halimium commutatum",0.333333333333333,0.833333333333333,0.25,0,0.5,0,"0","0.577350269189626"
+"Pinodelcuervo","2","Lavandula stoechas",0.5,3,0,0,NA,1,"0",NA
+"Pinodelcuervo","2","Rosmarinus officinalis",0.166666666666667,0.333333333333333,1,0,0.375,0,"0","-1.15470053837925"
+"Pinodelcuervo","2","Ulex australis",0.333333333333333,0.833333333333333,0.5,0,0.5,0,"0","0.577350269189626"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Pinodelcuervo","3","Cistus ladanifer",0.571428571428571,3.66666666666667,0,0,1.33333333333333,0.261859507142915,"0",NA
+"Pinodelcuervo","3","Cistus salvifolius",0.142857142857143,1,0.666666666666667,0,NA,1,"0",NA
+"Pinodelcuervo","3","Halimium commutatum",0.285714285714286,1.33333333333333,0.333333333333333,0,0.666666666666667,0,"0.375",NA
+"Pinodelcuervo","3","Lavandula pedunculata",0.142857142857143,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Pinodelcuervo","4","Andryala integrifolia",0.222222222222222,2,0.333333333333333,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Pinodelcuervo","4","Cistus ladanifer",0.222222222222222,2,0.666666666666667,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Pinodelcuervo","4","Cistus salvifolius",0.222222222222222,2,1,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Pinodelcuervo","4","Lavandula stoechas",0.333333333333333,3,0,NA,NA,0,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Pinodelcuervo","5","Asphodelus fistulosus",0.181818181818182,2,0.4,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Pinodelcuervo","5","Cistus crispus",0.272727272727273,3,0,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Pinodelcuervo","5","Cistus ladanifer",0.0909090909090909,1,0.8,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Pinodelcuervo","5","Cistus salvifolius",0.272727272727273,3,0.2,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Pinodelcuervo","5","Lavandula stoechas",0.0909090909090909,1,0.6,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Pinodelcuervo","5","Ranunculus sp",0.0909090909090909,1,1,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Pinodelcuervo","6","Armeria velutina",0.0454545454545455,1,0.5,0,NA,1,"0",NA
+"Pinodelcuervo","6","Asphodelus fistulosus",0.454545454545455,7.91666666666667,0,0.333333333333333,0.296296296296296,0.27894294565113,"0.061163434903047",NA
+"Pinodelcuervo","6","Chamaemelum fuscatum",0.0454545454545455,1,0.666666666666667,0,NA,1,"0",NA
+"Pinodelcuervo","6","Cistus crispus",0.454545454545455,7.91666666666667,0.166666666666667,0.666666666666667,0.296296296296296,0.27894294565113,"0.273905817174515","0.707106781186548"
+"Pinodelcuervo","6","Cistus salvifolius",0.0454545454545455,0.333333333333333,0.833333333333333,0,0.111111111111111,0.207518749639422,"0","-0.707106781186547"
+"Pinodelcuervo","6","Lavandula stoechas",0.181818181818182,2.83333333333333,0.333333333333333,0,0.242424242424242,0.5,"0.207612456747405",NA
+"Pinodelcuervo","6","Thapsia villosa",0.0454545454545455,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Pinodelcuervo","7","Asphodelus fistulosus",0.111111111111111,0.333333333333333,1,0,0.177777777777778,0,"0","-0.707106781186547"
+"Pinodelcuervo","7","Cistus crispus",0.555555555555556,4.33333333333333,0,0,0.253968253968254,0.5,"0.142011834319526",NA
+"Pinodelcuervo","7","Lavandula stoechas",0.444444444444444,3.33333333333333,0.333333333333333,0,0.253968253968254,0.5,"0.18",NA
+"Pinodelcuervo","7","Mirtus communis",0.222222222222222,1,0.666666666666667,1,0.355555555555556,0.130929753571457,"0","0.707106781186548"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Bonares","1","Cistus ladanifer",0.833333333333333,5,0,NA,NA,0,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Bonares","1","Cistus salvifolius",0.166666666666667,1,1,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Bonares","2","Cistus ladanifer",0.444444444444444,2.83333333333333,0.333333333333333,0,0.374025974025974,0.215939358447142,"0.207612456747405",NA
+"Bonares","2","Cistus salvifolius",0.333333333333333,1.55555555555556,0.666666666666667,0,0.293877551020408,0.144408242025224,"0","0"
+"Bonares","2","Halimium commutatum",0.555555555555556,3.05555555555556,0,0,0.342857142857143,0.0565457739757257,"0.511735537190083",NA
+"Bonares","2","Lavandula stoechas",0.333333333333333,1.55555555555556,1,0,0.293877551020408,0.144408242025224,"0","0"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Bonares","3","Cistus ladanifer",0.142857142857143,0.2,1,0,0.238095238095238,0,"0","-0.707106781186548"
+"Bonares","3","Cistus salvifolius",0.857142857142857,4.7,0,1,0.25974025974026,0.102399116071028,"0.262562245359891",NA
+"Bonares","3","Halimium commutatum",0.285714285714286,0.6,0.25,0,0.136054421768707,0.0693234419266069,"0.277777777777778",NA
+"Bonares","3","Lavandula stoechas",0.142857142857143,0.4,0.75,0,0.476190476190476,0.148639469512771,"0","0.707106781186547"
+"Bonares","3","Spartium junceum",0.285714285714286,1.1,0.5,0,0.119047619047619,0.284661720963303,"0.165289256198347",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Bonares","4","Cistus crispus",0.0833333333333333,1,1,0,NA,1,"0",NA
+"Bonares","4","Cistus salvifolius",0.583333333333333,6,0,1,0.5,0.333333333333333,"0.291666666666667",NA
+"Bonares","4","Lavandula pedunculata",0.333333333333333,3.5,0.333333333333333,0,0.333333333333333,0.666666666666667,"0",NA
+"Bonares","4","Taraxacum vulgare",0.166666666666667,1.5,0.666666666666667,0,0.333333333333333,0.5,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Bonares","5","Carduus sp",0.230769230769231,3,0.5,0,NA,1,"0",NA
+"Bonares","5","Cistus ladanifer",0.0769230769230769,0.25,0.75,0,0.375,0,"0","-0.707106781186548"
+"Bonares","5","Cistus salvifolius",0.0769230769230769,1,1,0,NA,1,"0",NA
+"Bonares","5","Lavandula stoechas",0.230769230769231,2.5,0.25,0,0.75,0,"0","0.707106781186547"
+"Bonares","5","Thapsia villosa",0.538461538461538,6.25,0,0,0.375,0,"0.0768",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Bonares","6","Andryala integrifolia",0.111111111111111,1,1,NA,NA,1,"0",NA
+"Bonares","6","Cistus crispus",0.333333333333333,3,0.5,NA,NA,0.999999999999999,"0",NA
+"Bonares","6","Thapsia villosa",0.555555555555556,5,0,NA,NA,0.999999999999998,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Bonares","7","Cistus crispus",0.181818181818182,2,0.666666666666667,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Bonares","7","Scabiosa atropurpurea",0.0909090909090909,1,1,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Bonares","7","Thapsia villosa",0.272727272727273,3,0.333333333333333,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Bonares","7","Thymus mastichina",0.454545454545455,5,0,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Niebla","1","Asphodelus fistulosus",0.4,2,0.5,NA,NA,1,"0",NA
+"Niebla","1","Astragalus lusitanicus",0.4,2,0,NA,NA,1,"0",NA
+"Niebla","1","Lavandula pedunculata",0.2,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Niebla","2","Asphodelus fistulosus",0.333333333333333,1.33333333333333,0.333333333333333,0,0.25,0.386852807234542,"0","0.707106781186547"
+"Niebla","2","Astragalus lusitanicus",0.666666666666667,2.83333333333333,0,1,0.333333333333333,0,"0.456747404844291",NA
+"Niebla","2","Cistus ladanifer",0.333333333333333,1.5,0.666666666666667,0,0.2,0.613147192765458,"0",NA
+"Niebla","2","Lavandula stoechas",0.166666666666667,0.333333333333333,1,0,0.25,0,"0","-0.707106781186547"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Niebla","3","Asphodelus fistulosus",0.333333333333333,3.2,0.4,0,0.175824175824176,0.555936391692488,"0.1171875",NA
+"Niebla","3","Astragalus lusitanicus",0.0833333333333333,1,0.6,0,NA,1,"0",NA
+"Niebla","3","Cistus ladanifer",0.333333333333333,3.06666666666667,0,1,0.41025641025641,0.270622789398086,"0.226843100189036","0.707106781186547"
+"Niebla","3","Lavandula stoechas",0.333333333333333,3.4,0.2,0,0.307692307692308,0.494368356168037,"0",NA
+"Niebla","3","Leontodon sp",0.0833333333333333,1,0.8,0,NA,1,"0",NA
+"Niebla","3","Phlomis purpurea",0.0833333333333333,0.333333333333333,1,0,0.153846153846154,0.317393805514015,"0","-0.707106781186548"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Niebla","4","Calendula arvensis",0.117647058823529,2,0.285714285714286,0,NA,1,"0",NA
+"Niebla","4","Cistus crispus",0.117647058823529,2,0.428571428571429,0,NA,1,"0",NA
+"Niebla","4","Cistus ladanifer",0.176470588235294,3,0.142857142857143,0,NA,1,"0",NA
+"Niebla","4","Lavandula pedunculata",0.352941176470588,5.33333333333333,0,0,0.5,0.386852807234542,"0.1171875",NA
+"Niebla","4","Lavandula stoechas",0.117647058823529,1.33333333333333,0.571428571428571,0,0.5,0.386852807234542,"0","0"
+"Niebla","4","Leontodon sp",0.0588235294117647,1,0.857142857142857,0,NA,1,"0",NA
+"Niebla","4","Linum bienne",0.0588235294117647,1,1,0,NA,1,"0",NA
+"Niebla","4","Lupinus angustifolius",0.117647058823529,1.33333333333333,0.714285714285714,0,0.5,0.386852807234542,"0","0"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Niebla","5","Cistus ladanifer",0.0625,1,0.833333333333333,0,NA,1,"0",NA
+"Niebla","5","Cistus monspeliensis",0.3125,3.5,0.166666666666667,1,0.444444444444444,0.25,"0.244897959183674",NA
+"Niebla","5","Convolvulus althaeoides",0.375,5,0,0,0.333333333333333,0.5,"0.32",NA
+"Niebla","5","Genista hirsuta",0.0625,1,1,0,NA,1,"0",NA
+"Niebla","5","Linaria viscosa",0.125,1.5,0.333333333333333,0,0.266666666666667,0.5,"0",NA
+"Niebla","5","Linum bienne",0.125,2,0.5,NA,NA,1,"0",NA
+"Niebla","5","Thapsia villosa",0.125,2,0.666666666666667,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Niebla","6","Arctotheca calendula",0.0588235294117647,1,0.5,0,NA,1,"0",NA
+"Niebla","6","Carduus sp",0.0588235294117647,1,0.666666666666667,0,NA,1,"0",NA
+"Niebla","6","Cistus monspeliensis",0.235294117647059,3.33333333333333,0.333333333333333,0,0.666666666666667,0.5,"0.18",NA
+"Niebla","6","Convolvulus arvensis",0.294117647058824,5,0,0,NA,1,"0",NA
+"Niebla","6","Lavandula stoechas",0.0588235294117647,1,0.833333333333333,0,NA,1,"0",NA
+"Niebla","6","Phlomis purpurea",0.0588235294117647,1,1,0,NA,1,"0",NA
+"Niebla","6","Thapsia villosa",0.294117647058824,4.66666666666667,0.166666666666667,0,1.33333333333333,0.630929753571458,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Niebla","7","Andryala integrifolia",0.5,3.5,0,0,1,0,"0.244897959183674",NA
+"Niebla","7","Cistus crispus",0.125,1,1,0,NA,1,"0",NA
+"Niebla","7","Convolvulus arvensis",0.25,2,0.333333333333333,0,NA,1,"0",NA
+"Niebla","7","Taraxacum vulgare",0.25,1.5,0.666666666666667,0,1,0,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"ConventodelaLuz","1","Cistus salvifolius",0.4,2,0,0,NA,1,"0",NA
+"ConventodelaLuz","1","Rosmarinus officinalis",0.2,0.5,0.666666666666667,0,1,0,"0","-0.707106781186547"
+"ConventodelaLuz","1","Teucrium fruticans",0.2,1,1,0,NA,1,"0",NA
+"ConventodelaLuz","1","Ulex australis",0.4,1.5,0.333333333333333,0,1,0,"0","0.707106781186547"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"ConventodelaLuz","2","Cistus ladanifer",0.181818181818182,1.5,0.666666666666667,0,0.666666666666667,0.419720789148188,"0",NA
+"ConventodelaLuz","2","Cistus salvifolius",0.181818181818182,1.16666666666667,1,0,0.222222222222222,0.27894294565113,"0.244897959183674",NA
+"ConventodelaLuz","2","Rosmarinus officinalis",0.272727272727273,2.16666666666667,0.333333333333333,0,0.222222222222222,0.436208583971063,"0.142011834319526",NA
+"ConventodelaLuz","2","Teucrium fruticans",0.636363636363636,6.16666666666667,0,0,0.222222222222222,0.483007499855769,"0.0525931336742149",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"ConventodelaLuz","3","Andryala integrifolia",0.0666666666666667,0.166666666666667,0.571428571428571,0,0.0732758620689655,0.221848749616356,"0","-0.707106781186547"
+"ConventodelaLuz","3","Cistus ladanifer",0.4,4.46666666666667,0.142857142857143,0,0.255,0.254529584532176,"0.192136333259078",NA
+"ConventodelaLuz","3","Cistus salvifolius",0.533333333333333,6.46666666666667,0,1,0.323369565217391,0.182344302650478,"0.21681368902115","0.707106781186547"
+"ConventodelaLuz","3","Lavandula stoechas",0.0666666666666667,0.1,0.714285714285714,0,0.085,0,"0","-0.577350269189626"
+"ConventodelaLuz","3","Retama sp",0.2,2.1,0.285714285714286,0,0.085,0.540460449055821,"0.090702947845805",NA
+"ConventodelaLuz","3","Rosmarinus officinalis",0.0666666666666667,0.1,0.857142857142857,0,0.085,0,"0","-0.577350269189626"
+"ConventodelaLuz","3","Teucrium fruticans",0.133333333333333,0.6,0.428571428571429,0,0.120934959349594,0.268324336648371,"0","1.15470053837925"
+"ConventodelaLuz","3","Ulex australis",0.0666666666666667,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"ConventodelaLuz","4","Cistus ladanifer",0.6,5.16666666666667,0,0,0.2,0.184535123214271,"0.0624349635796047",NA
+"ConventodelaLuz","4","Cistus salvifolius",0.1,0.166666666666667,0.6,0,0.2,0,"0","0"
+"ConventodelaLuz","4","Lavandula stoechas",0.3,2.16666666666667,0.2,0,0.2,0.184535123214271,"0.142011834319526",NA
+"ConventodelaLuz","4","Rosmarinus officinalis",0.1,0.166666666666667,0.8,0,0.2,0,"0","0"
+"ConventodelaLuz","4","Spartium junceum",0.1,0.166666666666667,1,0,0.2,0,"0","0"
+"ConventodelaLuz","4","Teucrium fruticans",0.3,2.16666666666667,0.4,0,0.2,0.184535123214271,"0.142011834319526",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"ConventodelaLuz","5","Cistus crispus",0.2,1,0.5,0,NA,1,"0",NA
+"ConventodelaLuz","5","Cistus ladanifer",0.4,1.5,0,0,0.75,0,"0","0.707106781186548"
+"ConventodelaLuz","5","Cistus salvifolius",0.2,1,0.75,0,NA,1,"0",NA
+"ConventodelaLuz","5","Lavandula stoechas",0.2,0.25,1,0,0.375,0,"0","-0.707106781186547"
+"ConventodelaLuz","5","Teucrium fruticans",0.4,1.25,0.25,0,0.375,0,"0.32",NA
+"ConventodelaLuz","6","Cistus crispus",0.2,0.333333333333333,0.333333333333333,0,0.5,0,"0","0"
+"ConventodelaLuz","6","Halimium halimifolium",0.8,3.33333333333333,0,0,0.5,0,"0.18",NA
+"ConventodelaLuz","6","Lavandula stoechas",0.2,1,0.666666666666667,0,NA,1,"0",NA
+"ConventodelaLuz","6","Teucrium fruticans",0.2,0.333333333333333,1,0,0.5,0,"0","0"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Urbanizaciones","1","Halimium commutatum",0.0909090909090909,1,1,0,NA,1,"0",NA
+"Urbanizaciones","1","Lavandula stoechas",0.272727272727273,2.5,0.333333333333333,0,0.333333333333333,0.5,"0",NA
+"Urbanizaciones","1","Rosmarinus officinalis",0.636363636363636,6,0,1,0.5,0,"0.291666666666667",NA
+"Urbanizaciones","1","Ulex australis",0.181818181818182,1.5,0.666666666666667,0,0.333333333333333,0.5,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Urbanizaciones","3","Cistus salvifolius",0.230769230769231,3,0.666666666666667,0,NA,1,"0",NA
+"Urbanizaciones","3","Halimium commutatum",0.153846153846154,1.2,1,0,0.25,0.301029995663981,"0.277777777777778",NA
+"Urbanizaciones","3","Lavandula stoechas",0.615384615384615,6.7,0,0,0.375,0.088348188874947,"0.187124081087102",NA
+"Urbanizaciones","3","Rosmarinus officinalis",0.230769230769231,2.1,0.333333333333333,1,0.857142857142857,0.118819016099225,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Urbanizaciones","4","Calendula arvensis",0.5,1.33333333333333,0,0,NA,0.386852807234542,"0.375",NA
+"Urbanizaciones","4","Cistus salvifolius",0.25,0.666666666666667,0.25,0,NA,0.547411228938166,"0",NA
+"Urbanizaciones","4","Halimium commutatum",0.25,0.5,0.5,0,1,0.369070246428543,"0","0"
+"Urbanizaciones","4","Lavandula stoechas",0.25,1,0.75,0,NA,1,"0",NA
+"Urbanizaciones","5","Cistus crispus",0.555555555555556,4.33333333333333,0,0,0.25,0.619906233284066,"0.142011834319526",NA
+"Urbanizaciones","5","Cistus salvifolius",0.555555555555556,3.83333333333333,0.333333333333333,1,0.333333333333333,0.380093766715934,"0.158790170132325","0.707106781186548"
+"Urbanizaciones","5","Lavandula stoechas",0.111111111111111,0.333333333333333,0.666666666666667,0,0.25,0,"0",NA
+"Urbanizaciones","5","Tuberaria guttata",0.111111111111111,0.5,1,0,0.2,0.369070246428542,"0","-0.707106781186548"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Urbanizaciones","6","Cirsium vulgare",0.6,3,0,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Urbanizaciones","6","Cistus crispus",0.4,2,1,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Urbanizaciones","7","Cistus crispus",0.4,4,1,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"Urbanizaciones","7","Lavandula pedunculata",0.6,6,0,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"CotitodeSantaTeresa","1","Asphodelus fistulosus",0.333333333333333,2,0.333333333333333,NA,NA,1,"0",NA
+"CotitodeSantaTeresa","1","Astragalus lusitanicus",0.333333333333333,2,0,NA,NA,1,"0",NA
+"CotitodeSantaTeresa","1","Lavandula stoechas",0.166666666666667,1,0.666666666666667,NA,NA,1,"0",NA
+"CotitodeSantaTeresa","1","Rosmarinus officinalis",0.166666666666667,1,1,NA,NA,1,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"CotitodeSantaTeresa","2","Astragalus lusitanicus",0.333333333333333,3,0,0,NA,1,"0",NA
+"CotitodeSantaTeresa","2","Cistus albidus",0.111111111111111,0.5,1,0,0.333333333333333,0.369070246428543,"0","-0.707106781186547"
+"CotitodeSantaTeresa","2","Cistus salvifolius",0.222222222222222,2,0.5,0,NA,1,"0",NA
+"CotitodeSantaTeresa","2","Lavandula stoechas",0.333333333333333,2,0.25,1,0.5,0.44211410869774,"0.375","0.707106781186547"
+"CotitodeSantaTeresa","2","Rosmarinus officinalis",0.222222222222222,1.5,0.75,0,0.333333333333333,0.613147192765458,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"CotitodeSantaTeresa","3","Astragalus lusitanicus",0.142857142857143,1.5,1,0,1,0,"0",NA
+"CotitodeSantaTeresa","3","Cistus albidus",0.5,7,0,0,NA,0.999999999999999,"0",NA
+"CotitodeSantaTeresa","3","Lavandula stoechas",0.428571428571429,5.5,0.5,0,1,0,"0.165289256198347",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"CotitodeSantaTeresa","4","Cistus albidus",0.4,4,0,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"CotitodeSantaTeresa","4","Cistus salvifolius",0.2,2,1,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"CotitodeSantaTeresa","4","Lavandula stoechas",0.4,4,0.5,NA,NA,NA,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"CotitodeSantaTeresa","5","Chamaerops humilis",0.0588235294117647,1,0.6,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"CotitodeSantaTeresa","5","Cistus albidus",0.0588235294117647,1,0.8,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"CotitodeSantaTeresa","5","Cistus crispus",0.117647058823529,2,0.4,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"CotitodeSantaTeresa","5","Cistus salvifolius",0.0588235294117647,1,1,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"CotitodeSantaTeresa","5","Lavandula stoechas",0.235294117647059,4,0.2,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+"CotitodeSantaTeresa","5","Thapsia villosa",0.470588235294118,8,0,NA,NA,1,"Error in cz.pl$c : $ operator is invalid for atomic vectors
+","Error in cz.pl$c : $ operator is invalid for atomic vectors
+"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"CotitodeSantaTeresa","6","Cistus crispus",0.4,3,0.333333333333333,1,0.5,0,"0","0.707106781186548"
+"CotitodeSantaTeresa","6","Cistus salvifolius",0.1,0.5,0.666666666666667,0,0.333333333333333,0,"0","-0.707106781186548"
+"CotitodeSantaTeresa","6","Lavandula pedunculata",0.1,1,1,0,NA,1,"0",NA
+"CotitodeSantaTeresa","6","Thapsia villosa",0.6,5.5,0,0,0.333333333333333,0.5,"0.165289256198347",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Elpinar","2","Cistus albidus",0.333333333333333,3.6,0.25,0,0.9,0.393253556849261,"0","0.707106781186548"
+"Elpinar","2","Cistus salvifolius",0.0833333333333333,1,0.5,0,NA,1,"0",NA
+"Elpinar","2","Halimium commutatum",0.0833333333333333,1,0.75,0,NA,1,"0",NA
+"Elpinar","2","Lavandula stoechas",0.0833333333333333,0.2,1,0,0.3,0,"0","-0.707106781186548"
+"Elpinar","2","Rosmarinus officinalis",0.583333333333333,6.2,0,0,0.3,0.362782729624982,"0.0624349635796047",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Elpinar","3","Cistus albidus",1,4,0,1,0.5,0,"0.40625",NA
+"Elpinar","3","Cistus salvifolius",0.2,0.5,0.5,0,0.333333333333333,0,"0",NA
+"Elpinar","3","Lavandula stoechas",0.2,0.5,1,0,0.333333333333333,0,"0",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Elpinar","4","Cistus albidus",0.333333333333333,0.5,1,0,1,0,"0",NA
+"Elpinar","4","Lavandula stoechas",1,2.5,0,0,1,0,"0.32",NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Elpinar","5","Andryala integrifolia",0.0769230769230769,0.166666666666667,0.5,0,0.142857142857143,0,"0","-0.707106781186547"
+"Elpinar","5","Chamaemelum fuscatum",0.153846153846154,0.666666666666667,0.166666666666667,1,0.19047619047619,0,"0.375","0"
+"Elpinar","5","Cistus crispus",0.0769230769230769,1,0.666666666666667,0,NA,1,"0",NA
+"Elpinar","5","Cistus salvifolius",0.153846153846154,2,0.333333333333333,0,NA,1,"0",NA
+"Elpinar","5","Convolvulus arvensis",0.615384615384615,7.66666666666667,0,0,0.326530612244898,0.415037499278844,"0","0.707106781186547"
+"Elpinar","5","Diplotaxis virgata",0.0769230769230769,0.5,0.833333333333333,0,0.114285714285714,0.613147192765459,"0","0"
+"Elpinar","5","Ranunculus sp",0.0769230769230769,1,1,NA,NA,1,"0",NA

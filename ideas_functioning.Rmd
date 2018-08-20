@@ -2,18 +2,21 @@
 title: "Ideas_ntw_function"
 author: "I. Bartomeus, A. Magrach"
 date: "6/14/2018"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 -------------------------------------
 IDEAS
 -------------------------------------
 
-
+NACHO
+-----
 I'll start by 
   - showing the relationship between ntw structure (defined as? Niche complementariety?) and overall functioning (defined as mean rep success of plants?)
   - showing the relationship between node position and plant species functioning
@@ -21,7 +24,7 @@ I'll start by
 
 We can use data on both visitation rates (quantity), pollen deposition (quality), its product (pollen delivered) and fruit set and seed set.
 
-AINHOA: We could look at
+AINHOA OTHER IDEAS: We could look at
 1) how do perturbations (in this case fragmentation) affect species specialization? in this setting are specialization and 
 link conservatism or opportunism (how regional interaction richness of a species differs from what could be expected if species interacted randomly with the available set of partners, see Carstensen et al 2017) constant through time? Carstensen et al also find that specialization is conserved from local to regional levels (correlation between specialization levels), is this the case in a fragmented setting? 
 2) are these changes a consequence of turnover in species composition across fragments or interaction composition (rewiring)? or is it temporal turnover?
@@ -34,156 +37,687 @@ link conservatism or opportunism (how regional interaction richness of a species
 ABSTRACT
 -----------------------------------------
 
+Natural ecosystems across the globe are increasingly suffering from the pressures of on-going global change. Pollinators, in particular, have been reported to decline in abundance and diversity in different parts of the world, with potential implications for many plant species given the dependence of 87.5% of plant species on pollinators for reproduction. Although a strong body of research has focused on pollinator visitation frequency and plant reproduction, most of these efforts have been done at the individual species level, largely ignoring community-level implications. Indeed, interaction network structure can affect pollinator functional roles, their visitation patterns to different plant species and ultimately the pollination service they deliver to plants. Thus, a major knowledge gap at the moment is a mechanistic understanding of how pollinator visitation and the structure of plant-pollinator visitation networks affect plant reproduction. Here, we use 16 well-resolved plant-pollinator networks from Mediterranean shrub ecosystems to evaluate how pollinator species diversity, community composition and interaction network structure affect plant reproduction for 19 species of plants. Further, we link pollinator visitation frequencies with the efficiency of individual pollinator species. To this end, we use data on fruit and seed set for all plant species as well as data on the efficiency of a single visit by different pollinator species on 12 of these plant species. This work represents one of the first efforts linking pollination visitation and plant reproduction from a community-wide perspective using a well-replicated dataset.  
+
 -----------------------------------------
 METHODS
 -----------------------------------------
 
-```{r}
-setwd("C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun")
+1) How does network structure (nestedness, modularity etc.) link to ecosystem function?
+2) How does the location of a particular plant species within a particular network affect its reproductive success? Apparent competition with other plant species? Pollinator diversity visiting?
+3) Is pollination efficiency on reproductive success altered by different network structures? For example, increasing apparent competition between pollinators or overlap in niches affect reproductive success despite great efficiency?
 
-all_interactions
-summary(all_interactions)
+
+First, check sampling completeness
+
+```{r, include=TRUE}
+#First attempt to load the data, etc...
+
+#prepare stuff-----
+#If you don't have devtools install it
+#install.packages("devtools")
+#library(devtools)
+#Then install the data package. Reprot issues 
+#install_github("ibartomeus/BeeFunData", ref = "fun")
+library(BeeFunData)
+
+
+setwd("~/Dropbox/Beefun/Beefun/functioning")
+ #setwd("C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning")
 
 d<-all_interactions
-str(d)
+f<-fruitset
+s<-seedset
+si<-single_visits
+
+si$Plant.sp<-paste(si$Plant_genus, si$Plant_species)
+
+#####################################################################################################################
+########################CALCULATE SAMPLING COMPLETENESS FOR POLLINATORS, PLANTS AND LINKS#############################
+######################################################################################################################
+
+#POLLINATORS
+d2<-table(d$Site_ID, d$Pollinator_gen_sp)
+d3<-as.data.frame.array(d2)
+
+d4 <- t(d3[,1:277])
+#head(d4)
+#str(d4)
+d5<-as.data.frame(d4)
+#str(d5)
+d6<-as.list(d5)
+
+library(iNEXT)
+library(ggplot2)
+
+rar <- iNEXT(d6, q=0, datatype="abundance", endpoint = 400)
+poll<-ggiNEXT.iNEXT(rar, color.var="site", se=FALSE) + ylab("Richness of pollinators") + theme_bw() + theme (legend.position= "none")
+  # theme(text = element_text(size = 12),
+  #       axis.text=element_text(size=rel(1)),
+  #       axis.title=element_text(size=rel(1),face="bold"), legend.direction="horizontal", legend.text=element_text(size=10)) 
+
+poll
 
 
-library(bipartite)
-
-##1st create a bipartite matrix for each site and round and extract a set of metrics at the network level
-
-
-
-#############################################################################
-#####################NETWORK LEVEL METRICS ##############################
-#############################################################################
-
-sites <- unique(d$Site_ID)
-rounds <- unique(d$Round)
-
-out <- data.frame(Site_id = NA, Round = NA, #year= NA,
-                  links_sps = NA, num_compartments = NA,NODF  = NA,
-                  link_dens=NA, weigh_connectance=NA, Shannon=NA,
-                  int_evenness=NA, Alatalo_int_evenness=NA, H2=NA, 
-                  species.poll=NA, species.pl=NA, 
-                  niche.overlap.poll=NA, niche.overlap.plant=NA,
-                  functional.comp.poll=NA, functional.comp.plant=NA,
-                  modularity=NA, z=NA)
-webs <- list()
-for(i in 1:length(sites)){
-  temp <- subset(d, Site_ID == sites[i])
-  for(j in 1:length(rounds)){
-    temp2 <- subset(temp, Round == rounds[j])
-      
-        web <- table(temp2$Plant_gen_sp, temp2$Pollinator_gen_sp)
-        #p1<-plotweb(web)
-        ntw <- networklevel(web)
-        #para calcular modularity de la red
-        mod<-try(computeModules(web), TRUE)
-        #null model for modularity
-        nulls <- try(nullmodel(web, N=100, method="r2d"), TRUE)
-        modules.nulls <- try(sapply(nulls, computeModules), TRUE)
-        like.nulls <- try(sapply(modules.nulls, function(x) x@likelihood), TRUE)
-        z <- try((mod@likelihood - mean(like.nulls))/sd(like.nulls), TRUE)
-        
-        
-        n <- nrow(out)
-        webs[[n]] <- web
-        
-        out[n + 1,1] <- as.character(sites[i])
-        out[n + 1,2] <- as.character(rounds[j])
-        out[n + 1,3:17] <- c(ntw[3:4],ntw[9], ntw[12:13], ntw[15:20],
-                             ntw[27:28], ntw[41:42])
-        out[n + 1,18] <- try(mod@likelihood, TRUE)#esto sirve para pasar del error cuando no se puede computar la modularidad para una red
-        out[n + 1,19] <- try(z, TRUE)
-      }  
-    }  
-  
-str(out)
-head(out)
-out[2:30,]
-
-##sacar la tabla con todas las metrics del network y añadirle el landscape_type
-#primero hay que crear una columna con landscape_type y año jutnos porque el tipo
-#de landscape varia en algunos años
-#especie de iferror(vlookup)
-str(out)
-tablenetwork<-out[2:61,]
+#per site sampling completeness for pollinators
+#Aznalcazar 64/103 = 0.62
+#Bonares  54.000/178.701 = 0.30
+#ConventodelaLuz  33.000/98.950 = 0.33
+#CotitodeSantaTeresa  54.000/190.442 = 0.28
+#Elpinar  29.000/158.657= 0.18
+#Elpozo  32.000/174.000= 0.18
+#Esparragal  39.000/110.859= 0.35
+#LaCunya  32.000/118.672= 0.27
+#LaRocina  74.000/147.129 = 0.50
+#Lasmulas  52.000/127.295 = 0.41
+#Niebla  57.000/124.792 = 0.46
+#PinaresdeHinojos 40.000/168.852 = 0.24
+#Pinodelcuervo  52.000/187.503 = 0.28
+#Urbanizaciones  40.000/109.136 = 0.37 
+#Villamanriqueeste  62.000/141.310 = 0.44
+#Villamanriquesur  48.000/111.326 = 0.43
 
 
+#(0.62 + 0.30 + 0.33 + 0.28 + 0.18 + 0.18 + 0.35 + 0.27 + 0.50 + 0.41 + 0.46 + 0.24 + 0.28 + 0.37 + 0.44 + 0.43)/16
+#TOTAL AVERAGE sampling completeness of pollinators 0.35
 
 
-#############################################################################
-#####################SPECIES LEVEL NETWORK METRICS ##############################
-#############################################################################
+#PLANTS
+d.pl<-table(d$Site_ID, d$Plant_gen_sp)
+d.pl2<-as.data.frame.array(d.pl)
 
-## super importante cargar primero igraph antes que network porque se sobrescriben partes de las librerias
-## y el script no funcionaria bien.
+d.pl3 <- t(d.pl2[,1:57])
+#head(d.pl3)
+#str(d.pl3)
+d.pl4<-as.data.frame(d.pl3)
+#str(d.pl4)
+d.pl5<-as.list(d.pl4)
 
-require(igraph)
-require(network)
-require(sna)
-require(ggplot2)
-require(sna)
-require(ergm)
-require(bipartite)
-require(dplyr)
-require(reshape)
-require(wesanderson)
+library(iNEXT)
+library(ggplot2)
 
+rar2 <- iNEXT(d.pl5, q=0, datatype="abundance", endpoint = 200)
+plant<-ggiNEXT.iNEXT(rar2, color.var="site", se=FALSE) + ylab("Richness of plants") + 
+  theme_bw()  + theme (legend.position= "none")
+  # theme(text = element_text(size = 12),
+  #       axis.text=element_text(size=rel(1)),
+  #       axis.title=element_text(size=rel(1),face="bold"), legend.direction="horizontal", legend.text=element_text(size=10)) 
 
-
-
-
-sites <- unique(d$Site_ID)
-rounds <- unique(d$Round)
-
-out <- data.frame(Site_id = NA, Round = NA, #year= NA,
-                 links_sps = NA, num_compartments = NA,NODF  = NA,
-                link_dens=NA, weigh_connectance=NA, Shannon=NA,
-               int_evenness=NA, Alatalo_int_evenness=NA, H2=NA)
+plant
 
 
-outsp <- data.frame(Site_id = NA, Round = NA, #year= NA,
-                species=NA,  norm_degree = NA,strength= NA, nestedra= NA,weigh_betweeness  = NA, 
-                weigh_closeness=NA, d=NA, c=NA, z=NA, specificity=NA)
-webs <- list()
-for(i in 1:length(sites)){
-  temp <- subset(sp, Site_ID == sites[i])
-  for(j in 1:length(rounds)){
-    temp2 <- subset(temp, Round == rounds[j])
-      
-        web <- table(temp2$Plant_gen_sp, temp2$Pollinator_gen_sp)
-        #p1<-plotweb(web)
-         spntw <- try(specieslevel(web), TRUE)
-         ntw<-try(networklevel(web), TRUE)
-         n <- nrow(out)
-          webs[[n]] <- web
-          mod<-try(computeModules(web), TRUE)
-          cz<-try(czvalues(mod, level="lower", weighted=TRUE), TRUE)
-          spec<-getspe(web)
-          
-          n2 <- nrow(outsp)
-          out[n + 1,1] <- as.character(sites[l])
-          out[n + 1,2] <- as.character(rounds[j])
-          out[n + 1,3:11] <- c(ntw[3:4],ntw[9], ntw[12:13], ntw[15:18])   
-          
-          
-        
-        outsp[n2+seq(nrow(web)),1] <- as.character(sites[l])
-        outsp[n2+seq(nrow(web)),2] <- as.character(rounds[j])
-        outsp[n2+seq(nrow(web)),3] <- try(as.character(rownames(web)), TRUE)
-        outsp[n2+seq(nrow(web)),4:9] <- try(c(spntw$`lower level`[2:3], spntw$`lower level`[5],
-              spntw$`lower level`[12], spntw$`lower level`[14],
-              spntw$`lower level`[20]), TRUE)
-        outsp[n2+seq(nrow(web)),10:11] <- try(c(cz$c,
-                                              cz$z), TRUE)
-        outsp[n2+seq(nrow(web)),12] <- spec
-        
-      }  
-    }  
-  
+#per site sampling completeness for pollinators
+#Aznalcazar 17.000/18.490 = 0.92
+#Bonares  13.000/13.990 = 0.93
+#ConventodelaLuz  12.000/13.978 = 0.86
+#CotitodeSantaTeresa  10.000/11.973 = 0.84
+#Elpinar  11.000/23.255 = 0.47
+#Elpozo  11.000 /13.219 = 0.83
+#Esparragal  12.000 /16.436 = 0.73
+#LaCunya  13.000/21.847 = 0.60
+#LaRocina  16.000 /21.959 = 0.73 
+#Lasmulas  12.000 /17.940 = 0.67
+#Niebla  21.000/21.743 = 0.97
+#PinaresdeHinojos 14.000/21.889 = 0.64
+#Pinodelcuervo  15.000/27.372 = 0.55
+#Urbanizaciones  10.000 /10.247 = 0.98
+#Villamanriqueeste  9.000 /10.983 = 0.82
+#Villamanriquesur  12.000 /12.989 = 0.92
+
+#(0.92 + 0.93 + 0.86 + 0.84 + 0.47 + 0.83 + 0.73 + 0.60 + 0.73 + 0.67 + 0.97 + 0.64 + 0.55 + 0.98 + 0.82 + 0.92)/16
+
+#TOTAL AVERAGE sampling completeness of plants 0.78
 
 
-str(outsp)
+#LINKS
+
+d$link<-paste(d$Plant_gen_sp, d$Pollinator_gen_sp)
+d.l<-table(d$Site_ID, d$link)
+d.l2<-as.data.frame.array(d.l)
+
+d.l3 <- t(d.l2[,1:750])
+#head(d.l3)
+#str(d.l3)
+d.l4<-as.data.frame(d.l3)
+#str(d.l4)
+d.l5<-as.list(d.l4)
+
+library(iNEXT)
+library(ggplot2)
+
+rar3 <- iNEXT(d.l5, q=0, datatype="abundance", endpoint = 500)
+link<-ggiNEXT.iNEXT(rar3, color.var="site", se=FALSE) + ylab("Richness of links") + theme_bw() +
+   theme (legend.position= "none")
+  # theme(text = element_text(size = 12),
+  #       axis.text=element_text(size=rel(1)),
+  #       axis.title=element_text(size=rel(1),face="bold"), legend.direction="horizontal", legend.text=element_text(size=10)) 
+
+link
+
+
+#per site sampling completeness for pollinators
+#Aznalcazar 101.000/244.145 = 0.41
+#Bonares  72.000/389.031 = 0.19
+#ConventodelaLuz  52.000/221.285 = 0.23
+#CotitodeSantaTeresa  64.000/478.893 = 0.13
+#Elpinar  37.000/194.026 = 0.19
+#Elpozo   46.000/159.994 = 0.29
+#Esparragal   52.000/196.900 = 0.26
+#LaCunya  44.000/115.025 = 0.38
+#LaRocina  98.000/351.931 = 0.28
+#Lasmulas  69.000/306.883 = 0.22
+#Niebla  84.000/611.776 = 0.14
+#PinaresdeHinojos  56.000/186.413 = 0.30
+#Pinodelcuervo   77.000/273.425 = 0.28
+#Urbanizaciones  55.000/204.100 = 0.27
+#Villamanriqueeste  76.000/193.208 = 0.39
+#Villamanriquesur  67.000/234.221 = 0.29 
+
+#(0.41 + 0.19 + 0.23 + 0.13 + 0.19 + 0.29 + 0.26 + 0.38 + 0.28 + 0.22 + 0.14 + 0.30 + 0.28 + 0.27 + 0.39 + 0.29)/16
+
+#TOTAL AVERAGE sampling completeness of links 0.27
+
 ```
+
+Sampling completeness for pollinators = 0.35
+                          plants= 0.78
+                          links= 0.27
+
+
+
+QUESTION 1:  - relationship between ntw structure defined as nestedness (i.e. redundancy) and complementarity (i.e. funct compl), also taking into species-level characteristics (e.g., degree and specialization) and relate it to overall functioning (defined as mean rep success of all plant species together per site)
+
+```{r, include=TRUE}
+
+#####################################################################################################################
+######################## NTW STRUCTURE ~ ECOSYSTEM FUNCTION #########################################################
+######################################################################################################################
+#calculate column with fruit set as
+
+#Fruit_Yes +  Fruit_Preyed + Fruit_Dispersed) / (Fruit_Yes + Fruit_No +Fruit_Preyed + Fruit_Dispersed) #Nacho this equation is wrong in your metadata!
+
+#1st eliminate frutos perdidos
+wordList <- c("fruto perdido","frutos perdidos")
+
+require(Hmisc)
+f2<-subset(f, Notes %nin% wordList)
+
+f2$tot.fruitset<-(f2$Fruit_Yes +  f2$Fruit_preyed + f2$Fruit_dispersed)/(f2$Fruit_Yes +f2$Fruit_No + f2$Fruit_preyed + f2$Fruit_dispersed)
+
+
+s2<-subset(s, Notes %nin% wordList)
+s2$tot.seedset
+
+###### read network and species level files (network analyses to be found at "...scripts/network analysis.R")
+
+outsp.pl.site<-read.csv("SITE_plant_species_level_metrics.csv")
+outsp.site<-read.csv("SITE_species_level_metrics.csv")
+out.site<-read.csv("SITE_network_level_metrics.csv")
+
+
+#-------------------------------------------------------------------------------------------
+#     QUESTION 1:  - relationship between ntw structure defined as nestedness (i.e. redundancy) and complementarity (i.e. funct compl), also taking into species-level characteristics (e.g., degree and specialization) and relate it to overall functioning (defined as mean rep success of all plant species together per site)
+
+#join plant species level network metrics with fruit and seed set for each site 
+
+
+#FRUIT SET
+
+#1st calculate average fruit set for all plants per site
+
+library(plyr)
+
+f2$Plant.sp<-paste(f2$Plant_genus, f2$Plant_species)
+
+f.agg <- ddply(f2, c("Site_ID", "Plant.sp"), summarise,
+                         mean.fruitset    = mean(tot.fruitset),
+                         sd.fruitset = sd(tot.fruitset))
+
+
+#f.agg
+
+
+f.agg$nodf.corr<-out.site$nodf.corr[match(f.agg$Site_ID, out.site$Site_id)]
+f.agg$int_evenness<-out.site$int_evenness[match(f.agg$Site_ID, out.site$Site_id)]
+f.agg$h2.corr<-out.site$h2.corr[match(f.agg$Site_ID, out.site$Site_id)]
+f.agg$functional.comp.poll<-out.site$functional.comp.poll[match(f.agg$Site_ID, out.site$Site_id)]
+f.agg$niche.overlap.plant<-out.site$niche.overlap.plant[match(f.agg$Site_ID, out.site$Site_id)]
+f.agg$modularity<-out.site$modularity[match(f.agg$Site_ID, out.site$Site_id)]
+
+#also match with plant species level network data
+f.agg$match<-paste(f.agg$Site_ID, f.agg$Plant.sp)
+outsp.pl.site$match<-paste(outsp.pl.site$Site_id, outsp.pl.site$species)
+
+f.agg$norm_degree<-outsp.pl.site$norm_degree[match(f.agg$match, outsp.pl.site$match)]
+f.agg$strength<-outsp.pl.site$strength[match(f.agg$match, outsp.pl.site$match)]
+f.agg$nestedra<-outsp.pl.site$nestedra[match(f.agg$match, outsp.pl.site$match)]
+f.agg$weigh_betweeness<-outsp.pl.site$weigh_betweeness[match(f.agg$match, outsp.pl.site$match)]
+f.agg$weigh_closeness<-outsp.pl.site$weigh_closeness[match(f.agg$match, outsp.pl.site$match)]
+f.agg$d<-outsp.pl.site$d[match(f.agg$match, outsp.pl.site$match)]
+f.agg$c<-outsp.pl.site$c[match(f.agg$match, outsp.pl.site$match)]
+f.agg$z<-outsp.pl.site$z[match(f.agg$match, outsp.pl.site$match)]
+
+
+#check for structure of data
+#hist(f.agg$mean.fruitset)
+
+
+f.agg2<-na.omit(f.agg)
+cor(f.agg2[,c(5:10, 12:19)])
+
+
+library(glmmTMB)
+library(DHARMa)
+
+
+m1<-glmmTMB(mean.fruitset ~ nodf.corr +  functional.comp.poll + int_evenness + norm_degree + d  +  (1|Plant.sp), family="gaussian", data=f.agg2)
+summary(m1)
+
+
+
+#test for problems in residuals
+res<-simulateResiduals(m1)
+plot(res, rank = TRUE)
+
+#plot nodf only significant variable, with different colors for plant species and all together
+
+
+
+pl1<-ggplot(f.agg2,  aes(x=nodf.corr, y=mean.fruitset, color=Plant.sp))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        xlab("Nestedness") +      
+        ylab("Mean fruitset") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+
+pl1
+
+
+
+
+#SEED NUMBER
+
+#1st calculate average seed number for all plants per site
+
+s<-s[,-10]
+
+library(plyr)
+
+s$Plant.sp<-paste(s$Plant_genus, s$Plant_species)
+
+s.agg <- ddply(s, c("Site_ID", "Plant.sp"), summarise,
+                         mean.seednumber    = mean(Seeds2),
+                        # sd.seednumber = sd(Seeds2),
+                         mean.seedweight = mean(Seed.weight),
+                        # sd.seedweight = sd(Seed.weight),
+                         mean.fruitweight = mean(Fruit.weight2)#,
+                         #sd.fruitweight = sd(Fruit.weight2)
+                         )
+
+
+#s.agg
+
+
+s.agg$nodf.corr<-out.site$nodf.corr[match(s.agg$Site_ID, out.site$Site_id)]
+s.agg$int_evenness<-out.site$int_evenness[match(s.agg$Site_ID, out.site$Site_id)]
+s.agg$h2.corr<-out.site$h2.corr[match(s.agg$Site_ID, out.site$Site_id)]
+s.agg$functional.comp.poll<-out.site$functional.comp.poll[match(s.agg$Site_ID, out.site$Site_id)]
+s.agg$niche.overlap.plant<-out.site$niche.overlap.plant[match(s.agg$Site_ID, out.site$Site_id)]
+s.agg$modularity<-out.site$modularity[match(s.agg$Site_ID, out.site$Site_id)]
+
+#also match with plant species level network data
+s.agg$match<-paste(s.agg$Site_ID, s.agg$Plant.sp)
+outsp.pl.site$match<-paste(outsp.pl.site$Site_id, outsp.pl.site$species)
+
+s.agg$norm_degree<-outsp.pl.site$norm_degree[match(s.agg$match, outsp.pl.site$match)]
+s.agg$strength<-outsp.pl.site$strength[match(s.agg$match, outsp.pl.site$match)]
+s.agg$nestedra<-outsp.pl.site$nestedra[match(s.agg$match, outsp.pl.site$match)]
+s.agg$weigh_betweeness<-outsp.pl.site$weigh_betweeness[match(s.agg$match, outsp.pl.site$match)]
+s.agg$weigh_closeness<-outsp.pl.site$weigh_closeness[match(s.agg$match, outsp.pl.site$match)]
+s.agg$d<-outsp.pl.site$d[match(s.agg$match, outsp.pl.site$match)]
+s.agg$c<-outsp.pl.site$c[match(s.agg$match, outsp.pl.site$match)]
+s.agg$z<-outsp.pl.site$z[match(s.agg$match, outsp.pl.site$match)]
+
+
+#check for structure of data
+#hist(s.agg$mean.seednumber)
+
+
+
+library(glmmTMB)
+library(DHARMa)
+
+
+m2<-glmmTMB(mean.seednumber ~ nodf.corr +  functional.comp.poll + int_evenness + norm_degree + d  +  (1|Plant.sp), family="poisson", data=s.agg)
+summary(m2)
+
+
+
+#test for problems in residuals
+res<-simulateResiduals(m2)
+plot(res, rank = TRUE)
+
+#plot nodf only significant variable, with different colors for plant species and all together
+
+
+pl2<-ggplot(s.agg,  aes(x=functional.comp.poll, y=mean.seednumber, color=Plant.sp))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        xlab("Functional complementarity") +      
+        ylab("Mean seed number") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+
+pl2
+
+pl3<-ggplot(s.agg,  aes(x=int_evenness, y=mean.seednumber, color=Plant.sp))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        xlab("Interaction evenness") +      
+        ylab("Mean seed number") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+
+pl3
+
+pl4<-ggplot(s.agg,  aes(x=norm_degree, y=mean.seednumber, color=Plant.sp))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        xlab("Normalized degree") +      
+        ylab("Mean seed number") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+
+pl4
+
+
+#it seems all effects are driven by Cistus ladanifer, re-analyse without this species
+
+
+s.agg2<-subset(s.agg, s.agg$Plant.sp!="Cistus ladanifer")
+
+
+library(glmmTMB)
+library(DHARMa)
+
+
+m2b<-glmmTMB(mean.seednumber ~ nodf.corr +  functional.comp.poll + int_evenness + norm_degree + d  +  (1|Plant.sp), family="poisson", data=s.agg2)
+summary(m2b)
+
+
+pl5<-ggplot(s.agg2,  aes(x=int_evenness, y=mean.seednumber, color=Plant.sp))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        xlab("Interaction evenness") +      
+        ylab("Mean seed number") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+
+pl5
+
+
+pl6<-ggplot(s.agg2,  aes(x=nodf.corr, y=mean.seednumber, color=Plant.sp))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        xlab("Nestedness") +      
+        ylab("Mean seed number") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+
+pl6
+
+#driven only by C. salvifolius?
+
+
+s.agg3<-subset(s.agg2, s.agg2$Plant.sp!="Cistus salvifolius")
+
+
+library(glmmTMB)
+library(DHARMa)
+
+
+m2c<-glmmTMB(mean.seednumber ~ nodf.corr +  functional.comp.poll + int_evenness + norm_degree + d  +  (1|Plant.sp), family="poisson", data=s.agg3)
+summary(m2c)
+
+
+pl7<-ggplot(s.agg3,  aes(x=nodf.corr, y=mean.seednumber, color=Plant.sp))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        xlab("Nestedness") +      
+        ylab("Mean seed number") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+
+pl7
+
+#SEED WEIGHT
+
+#check for structure of data
+#hist(s.agg$mean.seedweight)
+
+
+library(glmmTMB)
+library(DHARMa)
+
+
+m3<-glmmTMB(mean.seedweight ~ nodf.corr +  functional.comp.poll + int_evenness + norm_degree + d  +  (1|Plant.sp), family="poisson", data=s.agg)
+summary(m3)
+
+#test for problems in residuals
+res<-simulateResiduals(m3)
+plot(res, rank = TRUE)
+
+
+#FRUIT WEIGHT
+
+#check for structure of data
+#hist(s.agg$mean.fruitweight)
+
+
+library(glmmTMB)
+library(DHARMa)
+
+
+m4<-glmmTMB(mean.fruitweight ~ nodf.corr +  functional.comp.poll + int_evenness + norm_degree + d  +  (1|Plant.sp), family="nbinom2", data=s.agg)
+summary(m4)
+
+#model convergence problem, check fixed effects for extreme values
+
+fixef(m4)
+
+#int_evenn has a very large value, try removing 
+m4b<-glmmTMB(mean.fruitweight ~ nodf.corr +  functional.comp.poll +  norm_degree + d  +  (1|Plant.sp), family="poisson", data=s.agg)
+summary(m4b)
+
+#test for problems in residuals
+res<-simulateResiduals(m4b)
+plot(res, rank = TRUE)
+
+```
+
+
+#RELATIONSHIP BETWEEN NODE POSITION AND FUNCTIONING
+
+#look at cz plots to see potential connector, hub etc species
+
+```{r, include=TRUE}
+
+czplot<- ggplot(s.agg,  aes(x=c, y=z)) +
+    geom_point(size=4.5, position="jitter", aes(color = factor(Plant.sp)))+
+    #geom_jitter()+
+    geom_vline(xintercept=0.62)+
+    geom_hline(yintercept=2.5)+
+    xlim(0,1)+
+    ylim(0,4)+
+    xlab("Between-module connectivity (c)") +
+    ylab("Within-module degree (z)")  +theme_bw() +
+    theme(axis.text=element_text(size=20),
+          axis.title=element_text(size=20,face="bold"))
+
+
+czplot
+
+m5<-glmmTMB(mean.fruitset ~ c + z +  (1|Plant.sp), family="gaussian", data=f.agg)
+summary(m5)
+
+
+#test for problems in residuals
+res<-simulateResiduals(m5)
+plot(res, rank = TRUE)
+
+
+
+
+
+m6<-glmmTMB(mean.seednumber ~ c + z   + (1|Plant.sp), family="gaussian", data=s.agg)
+summary(m6)
+
+m7<-glmmTMB(mean.seedweight ~ c + z   + (1|Plant.sp), family="gaussian", data=s.agg)
+summary(m7)
+
+m8<-glmmTMB(mean.fruitweight ~ c + z   + (1|Plant.sp), family="gaussian", data=s.agg)
+summary(m8)
+
+
+
+
+m8.c<- ggplot(s.agg,  aes(x=c, y=mean.fruitweight, color=Plant.sp))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        xlab("c") +      
+        ylab("Mean fruit weight") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+
+
+m8.c
+
+
+m8b<-glmmTMB(mean.fruitweight ~ c + z   + (1|Plant.sp), family="gaussian", data=s.agg2)
+summary(m8b)
+
+
+
+m8.cbis<- ggplot(s.agg2,  aes(x=c, y=mean.fruitweight, color=Plant.sp))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        xlab("c") +      
+        ylab("Mean fruit weight") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+
+
+m8.cbis
+```
+
+
+#LOOK AT EVENNESSS IN FUNCTION. within a site most plant species have very low reproductive success and thus we get incredibly high evenness values. therefore we use thresholds, for each sps and site we calculate the # of individuals that are above 50% in fruit production
+
+```{r, include=TRUE}
+library(vegan)
+library(dplyr)
+
+f2$Plant.sp<-paste(f2$Plant_genus, f2$Plant_species)
+f3<-f2[,c(1,13:14)]
+
+f4 <- ddply(f3, c("Site_ID", "Plant.sp"), summarise,
+                         mean.fruitset    = mean(tot.fruitset))
+
+
+#f4
+
+fr.max<-aggregate(.~ Plant.sp, f4, FUN=max)
+
+f4$fruit.max<-fr.max$mean.fruitset[match(f4$Plant.sp, fr.max$Plant.sp)]
+
+f4$fruit.prop<-f4$mean.fruitset/f4$fruit.max
+f5<-subset(f4, f4$fruit.prop>0.5)
+
+#for each site here is the number of sps whose fruitset exceeds 50% of maximum fruitset observed in the whole study area
+f6<-f5 %>% 
+  group_by(Site_ID) %>%
+  summarise(no_rows = length(Site_ID ))
+
+
+#join this with fruitset data used previously
+
+f6$nodf.corr<-out.site$nodf.corr[match(f6$Site_ID, out.site$Site_id)]
+f6$int_evenness<-out.site$int_evenness[match(f6$Site_ID, out.site$Site_id)]
+f6$h2.corr<-out.site$h2.corr[match(f6$Site_ID, out.site$Site_id)]
+f6$functional.comp.poll<-out.site$functional.comp.poll[match(f6$Site_ID, out.site$Site_id)]
+f6$niche.overlap.plant<-out.site$niche.overlap.plant[match(f6$Site_ID, out.site$Site_id)]
+f6$modularity<-out.site$modularity[match(f6$Site_ID, out.site$Site_id)]
+
+
+
+library(glmmTMB)
+library(DHARMa)
+
+
+m.th<-glmmTMB(no_rows ~ nodf.corr +  functional.comp.poll + int_evenness , family="gaussian", data=f6)
+summary(m.th)
+
+
+
+#test for problems in residuals
+res<-simulateResiduals(m.th)
+plot(res, rank = TRUE)
+
+#plot nodf only significant variable, with different colors for plant species and all together
+
+
+
+pl.th<-ggplot(f6,  aes(x=nodf.corr, y=no_rows))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        xlab("Nestedness") +      
+        ylab("Evenness in fruitset") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
+
+pl.th
+
+
+pl.th2<-ggplot(f6,  aes(x=functional.comp.poll, y=no_rows))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        xlab("Functional complementarity") +      
+        ylab("Evenness in fruitset") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
+
+pl.th2
+ 
+```
+
+#look at single visit data for some species to see whether they can be related to network roles or repr success
+#importante
+
+#Control = siempre embolsados
+#Open = embolsados la noche antes, y open durante 6 horas de dia (o sea visitado por lo que sea que pasara durante el dia).
+
+```{r, include=TRUE}
+
+# si.cs<-subset(si, si$Plant.sp=="Cistus  salvifolius") 
+# si.cs
+# 
+# 
+# pl.si.cs<-ggplot(si.cs,  aes(x=Pollinator_genus, y=pollen_tubes))+  
+#   geom_bar(stat="identity")
+#         
+# pl.si.cs
+
+library(ggplot2)
+
+
+gg_color_hue <- function(n) {
+  hues = seq(15, 375, length=n+1)
+  hcl(h=hues, l=65, c=100)[1:n]
+}
+
+mycols <- gg_color_hue(length(unique(si$Pollinator_genus)))
+names(mycols) <- unique(si$Pollinator_genus)
+mycols["Control"] <- "black"
+mycols["Open"] <- "grey"
+
+  pl.si<- ggplot(si,  aes(x=Pollinator_genus, y=pollen_tubes, fill=Pollinator_genus))+  
+    geom_bar(stat="identity")  + scale_fill_manual(values=mycols) + 
+    theme(text = element_text(size = 12),
+        axis.text=element_text(size=rel(1)),
+        axis.title=element_text(size=rel(1),face="bold"), legend.direction="horizontal", legend.text=element_text(size=10)) 
+  
+  pl.si + facet_wrap( ~ Plant.sp, scales="free") 
+  
+  
+
+```
+
+El control tiene valores super altos, esta bien??
