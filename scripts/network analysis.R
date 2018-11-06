@@ -34,6 +34,11 @@ f<-fruitset
 s<-seedset
 si<-single_visits
 
+#we will calculate nestedness based on paper by Song et al 2017 Journal of ANimal ecology based on NODF and its
+#correction by max NODF as NODFc = NODFn/(C  log(S)), where NODFn = NODF/max(NODF).
+#to this end we use the toolbox provided with their paper
+
+source('toolbox.R') #load the toolbox
 
 ##1st create a bipartite matrix for each site MERGING ALL ROUNDS TOGETHER and extract a set of metrics at the network level
 
@@ -66,8 +71,7 @@ out.site <- data.frame(Site_id = NA, links_sps = NA, num_compartments = NA,weigh
                        species.poll=NA, species.pl=NA, 
                        niche.overlap.poll=NA, niche.overlap.plant=NA, robustness.poll=NA, robustness.plant=NA,
                        functional.comp.poll=NA, functional.comp.plant=NA,
-                       modularity=NA, z=NA, links.corr=NA, nodf.corr=NA, linkdens.corr=NA, conn.corr=NA,
-                       even.corr=NA, h2.corr=NA)
+                       modularity=NA, z=NA, nodf.song=NA)
 
 outsp.site <- data.frame(Site_id = NA, species=NA,  norm_degree = NA,strength= NA, nestedra= NA,weigh_betweeness  = NA, 
                          weigh_closeness=NA, d=NA, c=NA, z=NA)#, specificity=NA)
@@ -105,6 +109,13 @@ for(i in 1:length(sites)){
   like.nulls <- try(sapply(modules.nulls, function(x) x@likelihood), TRUE)
   z <- try((mod@likelihood - mean(like.nulls))/sd(like.nulls), TRUE)
   
+  #song et al nestedness corrected with NODF max
+  
+NODF <- nestedness_NODF(web) # this calculates the raw value of NODF
+max_NODF <- max_nest(web) # this calculates the maximum value of NODF for that network
+combined_NODF <- comb_nest(web,NODF,max_NODF) # this calculates the combined NODF statistic as described in the manuscript
+  
+  
   #species-level c and z values for plants and poll
   
   cz<-try(czvalues(mod, level="higher", weighted=TRUE), TRUE)
@@ -124,12 +135,13 @@ for(i in 1:length(sites)){
                             ntw[19:21], ntw[28:29], ntw[40:43])
   out.site[n + 1,18] <- try(mod@likelihood, TRUE)
   out.site[n + 1,19] <- try(z, TRUE)
-  out.site[n + 1,20] <- try((ntw[3] - mean(ntw.null[3,1:100])/sd(ntw.null[3,1:100])), TRUE)
-  out.site[n + 1,21] <- try((ntw[9] - mean(ntw.null[9,1:100])/sd(ntw.null[9,1:100])), TRUE)
-  out.site[n + 1,22] <- try((ntw[12] - mean(ntw.null[12,1:100])/sd(ntw.null[12,1:100])), TRUE)
-  out.site[n + 1,23] <- try((ntw[13] - mean(ntw.null[13,1:100])/sd(ntw.null[13,1:100])), TRUE)
-  out.site[n + 1,24] <- try((ntw[16] - mean(ntw.null[15,1:100])/sd(ntw.null[15,1:100])), TRUE)
-  out.site[n + 1,25] <- try((ntw[18] - mean(ntw.null[16,1:100])/sd(ntw.null[16,1:100])), TRUE)
+  out.site[n + 1,20] <- try(combined_NODF, TRUE)
+  # out.site[n + 1,20] <- try((ntw[3] - mean(ntw.null[3,1:100])/sd(ntw.null[3,1:100])), TRUE)
+  # out.site[n + 1,21] <- try((ntw[9] - mean(ntw.null[9,1:100])/sd(ntw.null[9,1:100])), TRUE)
+  # out.site[n + 1,22] <- try((ntw[12] - mean(ntw.null[12,1:100])/sd(ntw.null[12,1:100])), TRUE)
+  # out.site[n + 1,23] <- try((ntw[13] - mean(ntw.null[13,1:100])/sd(ntw.null[13,1:100])), TRUE)
+  # out.site[n + 1,24] <- try((ntw[16] - mean(ntw.null[15,1:100])/sd(ntw.null[15,1:100])), TRUE)
+  # out.site[n + 1,25] <- try((ntw[18] - mean(ntw.null[16,1:100])/sd(ntw.null[16,1:100])), TRUE)
   
   
   
