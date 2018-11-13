@@ -40,6 +40,7 @@ library(BeeFunData)
 #setwd("~/Dropbox/Beefun/Beefun/functioning")
 setwd("C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning")
 
+
 d<-all_interactions
 f<-fruitset
 s<-seedset
@@ -292,6 +293,8 @@ f.agg$modularity<-out.site$modularity[match(f.agg$Site_ID, out.site$Site_id)]
 f.agg$nodf.song<-out.site$nodf.song[match(f.agg$Site_ID, out.site$Site_id)]
 f.agg$link_dens<-out.site$link_dens[match(f.agg$Site_ID, out.site$Site_id)]
 f.agg$Shannon<-out.site$Shannon[match(f.agg$Site_ID, out.site$Site_id)]
+f.agg$species.poll<-out.site$species.poll[match(f.agg$Site_ID, out.site$Site_id)]
+f.agg$species.pl<-out.site$species.pl[match(f.agg$Site_ID, out.site$Site_id)]
 
 #also match with plant species level network data
 f.agg$match<-paste(f.agg$Site_ID, f.agg$Plant.sp)
@@ -316,7 +319,7 @@ f.agg$z<-outsp.pl.site$z[match(f.agg$match, outsp.pl.site$match)]
 
 
 f.agg2<-na.omit(f.agg)
-#cor(f.agg2[,c(5:10, 12:19)])
+#cor(f.agg2[,c(5:13, 15:24)])
 
 
 library(glmmTMB)
@@ -328,7 +331,7 @@ library(jtools) #plot interactions
 
 #compare AIC of models with and without interaction
 
-m1.fr<-glmmTMB(mean.fruitset ~ nodf.song *  functional.comp.poll  +  (1|Plant.sp), family="gaussian", data=f.agg2)
+m1.fr<-glmmTMB(mean.fruitset ~ nodf.song *  functional.comp.poll +  (1|Plant.sp), family="gaussian", data=f.agg2)
 summary(m1.fr)
 
 
@@ -369,6 +372,33 @@ pl1
 
 
 ```
+
+
+
+Relationship between pollinator diversity, nestedness and functinal comp. Less diverse communities have higher levels of nestedness, hence redundancy while more diverse comm have higher levels of complementarity. 
+These variables are highly correlated so analyze separately. Communities with greater diversity of pollinators have less fruit set!! Opposite to BEF relationships!!! the negative effect of diversty on nestedness ends up having an effect on function! it would be interesting to see temporal dynamics here.
+
+```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
+
+m1.fr.div<-glmmTMB(mean.fruitset ~ species.poll +  (1|Plant.sp), family="gaussian", data=f.agg2)
+summary(m1.fr.div)
+
+
+pl.div<-ggplot(f.agg2,  aes(x=species.poll, y=mean.fruitset, color=Plant.sp))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        xlab("Pollinator species diversity") +      
+        ylab("Mean fruitset") + theme_bw() +  theme(text = element_text(size = 15), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1), face="bold")) + labs(col="Plant species")
+
+pl.div
+
+
+
+m1.fr.pl.div<-glmmTMB(mean.fruitset ~ species.pl +  (1|Plant.sp), family="gaussian", data=f.agg2)
+summary(m1.fr.pl.div)
+
+```
+
 #### Function as SEED NUMBER
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
@@ -412,6 +442,8 @@ s.agg$functional.comp.poll<-out.site$functional.comp.poll[match(s.agg$Site_ID, o
 s.agg$niche.overlap.plant<-out.site$niche.overlap.plant[match(s.agg$Site_ID, out.site$Site_id)]
 s.agg$modularity<-out.site$modularity[match(s.agg$Site_ID, out.site$Site_id)]
 s.agg$nodf.song<-out.site$nodf.song[match(s.agg$Site_ID, out.site$Site_id)]
+s.agg$species.poll<-out.site$species.poll[match(s.agg$Site_ID, out.site$Site_id)]
+s.agg$species.pl<-out.site$species.pl[match(s.agg$Site_ID, out.site$Site_id)]
 
 #also match with plant species level network data
 s.agg$match<-paste(s.agg$Site_ID, s.agg$Plant.sp)
@@ -430,7 +462,7 @@ s.agg$z<-outsp.pl.site$z[match(s.agg$match, outsp.pl.site$match)]
 #check for structure of data
 #hist(s.agg$mean.seednumber)
 
-m2.see<-glmmTMB(mean.seednumber ~ nodf.song *  functional.comp.poll +   (1|Plant.sp), family="poisson", data=s.agg)
+m2.see<-glmmTMB(mean.seednumber ~ nodf.song *  functional.comp.poll  +  (1|Plant.sp), family="poisson", data=s.agg)
 summary(m2.see)
 
 dredge(m2.see)
@@ -467,8 +499,8 @@ pl2<-ggplot(s.agg,  aes(x=functional.comp.poll, y=mean.seednumber, color=Plant.s
 
 pl2
 # 
-# interact_plot(m2.see, pred = "functional.comp.poll", modx = "nodf.song", interval = TRUE, plot.points = TRUE, int.type = "confidence",  facet.modx = TRUE, x.label = "Functional complementarity", y.label = "Mean seed number/fruit",
-#               modx.labels= c("Mean nestedness + 1 SD", "Mean nestedness", "Mean nestedness - 1 SD"))
+# interact_plot(m2.see, pred = "nodf.song", modx = "species.poll", interval = TRUE, plot.points = TRUE, int.type = "confidence",  facet.modx = TRUE, x.label = "Functional complementarity", y.label = "Mean seed number/fruit",
+#                modx.labels= c("Mean nestedness + 1 SD", "Mean nestedness", "Mean nestedness - 1 SD"))
 
 
 
@@ -535,10 +567,11 @@ pl7<-ggplot(s.agg3,  aes(x=nodf.song, y=mean.seednumber, color=Plant.sp))+
 s.agg4<-subset(s.agg2, s.agg2$Plant.sp!="Cistus albidus")
 
 
-m2.see.d<-glmmTMB(mean.seednumber ~ nodf.song *  functional.comp.poll  +  (1|Plant.sp), family="poisson", data=s.agg4)
+m2.see.d<-glmmTMB(mean.seednumber ~ nodf.song *  functional.comp.poll   +  (1|Plant.sp), family="poisson", data=s.agg4)
 summary(m2.see.d)
 
 dredge(m2.see.d)
+
 
 
 b3<-summary(m2.see.d)$coefficients$cond
@@ -580,6 +613,30 @@ pl9<-ggplot(s.agg4,  aes(x=functional.comp.poll, y=mean.seednumber, color=Plant.
 # 
 # summary(lm(functional.comp.poll ~ nodf.song, data=s.agg4))$r.squared
 ```
+
+
+Relationship between pollinator diversity AND SEED SET
+
+```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
+
+m1.seed.div<-glmmTMB( mean.seednumber ~ species.poll  +  (1|Plant.sp), family="poisson", data=s.agg4)
+summary(m1.seed.div)
+
+
+m1.seed.pl.div<-glmmTMB( mean.seednumber ~ species.pl  +  (1|Plant.sp), family="poisson", data=s.agg4)
+summary(m1.seed.pl.div)
+
+pl.div2<-ggplot(s.agg4,  aes(x=species.pl, y=mean.seednumber, color=Plant.sp))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        xlab("Plant species diversity") +      
+        ylab("Mean number of seeds/fruit") + theme_bw() +  theme(text = element_text(size = 15), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1), face="bold")) + labs(col="Plant species")
+
+pl.div2
+
+```
+
+
 
 #### fUNCTION AS SEED OR FRUIT WEIGHT
 
