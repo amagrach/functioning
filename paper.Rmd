@@ -646,7 +646,6 @@ pl.div2
 #hist(s.agg$mean.seedweight)
 
 
-
 m3<-glmmTMB(mean.seedweight ~ nodf.song *  functional.comp.poll +  (1|Plant.sp), family="poisson", data=s.agg)
 summary(m3)
 
@@ -940,6 +939,8 @@ f6$H2<-out.site$H2[match(f6$Site_ID, out.site$Site_id)]
 f6$functional.comp.poll<-out.site$functional.comp.poll[match(f6$Site_ID, out.site$Site_id)]
 f6$niche.overlap.plant<-out.site$niche.overlap.plant[match(f6$Site_ID, out.site$Site_id)]
 f6$modularity<-out.site$modularity[match(f6$Site_ID, out.site$Site_id)]
+f6$species.poll<-out.site$species.poll[match(f6$Site_ID, out.site$Site_id)]
+f6$species.pl<-out.site$species.pl[match(f6$Site_ID, out.site$Site_id)]
 
 
 
@@ -990,6 +991,24 @@ pl.th2<-ggplot(f6,  aes(x=functional.comp.poll, y=no_rows))+
 
 pl.th2
 
+
+
+#also analyze effect of diversity
+
+m.th.poll.div<-glmmTMB(no_rows ~ species.poll , family="gaussian", data=f6)
+summary(m.th.poll.div)
+
+m.th.pl.div<-glmmTMB(no_rows ~ species.pl , family="gaussian", data=f6)
+summary(m.th.pl.div)
+
+
+pl.th3<-ggplot(f6,  aes(x=species.pl, y=no_rows))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        xlab("Plant species diversity") +      
+        ylab("Evenness in fruitset") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
+
+pl.th3
 
 
 ```
