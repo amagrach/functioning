@@ -1,5 +1,5 @@
 ---
-title: "Paper"
+title: "Paper round 2"
 author: "Ainhoa Magrach"
 date: "6 November 2018"
 output: html_document
@@ -485,7 +485,7 @@ summary(m3.seed)
 
 
 library(bbmle)
-AICtab(m1.seed, m2.seed, m3.seed) #best model is m2
+AICtab(m1.seed, m2.seed, m3.seed) 
 
 #test for problems in residuals
 res<-simulateResiduals(m2.seed)
@@ -516,7 +516,7 @@ summary(m3.seedb)
 
 
 library(bbmle)
-AICtab(m1.seedb, m2.seedb, m3.seedb) #best model is m2
+AICtab(m1.seedb, m2.seedb, m3.seedb) 
 
 pl2b<-ggplot(s3,  aes(x=weigh_closeness, y=mean.seedn.sc, color=Plant.sp))+      
         geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
@@ -543,7 +543,7 @@ summary(m3.seedw)
 
 
 library(bbmle)
-AICtab(m1.seedw, m2.seedw, m3.seedw) #best model is m2
+AICtab(m1.seedw, m2.seedw, m3.seedw) 
 
 #test for problems in residuals
 res<-simulateResiduals(m2.seedw)
@@ -566,7 +566,7 @@ summary(m3.fruitw)
 
 
 library(bbmle)
-AICtab(m1.fruitw, m2.fruitw, m3.fruitw) #best model is m2
+AICtab(m1.fruitw, m2.fruitw, m3.fruitw) 
 
 #test for problems in residuals
 res<-simulateResiduals(m2.seedw)
@@ -608,7 +608,7 @@ m3.fr<-glmmTMB(mean.fruitset ~ tot.visits + species.poll + nodf.song +  function
 summary(m3.fr)
 
 library(bbmle)
-AICtab(m1.fr, m2.fr, m3.fr) #best model is m2
+AICtab(m1.fr, m2.fr, m3.fr) 
 
 #test for problems in residuals
 res<-simulateResiduals(m1.fr)
@@ -648,7 +648,7 @@ m3.seedcomm<-glmmTMB(mean.seedset ~ tot.visits + species.poll + nodf.song +  fun
 summary(m3.seedcomm)
 
 library(bbmle)
-AICtab(m1.seedcomm, m2.seedcomm, m3.seedcomm) #best model is m2
+AICtab(m1.seedcomm, m2.seedcomm, m3.seedcomm) 
 
 #test for problems in residuals
 res<-simulateResiduals(m1.seedcomm)
@@ -689,7 +689,7 @@ m3.fwcomm<-glmmTMB(mean.fruitweight ~ tot.visits + species.poll + nodf.song +  f
 summary(m3.fwcomm)
 
 library(bbmle)
-AICtab(m1.fwcomm, m2.fwcomm, m3.fwcomm) #best model is m2
+AICtab(m1.fwcomm, m2.fwcomm, m3.fwcomm) 
 
 #test for problems in residuals
 res<-simulateResiduals(m1.fwcomm)
@@ -719,7 +719,7 @@ m3.swcomm<-glmmTMB(mean.seedweight ~ tot.visits + species.poll + nodf.song +  fu
 summary(m3.swcomm)
 
 library(bbmle)
-AICtab(m1.swcomm, m2.swcomm, m3.swcomm) #best model is m2
+AICtab(m1.swcomm, m2.swcomm, m3.swcomm) 
 
 #test for problems in residuals
 res<-simulateResiduals(m1.swcomm)
