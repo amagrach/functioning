@@ -1,15 +1,10 @@
 ---
-title: "Paper"
-author: "Ainhoa Magrach"
-date: "6 November 2018"
-output: html_document
----
-
----
 title: Impact of interaction network structure on community-level plant reproductive success 
-author: "Magrach, A & Bartomeus, I"
+author: "Magrach, A, Molina, C, Bartomeus, I"
 date: "6 November 2018"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 
@@ -38,8 +33,8 @@ library(BeeFunData)
 
 
 #setwd("~/Dropbox/Beefun/Beefun/functioning")
-setwd("C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning")
-
+#setwd("C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning") #use rstudio projects and avoid wd issues.
+#I am uploading a Rproj. just cleick there to open it the next time.
 
 d<-all_interactions
 f<-fruitset
@@ -229,7 +224,9 @@ Here, we will define network structure at the community (whole-network level) fo
 ######################################################################################################################
 #calculate column with fruit set as
 
-#Fruit_Yes +  Fruit_Preyed + Fruit_Dispersed) / (Fruit_Yes + Fruit_No +Fruit_Preyed + Fruit_Dispersed) #Nacho this equation is wrong in your metadata!
+#Fruit_Yes +  Fruit_Preyed + Fruit_Dispersed) / (Fruit_Yes + Fruit_No + Fruit_Preyed + Fruit_Dispersed) #Nacho this equation is wrong in your metadata!
+
+
 
 #1st eliminate frutos perdidos
 wordList <- c("fruto perdido","frutos perdidos")
@@ -237,11 +234,11 @@ wordList <- c("fruto perdido","frutos perdidos")
 require(Hmisc)
 f2<-subset(f, Notes %nin% wordList)
 
-f2$tot.fruitset<-(f2$Fruit_Yes +  f2$Fruit_preyed + f2$Fruit_dispersed)/(f2$Fruit_Yes +f2$Fruit_No + f2$Fruit_preyed + f2$Fruit_dispersed)
+f2$tot.fruitset<-(f2$Fruit_Yes +  f2$Fruit_preyed + f2$Fruit_dispersed)/(f2$Fruit_Yes +f2$Fruit_No + f2$Fruit_preyed + f2$Fruit_dispersed) #why not use a binomial response and use both the numerator and the denominator? mmm... this will bias the estimates for plants producing larger number of seeds. 
 
 
 s2<-subset(s, Notes %nin% wordList)
-s2$tot.seedset
+s2$tot.seedset #this variable do not exists
 
 
 #check correlation between different variables
@@ -318,7 +315,7 @@ f.agg$z<-outsp.pl.site$z[match(f.agg$match, outsp.pl.site$match)]
 #hist(f.agg$mean.fruitset)
 
 
-f.agg2<-na.omit(f.agg)
+f.agg2<-na.omit(f.agg) #you are ommiting here also NA's on SE, which is consevartive.
 #cor(f.agg2[,c(5:13, 15:24)])
 
 
@@ -340,6 +337,8 @@ dredge(m1.fr)
 m1.fr2<-glmmTMB(mean.fruitset ~ nodf.song +   (1|Plant.sp), family="gaussian", data=f.agg2)
 summary(m1.fr2)
 
+m1.fr3<-glmmTMB(mean.fruitset ~ nodf.song + functional.comp.poll +   (1|Plant.sp), family="gaussian", data=f.agg2)
+summary(m1.fr3)
 
 #save results to table to include in paper
 
@@ -365,7 +364,7 @@ pl1<-ggplot(f.agg2,  aes(x=nodf.song, y=mean.fruitset, color=Plant.sp))+
         xlab("Nestedness") +      
         ylab("Mean fruitset") + theme_bw() +  theme(text = element_text(size = 15), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1), face="bold")) + labs(col="Plant species")
 
-pl1
+pl1 #This suggests random slopes... 
 
 #theme (legend.position= "none") +
 
@@ -1124,21 +1123,35 @@ mp$j<-paste(mp$web, mp$species)
 mp$mean.fruitset<-f4$mean.fruitset[match(mp$j, f4$j)]
 
 mp2<-subset(mp, mp$mean.fruitset!="NA")
-mp2$class[mp2$mean.fruitset>0.5]<-"high"
+mp2$class[mp2$mean.fruitset<0.75]<-"mid"
 mp2$class[mp2$mean.fruitset<0.5]<-"low"
+mp2$class[mp2$mean.fruitset>0.75]<-"high"
 
 
 
 # How many native and introduced species?
 mp2 <- mp2[order(mp2$class, decreasing = TRUE),]
 class_f <- table(mp2$class)
+#lots of empty positions. why?
+
+#test mcount(M = m, six_node = TRUE, normalise = TRUE)
+test <- mcount(M = webs[[1]], six_node = FALSE, normalise = TRUE)
+sum(test$nodes) #74 positions
+
+#see one position model
+plot(mp2$mean.fruitset ~ mp2$m2)
 
 
+pca <- prcomp(mp2[,3:48]) #there are two cases that break everything...
+biplot(pca)
+summary(pca)
 
+
+#Notes, before doing the NMDS wes should remove imposible positions (e.g. 1,3,5,7,... for pollinators.)
 # NMDS
-example_NMDS <- metaMDS(vegdist(mp2[,paste0("m",1:46)], method = "bray"), k=2, distance = "bray", trymax = 100)
+example_NMDS <- metaMDS(vegdist(mp2[,paste0("m",1:46)], method = "euclidian"), k=2, distance = "bray", trymax = 100)
 mds.fig <- ordiplot(example_NMDS, type = "none")
-colors=c(rep("darkorange2",class_f["low"]),rep("purple",class_f["high"]))
+colors=c(rep("yellow",class_f["low"]), rep("darkorange2",class_f["mid"]),rep("purple",class_f["high"]))
 treat <- mp2$class
 for(i in unique(treat)) {
   ordihull(example_NMDS$point[grep(i,treat),],draw="polygon",
@@ -1147,6 +1160,8 @@ with(mp2, legend("topright", legend = unique(mp2$class), bty = "n",
                 col = unique(colors), pch = 21, pt.bg = unique(colors)))
 points(mds.fig, "sites", pch = 19, col = "darkorange3", select = mp2$class == 
          "low")
+points(mds.fig, "sites", pch = 19, col = "yellow", select = mp2$class == 
+         "mid")
 points(mds.fig, "sites", pch = 19, col = "purple", select = mp2$class == 
          "high")
 
@@ -1155,10 +1170,12 @@ points(mds.fig, "sites", pch = 19, col = "purple", select = mp2$class ==
 #example_NMDS$species[order(example_NMDS$species[,"MDS2"]),]
 
 
-#permanova
+#permanova... we need to control for the web, right?
 
+adonis(mp2[,3:48]~ mean.fruitset, data=mp2, method = "euclidian", strata = mp2$web)
 adonis(mp2[,3:48]~ class, data=mp2, method = "bray")
 
-#no significant differences 
+
+#no significant differences at all.
 
 ```
