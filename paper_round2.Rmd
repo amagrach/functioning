@@ -1,5 +1,5 @@
 ---
-title: "Paper round 2"
+title: "Paper round 2 simplified"
 author: "Ainhoa Magrach"
 date: "6 November 2018"
 output: html_document
