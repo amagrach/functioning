@@ -1,6 +1,6 @@
 ---
 title: "Paper round 2 simplified"
-author: "Ainhoa Magrach"
+author: "Magrach, A, Molina, FP, Bartomeus, I"
 date: "6 November 2018"
 output: html_document
 bibliography: library.bib
@@ -8,7 +8,7 @@ bibliography: library.bib
 
 ---
 title: Impact of interaction network structure on community-level plant reproductive success 
-author: "Magrach, A & Bartomeus, I"
+author: "Magrach, A, Molina, FP, Bartomeus, I"
 date: "6 November 2018"
 output: html_document
 ---
@@ -966,7 +966,14 @@ points(mds.fig, "sites", pch = 19, col = "purple", select = mp2$class ==
 
 adonis(mp2[,3:48]~ mean.fruitset, data=mp2, method = "bray")
 
-#no significant differences 
+#permanova... we need to control for the web, right? not sure what you mean here, random effect?
+
+adonis(mp2[,3:48]~ mean.fruitset, data=mp2, method = "euclidean", strata = mp2$web)
+adonis(mp2[,3:48]~ class, data=mp2, method = "bray")
+
+
+#no significant differences at all.
+
 
 ```
 
