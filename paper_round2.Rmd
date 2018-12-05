@@ -361,6 +361,10 @@ f2$tot.visits<-d.vis$tot.visits[match(f2$match, d.vis$j)]
 f2$tot.visits[is.na(f2$tot.visits)]<-0
 
 f2$tot.visits.sc<-((f2$tot.visits-min(f2$tot.visits))/(max(f2$tot.visits)-min(f2$tot.visits)))  #scale number of visits
+head(f2)
+#why this is done? visits whould be all in the same scale already? 
+#If it is to correct for different atractiveness, you should scale as below (by plant)
+#If it is to scale the predictors and make estimates comparable, you should do that to all predictors.
 
 
 f2$niche.overlap<-out.niche.agg$mean.niche.over[match(f2$match, out.niche.agg$j)]
@@ -392,7 +396,7 @@ pairs.panels(f2[,c(31,27, 35, 37)])
 
 library(bbmle)
 AICtab(m1, m2, m3) #best model is m2
-#yes, but m3 is 0.6 AIC away... which is nothing...
+#yes, but m3 is 0.6 AIC away... which is nothing... and m1 with just one random is almost equal too!
 
 #test for problems in residuals
 res<-simulateResiduals(m2)
@@ -466,30 +470,36 @@ head(s2)
 s2$mean.seedn.sc<-((s2$mean.seedn-min(s2$mean.seedn))/(max(s2$mean.seedn)-min(s2$mean.seedn))) 
 #This scaling is not working like that. 1) scale() will do that for you. 2) you need to scale each plant in turn.
 library(dplyr)
-s2 %>% 
+s3 <- s2 %>% 
   group_by(Plant.sp) %>% 
-  
+  mutate(mean.seedn.sc = scale(mean.seedn, center = T, scale = T))
+dim(s2)
+dim(s3)
+head(s3)
 
+#FOR TESTING PUROSES I overwrite s2
+s2 <- s3
 
 h<-hist(s2$mean.seedn)
 h2<-hist(s2$mean.seedn.sc)
  
- m1.seed<-glmmTMB(mean.seedn.sc ~  norm_degree + tot.visits.sc +  (1|Site_ID) + (1|Site_ID), family="poisson", data=s2)
+ m1.seed<-glmmTMB(mean.seedn.sc ~  norm_degree + tot.visits.sc +  (1|Site_ID) + (1|Site_ID), family="gaussian", data=s2)
  summary(m1.seed)
 #Ojo, AIC changes if the second (1|Site_ID) is removed.
- m2.seed<-glmmTMB(mean.seedn.sc ~   weigh_closeness + niche.overlap + (1|Site_ID) , family="poisson", data=s2)
+ m2.seed<-glmmTMB(mean.seedn.sc ~   weigh_closeness + niche.overlap + (1|Site_ID) , family="gaussian", data=s2)
  summary(m2.seed)
 
-m3.seed<-glmmTMB(mean.seedn.sc ~  norm_degree  + tot.visits.sc + weigh_closeness + niche.overlap + (1|Site_ID), family="poisson", data=s2)
+m3.seed<-glmmTMB(mean.seedn.sc ~  norm_degree  + tot.visits.sc + weigh_closeness + niche.overlap + (1|Site_ID), family="gaussian", data=s2)
 summary(m3.seed)
 
 
 library(bbmle)
-AICtab(m1.seed, m2.seed, m3.seed) 
+AICtab(m1.seed, m2.seed, m3.seed) #2 is better, but all of them are pretty bad...
 
 #test for problems in residuals
 res<-simulateResiduals(m2.seed)
 plot(res, rank = TRUE)
+#residuals good with scaled and gaussian
 
 pl2<-ggplot(s2,  aes(x=weigh_closeness, y=mean.seedn.sc, color=Plant.sp))+      
         geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
@@ -501,7 +511,7 @@ pl2<-ggplot(s2,  aes(x=weigh_closeness, y=mean.seedn.sc, color=Plant.sp))+
 pl2
 
 #try removing Cistus ladanifer with very large values 
-#But this do not makes much sense, if they are scaled by species... 
+#But this do not makes much sense, if they are scaled by species... see above.
 
 s3<-subset(s2, s2$Plant.sp!="Cistus ladanifer")
 
@@ -544,7 +554,7 @@ summary(m3.seedw)
 
 
 library(bbmle)
-AICtab(m1.seedw, m2.seedw, m3.seedw) 
+AICtab(m1.seedw, m2.seedw, m3.seedw) #again, very similar (and bad) models.
 
 #test for problems in residuals
 res<-simulateResiduals(m2.seedw)
@@ -575,7 +585,7 @@ plot(res, rank = TRUE)
 
 
 ```
-
+[IB: I wonder if AIC is what we want here. Why compare models 1 and 2? One option is to present directly m3. Or m1 vs m3 maybe. I don't have a clear idea... skype?]
 ### Network-level
 #### FRUITSET
 We find that at the level of the whole communty, differences in average fruit set are driven particularly by the diversity of pollinator species. In this sense, we find that communities with greater pollinator diversity have lower values of fruit set but consistent higher values of other function aspects measured: seed number per fruit, fruit and seed weight. In contrast, we found that metrics accounting for the structure of interactions between plants and pollinators had little or no effect for functioning.
@@ -609,7 +619,8 @@ m3.fr<-glmmTMB(mean.fruitset ~ tot.visits + species.poll + nodf.song +  function
 summary(m3.fr)
 
 library(bbmle)
-AICtab(m1.fr, m2.fr, m3.fr) 
+AICtab(m1.fr, m2.fr, m3.fr) #m3 is as good!!!
+##I hate models... m2 nodf is sig, m3 fc is sig!! WHY!!! colineality issues?
 
 #test for problems in residuals
 res<-simulateResiduals(m1.fr)
@@ -627,6 +638,7 @@ pl3
 
 
 #seed number
+#How mean seed number is calculated?? scaled first would be better, right?
 
 library(plyr)
 
@@ -677,6 +689,7 @@ pl5<-ggplot(s.comm,  aes(x=tot.visits, y=mean.seedset))+
 pl5
 
 #fruit weight
+#How mean seed number is calculated?? scaled first would be better, right? At least if fruits vary in orders of magnitude.
 
 m1.fwcomm<-glmmTMB(mean.fruitweight ~ tot.visits + species.poll, family="gaussian", data=s.comm)
 summary(m1.fwcomm)
@@ -765,10 +778,13 @@ f4$fruit.max<-fr.max$mean.fruitset[match(f4$Plant.sp, fr.max$Plant.sp)]
 f4$fruit.prop<-f4$mean.fruitset/f4$fruit.max
 f5<-subset(f4, f4$fruit.prop>0.5)
 f5$no_rows<-rep(1, nrow(f5))
+head(f5)
+
+#NOTE TO SELF: Here is where we want to subsample 1 to 6 species per site to test the idea of increasing plants, complementarity increase.
 
 #for each site here is the number of sps whose fruitset exceeds 50% of maximum fruitset observed in the whole study area
 f6<- aggregate(no_rows ~ Site_ID, f5, length)
-
+head(f6)
 
 #join this with fruitset data used previously
 
@@ -796,7 +812,7 @@ m3.eq<-glmmTMB(no_rows ~ tot.visits + species.poll + nodf.song +  functional.com
 summary(m3.eq)
 
 library(bbmle)
-AICtab(m1.eq, m2.eq, m3.eq) 
+AICtab(m1.eq, m2.eq, m3.eq) #m3 as good almost
 
 #test for problems in residuals
 res<-simulateResiduals(m1.eq)
@@ -825,6 +841,7 @@ pl.th2
 Now look at motifs and indirect interactions. To this end, we compare the roles of plant species at each site with low (<0.5) and high (>0.5) fruit set. We calculate for each plant species at each site the sum-normalised roles of all plant species in motifs up to 5 nodes and plot them using NMDS. ALthough we find a large overlap between the roles of both types ofplant species, we do find that plant species with high fruit set tend to be located in the higher values of NMDS1 which is related to network positions in which a generalist plant species interacts with highly specialized pollinator partners (e.g, positions 16 and 46, see Fig. 1 in bmotif paper, Simmons et al preprint)
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
+#IB edited this in paper.Rmd
 #First attempt to load the data, etc...
 
 #prepare stuff-----
