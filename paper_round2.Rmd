@@ -1,20 +1,35 @@
 ---
+<<<<<<< HEAD
 title: "Impact of interaction network structure on community-level plant reproduction success"
 author: "Magrach, A, Molina, C, Bartomeus, I"
 date: "6 November 2018"
 output: html_document
 bibliography: library.bib
 editor options:
+=======
+title: "Impact of interaction network structure on community-level plant reproductive success"
+author: "Magrach, A, Molina, C, Bartomeus, I"
+output: html_document
+bibliography: library.bib
+editor_options: 
+>>>>>>> 4a45bf7d61c1c851ab41328bfc825a68bf59ea6f
   chunk_output_type: console
 ---
 
 # ABSTRACT
 
+<<<<<<< HEAD
 Natural ecosystems across the globe are increasingly suffering from the pressures of on-going global change. Pollinators, in particular, have been reported to decline in abundance and diversity in different parts of the world, with potential implications for many plant species given the dependence of 87.5% of plant species on pollinators for reproduction. Although a strong body of research has focused on pollinator visitation frequency and plant reproduction, most of these efforts have been done at the individual species level, largely ignoring community-level implications. Indeed, interaction network structure can affect pollinator functional roles, their visitation patterns to different plant species and ultimately the pollination service they deliver to plants. Thus, a major knowledge gap at the moment is a mechanistic understanding of how pollinator visitation and the structure of plant-pollinator visitation networks affect plant reproduction. Here, we use 16 well-resolved plant-pollinator networks from Mediterranean shrub ecosystems to evaluate how pollinator species diversity, community composition and interaction network structure affect plant reproduction for 15 species of plants. Further, we link pollinator visitation frequencies with the efficiency of individual pollinator species. To this end, we use data on fruit and seed set for all plant species as well as data on the efficiency of a single visit by different pollinator species on 12 of these plant species. This work represents one of the first efforts linking pollination visitation and plant reproduction from a community-wide perspective using a well-replicated dataset.  
 
 #INTRODUCTION
 Pollinators provide key services to plants by facilitating pollen flow between individuals. Given recent declining trends found for some pollinator species in some regions of the planet [@Potts2010], efforts have been devoted to study the effect of decreasing pollinator diversity and abundance for plant reproduction. Many of these approaches focus on pairwise plant-pollinator interactions [doi:10.1111/1365-2745.13055]. However, community-level analyses remain to be conducted. In particular, we have some knowledge on the effect of pollinator species richness for plant reproduction for one species of plant [@Albrecht2012]. We also have an understanding of the effects of pollinator diversity and niche complementarity between pollinators for plant reproductive success within an artificially-created community of 9 plant species  [@Frund2013]. Frund et al (2013) found that greater species diversity and functional complementarity led to greater average reproduction for the plant species surveyed. However, these approaches are based on experimental research, where plant and pollinator communities are artificially recreated within enclosures and thus may not reflect real-world conditions. In addition, other aspects of community structure and trade-offs between them remain to be explored.
 
+=======
+Natural ecosystems across the globe are increasingly suffering from the pressures of on-going global change. Pollinators, in particular, have been reported to decline in abundance and diversity in different parts of the world, with potential implications for many plant species given the dependence of 87.5% of plant species on pollinators for reproduction. Although a strong body of research has focused on pollinator visitation frequency and plant reproduction, most of these efforts have been done at the individual species level, largely ignoring community-level implications. Indeed, interaction network structure can affect pollinator functional roles, their visitation patterns to different plant species and ultimately the pollination service they deliver to plants. Thus, a major knowledge gap at the moment is a mechanistic understanding of how pollinator visitation and the structure of plant-pollinator visitation networks affect plant reproduction. Here, we use 16 well-resolved plant-pollinator networks from Mediterranean shrub ecosystems to evaluate how pollinator species diversity, community composition and interaction network structure affect plant reproduction for 19 species of plants. Further, we link pollinator visitation frequencies with the efficiency of individual pollinator species. To this end, we use data on fruit and seed set for all plant species as well as data on the efficiency of a single visit by different pollinator species on 12 of these plant species. This work represents one of the first efforts linking pollination visitation and plant reproduction from a community-wide perspective using a well-replicated dataset.  
+
+#INTRODUCTION
+Pollinators provide key services to plants by facilitating pollen flow between individuals. Given recent declining trends found for some pollinator species in some regions of the planet [@Potts2010], efforts have been devoted to study the effect of decreasing pollinator diversity and abundance for plant reproduction. Many of these approaches focus on pairwise plant-pollinator interactions [doi:10.1111/1365-2745.13055]. However, community-level analyses remain to be conducted. In particular, we have some knowledge on the effect of pollinator species richness for plant reproduction for one species of plant [@Albrecht2012]. We also have an understanding of the effects of pollinator diversity and niche complementarity between pollinators for plant reproductive success within an artificially-created community of 9 plant species  [@Frund2013]. Frund et al (2013) found that greater species diversity and functional complementarity led to greater average reproduction for the plant species surveyed. However, these approaches are based on experimental research, where plant and pollinator communities are artificially recreated within enclosures and thus may not reflect real-world conditions. In addition, other aspects of community structure and trade-offs between them remain to be explored. 
+>>>>>>> 4a45bf7d61c1c851ab41328bfc825a68bf59ea6f
 Indeed, we know that the diversity of pollinators visiting a plant (the degree in network terms) and the total number of visits they provide, have an important effect for reproductive success. However, we have yet to know whether these variables contribute more to plant reproductive success than others related to the position of a particular plant species within the wider plant community that hosts it. In particular, our study focuses on the importance of pollinator diversity and total number of visits for plant reproductive success in comparison to that of the plant´s position in the community. Specifically, niche overlap between plant species (which could give us a proxy for the existence of competition for pollination between plant species) and the position of the plant given by the connections it establishes with other species, e.g. its centrality within the network, where central species are those receiving the greatest number of connections from other species, could have an influence in a plant´s reproductive success.
 
 Furthermore, we do not know how the overall structure of a community, and the architecture of the network of interactions it hosts, affects the reproductive success of the whole community. In particular, one of the networks metrics that has received the most attention in the community ecology literature is that of nestedness. Nestedness is the property by which specialists interact with a subset of the species that generalists interact with. Although there is ongoing debate in the literature, some studies have found that more nested networks are more stable and resilient to perturbations because nestedness implies a certain level of redundancy and thus the possibility for functional replacement in the case of species loss. However, plant reproductive success depends on the delivery of conspecific pollen and thus of a certain level of specialization or niche divergence. Yet at present we do not know how the interplay between redundancy and complementarity determines reproductive success.
@@ -25,12 +40,17 @@ Our study aims to answer the following questions:
 
 # METHODS
 
+<<<<<<< HEAD
 Our study was conducted in SE Spain within the area of influence of Doñana National Park. Here, we surveyed 16 Mediterranean woodland patches. Each site was surveyed 7 times following a 100-m x 2 m transect for 30 mins. Along each transect we identified all plant species and the pollinators that legitimately visited them. In addition, within each site we evaluated fruit set, seed number per fruit and seed weight for several individuals belonging to 15 plant species. Not all plant species were present in all transects.
+=======
+Our study was conducted in SE Spain within the area of influence of Doñana National Park. Here, we surveyed 16 Mediterranean woodland patches. Each site was surveyed 7 times following a 100-m x 2 m transect for 30 mins. Along each transect we identified all plant species and the pollinators that legitimately visited them. In addition, within each site we evaluated fruit set, seed number per fruit and seed weight for several individuals belonging to 15 [in abstract you menton 19]() plant species. Not all plant species were present in all transects.
+>>>>>>> 4a45bf7d61c1c851ab41328bfc825a68bf59ea6f
 
 #DATA ANALYSES
 
 First, we checked for sampling completeness for the pollinator and the plant community as well as for plant-pollinator links using Chao 1 asymptotic species richness estimators. We first estimated the richness of pollinators, plants and plant–pollinator links accumulated as sampling effort increased up to 100% sampling coverage using package iNEXT. 
 
+<<<<<<< HEAD
 _Species-level_
 
 The data for all rounds was pooled to construct one plant-pollinator interaction network per site, for which we calculated a set of relevant network metrics. At the species level, we focused on: degree (i.e., number of pollinator species visiting a particular plant), total number of visits received, centrality, and average niche overlap between a focal species and other plant species in the community. We fit three models, (i) one including only the diversity of pollinator species and the total number of species, (ii) a model including metrics related to a plant´s position in the community and (iii) a model combining both sets of models. We then used information criterion methods to find the best model. We included plant species nested within site as random effect to account for non-independence of several individuals measured for the same plant species.
@@ -38,16 +58,33 @@ The data for all rounds was pooled to construct one plant-pollinator interaction
 _Network level_
 
 We followed the same logic at the community level, where we evaluated the importance of pollinator diversity and total visitation compared to that of network structure, in this case including nestedness and functional complementarity as metrics. In the case of nestedness we know it can be affected by network size. An approach to correct for this it to use null models and to compare null-model corrected nestedness values across different networks. However, this approach has the problem that z-scores depend on network size and connectance as shown by this recent paper by Song et al. What these authors propose is to use a normalized value of nestedness, and to control by the effect of connectance and network size, thus obtaining a new value of nestedness, NODFc, which is independent of network size and thus comparable across different networks. 
+=======
+__Species-level__
+
+The data for all rounds was pooled to construct one plant-pollinator interaction network per site, for which we calculated a set of relevant network metrics. At the species level, we focused on: degree (i.e., number of pollinator species visiting a particular plant), total number of visits recieved, centrality and average niche overlap between a focal species and other plant species in the community. We fit three models, one including only the diversity of pollinator species and the total number of species. One including only metrics related to a plant´s position in the community and a third one combining both sets of models and used information criterion methods to find the best model. We included plant species nested within site as random effect to account for non-independence of several individuals measured for the same plant species.
+[is seed set scaled across plants?]()
+
+__Network level__
+
+We followed the same logic at the community level, where we evaluated the importance of pollinator diversity and total visitation compared to that of network structure. Including in this case nestedness and functional complementarity as metrics. In the case of nestedness it is known that it can be biased by network size. One approach to correct for that is to use null-model and compare the null-corrcted netwedness values across different networks. However, this approach has the problem that the corrected z-scores values still depend on network size and connectance as shown by this recent paper by Song et al. What these authors propose is to use a normalized value of nestedness, and to control by the effect of connectance and network size, thus obtaining a new value of nestedness NODFc which is independent of network size and thus comparable across different networks. 
+>>>>>>> 4a45bf7d61c1c851ab41328bfc825a68bf59ea6f
 
 _Equity in reproductive success_
 
 Finally, we used the same framework to evaluate the contribution of the different variables we consider to equity in plant reproductive success across the community, by including as a response variable the number of plant species that produce 50% of fruit set recorded for our study area at each site. 
 
+[is seed set scaled across plants?]()
+
 
 #RESULTS
 
+<<<<<<< HEAD
 Within our transects we recorded 57 species of plants and 277 species of pollinators.
 Our sampling completeness analyses revealed that with our survey we were able to capture 18-62% of pollinator species (average= 35%), 47-98% for plant species (average= 78%) and 13-41% for plant-pollinator links (average=27%), in line with that obtained with other studies (e.g., Chacoff et al), yet slightly smaller in the case of pollinators given the great diversity of pollinators found in the Mediterranean region in particular and in the our study area, a hotspot of insect diversity.
+=======
+Within our transects we recorded 57 species of plants and 277 species of pollinators (HAY QUE MIRAR MORFOESPECIES! [IB: yes, but most should be identified to species level, to unique morphospecies. Ask Curro.]()).
+Our sampling completeness analyses revealed that with our survey we were able to capture 18-62% of pollinator species (average= 35%), 47-98% for plant species (average= 78%) and 13-41% for plant-pollinator links (average=27%), in line with that obtained with other studies (e.g., Chacoff et al), yet slightly smaller in the case of pollinators given the great diversity of pollinators found in the Mediterranean region in particular and in the our study area, a hotspot of insect diversity (?¿?).
+>>>>>>> 4a45bf7d61c1c851ab41328bfc825a68bf59ea6f
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=9}
 
@@ -359,6 +396,15 @@ f2$z<-outsp.pl.site$z[match(f2$match, outsp.pl.site$match)]
 f2$tot.visits<-d.vis$tot.visits[match(f2$match, d.vis$j)]
 f2$tot.visits[is.na(f2$tot.visits)]<-0
 
+<<<<<<< HEAD
+=======
+f2$tot.visits.sc<-((f2$tot.visits-min(f2$tot.visits))/(max(f2$tot.visits)-min(f2$tot.visits)))  #scale number of visits
+head(f2)
+#why this is done? visits whould be all in the same scale already? 
+#If it is to correct for different atractiveness, you should scale as below (by plant)
+#If it is to scale the predictors and make estimates comparable, you should do that to all predictors.
+
+>>>>>>> 4a45bf7d61c1c851ab41328bfc825a68bf59ea6f
 
 f2$niche.overlap<-out.niche.agg$mean.niche.over[match(f2$match, out.niche.agg$j)]
 
@@ -379,6 +425,7 @@ pairs.panels(f2[,c(31,27, 35, 37)])
  
  m1<-glmmTMB(tot.fruitset ~  norm_degree + tot.visits  + (1|Plant.sp/Site_ID) , family="gaussian", data=f2)
  summary(m1)
+ #why (1|Site_ID) is repeated?? and plant?
 
  m2<-glmmTMB(tot.fruitset ~   weigh_closeness + niche.overlap  + (1|Plant.sp/Site_ID) , family="gaussian", data=f2)
  summary(m2)
@@ -386,9 +433,13 @@ pairs.panels(f2[,c(31,27, 35, 37)])
  m3<-glmmTMB(tot.fruitset ~  norm_degree  + tot.visits + weigh_closeness + niche.overlap + (1|Plant.sp/Site_ID), family="gaussian", data=f2)
  summary(m3)
 
-
 library(bbmle)
+<<<<<<< HEAD
 AICtab(m1, m2, m3) 
+=======
+AICtab(m1, m2, m3) #best model is m2
+#yes, but m3 is 0.6 AIC away... which is nothing... and m1 with just one random is almost equal too!
+>>>>>>> 4a45bf7d61c1c851ab41328bfc825a68bf59ea6f
 
 #test for problems in residuals
 res<-simulateResiduals(m2)
@@ -459,6 +510,7 @@ s2$niche.overlap<-out.niche.agg$mean.niche.over[match(s2$match, out.niche.agg$j)
 #head(s2)
 
 #scale seed number
+<<<<<<< HEAD
 
 library(dplyr)
 s2_scaled <- s2 %>% group_by(Plant.sp) %>% mutate(mean.seedn = scale(mean.seedn, center = T, scale = T))
@@ -473,15 +525,42 @@ h<-hist(s2_scaled$mean.seedn)
  summary(m2.seed)
 
 m3.seed<-glmmTMB(mean.seedn ~  norm_degree  + tot.visits.sc + weigh_closeness + niche.overlap + (1|Plant.sp/Site_ID), family="gaussian", data=s2_scaled)
+=======
+head(s2)
+s2$mean.seedn.sc<-((s2$mean.seedn-min(s2$mean.seedn))/(max(s2$mean.seedn)-min(s2$mean.seedn))) 
+#This scaling is not working like that. 1) scale() will do that for you. 2) you need to scale each plant in turn.
+library(dplyr)
+s3 <- s2 %>% 
+  group_by(Plant.sp) %>% 
+  mutate(mean.seedn.sc = scale(mean.seedn, center = T, scale = T))
+dim(s2)
+dim(s3)
+head(s3)
+
+#FOR TESTING PUROSES I overwrite s2
+s2 <- s3
+
+h<-hist(s2$mean.seedn)
+h2<-hist(s2$mean.seedn.sc)
+ 
+ m1.seed<-glmmTMB(mean.seedn.sc ~  norm_degree + tot.visits.sc +  (1|Site_ID) + (1|Site_ID), family="gaussian", data=s2)
+ summary(m1.seed)
+#Ojo, AIC changes if the second (1|Site_ID) is removed.
+ m2.seed<-glmmTMB(mean.seedn.sc ~   weigh_closeness + niche.overlap + (1|Site_ID) , family="gaussian", data=s2)
+ summary(m2.seed)
+
+m3.seed<-glmmTMB(mean.seedn.sc ~  norm_degree  + tot.visits.sc + weigh_closeness + niche.overlap + (1|Site_ID), family="gaussian", data=s2)
+>>>>>>> 4a45bf7d61c1c851ab41328bfc825a68bf59ea6f
 summary(m3.seed)
 
 
 library(bbmle)
-AICtab(m1.seed, m2.seed, m3.seed) 
+AICtab(m1.seed, m2.seed, m3.seed) #2 is better, but all of them are pretty bad...
 
 #test for problems in residuals
 res<-simulateResiduals(m2.seed)
 plot(res, rank = TRUE)
+#residuals good with scaled and gaussian
 
 pl2<-ggplot(s2_scaled,  aes(x=weigh_closeness, y=mean.seedn, color=Plant.sp))+      
         geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
@@ -492,6 +571,37 @@ pl2<-ggplot(s2_scaled,  aes(x=weigh_closeness, y=mean.seedn, color=Plant.sp))+
 
 pl2
 
+<<<<<<< HEAD
+=======
+#try removing Cistus ladanifer with very large values 
+#But this do not makes much sense, if they are scaled by species... see above.
+
+s3<-subset(s2, s2$Plant.sp!="Cistus ladanifer")
+
+ 
+ m1.seedb<-glmmTMB(mean.seedn.sc ~  norm_degree + tot.visits.sc +  (1|Site_ID) + (1|Site_ID), family="poisson", data=s3)
+ summary(m1.seedb)
+
+ m2.seedb<-glmmTMB(mean.seedn.sc ~   weigh_closeness + niche.overlap + (1|Site_ID) , family="poisson", data=s3)
+ summary(m2.seedb)
+
+m3.seedb<-glmmTMB(mean.seedn.sc ~  norm_degree  + tot.visits.sc + weigh_closeness + niche.overlap + (1|Site_ID), family="poisson", data=s3)
+summary(m3.seedb)
+
+
+library(bbmle)
+AICtab(m1.seedb, m2.seedb, m3.seedb) 
+
+pl2b<-ggplot(s3,  aes(x=weigh_closeness, y=mean.seedn.sc, color=Plant.sp))+      
+        geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        xlab("Closeness centrality") +      
+        ylab("Seed number/fruit") + theme_bw()  + #theme (legend.position= "none") +
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+
+pl2b
+
+>>>>>>> 4a45bf7d61c1c851ab41328bfc825a68bf59ea6f
 #seed weight
 
 h<-hist(s2$mean.seedweight)
@@ -508,7 +618,7 @@ summary(m3.seedw)
 
 
 library(bbmle)
-AICtab(m1.seedw, m2.seedw, m3.seedw) 
+AICtab(m1.seedw, m2.seedw, m3.seedw) #again, very similar (and bad) models.
 
 #test for problems in residuals
 res<-simulateResiduals(m2.seedw)
@@ -539,7 +649,7 @@ plot(res, rank = TRUE)
 
 
 ```
-
+[IB: I wonder if AIC is what we want here. Why compare models 1 and 2? One option is to present directly m3. Or m1 vs m3 maybe. I don't have a clear idea... skype?]
 ### Network-level
 #### FRUITSET
 We find that at the level of the whole communty, differences in average fruit set are driven particularly by the diversity of pollinator species. In this sense, we find that communities with greater pollinator diversity have lower values of fruit set but consistent higher values of other function aspects measured: seed number per fruit, fruit and seed weight. In contrast, we found that metrics accounting for the structure of interactions between plants and pollinators had little or no effect for functioning.
@@ -573,7 +683,8 @@ m3.fr<-glmmTMB(mean.fruitset ~ tot.visits + species.poll + nodf.song +  function
 summary(m3.fr)
 
 library(bbmle)
-AICtab(m1.fr, m2.fr, m3.fr) 
+AICtab(m1.fr, m2.fr, m3.fr) #m3 is as good!!!
+##I hate models... m2 nodf is sig, m3 fc is sig!! WHY!!! colineality issues?
 
 #test for problems in residuals
 res<-simulateResiduals(m1.fr)
@@ -591,6 +702,7 @@ pl3
 
 
 #seed number
+#How mean seed number is calculated?? scaled first would be better, right?
 
 library(plyr)
 
@@ -641,6 +753,7 @@ pl5<-ggplot(s.comm,  aes(x=tot.visits, y=mean.seedset))+
 pl5
 
 #fruit weight
+#How mean seed number is calculated?? scaled first would be better, right? At least if fruits vary in orders of magnitude.
 
 m1.fwcomm<-glmmTMB(mean.fruitweight ~ tot.visits + species.poll, family="gaussian", data=s.comm)
 summary(m1.fwcomm)
@@ -729,10 +842,13 @@ f4$fruit.max<-fr.max$mean.fruitset[match(f4$Plant.sp, fr.max$Plant.sp)]
 f4$fruit.prop<-f4$mean.fruitset/f4$fruit.max
 f5<-subset(f4, f4$fruit.prop>0.5)
 f5$no_rows<-rep(1, nrow(f5))
+head(f5)
+
+#NOTE TO SELF: Here is where we want to subsample 1 to 6 species per site to test the idea of increasing plants, complementarity increase.
 
 #for each site here is the number of sps whose fruitset exceeds 50% of maximum fruitset observed in the whole study area
 f6<- aggregate(no_rows ~ Site_ID, f5, length)
-
+head(f6)
 
 #join this with fruitset data used previously
 
@@ -760,7 +876,7 @@ m3.eq<-glmmTMB(no_rows ~ tot.visits + species.poll + nodf.song +  functional.com
 summary(m3.eq)
 
 library(bbmle)
-AICtab(m1.eq, m2.eq, m3.eq) 
+AICtab(m1.eq, m2.eq, m3.eq) #m3 as good almost
 
 #test for problems in residuals
 res<-simulateResiduals(m1.eq)
@@ -789,6 +905,7 @@ pl.th2
 Now look at motifs and indirect interactions. To this end, we compare the roles of plant species at each site with low (<0.5) and high (>0.5) fruit set. We calculate for each plant species at each site the sum-normalised roles of all plant species in motifs up to 5 nodes and plot them using NMDS. ALthough we find a large overlap between the roles of both types ofplant species, we do find that plant species with high fruit set tend to be located in the higher values of NMDS1 which is related to network positions in which a generalist plant species interacts with highly specialized pollinator partners (e.g, positions 16 and 46, see Fig. 1 in bmotif paper, Simmons et al preprint)
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
+#IB edited this in paper.Rmd
 #First attempt to load the data, etc...
 
 #prepare stuff-----
