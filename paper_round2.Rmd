@@ -397,7 +397,7 @@ pairs.panels(f2[,23:29])
 library(lme4)
 library(lmerTest)
  
- m1<-glmer(tot.fruitset ~  norm_degree.sc + tot.visits.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=f2_scaled)
+ m1<-glmer(tot.fruitset ~  norm_degree.sc + tot.visits.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="gaussian", data=f2_scaled)
 
  summary(m1)
  
@@ -410,7 +410,7 @@ coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
 coefs
 
 
- m3<-glmer(tot.fruitset ~  norm_degree.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=f2_scaled)
+ m3<-glmer(tot.fruitset ~  norm_degree.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="gaussian", data=f2_scaled)
  
  summary(m3)
  
@@ -918,7 +918,7 @@ f7 <- subset(f6, f6$tot.visits.sc < 2)
  m1.eqb<-glm(no_rows ~  species.poll.sc + tot.visits.sc, family="gaussian", data=f7)
 
  summary(m1.eqb)
-
+ 
  
  
 pl.th2<-ggplot(f7,  aes(x=tot.visits.sc, y=no_rows))+      
