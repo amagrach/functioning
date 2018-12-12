@@ -928,6 +928,180 @@ pl.th2<-ggplot(f7,  aes(x=tot.visits.sc, y=no_rows))+
         theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
 
 pl.th2
+
+
+
+#Repeat with 75% threshold
+
+f75<-subset(f4, f4$fruit.prop>0.75)
+f75$no_rows<-rep(1, nrow(f75))
+head(f75)
+
+
+#for each site here is the number of sps whose fruitset exceeds 75% of maximum fruitset observed in the whole study area
+f75b<- aggregate(no_rows ~ Site_ID, f75, length)
+head(f75b)
+
+#join this with fruitset data used previously
+
+f75b$nodf.song<-out.site$nodf.song[match(f75b$Site_ID, out.site$Site_id)]
+f75b$functional.comp.poll<-out.site$functional.comp.poll[match(f75b$Site_ID, out.site$Site_id)]
+f75b$species.poll<-out.site$species.poll[match(f75b$Site_ID, out.site$Site_id)]
+f75b$tot.visits<-f.agg$tot.visits[match(f75b$Site_ID, f.agg$Site_ID)]
+
+#scale all variables
+
+f75b$nodf.song.sc <- scale(f75b$nodf.song, center = T, scale = T)
+f75b$functional.comp.poll.sc <- scale(f75b$functional.comp.poll, center = T, scale = T)
+f75b$species.poll.sc <- scale(f75b$species.poll, center = T, scale = T)
+f75b$tot.visits.sc <- scale(f75b$tot.visits, center = T, scale = T)
+
+
+library(lme4)
+library(lmerTest)
+ 
+ m1.eq.75<-glm(no_rows ~  species.poll.sc + tot.visits.sc, family="gaussian", data=f75b)
+
+ summary(m1.eq.75)
+ 
+ library(car)
+ vif(m1.eq.75)
+ 
+m3.eq.75<-glm(no_rows ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=f75b)
+ 
+ summary(m3.eq.75)
+ 
+ vif(m3.eq.75)
+ 
+#select best model based on AIC 
+library(bbmle)
+
+AICtab(m1.eq.75, m3.eq.75)
+
+#test for problems in residuals
+res<-simulateResiduals(m1.eq.75)
+plot(res, rank = TRUE)
+
+#and for 25% threshold
+
+f25<-subset(f4, f4$fruit.prop>0.25)
+f25$no_rows<-rep(1, nrow(f25))
+head(f25)
+
+
+#for each site here is the number of sps whose fruitset exceeds 25% of maximum fruitset observed in the whole study area
+f25b<- aggregate(no_rows ~ Site_ID, f25, length)
+head(f25b)
+
+#join this with fruitset data used previously
+
+f25b$nodf.song<-out.site$nodf.song[match(f25b$Site_ID, out.site$Site_id)]
+f25b$functional.comp.poll<-out.site$functional.comp.poll[match(f25b$Site_ID, out.site$Site_id)]
+f25b$species.poll<-out.site$species.poll[match(f25b$Site_ID, out.site$Site_id)]
+f25b$tot.visits<-f.agg$tot.visits[match(f25b$Site_ID, f.agg$Site_ID)]
+
+#scale all variables
+
+f25b$nodf.song.sc <- scale(f25b$nodf.song, center = T, scale = T)
+f25b$functional.comp.poll.sc <- scale(f25b$functional.comp.poll, center = T, scale = T)
+f25b$species.poll.sc <- scale(f25b$species.poll, center = T, scale = T)
+f25b$tot.visits.sc <- scale(f25b$tot.visits, center = T, scale = T)
+
+
+library(lme4)
+library(lmerTest)
+ 
+ m1.eq.25<-glm(no_rows ~  species.poll.sc + tot.visits.sc, family="gaussian", data=f25b)
+
+ summary(m1.eq.25)
+ 
+ library(car)
+ vif(m1.eq.25)
+ 
+m3.eq.25<-glm(no_rows ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=f25b)
+ 
+ summary(m3.eq.25)
+ 
+ vif(m3.eq.25)
+ 
+#select best model based on AIC 
+library(bbmle)
+
+AICtab(m1.eq.25, m3.eq.25)
+
+#test for problems in residuals
+res<-simulateResiduals(m1.eq.25)
+plot(res, rank = TRUE)
+
+
+
+##equity in seed number
+
+library(vegan)
+library(dplyr)
+
+
+s5 <- ddply(s4_scaled, c("Site_ID", "Plant.sp", "functional.comp.poll.sc", "nodf.song.sc", "species.poll.sc", "tot.visits.sc"), summarise,
+                         mean.seedset    = mean(mean.seedn))
+
+
+
+s5.max<-aggregate(.~ Plant.sp, s5, FUN=max)
+
+s5$seed.max<-s5.max$mean.seedset[match(s5$Plant.sp, s5.max$Plant.sp)]
+
+s5$seed.prop<-s5$mean.seedset/s5$seed.max
+s6<-subset(s5, s5$seed.prop>0.5)
+s6$no_rows<-rep(1, nrow(s6))
+head(s6)
+
+
+#for each site here is the number of sps whose seedset exceeds 50% of maximum seedset observed in the whole study area
+s7<- aggregate(no_rows ~ Site_ID, s6, length)
+head(s7)
+
+#join this with fruitset data used previously
+
+s7$nodf.song<-out.site$nodf.song[match(s7$Site_ID, out.site$Site_id)]
+s7$functional.comp.poll<-out.site$functional.comp.poll[match(s7$Site_ID, out.site$Site_id)]
+s7$species.poll<-out.site$species.poll[match(s7$Site_ID, out.site$Site_id)]
+s7$tot.visits<-f.agg$tot.visits[match(s7$Site_ID, f.agg$Site_ID)]
+
+#scale all variables
+
+s7$nodf.song.sc <- scale(s7$nodf.song, center = T, scale = T)
+s7$functional.comp.poll.sc <- scale(s7$functional.comp.poll, center = T, scale = T)
+s7$species.poll.sc <- scale(s7$species.poll, center = T, scale = T)
+s7$tot.visits.sc <- scale(s7$tot.visits, center = T, scale = T)
+
+
+library(lme4)
+library(lmerTest)
+ 
+ m1.eq.seed<-glm(no_rows ~  species.poll.sc + tot.visits.sc, family="gaussian", data=s7)
+
+ summary(m1.eq.seed)
+ 
+ library(car)
+ vif(m1.eq.seed)
+ 
+m3.eq.seed<-glm(no_rows ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=s7)
+ 
+ summary(m3.eq.seed)
+ 
+ vif(m3.eq)
+ 
+#select best model based on AIC 
+library(bbmle)
+
+AICtab(m1.eq.seed, m3.eq.seed)
+
+#test for problems in residuals
+res<-simulateResiduals(m1.eq.seed)
+plot(res, rank = TRUE)
+
+
+
 ```
 
 
@@ -1075,15 +1249,13 @@ points(mds.fig, "sites", pch = 19, col = "purple", select = mp2$class ==
 
 #permanova
 
-adonis(mp2[,3:48]~ mean.fruitset, data=mp2, method = "bray")
+adonis(mp2[,3:48]~ mean.fruitset / web, data=mp2, method = "euclidean")
 
-#permanova... we need to control for the web, right? not sure what you mean here, random effect?
+#permanova... 
 
 adonis(mp2[,3:48]~ mean.fruitset, data=mp2, method = "euclidean", strata = mp2$web)
 adonis(mp2[,3:48]~ class, data=mp2, method = "bray")
 
-
-#no significant differences at all.
 
 
 ```
