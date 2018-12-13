@@ -69,8 +69,22 @@ semPaths(fit,"std",layout = 'tree', edge.label.cex=.9, curvePivot = TRUE)
 
 
 
-ggcorr(f2_scaled[,c(14, 26:29)], nbreaks = 6, label = T, low = "red3", high = "green3", 
-       label_round = 2, name = "Correlation Scale", label_alpha = T, hjust = 0.75) +
-  ggtitle(label = "Correlation Plot") +
-  theme(plot.title = element_text(hjust = 0.6))
 
+
+#equity
+
+
+
+
+model <-'
+no_rows ~ species.poll.sc + tot.visits.sc + nodf.song.sc + 
+functional.comp.poll.sc
+'
+
+
+fit <- cfa(model, data = f6)
+summary(fit, fit.measures = TRUE, standardized=T,rsquare=T)
+
+semPaths(fit, 'std', layout = 'circle')
+
+semPaths(fit,"std",layout = 'tree', edge.label.cex=.9, curvePivot = TRUE)
