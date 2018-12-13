@@ -375,7 +375,8 @@ f2_scaled <- f2 %>% group_by(Plant.sp) %>% mutate(tot.visits.sc = scale(tot.visi
 #cor(f2[,23:29])
 
 library(psych)
-pairs.panels(f2[,23:29]) 
+dim(f2)
+pairs.panels(f2[,23:28]) 
 
 # function to look at variance inflation factors
  
@@ -421,14 +422,14 @@ coefs <- data.frame(coef(summary(m3)))
 # use normal distribution to approximate p-value
 coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
 coefs
- 
- 
+
 #select best model based on AIC 
 library(bbmle)
 
 AICtab(m1, m3) 
 
 #test for problems in residuals
+library(DHARMa)
 res<-simulateResiduals(m1)
 plot(res, rank = TRUE)
 
@@ -451,7 +452,6 @@ pl1b<-ggplot(f2_scaled,  aes(x=norm_degree.sc, y=tot.fruitset)) +
         theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
 
 pl1b
-
 
 ##ahora con seed set
 s<-seedset
@@ -563,7 +563,7 @@ library(lmerTest)
  # extract coefficients
 coefs <- data.frame(coef(summary(m1.seed.w)))
 # use normal distribution to approximate p-value
-coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs$p.z <- round(2 * (1 - pnorm(abs(coefs$t.value))),3)
 coefs
 
 
@@ -576,7 +576,7 @@ coefs
  # extract coefficients
 coefs <- data.frame(coef(summary(m3.seed.w)))
 # use normal distribution to approximate p-value
-coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs$p.z <- round(2 * (1 - pnorm(abs(coefs$t.value))), 3)
 coefs
  
  
@@ -604,7 +604,7 @@ library(lmerTest)
  # extract coefficients
 coefs <- data.frame(coef(summary(m1.fruit.w)))
 # use normal distribution to approximate p-value
-coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs$p.z <- round(2 * (1 - pnorm(abs(coefs$t.value))),3)
 coefs
 
 
@@ -617,7 +617,7 @@ coefs
  # extract coefficients
 coefs <- data.frame(coef(summary(m3.fruit.w)))
 # use normal distribution to approximate p-value
-coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs$p.z <- round(2 * (1 - pnorm(abs(coefs$t.value))),3)
 coefs
  
  
@@ -645,7 +645,7 @@ library(plyr)
 
 f.agg <- ddply(f2, c("Site_ID", "nodf.song", "functional.comp.poll", "species.poll"), summarise, tot.visits    = sum(tot.visits),
                          mean.fruitset = mean(tot.fruitset))
-
+#I see what you mean, no weghting for plant species... maybe is good doing it... mean on means? I don't think it will change much the result.
 
 #scale all variables to be able to compare effect sizes 
 
@@ -668,6 +668,7 @@ library(lmerTest)
  vif(m1.fruit.net)
  
 m3.fruit.net<-glm(mean.fruitset ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=f.agg)
+#note estimate of niche part do not overlap zero 0.06105  +-  0.03637 and it's moderatelly big.
  
  summary(m3.fruit.net)
  
@@ -676,7 +677,7 @@ m3.fruit.net<-glm(mean.fruitset ~  species.poll.sc + tot.visits.sc + nodf.song.s
 #select best model based on AIC 
 library(bbmle)
 
-AICtab(m1.fruit.net, m3.fruit.net)
+AICtab(m1.fruit.net, m3.fruit.net) #Almost as good. The take home message would be. If interested in predictions, go for simplicity. If interested in mechanisms, nich part is a mechanism to take into account.
 
 
 pl2<-ggplot(f.agg,  aes(x=species.poll.sc, y=mean.fruitset)) +    
@@ -686,6 +687,14 @@ pl2<-ggplot(f.agg,  aes(x=species.poll.sc, y=mean.fruitset)) +
         theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
 
 pl2
+
+pl2_ <-ggplot(f.agg,  aes(x=functional.comp.poll.sc, y=mean.fruitset)) +    
+        geom_point(size=4, color="darkgrey") + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        xlab("Niche complementariety") +      
+        ylab("Fruitset") + theme_bw()  + #theme (legend.position= "none") +
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+
+pl2_ #Well, moderate... without scaling it was more pronunced?
 
 #test for problems in residuals
 res<-simulateResiduals(m1.fruit.net)
@@ -888,7 +897,7 @@ library(lmerTest)
  vif(m1.eq)
  
 m3.eq<-glm(no_rows ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=f6)
- 
+ #nich estimate not overlaping zero: 0.6178     0.4354, second higher effect size!
  summary(m3.eq)
  
  vif(m3.eq)
@@ -896,12 +905,24 @@ m3.eq<-glm(no_rows ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functiona
 #select best model based on AIC 
 library(bbmle)
 
-AICtab(m1.eq, m3.eq)
+AICtab(m1.eq, m3.eq) #Almost equal... Again, for prediction, go with the simple, for mechanistic understanding, look into niche partitioning. 
+
+m3.eq_ <-glm(no_rows ~ functional.comp.poll.sc, family="gaussian", data=f6)
+ #Oh yeah. It works for doing my null simulation.
+ summary(m3.eq_)
 
 #test for problems in residuals
 res<-simulateResiduals(m1.eq)
 plot(res, rank = TRUE)
 
+
+pl.th_ <-ggplot(f6,  aes(x=functional.comp.poll.sc, y=no_rows))+      
+        geom_point(size=4, color="darkgrey") + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+        xlab("niche complementariety") +      
+        ylab("Equity in fruitset") + theme_bw() + 
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
+
+pl.th_ #oh yeah!
 
 pl.th<-ggplot(f6,  aes(x=tot.visits.sc, y=no_rows))+      
         geom_point(size=4, color="darkgrey") + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
