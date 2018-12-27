@@ -65,7 +65,7 @@ summary(fit, fit.measures = TRUE, standardized=T,rsquare=T)
 
 semPaths(fit, 'std', layout = 'circle')
 
-semPaths(fit,"std",layout = 'tree', edge.label.cex=.9, curvePivot = TRUE)
+semPaths(fit,"std",layout = 'tree', edge.label.cex=1.5, curvePivot = TRUE)
 
 
 
@@ -74,17 +74,16 @@ semPaths(fit,"std",layout = 'tree', edge.label.cex=.9, curvePivot = TRUE)
 #equity
 
 
-
+f6red <- f6[, c(1:2, 7:10)]
+colnames(f6red) <- c("Site", "Eq", "N", "F", "D", "V")
 
 model <-'
-no_rows ~ species.poll.sc + tot.visits.sc + nodf.song.sc + 
-functional.comp.poll.sc
-'
+Eq ~ D + V + N + F'
 
 
-fit <- cfa(model, data = f6)
+fit <- cfa(model, data = f6red)
 summary(fit, fit.measures = TRUE, standardized=T,rsquare=T)
 
 semPaths(fit, 'std', layout = 'circle')
 
-semPaths(fit,"std",layout = 'tree', edge.label.cex=.9, curvePivot = TRUE)
+semPaths(fit,"std",layout = 'tree', edge.label.cex=1.5, curvePivot = TRUE)

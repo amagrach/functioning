@@ -11,7 +11,7 @@ editor options:
 # ABSTRACT
 
 
-Natural ecosystems across the globe are increasingly suffering from the pressures of on-going global change. Pollinators, in particular, have been reported to decline in abundance and diversity in different parts of the world, with potential implications for many plant species given the dependence of 87.5% of plant species on pollinators for reproduction. Although a strong body of research has focused on pollinator visitation frequency and plant reproduction, most of these efforts have been done at the individual species level, largely ignoring community-level implications. Indeed, interaction network structure can affect pollinator functional roles, their visitation patterns to different plant species and ultimately the pollination service they deliver to plants. Thus, a major knowledge gap at the moment is a mechanistic understanding of how pollinator visitation and the structure of plant-pollinator visitation networks affect plant reproduction. Here, we use 16 well-resolved plant-pollinator networks from Mediterranean shrub ecosystems to evaluate how pollinator species diversity, community composition and interaction network structure affect plant reproduction for 15 species of plants. Further, we link pollinator visitation frequencies with the efficiency of individual pollinator species. To this end, we use data on fruit and seed set for all plant species as well as data on the efficiency of a single visit by different pollinator species on 12 of these plant species. This work represents one of the first efforts linking pollination visitation and plant reproduction from a community-wide perspective using a well-replicated dataset.  
+Natural ecosystems across the globe are increasingly suffering from the pressures of on-going global change, which leads to the local extinction of many species. In particular, pollinators have been reported to decline in abundance and diversity in different regions of the planet, with potential implications for the reproductive success of many plant species. Although a strong body of literature has focused on pollinator visitation frequencies and consequences for plant reproduction, most of these efforts have been done at the species level, focusing on pairwise plant-pollinator interactions, and largely ignoring community-level implications. Indeed, interaction network structure can affect pollinator functional roles, their visitation patterns to different plant species and ultimately the pollination service they deliver to plants. Thus, a major knowledge gap at the moment is a mechanistic understanding of how pollinator visitation and the structure of plant-pollinator visitation networks affect plant reproduction. Here, we use 16 well-resolved plant-pollinator networks from Mediterranean shrub ecosystems to evaluate how pollinator species diversity, community composition and interaction network structure affect plant reproduction for 15 species of plants. Further, we link pollinator visitation frequencies with the efficiency of individual pollinator species. To this end, we use data on fruit and seed set for all plant species as well as data on the efficiency of a single visit by different pollinator species on 12 of these plant species. This work represents one of the first efforts linking pollination visitation and plant reproduction from a community-wide perspective using a well-replicated dataset.  
 
 #INTRODUCTION
 Pollinators provide key services to plants by facilitating pollen flow between individuals. Given recent declining trends found for some pollinator species in some regions of the planet [@Potts2010], efforts have been devoted to study the effect of decreasing pollinator diversity and abundance for plant reproduction. Many of these approaches focus on pairwise plant-pollinator interactions [doi:10.1111/1365-2745.13055]. However, community-level analyses remain to be conducted. In particular, we have some knowledge on the effect of pollinator species richness for plant reproduction for one species of plant [@Albrecht2012]. We also have an understanding of the effects of pollinator diversity and niche complementarity between pollinators for plant reproductive success within an artificially-created community of 9 plant species  [@Frund2013]. Frund et al (2013) found that greater species diversity and functional complementarity led to greater average reproduction for the plant species surveyed. However, these approaches are based on experimental research, where plant and pollinator communities are artificially recreated within enclosures and thus may not reflect real-world conditions. In addition, other aspects of community structure and trade-offs between them remain to be explored.
@@ -900,10 +900,6 @@ m3.eq<-glm(no_rows ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functiona
  #nich estimate not overlaping zero: 0.6178     0.4354, second higher effect size!
  summary(m3.eq)
  
-  
-m3.eq<-glm(no_rows ~  tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=f6)
- 
- summary(m3.eq)
  
  vif(m3.eq)
  
@@ -923,7 +919,7 @@ plot(res, rank = TRUE)
 
 pl.th_ <-ggplot(f6,  aes(x=functional.comp.poll.sc, y=no_rows))+      
         geom_point(size=4, color="darkgrey") + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
-        xlab("niche complementariety") +      
+        xlab("Functional complementarity") +      
         ylab("Equity in fruitset") + theme_bw() + 
         theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
 
@@ -937,13 +933,6 @@ pl.th<-ggplot(f6,  aes(x=tot.visits.sc, y=no_rows))+
 
 pl.th
 
-pl.th.fun<-ggplot(f6,  aes(x=functional.comp.poll.sc, y=no_rows))+      
-        geom_point(size=4, color="darkgrey") + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
-        xlab("Functional complementarity") +      
-        ylab("Equity in fruitset") + theme_bw() + 
-        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
-
-pl.th.fun
 
 #check whether it is driven by that one point with large number of visits
 
