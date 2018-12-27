@@ -1127,6 +1127,145 @@ plot(res, rank = TRUE)
 
 ```
 
+Now, we ask if the effect of niche complementariety increases with the number of species considered in the network. We expect that for any single species, the effect should be almost zero (as shown in our single species analysis above), but when you take into account up to 6 species, network metrics start to be important (see also above the community level results). This implies that if we would be able to measure reproductive success on all plant species in the community in all networks (not done for effort constrains) the effects of network configuartion may be even more prevalent. To test this, we ran a simple simulation where we first increase randomly the number of selected species per network and calculate the equitativity for each run. Instead of drawing random plants for each run, for each plant number level and network we test all possible combinations, as this number is low (n = 63 possible combiations overall for the network with the largest dataset) and increasing sampling events in our simulation would only result in repeated combinations. Second, we test the overall relation between equitativity in fruit set and niche complementariety in our simulated communities. To this end, for each species number level, we randomly combine the generated equitativity values across the 16 communities as to obtain one random value per species. Finally, for each of such combinations we calculated the estimate of equitativity in relation with niche partitioning and average all estimates from 1000 simulated combinations per number of plants considered. We expect that the more plants considered, the larger are the resulting average estimates. Note that We only interpret the mean effects, as the variance among different plant number of species depends on the initial number of combinations.
+
+
+
+```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
+
+library(vegan)
+library(dplyr)
+
+f2$Plant.sp<-paste(f2$Plant_genus, f2$Plant_species)
+f3<-f2[,c(1,13:14)]
+
+f4 <- ddply(f3, c("Site_ID", "Plant.sp"), summarise,
+                         mean.fruitset    = mean(tot.fruitset))
+
+table(f4$Plant.sp)
+#Astragalus lusitanicus and Cistus albidus is causing problems later on. It has a very low fruit set, but as there is only one value, when correcting for max fruit set, gets a value of 1. Both are in Cotito... This is problematic. Similar with Anchusa azurea. 
+
+#I am removing them here.
+f4 <- subset(f4, !Plant.sp %in% c("Astragalus lusitanicus", "Cistus albidus", "Anchusa azurea"))
+#Alternative, we use raw values (not dividing by max.)
+
+#Ainhoa, another question, this is a mean per species, right? So, for some species we may have more than one value. 
+
+
+#f4
+
+fr.max<-aggregate(.~ Plant.sp, f4, FUN=max)
+
+f4$fruit.max<-fr.max$mean.fruitset[match(f4$Plant.sp, fr.max$Plant.sp)]
+
+f4$fruit.prop<-f4$mean.fruitset/f4$fruit.max
+head(f4) #this is ok, I guess, but imply we are correcting for differences in production across plants. 
+
+#Quick dirty fix to see if things change a lot for uncorrected values
+#f4$fruit.prop <- f4$mean.fruitset
+  
+#1) First let's calculate all combinations of 1,2,3,4,5,6 species per network.
+combinatorials_all <-  matrix(ncol = 5, nrow = 1, NA) 
+colnames(combinatorials_all) <- c("SiteID", "Plant_number_level", "iteration", "equitativity", "niche")
+uniqueSite_ID <- unique(f4$Site_ID)
+for(k in 1:length(uniqueSite_ID)){ #sites
+  Site_temp <- subset(f4, Site_ID == uniqueSite_ID[k]) #1:SiteID
+  n <- length(Site_temp$Plant.sp)
+  combinatorials <- matrix(ncol = 5, nrow = 1, NA) #flexible
+  colnames(combinatorials) <- c("SiteID", "Plant_number_level", "iteration", "equitativity", "niche")
+  combinatorials <- as.data.frame(combinatorials)
+  for (i in 1:n){ #levels
+    combinatorials_1 <- combn(x = Site_temp$Plant.sp, m = i) #1:n
+    for (j in 1:ncol(combinatorials_1)){ #different combinations
+      temp1 <- Site_temp[which(Site_temp$Plant.sp %in% combinatorials_1[,j]),]
+      combinatorials_2 <- subset(temp1, temp1$fruit.prop > 0.5)
+      if(dim(combinatorials_2)[1] == 0) {
+        combinatorials_2 <- temp1
+        combinatorials_2$no_rows <- 0
+      } else{
+        combinatorials_2$no_rows<-rep(1, nrow(combinatorials_2))
+      }
+      #head(combinatorials_2)
+      #for each site here is the number of sps whose fruitset exceeds 50% of maximum fruitset observed in the whole study area
+      combinatorials_3 <- aggregate(no_rows ~ Site_ID, combinatorials_2, sum)
+      #head(combinatorials_3)
+      combinatorials_3$functional.comp.poll <- out.site$functional.comp.poll[match(combinatorials_3$Site_ID, out.site$Site_id)]
+      #now save for later.
+      index <- dim(combinatorials)[1]
+      combinatorials[index+1,1] <-  as.character(combinatorials_3$Site_ID) #1:SiteID
+      combinatorials[index+1,2] <-  i #Plant number level
+      #combinatorials[index+1,3] <-    #"iteration" let's asume we don' care, but would be good for unit testing
+      combinatorials[index+1,4] <- combinatorials_3$no_rows/i #above threshold in %
+      combinatorials[index+1,5] <-  combinatorials_3$functional.comp.poll #nich comp value...    
+    } #close different combinations
+  } #close levels
+  combinatorials_all <- rbind(combinatorials_all, combinatorials[-1,])
+} #close sites
+
+combinatorials_all <- combinatorials_all[-1,]
+
+#plot overall (asi a saco)
+
+scatter.smooth(combinatorials_all$equitativity ~ combinatorials_all$niche) #no relationship, good
+
+#now try overall, per level.
+estimate <- rep(NA,6)
+for (i in unique(combinatorials_all$Plant_number_level)){
+  temp <- subset(combinatorials_all, Plant_number_level == i)
+  m <- lm(temp$equitativity ~ temp$niche)
+  plot(temp$equitativity ~ temp$niche) 
+  abline(m)
+  estimate[i] <- m$coefficients[2]
+  }
+
+plot(unique(combinatorials_all$Plant_number_level) , estimate, las = 1,
+     ylab = "importance of niche partitioning", xlab = "number of plants considered")
+
+# I think this is a true pattern, as the for the cnetral limit theorem a mean of means should equal the grand mean, but worth check it.
+
+#now we subsample 16 combinations at a time 100 timeas and make the average.
+estimate_i <- data.frame(level = NA, estimate = NA)
+estimate_k <- data.frame(level = NA, estimate = NA)
+head(combinatorials_all)
+for (i in 1:length(unique(combinatorials_all$Plant_number_level))){ # over levels
+  temp <- subset(combinatorials_all, Plant_number_level == unique(combinatorials_all$Plant_number_level)[i])
+  for(k in 1:100){ #iterations
+    value <- data.frame(site = NA, eq = NA, nich = NA)
+    for(j in 1:length(unique(temp$SiteID))){ # over sites
+      temp2 <- subset(temp, SiteID == unique(temp$SiteID)[j]) #why only one record at Elpinar??
+      value_temp <- temp2[sample(x = 1:nrow(temp2), 1),]
+      value[j,1] <- value_temp$SiteID
+      value[j,2] <- value_temp$equitativity
+      value[j,3] <- value_temp$niche
+    } #close sites
+    m <- lm(value$eq ~ value$nich)
+    #plot(value$eq ~ value$nich)
+    estimate_k[k,1] <- i
+    estimate_k[k,2] <- m$coefficients[2]  
+  } #close iteration
+  #unique(estimate_k) #only 5 unique ombinations for n = 5. All negative. highly influenced by one data point of low niche part and equ = 1. "CotitodeSantaTeresa"
+  #subset(f4, Site_ID == "CotitodeSantaTeresa") #Super high values!
+  estimate_mean <- aggregate(estimate ~ level, estimate_k, mean)
+  estimate_i[i,1] <- estimate_mean$level
+  estimate_i[i,2] <- estimate_mean$estimate
+  }
+
+estimate_i
+
+plot(estimate_i$level, estimate_i$estimate, las = 1,
+     ylab = "importance of niche partitioning", xlab = "number of plants considered")
+#we had an issue for n = 5 ... this is cause by cotito de santa teresa having a huge influence when only 7 datasets are used. Once This is fixed, the plot looks nice. It's a shame that with 5 and 6 plants it asimptotes, but on the other hand, for 6 plants we only have very few sites.
+
+#One option is removing n = 6 from the simulation, as there is only one model for n = 6, and hence, while all other models estimate better the uncertainty on plant choice, the last model we have just 4 communities.
+
+
+#Ainhoa, this akes me think that when calculating thresholds, sites with 6 plants can score up to 6, but sites with 4 sites can oscar max = 4. I corrected for this doing % above threshold, and no number. Worth doing the same in the above models.
+
+#I only did it for fruit set.... no seeds, no weight...
+
+```
+
+
 
 Now look at motifs and indirect interactions. To this end, we compare the roles of plant species at each site with low (<0.5) and high (>0.5) fruit set. We calculate for each plant species at each site the sum-normalised roles of all plant species in motifs up to 5 nodes and plot them using NMDS. ALthough we find a large overlap between the roles of both types ofplant species, we do find that plant species with high fruit set tend to be located in the higher values of NMDS1 which is related to network positions in which a generalist plant species interacts with highly specialized pollinator partners (e.g, positions 16 and 46, see Fig. 1 in bmotif paper, Simmons et al preprint)
 
