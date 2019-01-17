@@ -1,6 +1,6 @@
 ---
 title: "Impact of interaction network structure on community-level plant reproduction success"
-author: "Magrach, A, Molina, C, Bartomeus, I"
+author: "Magrach, A, Molina, FP, Bartomeus, I"
 date: "6 November 2018"
 output: html_document
 bibliography: library.bib
@@ -8,50 +8,118 @@ editor options:
   chunk_output_type: console
 ---
 
+------------------------------------------------------------------------------------------------
+To be potentially submitted to ECOLOGY LETTERS as a Letter: maximum of 5000 words and 6 figures, tables or text boxes. 
+The abstract page should contain a short summary not exceeding 150 words for Letters.
+
+III. Main text (Sections b-d required for Letters only)
+(a) Introduction. The introduction should summarize briefly the background and aims, and end with a very brief statement of what has been achieved by the work.
+
+(b) Material and methods. This section should contain sufficient detail so that all procedures can be repeated (in conjunction with cited references). A checklist is provided so that authors can check that their methods report details which our editors regard as essential. This checklist is available here. Where specific equipment and materials are named, the manufacturer's name, city and country should be given (generally in parentheses after first mention).
+
+(c) Results. The Results section should present the experiments that support the conclusions to be drawn later in the Discussion. The Results section should conform to a high standard of rigour. Extended lines of inference, arguments or speculations should not be placed in the Results.
+
+(d) Discussion. The Discussion section should be separate from the Results section. It allows authors to propose their interpretation of the results, and to suggest what they might mean in a wider context. It should end with a clear statement of the main conclusions of the research, and a clear explanation of their importance and relevance.
+
+(e) Acknowledgements. Acknowledgements should be brief and concise.
+
+(f) References. See below for detailed information to in-text citations and Reference list.]
+
+
+---------------------------------------------------------------------------------------------------------
+
+Title: Impact of interaction network structure on community-level plant reproduction success
+
+Ainhoa Magrach, Francisco de Paula Molina, Ignasi Bartomeus
+
+Short running title: Network structure effects on function
+
+Keywords: nestedness, functional complementary, fruitset, pollination, plant-pollinator interaction
+
+Type of article: Letter
+
+Words in Abstract: 149 words
+
+Words in main text (excluding abstract, acknowledgements, references, table and figure legends):
+
+Words in text boxes: 
+
+Number of references:
+
+Number of figures, tables and text boxes:
+
+Corresponding author: ainhoa.magrach@bc3research.org, nacho.bartomeus@gmail.com
+
+
+
 # ABSTRACT
 
-
-Natural ecosystems across the globe are increasingly suffering from the pressures of on-going global change, which leads to the local extinction of many species. In particular, pollinators have been reported to decline in abundance and diversity in different regions of the planet, with potential implications for the reproductive success of many plant species. Although a strong body of literature has focused on pollinator visitation frequencies and consequences for plant reproduction, most of these efforts have been done at the species level, focusing on pairwise plant-pollinator interactions, and largely ignoring community-level implications. Indeed, interaction network structure can affect pollinator functional roles, their visitation patterns to different plant species and ultimately the pollination service they deliver to plants. Thus, a major knowledge gap at the moment is a mechanistic understanding of how pollinator visitation and the structure of plant-pollinator visitation networks affect plant reproduction. Here, we use 16 well-resolved plant-pollinator networks from Mediterranean shrub ecosystems to evaluate how pollinator species diversity, community composition and interaction network structure affect plant reproduction for 15 species of plants. Further, we link pollinator visitation frequencies with the efficiency of individual pollinator species. To this end, we use data on fruit and seed set for all plant species as well as data on the efficiency of a single visit by different pollinator species on 12 of these plant species. This work represents one of the first efforts linking pollination visitation and plant reproduction from a community-wide perspective using a well-replicated dataset.  
+Declines in pollinator diversity and abundance have been reported across different regions, with implications for the reproductive success of many plant species. However, research has targeted the consequences for individual plant species, particularly focusing on pairwise plant-pollinator interactions, and largely overlooking community-level dynamics. Yet species do not interact in isolation, they are embedded within larger networks whose structure can affect pollinator functional roles and, ultimately, the pollination service they deliver to plants. Here, we present one of the first efforts linking pollinator visitation and plant reproduction from a community-wide perspective using a well-replicated dataset encompassing 16 well-resolved networks and data on reproductive success for 19 plant species from Mediterranean shrub ecosystems. We find that for prediction purposes, information on simple visitation metrics is sufficient. Contrastingly, a mechanisitic understanding of the pathways through which differences in pollinator diversity translate into changes in reproductive success, requires additional information on network structure. 
 
 #INTRODUCTION
-Pollinators provide key services to plants by facilitating pollen flow between individuals. Given recent declining trends found for some pollinator species in some regions of the planet [@Potts2010], efforts have been devoted to study the effect of decreasing pollinator diversity and abundance for plant reproduction. Many of these approaches focus on pairwise plant-pollinator interactions [doi:10.1111/1365-2745.13055]. However, community-level analyses remain to be conducted. In particular, we have some knowledge on the effect of pollinator species richness for plant reproduction for one species of plant [@Albrecht2012]. We also have an understanding of the effects of pollinator diversity and niche complementarity between pollinators for plant reproductive success within an artificially-created community of 9 plant species  [@Frund2013]. Frund et al (2013) found that greater species diversity and functional complementarity led to greater average reproduction for the plant species surveyed. However, these approaches are based on experimental research, where plant and pollinator communities are artificially recreated within enclosures and thus may not reflect real-world conditions. In addition, other aspects of community structure and trade-offs between them remain to be explored.
 
-Indeed, we know that the diversity of pollinators visiting a plant (the degree in network terms) and the total number of visits they provide, have an important effect for reproductive success. However, we have yet to know whether these variables contribute more to plant reproductive success than others related to the position of a particular plant species within the wider plant community that hosts it. In particular, our study focuses on the importance of pollinator diversity and total number of visits for plant reproductive success in comparison to that of the plant´s position in the community. Specifically, niche overlap between plant species (which could give us a proxy for the existence of competition for pollination between plant species) and the position of the plant given by the connections it establishes with other species, e.g. its centrality within the network, where central species are those receiving the greatest number of connections from other species, could have an influence in a plant´s reproductive success.
+Pollinators provide key services to plants by facilitating pollen flow between individuals. The recent declining trends found for some pollinator species in some regions of the planet ([@Potts2010], although see [@Herrera2018] for opposite trends), have led many researchers to focus on the functional impacts of these changes in pollinator diversity, with a major focus being placed on the consequences for plant reproductive success [@Biesmeijer2006]. 
 
-Furthermore, we do not know how the overall structure of a community, and the architecture of the network of interactions it hosts, affects the reproductive success of the whole community. In particular, one of the networks metrics that has received the most attention in the community ecology literature is that of nestedness. Nestedness is the property by which specialists interact with a subset of the species that generalists interact with. Although there is ongoing debate in the literature, some studies have found that more nested networks are more stable and resilient to perturbations because nestedness implies a certain level of redundancy and thus the possibility for functional replacement in the case of species loss. However, plant reproductive success depends on the delivery of conspecific pollen and thus of a certain level of specialization or niche divergence. Yet at present we do not know how the interplay between redundancy and complementarity determines reproductive success.
-Finally, average values of reproductive success at the community level can be driven to a large degree by one single plant species. Yet, what will determine the persistence of a diverse plant community is the presence of some sort of “equity” in reproductive success across the whole community. We thus also focus on the effect of community structure for equity in reproductive success across the plant community.
+Many research efforts have targeted the reproductive success of individual plant species [@Albrecht2012a; @doi:10.1111/1365-2745.13055], and used relatively simple visitation metrics (e.g., the number of pollinator species that visit a plant or the number of visits they perform) to explain differences found  across different plant individuals. Some have gone a step further by including information on the efficiency of these visits, thus adding a measure of quality to the pollination services (REF). Contrastingly, community-level analyses remain scarce [@Bennett2018]. Yet plants and pollinators do not interact in isolation, but rather are embedded within larger networks of interactions encompassing other plant and pollinator species. We are thus missing an important part of the picture, which includes the direct interactions between the whole ensemble of plants and pollinators, but also the indirect ones between species within one guild (e.g., plants) through their shared resources [@Lazaro2014]. Understanding how changes in pollinator diversity affect whole plant assemblages is thus a major challenge that requires attention.
 
-Our study aims to answer the following questions: How do direct visitation measures and community structure affect ecosystem functioning (i) at the species and (ii) community level as well as equity in functioning at the community level?
+The few pollination studies that have analysed the effects of changing pollinator diversity for reproductive success at the community level, have done so using mainly experimental setups. As an example, a study that experimentally recreated a plant community with 9 plant species and differing levels of pollinator diversity across different enclosures, found that not only pollinator species diversity had an effect for average reproductive success, but also they found that the structure that shaped the community had an important effect [@Frund2013]. In particular, these authors found that functional complementarity between pollinators, in terms of plant species and temperature coverage (a measure of the overlap in the use of plant resources and optimum temperature activity) had a positive effect for average seed set at the community level [@Frund2013]. This provides added information on the effects of biodiversity for ecosystem functioning, suggesting that not only the diversity of species present but also the diversity of roles and ways in which a community is structured are determinant factors.
+
+Indeed, theoretical research has long suggested that the structure of a community has an effect for ecosystem functioning (reviewed in [@Thompson2012]). This line of research, primarliy driven by food-web studies, has greatly advanced theory, but these ideas have not yet been tested with empirical data. Specifically, a major knowledge gap resides in understading which aspects of structure determine which aspects of function [@Thompson2012]. We are now at a point in which there is considerable understanding on the attributes of interaction networks (REF, REF, REF). Even further, we now have a substantial understanding of how these attributes vary along different types of gradients [@Pellissier2017; @Tylianakis2016]. Especially, in the case of pollination, we have ample knowledge on the attributes that shape these mutualistic interactions at the community level, such as a prevalence of nested structures (REF) or the presence of asymmetric specialization as a pervasive feature [@Vazquez2004]. The time is thus ripe to use this knowledge to explore relationships between community structure and ecosystem functioning, with special emphasis being placed on the underlying mechanisms that drive these relationships.
+
+Here, we present one of the first efforts linking pollinator visitation and plant reproductive success at the community level. To this end, we use a well-replicated dataset encompassing 16 well-resolved networks coupled with data on the reproductive success of 19 plant species recorded at Mediterranean shrub ecosystems within the area of influence of Doñana National Park in SW Spain. Our study focuses on understanding whether adding information on the structure of the community to previously-used simple visitation metrics (e.g., number of pollinator species visiting a plant species) aids in better explaining the differences observed in community-wide reproductive success. In doing so, we conducted our analyses focusing on reproductive success at two different levels: (i) at the species level by considering the effect of the position of a focal species within the larger network and its impact on its individual reproductive success and (ii) at the community level, by evaluating how attributes that describe the whole community might affect average values of reproductive succes. 
+
+Our results suggest that for prediction purposes, information on simple visitation metrics, particularly regarding the diversity of pollinators that visit a plant species, is sufficient. However, we find that a mechanisitic understanding of the pathways through which differences in pollinator diversity translate into changes in reproductive success requires additional information on network structure, notably information on the complementarity between the functions performed by different pollinator species. 
 
 # METHODS
 
-<<<<<<< HEAD
-Our study was conducted in SE Spain within the area of influence of Doñana National Park. Here, we surveyed 16 Mediterranean woodland patches. Each site was surveyed 7 times following a 100-m x 2 m transect for 30 mins. Along each transect we identified all plant species and the pollinators that legitimately visited them. In addition, within each site we evaluated fruit set, seed number per fruit and seed weight for several individuals belonging to 15 plant species. Not all plant species were present in all transects.
+_Plant pollinator interactions_
 
+Our study was conducted in SW Spain within the area of influence of Doñana National Park (Figure 1?). Here, we surveyed 16 Mediterranean woodland patches, located within a XXX m2 area and with an average distance of XX km between them (min= XX, max= XX). [SHOULD WE SAY SOMETHING ABOUT THE MATRIX SURROUNDING THESE SITES OR THE TYPE OF VEGETATION PRESENT IN THEM???] Each site was surveyed 7 times during the flowering season of 2015?? (February-July???) following a 100-m x 2 m transect for 30 mins. Along each transect, we identified all plant species and recorded all the flower visitors (IS IT JUST BEES AND HOVERFLIES?) that legitimately visited them. Floral visitors (from now on referred to as pollinators) that could not be identified in the field were captured, stored and identified in the laboratory by FdPM with the aid of experts in the different taxonomic groups (see acknowledgements). All surveys were done under similar weather conditions, avoiding windy or rainy days. 
+
+_Plant reproductive success_
+
+Within each site, we marked between 2 and 12 individuals (6.49 +- 2.37) of 1 to 6 plant species (4.06 +- 1.69), depending on availability and presence of flowers during the first sampling event. For each individual, we counted the number of flowers at the beginning of the season and recorded fruit set, the number of seeds per fruit (for 2-36 fruits, 11.17 +- 6.84) and average seed weight at the end of the season???. Our survey included a total of 19 plant species across our 16 sites. 
 
 #DATA ANALYSES
 
-First, we checked for sampling completeness for the pollinator and the plant community as well as for plant-pollinator links using Chao 1 asymptotic species richness estimators. We first estimated the richness of pollinators, plants and plant–pollinator links accumulated as sampling effort increased up to 100% sampling coverage using package iNEXT. 
+In order to evaluate the completeness of our sampling of the pollinator and plant community as well as that of their interactions, we estimated the asymptotic number of species present, including non-detected species, and calculated the proportion detected with our original sampling data. We used Chao 1 asymptotic species richness estimators [@Chao2009] and estimated the richness of pollinators, plants and plant–pollinator links accumulated as sampling effort increased up to 100% sampling coverage using package iNEXT [@Hsieh2016] within the R environment [@RDevelopmentCoreTeam2011]. We then extracted the values covered by our sampling.
 
+In order to analyse how differences within the pollinator community might affect plant reproductive success, we constructed weighted interaction networks by pooling the data for the 7 rounds of sampling. We thus obtained one weighted interaction network per site representing the frequency of visits by different pollinator species to different plant species. For each network we then proceeded to extract a series of relevant network metrics.
 
-_Species-level_
+_Species-level network analysis_
 
-The data for all rounds was pooled to construct one plant-pollinator interaction network per site, for which we calculated a set of relevant network metrics. At the species level, we focused on: degree (i.e., number of pollinator species visiting a particular plant), total number of visits received, centrality, and average niche overlap between a focal species and other plant species in the community. We fit three models, (i) one including only the diversity of pollinator species and the total number of species, (ii) a model including metrics related to a plant´s position in the community and (iii) a model combining both sets of models. We then used information criterion methods to find the best model. We included plant species nested within site as random effect to account for non-independence of several individuals measured for the same plant species.
+At the species level, we focused on attributes defining the position of a focal plant species within the larger community. As such, we considered two metrics providing complementary non-redundant information: (i) average niche overlap between a focal species and other plant species in the community, which covers the potential indirect interactions between different plant species through shared resources (in this case pollinators), and (ii) centrality, which depicts the importance of the plant species within the larger community (as resource for a large number of pollinator species) and its contribution to network cohesiveness. 
 
-_Network level_
+_Community-level network analysis_
 
-We followed the same logic at the community level, where we evaluated the importance of pollinator diversity and total visitation compared to that of network structure, in this case including nestedness and functional complementarity as metrics. In the case of nestedness we know it can be affected by network size. An approach to correct for this it to use null models and to compare null-model corrected nestedness values across different networks. However, this approach has the problem that z-scores depend on network size and connectance as shown by this recent paper by Song et al. What these authors propose is to use a normalized value of nestedness, and to control by the effect of connectance and network size, thus obtaining a new value of nestedness, NODFc, which is independent of network size and thus comparable across different networks. 
+At the community level, we followed the same logic as the one presented at the species level. Thus, we also calculated two network metrics providing complementary non-redundant information. In this case we focused on (i) nestedness and (ii) functional complementarity. Nestedness is the property by which specialists interact with a subset of the species that generalists interact with (REF). Although there is an ongoing debate in the literature, some studies have found that nested networks are more stable and resilient to perturbations because nestedness implies a certain level of redundancy and thus the possibility for functional replacement in the case of species loss (REF). However, plant reproductive success depends on the delivery of conspecific pollen and thus of a certain level of specialization or niche divergence (reviewed in [@Brosi2016]). Yet at present we do not know how the interplay between redundancy and complementarity in species roles determines reproductive success.
 
-_Equity in reproductive success_
+Many network attributes vary with network size and complexity [@Bluthgen2006]. In the case of nestedness, we know it can be affected by network size and connectance (REF). An approach that is often used to correct for this, is to use null models and to compare null-model corrected nestedness values across different networks. However, this approach has been recently shown to present the same issues, as z-scores also change with network size and connectance [@Song2017]. Given the dependence of nestedness on network size and connectance, we followed the advice of these researchers by using a normalized value of nestedness, NODFc, which is independent of network size and thus comparable across different networks [@Song2017]. All network metrics were calculated using package bipartite [@Dormann2009].
 
-Finally, we used the same framework to evaluate the contribution of the different variables we consider to equity in plant reproductive success across the community, by including as a response variable the number of plant species that produce 50% of fruit set recorded for our study area at each site. 
+_Statistical analyses_
+
+In order to evaluate whether adding information on community structure improves our ability to explain differences in reproductive success both at the species and the community level, we used general linear (GLM) and general linear mixed models (GLMM). In both cases (species and community-level models) we fit two types of models: (i) model 1, that only included simple visitation metrics and (ii) model 2, that additionally included information on community structure.
+
+At the species level, model 1 included as explanatory variables the diversity of pollinator species visiting a focal plant and the total number of visits received by that plant species; while model 2, added the two network attributes calculated at the species level: average niche overlap and centrality. In this case, we included plant species nested within site as a random effect to account for non-independence of several individuals measured for the same plant species within each site. The diversity of pollinator species visiting a focal plant was approximated using the plant´s normalised degree, i.e., the number of links with different pollinator species a plant has, scaled by the number of possible partners [@Dormann2009].
+
+At the community level, we upscaled our species-level analyses. In this case, model 1 included total pollinator diversity and the total number of visits received by all plants within the community as explanatory variables. Model 2, in turn, added information on community structure by including nestedness and functional complementarity as explanatory variables. 
+
+Average values of reproductive success at the community level can be driven to a large extent by one single plant species. Yet, what will determine the persistence of a diverse plant community, is the presence of some sort of “equity” in reproductive success across the whole community. We therefore calculated a measure of equity in reproductive success at the community level as the proportion of plant species within a site that is at 50% of the maximum value of fruitset recorded for that plant species within our sampling. We repeated this using 25% and 75% thresholds. We then used the same framework as before and fit the same model 1 and model 2 as those used at the community level but using equity in reproductive success as the response variable. 
+
+We used information criterion methods to find the best model for each case and selected the ones with the lowest Akaike Information Criterion (AIC) value. Differences in AIC values < 2, were not considered enough to select one model over the other.
+
+_Simulating the effect of community structure as sample size increases_
+
+Finally, we tested whether the effect of community structure metrics increases with the number of plant species whose reproductive success is being considered. We expect that when only one plant species is considered, then the effect of community structure will be negligible. Further, we expect this effect to increase in importance as more plant species are considered (up to a maximum number of 6 species which is the maximum we have measured in our study).
+
+To test this, we ran a simple simulation in which the number of species increases randomly (increases randomly or the identity of the sps is selected at random???) at each time step and calculate equity in reproductive success. Instead of drawing plants randomly for each run, for each plant number level and network, we test all possible combinations, as this number is low (n = 63 possible combiations overall for the network with the largest dataset) and increasing sampling events in our simulation would only result in repeated combinations. Then, we test the overall relation between equity in reproductive success and both community-level network metrics we consider: nestedness and functional complementarity within our simulated communities. To this end, for each species number level, we randomly combine the generated equity values across the 16 communities as to obtain one random value per species. Finally, for each of such combinations we calculated the estimate of equity in relation with functional complementarity and average all estimates from 1000 simulated combinations per number of plants considered. We expect that the more plants considered, the larger the resulting average estimates will be. Note that we only interpret the mean effects, as the variance among different plant number of species depends on the initial number of combinations.
 
 
 #RESULTS
 
-Within our transects we recorded 57 species of plants and 277 species of pollinators.
-Our sampling completeness analyses revealed that with our survey we were able to capture 18-62% of pollinator species (average= 35%), 47-98% for plant species (average= 78%) and 13-41% for plant-pollinator links (average=27%), in line with that obtained with other studies (e.g., Chacoff et al), yet slightly smaller in the case of pollinators given the great diversity of pollinators found in the Mediterranean region in particular and in the our study area, a hotspot of insect diversity.
+Within our sampling we recorded 57 species of plants and 277 species of pollinators. Within the pollinator community XX% of species were solitary bees, XX% hoverflies and XX%% other??
 
+Our sampling completeness analyses revealed that with our survey we were able to capture 18-62% of pollinator species (average= 35%), 47-98% for plant species (average= 78%) and 13-41% for plant-pollinator links (average=27%), in line with that obtained with other studies (e.g., [@Chacoff2012], Figure S1?). Our values of sampling completeness are slightly smaller in the case of pollinators probably as a consequence of the great diversity found in the Mediterranean region and within our study area in particular, a hotspot of insect diversity (REF).
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=9}
 
@@ -74,15 +142,49 @@ library(plyr)
 d<-all_interactions
 f<-fruitset
 s<-seedset
-si<-single_visits
+
+
+#calculate number of plant and pollinator species in total in our sampling
 
 d.pl<-unique(all_interactions$Plant_gen_sp)
 d.poll<-unique(all_interactions$Pollinator_gen_sp)
 
+#calculate number of plant species per site, number of individuals per plant species and number of fruits per ind surveyed for repr succ
 
-si$Plant.sp<-paste(si$Plant_genus, si$Plant_species)
+library(plyr)
+
+f$Plant.sp<-paste(f$Plant_genus, f$Plant_species)
+
+f.inds<-ddply(f, c("Site_ID", "Plant.sp"), summarise, 
+                   tot.inds = length(Plant.sp)) #number of individuals per plant sps
+
+#write.csv(f.inds, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/plantindspersite.csv", row.names = FALSE)
+
+mean<-mean(f.inds$tot.inds)
+stdev<-sd(f.inds$tot.inds)
 
 
+f.sps<-ddply(f.inds, c("Site_ID"), summarise, 
+                   tot.sps = length(Site_ID)) #number of plant sps per site
+
+
+#write.csv(f.sps, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/plantspspersite.csv", row.names = FALSE) 
+
+mean2<-mean(f.sps$tot.sps)
+stdev2<-sd(f.sps$tot.sps)
+  
+
+s$Plant.sp<-paste(s$Plant_genus, s$Plant_species)
+
+s.fruitnum<-ddply(s, c("Site_ID", "Plant.sp"), summarise, 
+                   tot.fruits = length(Plant.ID)) #number of fruits per individual
+
+
+#write.csv(s.fruitnum, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/fruitnumberperplantindspersite.csv", row.names = FALSE) 
+
+mean3<-mean(s.fruitnum$tot.fruits)
+stdev3<-sd(s.fruitnum$tot.fruits)
+   
 ###### read network and species level files (network analyses to be found at "...scripts/network analysis.R")
 
 outsp.pl.site<-read.csv("SITE_plant_species_level_metrics.csv")
@@ -90,8 +192,12 @@ outsp.site<-read.csv("SITE_species_level_metrics.csv")
 out.site<-read.csv("SITE_network_level_metrics.csv")
 
 #####################################################################################################################
-########################CALCULATE SAMPLING COMPLETENESS FOR POLLINATORS, PLANTS AND LINKS#############################
+########################CALCULATE SAMPLING COMPLETENESS FOR POLLINATORS, PLANTS AND LINKS #############################
 ######################################################################################################################
+
+library(iNEXT)
+library(ggplot2)
+library(grid)
 
 #POLLINATORS
 d2<-table(d$Site_ID, d$Pollinator_gen_sp)
@@ -104,14 +210,13 @@ d5<-as.data.frame(d4)
 #str(d5)
 d6<-as.list(d5)
 
-library(iNEXT)
-library(ggplot2)
 
 rar <- iNEXT(d6, q=0, datatype="abundance", endpoint = 400)
-poll<-ggiNEXT.iNEXT(rar, color.var="site", se=FALSE) + ylab("pollinators") + theme_bw() + 
+poll<-ggiNEXT.iNEXT(rar, color.var="site", se=FALSE) + ylab("Pollinator species richness") + theme_bw() + 
   theme (legend.position= "none") + theme(text = element_text(size = 15), axis.text=element_text(size=rel(1)),
                                           axis.title.x = element_blank(),
-        axis.title=element_text(size=rel(1),face="bold"), legend.direction="horizontal", legend.text=element_text(size=10)) 
+        axis.title=element_text(size=rel(1),face="bold"), legend.direction="horizontal", legend.text=element_text(size=10)) +
+  scale_color_manual(values=c("#F1BB7B", "#FD6467", "#5B1A18", "#D67236", "#E6A0C4", "#C6CDF7", "#D8A499", "#7294D4", "#D8B70A", "#02401B", "#A2A475", "#81A88D", "#972D15", "#9C964A", "#CDC08C", "#FAD77B"))
 
 #poll
 
@@ -150,14 +255,13 @@ d.pl4<-as.data.frame(d.pl3)
 #str(d.pl4)
 d.pl5<-as.list(d.pl4)
 
-library(iNEXT)
-library(ggplot2)
 
 rar2 <- iNEXT(d.pl5, q=0, datatype="abundance", endpoint = 200)
-plant<-ggiNEXT.iNEXT(rar2, color.var="site", se=FALSE) + ylab("plants") + 
+plant<-ggiNEXT.iNEXT(rar2, color.var="site", se=FALSE) + ylab("Plant species richness") + 
   theme_bw()  + theme (legend.position= "none") + theme(text = element_text(size = 15), axis.text=element_text(size=rel(1)),
                                                          axis.title.x = element_blank(),
-        axis.title=element_text(size=rel(1),face="bold"), legend.direction="horizontal", legend.text=element_text(size=10)) 
+        axis.title=element_text(size=rel(1),face="bold"), legend.direction="horizontal", legend.text=element_text(size=10)) +
+  scale_color_manual(values=c("#F1BB7B", "#FD6467", "#5B1A18", "#D67236", "#E6A0C4", "#C6CDF7", "#D8A499", "#7294D4", "#D8B70A", "#02401B", "#A2A475", "#81A88D", "#972D15", "#9C964A", "#CDC08C", "#FAD77B"))
 
 
 #plant
@@ -199,13 +303,12 @@ d.l4<-as.data.frame(d.l3)
 #str(d.l4)
 d.l5<-as.list(d.l4)
 
-library(iNEXT)
-library(ggplot2)
 
 rar3 <- iNEXT(d.l5, q=0, datatype="abundance", endpoint = 500)
-link<-ggiNEXT.iNEXT(rar3, color.var="site", se=FALSE) + ylab("links") + theme_bw() +
+link<-ggiNEXT.iNEXT(rar3, color.var="site", se=FALSE) + ylab("Link richness") + theme_bw() +
    theme (legend.position= "none") + theme(text = element_text(size = 15), axis.text=element_text(size=rel(1)),
-        axis.title=element_text(size=rel(1),face="bold"), legend.direction="horizontal", legend.text=element_text(size=10)) 
+        axis.title=element_text(size=rel(1),face="bold"), legend.direction="horizontal", legend.text=element_text(size=10)) +
+ scale_color_manual(values=c("#F1BB7B", "#FD6467", "#5B1A18", "#D67236", "#E6A0C4", "#C6CDF7", "#D8A499", "#7294D4", "#D8B70A", "#02401B", "#A2A475", "#81A88D", "#972D15", "#9C964A", "#CDC08C", "#FAD77B"))
   
 
 #link
@@ -233,19 +336,14 @@ link<-ggiNEXT.iNEXT(rar3, color.var="site", se=FALSE) + ylab("links") + theme_bw
 
 #TOTAL AVERAGE sampling completeness of links 0.27
 
-
-library(ggplot2)
-library(grid)
-library(dplyr)
-
 grid.newpage()
 grid.draw(rbind(ggplotGrob(poll), ggplotGrob(plant), ggplotGrob(link), size = "last"))
 
 ```
 
-### Species-level
+### Species-level analyses
 
-We find that for all measures of reproductive success at the plant species level (i.e., fruitset, number of seeds per fruit, fruit and seed weight), the best model is the one that only includes direct visitation metrics (i.e., diversity of visiting pollinators and number of visits received). In the case of fruitset, we find that normalised degree, i.e., the number of species visiting a plant species, has a positive effect for fruitset.
+At the species level, our results show that for all measures of reproductive success considered (i.e., fruitset, number of seeds per fruit, fruit and seed weight), the best model based on its AIC value was model 1, i.e., the model that only includes simple visitation metrics (i.e., the diversity of visiting pollinators and the total number of visits received by a focal plant species). In the case of fruitset, we find a positive effect of the diversity of species visiting a focal plant species (measured using the species´normalised degree, Fig. XX). Contrastingly, for seed set, fruit and seed weight we find that none of the variables included within our model explain the differences observed.
 
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
@@ -264,10 +362,6 @@ require(Hmisc)
 f2<-subset(f, Notes %nin% wordList)
 
 f2$tot.fruitset<-(f2$Fruit_Yes +  f2$Fruit_preyed + f2$Fruit_dispersed)/(f2$Fruit_Yes +f2$Fruit_No + f2$Fruit_preyed + f2$Fruit_dispersed)
-
-
-s2<-subset(s, Notes %nin% wordList)
-s2$tot.seedset
 
 
 #check correlation between different variables
@@ -302,6 +396,8 @@ d.vis$j<-paste(d.vis$Site_ID, d.vis$Plant_gen_sp)
 
 library(reshape2)
 library(spaa)
+library(plyr)
+
 sites <- unique(d$Site_ID)
 
 out.niche <- data.frame(Site_id = NA, row = NA, col = NA,value  = NA)
@@ -378,67 +474,56 @@ library(psych)
 dim(f2)
 pairs.panels(f2[,23:28]) 
 
-# function to look at variance inflation factors
- 
-  vif.mer <- function (fit) {
-    ## adapted from rms::vif
-    v <- vcov(fit)
-    nam <- names(fixef(fit)$cond)
-    ## exclude intercepts
-    ns <- sum(1 * (nam == "Intercept" | nam == "(Intercept)"))
-    if (ns > 0) {
-        v <- v[-(1:ns), -(1:ns), drop = FALSE]
-        nam <- nam[-(1:ns)] }
-    d <- diag(v$cond)^0.5
-    v <- diag(solve(v/(d %o% d)))
-    names(v) <- nam
-    v }
-
+#fit models 1 and 2 
 
 library(lme4)
-library(lmerTest)
+library(lmerTest) #to calculate coeff and p values
+library(car) #to calculate VIF
+library(bbmle)  #to select best model based on AIC
+library(ggplot2)
+library(DHARMa) #to check for problems in residuals
  
  m1<-glmer(tot.fruitset ~  norm_degree.sc + tot.visits.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="gaussian", data=f2_scaled)
 
  summary(m1)
  
- vif.mer(m1)
- 
- # extract coefficients
-coefs <- data.frame(coef(summary(m1)))
-# use normal distribution to approximate p-value
-coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
-coefs
 
-
- m3<-glmer(tot.fruitset ~  norm_degree.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="gaussian", data=f2_scaled)
+ vif(m1)  #check for correlations between variables included in model
  
- summary(m3)
  
- vif.mer(m3)
+ m2<-glmer(tot.fruitset ~  norm_degree.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="gaussian", data=f2_scaled)
  
- # extract coefficients
-coefs <- data.frame(coef(summary(m3)))
-# use normal distribution to approximate p-value
-coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
-coefs
+ summary(m2)
+ 
+ vif(m2)
+ 
 
 #select best model based on AIC 
-library(bbmle)
 
-AICtab(m1, m3) 
+AICtab(m1, m2) 
 
 #test for problems in residuals
-library(DHARMa)
-res<-simulateResiduals(m1)
-plot(res, rank = TRUE)
+
+# res<-simulateResiduals(m1)
+# plot(res, rank = TRUE)
+
+
+# extract coefficients and p-values for m1 and present them in paper
+coefs.m1 <- data.frame(coef(summary(m1)))
+# use normal distribution to approximate p-value
+coefs.m1$p.z <- 2 * (1 - pnorm(abs(coefs.m1$t.value)))
+coefs.m1
+summ<-round(coefs.m1,digits=2)
+#write.csv(summ, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/resultsfruitsetSPECIES.csv", row.names = TRUE)
+
+#best model is m1, plot significant variable, in this case degree
 
 pl1<-ggplot(f2_scaled,  aes(x=norm_degree.sc, y=tot.fruitset, color=Plant.sp)) +    
         geom_point(size=4) + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
-        geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
+        #geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
         xlab("Normalized degree") +      
-        ylab("Fruitset") + theme_bw()  + #theme (legend.position= "none") +
-        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+        ylab("Fruitset") + theme_bw()  + theme (legend.position= c(0.85,0.3)) +
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species") +  theme(legend.text = element_text(size = 10, face = "italic"), legend.title = element_text(size=11, face = "bold"))
 
 pl1
 
@@ -454,7 +539,7 @@ pl1b<-ggplot(f2_scaled,  aes(x=norm_degree.sc, y=tot.fruitset)) +
 pl1b
 
 ##ahora con seed set
-s<-seedset
+
 s$Plant.sp<-paste(s$Plant_genus, s$Plant_species)
 
 #1st eliminate frutos perdidos
@@ -464,6 +549,7 @@ require(Hmisc)
 s2<-subset(s, Notes %nin% wordList)
 
 #calculate average seed set per plant individual, there are several fruit measurements per plant and would lead to 3 nested random factors
+library(plyr)
 
 s3 <- ddply(s2, c("Site_ID", "Plant.sp", "Plant.ID"), summarise,
                          mean.seedn    = mean(Seeds2),
@@ -509,132 +595,107 @@ s3_scaled <- s3 %>% group_by(Plant.sp) %>% mutate(tot.visits.sc = scale(tot.visi
 s4_scaled <- s3_scaled %>% group_by(Plant.sp) %>% mutate(mean.seedn.sc = scale(mean.seedn, center = T, scale = T))
 
 
+#fit two models
 
-library(lme4)
-library(lmerTest)
- 
- m1.seed<-glmer(mean.seedn.sc ~  norm_degree.sc + tot.visits.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=s4_scaled)
+m1.seed<-glmer(mean.seedn.sc ~  norm_degree.sc + tot.visits.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=s4_scaled)
 
- summary(m1.seed)
+summary(m1.seed)
  
- vif.mer(m1.seed)
- 
- # extract coefficients
-coefs <- data.frame(coef(summary(m1.seed)))
-# use normal distribution to approximate p-value
-coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
-coefs
+vif(m1.seed)
 
 
- m3.seed<-glmer(mean.seedn.sc ~  norm_degree.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=s4_scaled)
+m2.seed<-glmer(mean.seedn.sc ~  norm_degree.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=s4_scaled)
  
- summary(m3.seed)
+summary(m2.seed)
  
- vif.mer(m3.seed)
+vif(m2.seed)
  
- # extract coefficients
-coefs <- data.frame(coef(summary(m3.seed)))
-# use normal distribution to approximate p-value
-coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
-coefs
- 
- 
-#select best model based on AIC 
-library(bbmle)
 
-AICtab(m1.seed, m3.seed) 
+AICtab(m1.seed, m2.seed) 
 
 #test for problems in residuals
-res<-simulateResiduals(m1.seed)
-plot(res, rank = TRUE)
+# res<-simulateResiduals(m1.seed)
+# plot(res, rank = TRUE)
 
+
+# extract coefficients and p-values for m1 and present them in paper
+coefs.m1.seed <- data.frame(coef(summary(m1.seed)))
+# use normal distribution to approximate p-value
+coefs.m1.seed$p.z <- 2 * (1 - pnorm(abs(coefs.m1.seed$t.value)))
+coefs.m1.seed
+summ.seed<-round(coefs.m1.seed,digits=2)
+#write.csv(summ.seed, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/resultsseedsetSPECIES.csv", row.names = TRUE)
 
 #SEED WEIGHT
 
-library(lme4)
-library(lmerTest)
- 
- m1.seed.w<-glmer(mean.seedw ~  norm_degree.sc + tot.visits.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=s3_scaled)
+m1.seed.w<-glmer(mean.seedw ~  norm_degree.sc + tot.visits.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=s3_scaled)
 
- summary(m1.seed.w)
+summary(m1.seed.w)
  
- vif.mer(m1.seed.w)
+vif(m1.seed.w)
  
- # extract coefficients
-coefs <- data.frame(coef(summary(m1.seed.w)))
-# use normal distribution to approximate p-value
-coefs$p.z <- round(2 * (1 - pnorm(abs(coefs$t.value))),3)
-coefs
+m2.seed.w<-glmer(mean.seedw ~  norm_degree.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=s3_scaled)
+ 
+summary(m2.seed.w)
+ 
+vif(m2.seed.w)
 
-
- m3.seed.w<-glmer(mean.seedw ~  norm_degree.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=s3_scaled)
- 
- summary(m3.seed.w)
- 
- vif.mer(m3.seed.w)
- 
- # extract coefficients
-coefs <- data.frame(coef(summary(m3.seed.w)))
-# use normal distribution to approximate p-value
-coefs$p.z <- round(2 * (1 - pnorm(abs(coefs$t.value))), 3)
-coefs
- 
- 
 #select best model based on AIC 
-library(bbmle)
 
-AICtab(m1.seed.w, m3.seed.w) 
+AICtab(m1.seed.w, m2.seed.w) 
 
 #test for problems in residuals
-res<-simulateResiduals(m1.seed.w)
-plot(res, rank = TRUE)
+# res<-simulateResiduals(m1.seed.w)
+# plot(res, rank = TRUE)
 
+
+# extract coefficients and p-values for m1 and present them in paper
+coefs.m1.seed.w <- data.frame(coef(summary(m1.seed.w)))
+# use normal distribution to approximate p-value
+coefs.m1.seed.w$p.z <- 2 * (1 - pnorm(abs(coefs.m1.seed.w$t.value)))
+coefs.m1.seed.w
+summ.seed.w<-round(coefs.m1.seed.w,digits=2)
+#write.csv(summ.seed.w, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/resultsseedweightSPECIES.csv", row.names = TRUE)
 
 #FRUIT WEIGHT
 
-library(lme4)
-library(lmerTest)
- 
- m1.fruit.w<-glmer(mean.fruitweight ~  norm_degree.sc + tot.visits.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=s3_scaled)
+m1.fruit.w<-glmer(mean.fruitweight ~  norm_degree.sc + tot.visits.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=s3_scaled)
 
- summary(m1.fruit.w)
+summary(m1.fruit.w)
  
- vif.mer(m1.fruit.w)
- 
- # extract coefficients
-coefs <- data.frame(coef(summary(m1.fruit.w)))
-# use normal distribution to approximate p-value
-coefs$p.z <- round(2 * (1 - pnorm(abs(coefs$t.value))),3)
-coefs
+vif(m1.fruit.w)
 
 
- m3.fruit.w<-glmer(mean.fruitweight ~  norm_degree.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=s3_scaled)
+m2.fruit.w<-glmer(mean.fruitweight ~  norm_degree.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID), family="gaussian", data=s3_scaled)
  
- summary(m3.fruit.w)
+summary(m2.fruit.w)
  
- vif.mer(m3.fruit.w)
- 
- # extract coefficients
-coefs <- data.frame(coef(summary(m3.fruit.w)))
-# use normal distribution to approximate p-value
-coefs$p.z <- round(2 * (1 - pnorm(abs(coefs$t.value))),3)
-coefs
- 
+vif(m2.fruit.w)
+
  
 #select best model based on AIC 
-library(bbmle)
 
-AICtab(m1.fruit.w, m3.fruit.w) 
+AICtab(m1.fruit.w, m2.fruit.w) 
 
 #test for problems in residuals
-res<-simulateResiduals(m1.fruit.w)
-plot(res, rank = TRUE)
+# res<-simulateResiduals(m1.fruit.w)
+# plot(res, rank = TRUE)
+
+
+# extract coefficients and p-values for m1 and present them in paper
+coefs.m1.fruit.w <- data.frame(coef(summary(m1.fruit.w)))
+# use normal distribution to approximate p-value
+coefs.m1.fruit.w$p.z <- 2 * (1 - pnorm(abs(coefs.m1.fruit.w$t.value)))
+coefs.m1.fruit.w
+summ.fruit.w<-round(coefs.m1.fruit.w,digits=2)
+#write.csv(summ.seed.w, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/resultsfruitweightSPECIES.csv", row.names = TRUE)
 
 ```
 
-### Network-level
-#### FRUITSET
-We find that at the level of the whole communty, differences in average fruit set are driven particularly by the diversity of pollinator species. In this sense, we find that communities with greater pollinator diversity have lower values of fruit set but consistent higher values of other function aspects measured: fruit and seed weight. In the case of seed number per fruit it was positively affected by the total number of visits received by the community. In contrast, we found that metrics accounting for the structure of interactions between plants and pollinators had little or no effect for functioning.
+### Network-level analyses
+
+At the network level, we find different patterns for fruitset and the number of seeds per fruit as compared to those for fruit and seed weight. In the case of fruitset and the number of seeds per fruit we find that the best model describing the differences observed is model 2, i.e., that including community-level network attributes in addition to simple visitation metrics. In particular, we find that fruitset is positively related to functional complementarity, while we find a similar yet marginal and non-significant trend in the case of the number of seeds per fruit. Additionally, we find a negative effect of community-level pollinator species diversity on average fruitset. Contrastingly, in the case of weight variables (fruit and seed weight), in both cases we find that the best model is model 1, i.e., that only including simple visitation metrics. Here, we find a consistent positive effect of community-level pollinator diversity for both weight descriptors.  
+
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
 #####################################################################################################################
@@ -642,10 +703,23 @@ We find that at the level of the whole communty, differences in average fruit se
 ######################################################################################################################
 
 library(plyr)
+#this is how i did originally, average of everything together, now following Nacho´s advice changing to mean of means previously calculated per sps
 
-f.agg <- ddply(f2, c("Site_ID", "nodf.song", "functional.comp.poll", "species.poll"), summarise, tot.visits    = sum(tot.visits),
+f.agg.prev <- ddply(f2, c("Site_ID", "nodf.song", "functional.comp.poll", "species.poll"), 
+                    summarise, tot.visits    = sum(tot.visits),
                          mean.fruitset = mean(tot.fruitset))
+
+
 #I see what you mean, no weghting for plant species... maybe is good doing it... mean on means? I don't think it will change much the result.
+#Doing mean of means here, it does change some values a bit!!
+f.ag <- ddply(f2, c("Site_ID", "Plant.sp", "nodf.song", "functional.comp.poll", "species.poll"), 
+               summarise, tot.visits    = sum(tot.visits),
+                         mean.fruitset = mean(tot.fruitset))
+
+f.agg <- ddply(f.ag, c("Site_ID",  "nodf.song", "functional.comp.poll", "species.poll"), 
+               summarise, tot.visits    = sum(tot.visits),
+                         mean.fruitset = mean(mean.fruitset))
+
 
 #scale all variables to be able to compare effect sizes 
 
@@ -657,59 +731,112 @@ f.agg$tot.visits.sc <- scale(f.agg$tot.visits, center = T, scale = T)
 
 #average FRUITset
 
-library(lme4)
-library(lmerTest)
- 
- m1.fruit.net<-glm(mean.fruitset ~  species.poll.sc + tot.visits.sc, family="gaussian", data=f.agg)
+m1.fruit.net<-glm(mean.fruitset ~  species.poll.sc + tot.visits.sc, family="gaussian", data=f.agg)
 
- summary(m1.fruit.net)
+summary(m1.fruit.net)
  
- library(car)
- vif(m1.fruit.net)
+vif(m1.fruit.net)
  
-m3.fruit.net<-glm(mean.fruitset ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=f.agg)
+m2.fruit.net<-glm(mean.fruitset ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=f.agg)
+
 #note estimate of niche part do not overlap zero 0.06105  +-  0.03637 and it's moderatelly big.
  
- summary(m3.fruit.net)
+summary(m2.fruit.net)
  
- vif(m3.fruit.net)
+vif(m2.fruit.net)
  
 #select best model based on AIC 
-library(bbmle)
 
-AICtab(m1.fruit.net, m3.fruit.net) #Almost as good. The take home message would be. If interested in predictions, go for simplicity. If interested in mechanisms, nich part is a mechanism to take into account.
+AICtab(m1.fruit.net, m2.fruit.net) #Almost as good. The take home message would be. If interested in predictions, go for simplicity. If interested in mechanisms, nich part is a mechanism to take into account.
 
+#when changing values to mean of means actually model2 is best and funct compl is significant!! YUHUUUU
+
+#save table with results for paper
+summ.fruit.net<-round(summary(m2.fruit.net)$coef, digits=2)
+#write.csv(summ.fruit.net, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/resultsfruitsetNETWORK.csv", row.names = TRUE)
+
+
+
+#TRYING TO MANUALLY CREATE PARTIAL RESIDUAL PLOTS
+
+pred<-m2.fruit.net$coef[1]+ (m2.fruit.net$coef[2] * mean(f.agg$species.poll.sc)) + (m2.fruit.net$coef[3] * mean(f.agg$tot.visits.sc)) + (m2.fruit.net$coef[4]* mean(f.agg$nodf.song.sc)) + (m2.fruit.net$coef[5] * f.agg$functional.comp.poll.sc)
+
+res<-pred-f.agg$mean.fruitset
+  
+
+
+pl2 <- ggplot(f.agg,  aes(x=functional.comp.poll.sc, y= res)) +    
+        geom_point(size=4, color="darkgrey") + 
+  stat_smooth(method = 'lm', size=1.5, se=TRUE, color = "black", alpha=0.2) +     
+        xlab("Functional complementarity") +      
+        ylab("Fruitset") + theme_bw()  + #theme (legend.position= "none") +
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
+
+pl2
+
+#SPECIFIC PACKAGE TO DO PARTIAL RES PLOTS BUT DIFFICULT TO CUSTOMIZE
+
+
+#partial residual plots to see real value of each variable eliminating noise from others
+library(car)
+
+crPlots(m2.fruit.net, smooth=FALSE, terms = ~  species.poll.sc + functional.comp.poll.sc, main = "", ylab = "Mean fruitset", col.lines= "black", pch=19, col= "black", bg = "darkgrey", cex=2, cex.axis=1.2, cex.lab=1.5, 
+        xlab = c("Pollinator diversity", "Functional complementarity"))
+
+
+#ORINGINAL PLOTS DO NOT SHOW EFFECTS OF VARIABLES IN ISOLATION
 
 pl2<-ggplot(f.agg,  aes(x=species.poll.sc, y=mean.fruitset)) +    
         geom_point(size=4, color="darkgrey") + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
         xlab("Pollinator species diversity") +      
         ylab("Fruitset") + theme_bw()  + #theme (legend.position= "none") +
-        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
 
 pl2
 
-pl2_ <-ggplot(f.agg,  aes(x=functional.comp.poll.sc, y=mean.fruitset)) +    
+pl2b <-ggplot(f.agg,  aes(x=functional.comp.poll.sc, y=mean.fruitset)) +    
         geom_point(size=4, color="darkgrey") + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
-        xlab("Niche complementariety") +      
+        xlab("Functional complementarity") +      
         ylab("Fruitset") + theme_bw()  + #theme (legend.position= "none") +
-        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
 
-pl2_ #Well, moderate... without scaling it was more pronunced?
+pl2b #Well, moderate... without scaling it was more pronunced?
 
 #test for problems in residuals
-res<-simulateResiduals(m1.fruit.net)
-plot(res, rank = TRUE)
+# res<-simulateResiduals(m2.fruit.net)
+# plot(res, rank = TRUE)
+
 
 
 #seed number
 #How mean seed number is calculated?? scaled first would be better, right? Yes using scaled values
 
+#same as before now averaging per species first and then per site 
+
 library(plyr)
 
-s.comm <- ddply(s4_scaled, c("Site_ID", "nodf.song", "functional.comp.poll", "species.poll"), summarise, tot.visits    = sum(tot.visits),
+s.comm.prev <- ddply(s4_scaled, c("Site_ID", "nodf.song", "functional.comp.poll", "species.poll"), summarise, tot.visits    = sum(tot.visits),
                          mean.seedset = mean(mean.seedn),
                           mean.seedweight = mean(mean.seedw),
                           mean.fruitweight = mean(mean.fruitweight))
+
+
+#mean of means!
+
+s.com <- ddply(s4_scaled, c("Site_ID", "Plant.sp", "nodf.song", "functional.comp.poll", "species.poll"), 
+               summarise, tot.visits    = sum(tot.visits),
+                         mean.seedset = mean(mean.seedn),
+                          mean.seedweight = mean(mean.seedw),
+                          mean.fruitweight = mean(mean.fruitweight))
+
+
+s.comm <- ddply(s.com, c("Site_ID", "nodf.song", "functional.comp.poll", "species.poll"), 
+               summarise, tot.visits    = sum(tot.visits),
+                         mean.seedset = mean(mean.seedset),
+                          mean.seedweight = mean(mean.seedweight),
+                          mean.fruitweight = mean(mean.fruitweight))
+
+
 
 #scale variables for comparison of effect sizes
 
@@ -721,69 +848,67 @@ s.comm$tot.visits.sc <- scale(s.comm$tot.visits, center = T, scale = T)
 
 #average seed set
 
-library(lme4)
-library(lmerTest)
- 
- m1.seed.net<-glm(mean.seedset ~  species.poll.sc + tot.visits.sc, family="gaussian", data=s.comm)
+m1.seed.net<-glm(mean.seedset ~  species.poll.sc + tot.visits.sc, family="gaussian", data=s.comm)
 
- summary(m1.seed.net)
+summary(m1.seed.net)
+
+vif(m1.seed.net)
  
- library(car)
- vif(m1.seed.net)
+m2.seed.net<-glm(mean.seedset ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=s.comm)
  
-m3.seed.net<-glm(mean.seedset ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=s.comm)
+summary(m2.seed.net)
  
- summary(m3.seed.net)
- 
- vif(m3.seed.net)
+vif(m2.seed.net)
  
 #select best model based on AIC 
-library(bbmle)
 
-AICtab(m1.seed.net, m3.seed.net)
+AICtab(m1.seed.net, m2.seed.net)
 
 #test for problems in residuals
-res<-simulateResiduals(m1.seed.net)
-plot(res, rank = TRUE)
+# res<-simulateResiduals(m2.seed.net)
+# plot(res, rank = TRUE)
 
 
-pl3<-ggplot(s.comm,  aes(x=tot.visits.sc, y=mean.seedset))+      
-        geom_point(size=4, color="darkgrey") + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
-        #geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
-        xlab("Total number of visits") +      
-        ylab("Number of seeds/fruit") + theme_bw()  + #theme (legend.position= "none") +
-        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
+#save table with results for paper
+summ.seed.net<-round(summary(m2.seed.net)$coef, digits=2)
+#write.csv(summ.seed.net, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/resultsseedsetNETWORK.csv", row.names = TRUE)
 
-pl3
+#functional comp only marginally significant so no plot here but just to see partial residual plot
 
+crPlots(m2.seed.net, smooth=FALSE, terms = ~  functional.comp.poll.sc, main = "", ylab = "Mean number of seeds per fruit", col.lines= "black", pch=19, col= "black", bg = "darkgrey", cex=2, cex.axis=1.2, cex.lab=1.5, 
+        xlab = "Functional complementarity")
 
 #fruit weight
 
 
-library(lme4)
-library(lmerTest)
- 
- m1.fruitw.net<-glm(mean.fruitweight ~  species.poll.sc + tot.visits.sc, family="gaussian", data=s.comm)
+m1.fruitw.net<-glm(mean.fruitweight ~  species.poll.sc + tot.visits.sc, family="gaussian", data=s.comm)
 
- summary(m1.fruitw.net)
+summary(m1.fruitw.net)
  
- library(car)
  vif(m1.fruitw.net)
  
-m3.fruitw.net<-glm(mean.fruitweight ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=s.comm)
+m2.fruitw.net<-glm(mean.fruitweight ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=s.comm)
  
- summary(m3.fruitw.net)
+ summary(m2.fruitw.net)
  
- vif(m3.fruitw.net)
+ vif(m2.fruitw.net)
  
 #select best model based on AIC 
-library(bbmle)
 
-AICtab(m1.fruitw.net, m3.fruitw.net)
+AICtab(m1.fruitw.net, m2.fruitw.net)
 
 #test for problems in residuals
-res<-simulateResiduals(m1.fruitw.net)
-plot(res, rank = TRUE)
+# res<-simulateResiduals(m1.fruitw.net)
+# plot(res, rank = TRUE)
+
+
+#save table with results for paper
+summ.fruitw.net<-round(summary(m1.fruitw.net)$coef, digits=2)
+#write.csv(summ.fruitw.net, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/resultsfruitweightNETWORK.csv", row.names = TRUE)
+
+
+crPlots(m1.fruitw.net, smooth=FALSE, terms = ~  species.poll.sc, main = "", ylab = "Mean fruit weight", col.lines= "black", pch=19, col= "black", bg = "darkgrey", cex=2, cex.axis=1.2, cex.lab=1.5, 
+        xlab = "Pollinator species diversity")
 
 
 pl4<-ggplot(s.comm,  aes(x=species.poll.sc, y=mean.fruitweight))+      
@@ -799,30 +924,34 @@ pl4
 #seed weight
 
 
-library(lme4)
-library(lmerTest)
- 
- m1.seedw.net<-glm(mean.seedweight ~  species.poll.sc + tot.visits.sc, family="gaussian", data=s.comm)
+m1.seedw.net<-glm(mean.seedweight ~  species.poll.sc + tot.visits.sc, family="gaussian", data=s.comm)
 
- summary(m1.seedw.net)
+summary(m1.seedw.net)
  
- library(car)
- vif(m1.seedw.net)
  
-m3.seedw.net<-glm(mean.seedweight ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=s.comm)
+vif(m1.seedw.net)
  
- summary(m3.seedw.net)
+m2.seedw.net<-glm(mean.seedweight ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=s.comm)
  
- vif(m3.seedw.net)
+summary(m2.seedw.net)
+ 
+vif(m2.seedw.net)
  
 #select best model based on AIC 
-library(bbmle)
 
-AICtab(m1.seedw.net, m3.seedw.net)
+AICtab(m1.seedw.net, m2.seedw.net)
 
 #test for problems in residuals
-res<-simulateResiduals(m1.seedw.net)
-plot(res, rank = TRUE)
+# res<-simulateResiduals(m1.seedw.net)
+# plot(res, rank = TRUE)
+
+#save table with results for paper
+summ.seedw.net<-round(summary(m1.seedw.net)$coef, digits=2)
+#write.csv(summ.fruitw.net, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/resultsseedweightNETWORK.csv", row.names = TRUE)
+
+
+crPlots(m1.seedw.net, smooth=FALSE, terms = ~  species.poll.sc, main = "", ylab = "Mean seed weight", col.lines= "black", pch=19, col= "black", bg = "darkgrey", cex=2, cex.axis=1.2, cex.lab=1.5, 
+        xlab = "Pollinator species diversity")
 
 
 pl5<-ggplot(s.comm,  aes(x=species.poll.sc, y=mean.seedweight))+      
@@ -833,16 +962,29 @@ pl5<-ggplot(s.comm,  aes(x=species.poll.sc, y=mean.seedweight))+
         theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) + labs(col="Plant species")
 
 pl5
+
 ```
 
-### EQUITY IN FRUIT PRODUCTION
+### Equity in fruitset
 
+When evaluating the effect of differences in community composition and structure for equity in reproductive success across the different plant species, we find that both model 1 and model 2 are equally good (AIC diff < 2) and thus we cannot select one over the other. This suggests that, the penalty that should be given to model 2 given its greater complexity (greater number of variables) is smaller than the additional information that is being provided by including data on community structure. Specifically, regarding the results for model 2 we find a significant and positive effect of both the total number of visits received by the community and the functional complementarity within it (mean +- sd not overlapping 0, Table X, Fig. X). This effect that we find when using a 50% threshold of productivity (i.e., when looking at plant species that are producing 50% of the maximum fruitset observed for the area), is maintained when using 25 and 75% thresholds. In the case of the 75% thershold we find an additional positive effect of pollinator species diversity. 
 
-LOOK AT EVENNESSS IN FUNCTION. within a site most plant species have very low reproductive success and thus we get incredibly high evenness values. therefore we use thresholds, for each sps and site we calculate the # of individuals that are above 50% in fruit production.
+ALL THESE RESULTS NOW CHANGE WHEN USING PROPORTION OF SPS RATHER THAN NUMBER, NOTHING IS SIG :()
 
-AS before we find that the best model is that including the diversity of pollinator species, which has a significant positive effect on equity in fruitset.
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
+#calculate column with fruit set as
+f$Plant.sp<-paste(f$Plant_genus, f$Plant_species)
+
+#Fruit_Yes +  Fruit_Preyed + Fruit_Dispersed) / (Fruit_Yes + Fruit_No +Fruit_Preyed + Fruit_Dispersed) #Nacho this equation is wrong in your metadata!
+
+#1st eliminate frutos perdidos
+wordList <- c("fruto perdido","frutos perdidos")
+
+require(Hmisc)
+f2<-subset(f, Notes %nin% wordList)
+
+f2$tot.fruitset<-(f2$Fruit_Yes +  f2$Fruit_preyed + f2$Fruit_dispersed)/(f2$Fruit_Yes +f2$Fruit_No + f2$Fruit_preyed + f2$Fruit_dispersed)
 
 library(vegan)
 library(dplyr)
@@ -871,6 +1013,15 @@ head(f5)
 f6<- aggregate(no_rows ~ Site_ID, f5, length)
 head(f6)
 
+#because when calculating thresholds, sites with 6 plants can score up to 6, but sites with 4 sites can oscar max = 4 we corrected for this doing % above threshold, and no number. 
+
+f4$no_rows<-rep(1, nrow(f4))
+f4b<- aggregate(no_rows ~ Site_ID, f4, length)
+head(f4b)
+
+f6$total.plant.numb<-f4b$no_rows[match(f6$Site_ID, f4b$Site_ID)]
+f6$equity<-f6$no_rows/f6$total.plant.numb
+
 #join this with fruitset data used previously
 
 f6$nodf.song<-out.site$nodf.song[match(f6$Site_ID, out.site$Site_id)]
@@ -885,37 +1036,37 @@ f6$functional.comp.poll.sc <- scale(f6$functional.comp.poll, center = T, scale =
 f6$species.poll.sc <- scale(f6$species.poll, center = T, scale = T)
 f6$tot.visits.sc <- scale(f6$tot.visits, center = T, scale = T)
 
-
-library(lme4)
-library(lmerTest)
- 
- m1.eq<-glm(no_rows ~  species.poll.sc + tot.visits.sc, family="gaussian", data=f6)
+#fit two models
+ m1.eq<-glm(equity ~  species.poll.sc + tot.visits.sc, family="binomial", data=f6)
 
  summary(m1.eq)
  
- library(car)
- vif(m1.eq)
+
+vif(m1.eq)
  
-m3.eq<-glm(no_rows ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=f6)
+m2.eq<-glm(equity ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="binomial", data=f6)
  #nich estimate not overlaping zero: 0.6178     0.4354, second higher effect size!
- summary(m3.eq)
+summary(m2.eq)
  
  
- vif(m3.eq)
+vif(m2.eq)
  
 #select best model based on AIC 
-library(bbmle)
 
-AICtab(m1.eq, m3.eq) #Almost equal... Again, for prediction, go with the simple, for mechanistic understanding, look into niche partitioning. 
+AICtab(m1.eq, m2.eq) #Almost equal... Again, for prediction, go with the simple, for mechanistic understanding, look into niche partitioning. 
 
-m3.eq_ <-glm(no_rows ~ functional.comp.poll.sc, family="gaussian", data=f6)
- #Oh yeah. It works for doing my null simulation.
- summary(m3.eq_)
 
-#test for problems in residuals
-res<-simulateResiduals(m1.eq)
-plot(res, rank = TRUE)
 
+#save table with results for paper, both models are equally good so save both tables
+summ.eq<-round(summary(m1.eq)$coef, digits=2)
+#write.csv(summ.eq, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/resultsequityNETWORKm1.csv", row.names = TRUE)
+
+summ.eq2<-round(summary(m2.eq)$coef, digits=2)
+#write.csv(summ.eq2, file="C:/Users/ainhoa.magrach/Dropbox/Beefun/Beefun/functioning/tables/resultsequityNETWORKm2.csv", row.names = TRUE)
+
+#partial residual plots
+
+crPlots(m2.eq, smooth=FALSE, terms = ~  tot.visits.sc + functional.comp.poll.sc, main = "", ylab = "Equity in fruitset", col.lines= "black", pch=19, col= "black", bg = "darkgrey", cex=2, cex.axis=1.2, cex.lab=1.5)
 
 pl.th_ <-ggplot(f6,  aes(x=functional.comp.poll.sc, y=no_rows))+      
         geom_point(size=4, color="darkgrey") + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
@@ -933,25 +1084,36 @@ pl.th<-ggplot(f6,  aes(x=tot.visits.sc, y=no_rows))+
 
 pl.th
 
+-------------------------------------------------------------------------------
 
-#check whether it is driven by that one point with large number of visits
 
-f7 <- subset(f6, f6$tot.visits.sc < 2)
+m3.eq_ <-glm(no_rows ~ functional.comp.poll.sc, family="gaussian", data=f6)
+ #Oh yeah. It works for doing my null simulation.
+ summary(m3.eq_)
 
- m1.eqb<-glm(no_rows ~  species.poll.sc + tot.visits.sc, family="gaussian", data=f7)
+#test for problems in residuals
+# res<-simulateResiduals(m1.eq)
+# plot(res, rank = TRUE)
 
- summary(m1.eqb)
- 
- 
- 
-pl.th2<-ggplot(f7,  aes(x=tot.visits.sc, y=no_rows))+      
-        geom_point(size=4, color="darkgrey") + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
-        xlab("Total number of visits") +      
-        ylab("Equity in fruitset") + theme_bw() + 
-        theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
-
-pl.th2
-
+# 
+# #check whether it is driven by that one point with large number of visits
+# 
+# f7 <- subset(f6, f6$tot.visits.sc < 2)
+# 
+#  m1.eqb<-glm(no_rows ~  species.poll.sc + tot.visits.sc, family="gaussian", data=f7)
+# 
+#  summary(m1.eqb)
+#  
+#  
+#  
+# pl.th2<-ggplot(f7,  aes(x=tot.visits.sc, y=no_rows))+      
+#         geom_point(size=4, color="darkgrey") + geom_smooth(method=lm, size=1.5, se=TRUE, color = "black", alpha=0.2) + 
+#         xlab("Total number of visits") +      
+#         ylab("Equity in fruitset") + theme_bw() + 
+#         theme(text = element_text(size = 20), axis.text=element_text(size=rel(1.2)), axis.title=element_text(size=rel(1.3), face="bold")) 
+# 
+# pl.th2
+# 
 
 
 #Repeat with 75% threshold
@@ -964,6 +1126,8 @@ head(f75)
 #for each site here is the number of sps whose fruitset exceeds 75% of maximum fruitset observed in the whole study area
 f75b<- aggregate(no_rows ~ Site_ID, f75, length)
 head(f75b)
+f75b$total.numb.plants<-f6$total.plant.numb[match(f75b$Site_ID, f6$Site_ID)]
+f75b$equity<-f75b$no_rows/f75b$total.numb.plants
 
 #join this with fruitset data used previously
 
@@ -980,30 +1144,25 @@ f75b$species.poll.sc <- scale(f75b$species.poll, center = T, scale = T)
 f75b$tot.visits.sc <- scale(f75b$tot.visits, center = T, scale = T)
 
 
-library(lme4)
-library(lmerTest)
- 
- m1.eq.75<-glm(no_rows ~  species.poll.sc + tot.visits.sc, family="gaussian", data=f75b)
+ m1.eq.75<-glm(equity ~  species.poll.sc + tot.visits.sc, family="gaussian", data=f75b)
 
  summary(m1.eq.75)
- 
- library(car)
+
  vif(m1.eq.75)
  
-m3.eq.75<-glm(no_rows ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=f75b)
+m2.eq.75<-glm(equity ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=f75b)
  
- summary(m3.eq.75)
+ summary(m2.eq.75)
  
- vif(m3.eq.75)
+ vif(m2.eq.75)
  
 #select best model based on AIC 
-library(bbmle)
 
-AICtab(m1.eq.75, m3.eq.75)
+AICtab(m1.eq.75, m2.eq.75) #as before both models are equally good.
 
-#test for problems in residuals
-res<-simulateResiduals(m1.eq.75)
-plot(res, rank = TRUE)
+# #test for problems in residuals
+# res<-simulateResiduals(m1.eq.75)
+# plot(res, rank = TRUE)
 
 #and for 25% threshold
 
@@ -1015,8 +1174,9 @@ head(f25)
 #for each site here is the number of sps whose fruitset exceeds 25% of maximum fruitset observed in the whole study area
 f25b<- aggregate(no_rows ~ Site_ID, f25, length)
 head(f25b)
+f25b$total.numb.plants<-f6$total.plant.numb[match(f25b$Site_ID, f6$Site_ID)]
+f25b$equity<-f25b$no_rows/f25b$total.numb.plants
 
-#join this with fruitset data used previously
 
 f25b$nodf.song<-out.site$nodf.song[match(f25b$Site_ID, out.site$Site_id)]
 f25b$functional.comp.poll<-out.site$functional.comp.poll[match(f25b$Site_ID, out.site$Site_id)]
@@ -1031,30 +1191,25 @@ f25b$species.poll.sc <- scale(f25b$species.poll, center = T, scale = T)
 f25b$tot.visits.sc <- scale(f25b$tot.visits, center = T, scale = T)
 
 
-library(lme4)
-library(lmerTest)
- 
- m1.eq.25<-glm(no_rows ~  species.poll.sc + tot.visits.sc, family="gaussian", data=f25b)
+ m1.eq.25<-glm(equity ~  species.poll.sc + tot.visits.sc, family="gaussian", data=f25b)
 
  summary(m1.eq.25)
  
- library(car)
- vif(m1.eq.25)
+  vif(m1.eq.25)
  
-m3.eq.25<-glm(no_rows ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=f25b)
+m2.eq.25<-glm(equity ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=f25b)
  
- summary(m3.eq.25)
+ summary(m2.eq.25)
  
- vif(m3.eq.25)
+ vif(m2.eq.25)
  
 #select best model based on AIC 
-library(bbmle)
 
-AICtab(m1.eq.25, m3.eq.25)
+AICtab(m1.eq.25, m2.eq.25)
 
 #test for problems in residuals
-res<-simulateResiduals(m1.eq.25)
-plot(res, rank = TRUE)
+# res<-simulateResiduals(m1.eq.25)
+# plot(res, rank = TRUE)
 
 
 
@@ -1083,6 +1238,16 @@ head(s6)
 s7<- aggregate(no_rows ~ Site_ID, s6, length)
 head(s7)
 
+
+#calculate proportion of sps at threshold because number depends on number of sps per site which is different
+
+s5$no_rows<-rep(1, nrow(s5))
+s5b<- aggregate(no_rows ~ Site_ID, s5, length)
+head(s5b)
+
+s7$total.plant.numb<-s5b$no_rows[match(s7$Site_ID, s5b$Site_ID)]
+s7$equity<-s7$no_rows/s7$total.plant.numb
+
 #join this with fruitset data used previously
 
 s7$nodf.song<-out.site$nodf.song[match(s7$Site_ID, out.site$Site_id)]
@@ -1098,36 +1263,38 @@ s7$species.poll.sc <- scale(s7$species.poll, center = T, scale = T)
 s7$tot.visits.sc <- scale(s7$tot.visits, center = T, scale = T)
 
 
-library(lme4)
-library(lmerTest)
+#fit two models
  
- m1.eq.seed<-glm(no_rows ~  species.poll.sc + tot.visits.sc, family="gaussian", data=s7)
+ m1.eq.seed<-glm(equity ~  species.poll.sc + tot.visits.sc, family="binomial", data=s7)
 
  summary(m1.eq.seed)
  
- library(car)
+
  vif(m1.eq.seed)
  
-m3.eq.seed<-glm(no_rows ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=s7)
+m2.eq.seed<-glm(equity ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="binomial", data=s7)
  
- summary(m3.eq.seed)
+ summary(m2.eq.seed)
  
- vif(m3.eq)
+ vif(m2.eq)
  
 #select best model based on AIC 
-library(bbmle)
 
-AICtab(m1.eq.seed, m3.eq.seed)
+AICtab(m1.eq.seed, m2.eq.seed)
 
 #test for problems in residuals
-res<-simulateResiduals(m1.eq.seed)
-plot(res, rank = TRUE)
+# res<-simulateResiduals(m1.eq.seed)
+# plot(res, rank = TRUE)
 
 
 
 ```
 
 Now, we ask if the effect of niche complementariety increases with the number of species considered in the network. We expect that for any single species, the effect should be almost zero (as shown in our single species analysis above), but when you take into account up to 6 species, network metrics start to be important (see also above the community level results). This implies that if we would be able to measure reproductive success on all plant species in the community in all networks (not done for effort constrains) the effects of network configuartion may be even more prevalent. To test this, we ran a simple simulation where we first increase randomly the number of selected species per network and calculate the equitativity for each run. Instead of drawing random plants for each run, for each plant number level and network we test all possible combinations, as this number is low (n = 63 possible combiations overall for the network with the largest dataset) and increasing sampling events in our simulation would only result in repeated combinations. Second, we test the overall relation between equitativity in fruit set and niche complementariety in our simulated communities. To this end, for each species number level, we randomly combine the generated equitativity values across the 16 communities as to obtain one random value per species. Finally, for each of such combinations we calculated the estimate of equitativity in relation with niche partitioning and average all estimates from 1000 simulated combinations per number of plants considered. We expect that the more plants considered, the larger are the resulting average estimates. Note that We only interpret the mean effects, as the variance among different plant number of species depends on the initial number of combinations.
+
+I ALSO INCLUDED HERE NESTEDNESS WHICH STARTS AS LESS IMPORTANT AND THEN BECOMES MORE IMPORTANT WITH NO ASYMPTOTE.
+
+ONE QUESTION, WHY DO WE DO THIS SIMULATION ONLY FOR EQUITY AND NOT ALSO FOR AVERAGE REP SUCCESS?
 
 
 
@@ -1165,14 +1332,14 @@ head(f4) #this is ok, I guess, but imply we are correcting for differences in pr
 #f4$fruit.prop <- f4$mean.fruitset
   
 #1) First let's calculate all combinations of 1,2,3,4,5,6 species per network.
-combinatorials_all <-  matrix(ncol = 5, nrow = 1, NA) 
-colnames(combinatorials_all) <- c("SiteID", "Plant_number_level", "iteration", "equitativity", "niche")
+combinatorials_all <-  matrix(ncol = 6, nrow = 1, NA) 
+colnames(combinatorials_all) <- c("SiteID", "Plant_number_level", "iteration", "equity", "functional.comp", "nestedness")
 uniqueSite_ID <- unique(f4$Site_ID)
 for(k in 1:length(uniqueSite_ID)){ #sites
   Site_temp <- subset(f4, Site_ID == uniqueSite_ID[k]) #1:SiteID
   n <- length(Site_temp$Plant.sp)
-  combinatorials <- matrix(ncol = 5, nrow = 1, NA) #flexible
-  colnames(combinatorials) <- c("SiteID", "Plant_number_level", "iteration", "equitativity", "niche")
+  combinatorials <- matrix(ncol = 6, nrow = 1, NA) #flexible
+  colnames(combinatorials) <- c("SiteID", "Plant_number_level", "iteration", "equity", "functional.comp", "nestedness")
   combinatorials <- as.data.frame(combinatorials)
   for (i in 1:n){ #levels
     combinatorials_1 <- combn(x = Site_temp$Plant.sp, m = i) #1:n
@@ -1190,13 +1357,15 @@ for(k in 1:length(uniqueSite_ID)){ #sites
       combinatorials_3 <- aggregate(no_rows ~ Site_ID, combinatorials_2, sum)
       #head(combinatorials_3)
       combinatorials_3$functional.comp.poll <- out.site$functional.comp.poll[match(combinatorials_3$Site_ID, out.site$Site_id)]
+      combinatorials_3$nestedness <- out.site$nodf.song[match(combinatorials_3$Site_ID, out.site$Site_id)]
       #now save for later.
       index <- dim(combinatorials)[1]
       combinatorials[index+1,1] <-  as.character(combinatorials_3$Site_ID) #1:SiteID
       combinatorials[index+1,2] <-  i #Plant number level
       #combinatorials[index+1,3] <-    #"iteration" let's asume we don' care, but would be good for unit testing
       combinatorials[index+1,4] <- combinatorials_3$no_rows/i #above threshold in %
-      combinatorials[index+1,5] <-  combinatorials_3$functional.comp.poll #nich comp value...    
+      combinatorials[index+1,5] <-  combinatorials_3$functional.comp.poll #nich comp value...
+      combinatorials[index+1,6] <-  combinatorials_3$nestedness #nestedness value...
     } #close different combinations
   } #close levels
   combinatorials_all <- rbind(combinatorials_all, combinatorials[-1,])
@@ -1206,20 +1375,43 @@ combinatorials_all <- combinatorials_all[-1,]
 
 #plot overall (asi a saco)
 
-scatter.smooth(combinatorials_all$equitativity ~ combinatorials_all$niche) #no relationship, good
+scatter.smooth(combinatorials_all$equity ~ combinatorials_all$functional.comp) #no relationship, good
+scatter.smooth(combinatorials_all$equity ~ combinatorials_all$nestedness) #no relationship, good
+
+
+#scale variables
+
+combinatorials_all$functional.comp.sc<-scale(combinatorials_all$functional.comp, center = T, scale = T)
+combinatorials_all$nestedness.sc<-scale(combinatorials_all$nestedness, center = T, scale = T)
+
 
 #now try overall, per level.
 estimate <- rep(NA,6)
 for (i in unique(combinatorials_all$Plant_number_level)){
   temp <- subset(combinatorials_all, Plant_number_level == i)
-  m <- lm(temp$equitativity ~ temp$niche)
-  plot(temp$equitativity ~ temp$niche) 
+  m <- lm(temp$equity ~ temp$functional.comp.sc)
+  plot(temp$equity ~ temp$functional.comp.sc) 
   abline(m)
   estimate[i] <- m$coefficients[2]
   }
 
-plot(unique(combinatorials_all$Plant_number_level) , estimate, las = 1,
+plot(unique(combinatorials_all$Plant_number_level) , estimate, las = 1, ylim = c(0, 0.1) ,
      ylab = "importance of niche partitioning", xlab = "number of plants considered")
+
+
+
+#now try overall, per level.
+estimate <- rep(NA,6)
+for (i in unique(combinatorials_all$Plant_number_level)){
+  temp <- subset(combinatorials_all, Plant_number_level == i)
+  m <- lm(temp$equity ~ temp$nestedness.sc)
+  plot(temp$equity ~ temp$nestedness.sc) 
+  abline(m)
+  estimate[i] <- m$coefficients[2]
+  }
+
+plot(unique(combinatorials_all$Plant_number_level) , estimate,  las = 1, ylim = c(0, 0.1) ,
+     ylab = "importance of nestedness", xlab = "number of plants considered")
 
 # I think this is a true pattern, as the for the cnetral limit theorem a mean of means should equal the grand mean, but worth check it.
 
@@ -1235,8 +1427,8 @@ for (i in 1:length(unique(combinatorials_all$Plant_number_level))){ # over level
       temp2 <- subset(temp, SiteID == unique(temp$SiteID)[j]) #why only one record at Elpinar??
       value_temp <- temp2[sample(x = 1:nrow(temp2), 1),]
       value[j,1] <- value_temp$SiteID
-      value[j,2] <- value_temp$equitativity
-      value[j,3] <- value_temp$niche
+      value[j,2] <- value_temp$equity
+      value[j,3] <- value_temp$functional.comp
     } #close sites
     m <- lm(value$eq ~ value$nich)
     #plot(value$eq ~ value$nich)
@@ -1267,159 +1459,22 @@ plot(estimate_i$level, estimate_i$estimate, las = 1,
 
 
 
-Now look at motifs and indirect interactions. To this end, we compare the roles of plant species at each site with low (<0.5) and high (>0.5) fruit set. We calculate for each plant species at each site the sum-normalised roles of all plant species in motifs up to 5 nodes and plot them using NMDS. ALthough we find a large overlap between the roles of both types ofplant species, we do find that plant species with high fruit set tend to be located in the higher values of NMDS1 which is related to network positions in which a generalist plant species interacts with highly specialized pollinator partners (e.g, positions 16 and 46, see Fig. 1 in bmotif paper, Simmons et al preprint)
-
-```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
-#IB edited this in paper.Rmd
-#First attempt to load the data, etc...
-
-#prepare stuff-----
-#If you don't have devtools install it
-#install.packages("devtools")
-library(devtools)
-#Then install the data package. Reprot issues 
-#install_github("ibartomeus/BeeFunData", ref = "fun")
-library(BeeFunData)
-
-
-# load packages
-library(bmotif)
-library(vegan)
-
-#make the data available
-#analysis...----
-
-
-d<-all_interactions
-f<-fruitset
-s<-seedset
-
-
-d2<-subset(d, d$Plant_gen_sp!="NA NA")
-#d2$Plant_gen_sp
-
-sites <- unique(d2$Site_ID)
-
-
-empty_web <- function(x) {
-  # Removes all-zero rows and columns from a matrix
-  cempty <- which(colSums(x) == 0)
-  rempty <- which(rowSums(x) == 0)
-  if(length(rempty) != 0 & length(cempty) == 0){
-    return(x[-rempty,,drop = FALSE])
-  } else if(length(rempty) == 0 & length(cempty) != 0){
-    return(x[,-cempty,drop = FALSE])
-  } else if(length(rempty) != 0 & length(cempty) != 0){
-    return(x[-rempty,-cempty,drop = FALSE])
-  } else if(length(rempty) == 0 & length(cempty) == 0){
-    return(x)
-  }
-}
-
-
-webs <- list()
-webs.or3<-list()
-for(i in 1:length(sites)){
-  temp <- subset(d2, Site_ID == sites[i])
-  # for(j in 1:length(rounds)){
-  #   temp2 <- subset(temp, Round == rounds[j])
-  #   if (nrow(temp2) == 0) next
-  
-  web <- as.matrix.data.frame(table(temp$Plant_gen_sp, temp$Pollinator_gen_sp))
-  web.or<-table(temp$Plant_gen_sp, temp$Pollinator_gen_sp)#keeps names of species
-  
-  web2<-empty_web(web)
-  web.or2<-empty_web(web.or)
-    
-  webs.or3[[i]]<-web.or2 #keeps names of species
-  webs[[i]]<-as.matrix(web2)
-}
-
-names(webs)<-sites
-names(webs.or3)<-sites
-
-out <- data.frame(web = NA, nrow = NA)
-
-#calculates number of rows in each web and then sums everything to see how many rows we need in total
-for(i in 1:length(webs)){
-  s<- sum(nrow(webs[[i]]))
-
-  n<-nrow(out)
-  out[n + 1,1] <- as.character(sites[i])
-  out[n + 1,2] <- s
-  
-}
-
-out<-out[-1,]
-out2<-sum(out$nrow)
-
-mp <- as.data.frame(matrix(nrow = out2, ncol = 48, dimnames = list(NULL,c("web","species",paste0("m",1:46)))))
-wr <- 0
-for(i in names(webs)){
-  
-    pv <- positions(webs[[i]], six_node = FALSE, level = "rows", normalisation = "sum") # calculate species positions
-    start_row <- which(is.na(mp$web))[1]
-    end_row <- (start_row + nrow(pv)) - 1
-    wr <- start_row:end_row
-    mp[wr,"web"] <- i
-    mp[wr,"species"] <- rownames(webs.or3[[i]])
-    mp[wr,paste0("m",1:46)] <- pv
-  }
+#DISCUSSION
+Importance of functional complementarity found in artificial [@Frund2013] and natural [@Fontaine2005] communities. 
 
 
 
-#SUBSET ONLY PLANTS FOR WHICH WE HAVE DATA ON FRUISET
-#f4
-f4$j<-paste(f4$Site_ID, f4$Plant.sp)
-
-mp$j<-paste(mp$web, mp$species)
 
 
-mp$mean.fruitset<-f4$mean.fruitset[match(mp$j, f4$j)]
-
-mp2<-subset(mp, mp$mean.fruitset!="NA")
-mp2$class[mp2$mean.fruitset>0.5]<-"high"
-mp2$class[mp2$mean.fruitset<0.5]<-"low"
+The analysis of natural communities of interacting species using network analysis represents an ideal way of visualizing and grasping the complexity present. 
 
 
 
-# How many native and introduced species?
-mp2 <- mp2[order(mp2$class, decreasing = TRUE),]
-class_f <- table(mp2$class)
 
 
 
-# NMDS
-example_NMDS <- metaMDS(vegdist(mp2[,paste0("m",1:46)], method = "bray"), k=2, distance = "bray", trymax = 100)
-mds.fig <- ordiplot(example_NMDS, type = "none")
-colors=c(rep("darkorange2",class_f["low"]),rep("purple",class_f["high"]))
-treat <- mp2$class
-for(i in unique(treat)) {
-  ordihull(example_NMDS$point[grep(i,treat),],draw="polygon",
-           groups=treat[treat==i],col=colors[grep(i,treat)],label=F) } 
-with(mp2, legend("topright", legend = unique(mp2$class), bty = "n",
-                col = unique(colors), pch = 21, pt.bg = unique(colors)))
-points(mds.fig, "sites", pch = 19, col = "darkorange3", select = mp2$class == 
-         "low")
-points(mds.fig, "sites", pch = 19, col = "purple", select = mp2$class == 
-         "high")
+we have yet to know whether these variables contribute more to plant reproductive success than others related to the position of a particular plant species within the wider plant community that hosts it. In particular, our study focuses on the importance of pollinator diversity and total number of visits for plant reproductive success in comparison to that of the plant´s position in the community. Specifically, niche overlap between plant species (which could give us a proxy for the existence of competition for pollination between plant species) and the position of the plant given by the connections it establishes with other species, e.g. its centrality within the network, where central species are those receiving the greatest number of connections from other species, could have an influence in a plant´s reproductive success.
 
-#example_NMDS <- metaMDS(mp2[,paste0("m",1:46)], k=2, distance = "bray", trymax = 100)
-#example_NMDS$species # which positions are associated with which axes
-#example_NMDS$species[order(example_NMDS$species[,"MDS2"]),]
-
-
-#permanova
-
-adonis(mp2[,3:48]~ mean.fruitset / web, data=mp2, method = "euclidean")
-
-#permanova... 
-
-adonis(mp2[,3:48]~ mean.fruitset, data=mp2, method = "euclidean", strata = mp2$web)
-adonis(mp2[,3:48]~ class, data=mp2, method = "bray")
-
-
-
-```
-
+Furthermore, we do not know how the overall structure of a community, and the architecture of the network of interactions it hosts, affects the reproductive success of the whole community. In particular, one of the networks metrics that has received the most attention in the community ecology literature is that of nestedness. Nestedness is the property by which specialists interact with a subset of the species that generalists interact with. Although there is ongoing debate in the literature, some studies have found that more nested networks are more stable and resilient to perturbations because nestedness implies a certain level of redundancy and thus the possibility for functional replacement in the case of species loss. However, plant reproductive success depends on the delivery of conspecific pollen and thus of a certain level of specialization or niche divergence. Yet at present we do not know how the interplay between redundancy and complementarity determines reproductive success.
+Finally, average values of reproductive success at the community level can be driven to a large degree by one single plant species. Yet, what will determine the persistence of a diverse plant community is the presence of some sort of “equity” in reproductive success across the whole community. We thus also focus on the effect of community structure for equity in reproductive success across the plant community.
 
