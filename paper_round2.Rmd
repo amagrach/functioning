@@ -1,7 +1,6 @@
 ---
 title: "Impact of interaction network structure on community-level plant reproduction success"
 author: "Magrach, A, Molina, FP, Bartomeus, I"
-date: "6 November 2018"
 output: html_document
 bibliography: library.bib
 csl: ecology-letters.csl
@@ -28,7 +27,8 @@ III. Main text (Sections b-d required for Letters only)
 
 
 
-Title: Impact of interaction network structure on community-level plant reproduction success
+Title: Impact of interaction network structure on community-level plant reproduction success  
+or "Interaction network structure maximizes community-level plant reproduction success via [niche complmentariety?]()"
 
 Ainhoa Magrach, Francisco de Paula Molina, Ignasi Bartomeus
 
@@ -54,31 +54,33 @@ Corresponding author: ainhoa.magrach@bc3research.org, nacho.bartomeus@gmail.com
 
 # ABSTRACT
 
-Declines in pollinator diversity and abundance have been reported across different regions, with implications for the reproductive success of many plant species. However, research has targeted the consequences for individual plant species, particularly focusing on pairwise plant-pollinator interactions, and largely overlooking community-level dynamics. Yet species do not interact in isolation, they are embedded within larger networks whose structure can affect pollinator functional roles and, ultimately, the pollination services they deliver to plants. Here, we present one of the first efforts linking pollinator visitation to plant reproduction from a community-wide perspective using a well-replicated dataset encompassing 16 well-resolved networks and data on reproductive success for 19 plant species from Mediterranean shrub ecosystems. We find that, for prediction purposes, information on simple visitation metrics is sufficient. Contrastingly, a mechanisitic understanding of the pathways through which differences in pollinator diversity translate into changes in reproductive success, requires additional information on network structure. 
+Declines in pollinator diversity and abundance have been reported across different regions, with implications for the reproductive success of many plant species. However, research has targeted the consequences for individual plant species, particularly focusing on pairwise plant-pollinator interactions, and largely overlooking community-level dynamics. Yet species do not interact in isolation, they are embedded within larger networks whose structure can affect pollinator functional roles and, ultimately, the pollination services they deliver to plants. Here, we present one of the first efforts linking pollinator visitation to plant reproduction from a community-wide perspective using a well-replicated dataset encompassing 16 well-resolved networks and data on reproductive success for 19 plant species from Mediterranean shrub ecosystems. We find that, for prediction purposes, information on simple visitation metrics is sufficient. Contrastingly, a mechanisitic understanding of the pathways through which differences in pollinator diversity translate into changes in reproductive success, requires additional information on network structure [such as...](). 
 
 #INTRODUCTION
 
-Pollinators provide key services to plants by facilitating pollen flow between individuals. The recent declining trends found for some pollinator species in some regions of the planet ([@Potts2010], although see [@Herrera2018] for opposite trends), have led many researchers to focus on the functional impacts of these changes in pollinator diversity, with a major focus being placed on the consequences for plant reproductive success [@Biesmeijer2006]. 
+Pollinators provide key services to plants by facilitating pollen flow between individuals. The recent declining trends found for some pollinator species in some regions of the planet ([@Potts2010], although see [@Herrera2018] for opposite trends[IB: I think Herrea paper is not needed here, as is quite local. My 2018 Phil Trans paper sumarizs the lack of knowledge for the world]()), have led many researchers to focus on the functional impacts of these changes in pollinator diversity, with a major focus being placed on the consequences for plant reproductive success [@Biesmeijer2006]. 
 
-Many research efforts have targeted the reproductive success of individual plant species [@Albrecht2012a; @doi:10.1111/1365-2745.13055], and used relatively simple visitation metrics (e.g., the number of pollinator species that visit a plant or the number of visits they perform) to explain differences found  across different plant individuals. Some have gone a step further by including information on the efficiency of these visits, thus adding a measure of quality to the pollination services (REF). Contrastingly, community-level analyses remain scarce [@Bennett2018]. Yet plants and pollinators do not interact in isolation, but rather are embedded within larger networks of interactions encompassing other plant and pollinator species. We are thus missing an important part of the picture, which includes the direct interactions between the whole ensemble of plants and pollinators, but also the indirect ones between species within one guild (e.g., plants) through their shared resources [@Lazaro2014]. Understanding how changes in pollinator diversity affect whole community assemblages is thus a major challenge that requires attention.
+Many research efforts have targeted the reproductive success of individual plant species [@Albrecht2012a; @doi:10.1111/1365-2745.13055], and used relatively simple visitation metrics (e.g., the number of pollinator species that visit a plant or the number of visits they perform) to explain differences found  across different plant individuals. Some have gone a step further by including information on the efficiency of these visits, thus adding a measure of quality to the pollination services (REF[I only know refs for crops, e.g. winfree. Check Morris Ecology 2010 to see if there is something tehere]()). Contrastingly, community-level analyses remain scarce [@Bennett2018]. Yet plants and pollinators do not interact in isolation, but rather are embedded within larger networks of interactions encompassing other plant and pollinator species. We are thus missing an important part of the picture, which includes the direct interactions between the whole ensemble of plants and pollinators, but also the indirect ones between species within one guild (e.g., plants) through their shared resources [@Lazaro2014, [Carvalheiro et al 2014 Ecol Lett, and Mayfield ans Stouffer 2017 Nature EcoEvo]()]. Understanding how changes in pollinator diversity [diversity or interaction structure?]() affect whole community assemblages is thus a major challenge that requires attention.
 
 The few pollination studies that have analysed the effects of changing pollinator diversity for reproductive success at the community level, have done so using mainly experimental setups. As an example, a study that experimentally recreated a plant community with 9 plant species and differing levels of pollinator diversity across different enclosures, found that not only pollinator species diversity had an effect for average reproductive success, but also they found that the structure that shaped the community had an important effect [@Frund2013]. In particular, these authors found that the functional complementarity between pollinators, in terms of plant species and temperature coverage (a measure of the overlap in the use of plant resources and optimum temperature activity) had a positive effect for average seed set at the community level [@Frund2013]. This provides added information on the effects of biodiversity for ecosystem functioning, suggesting that not only the diversity of species present but also the diversity of roles and ways in which a community is structured are determinant factors.
 
-Indeed, theoretical research has long suggested that the structure of a community has an effect for ecosystem functioning (reviewed in [@Thompson2012]). This line of research, primarliy driven by food-web studies, has greatly advanced theory, but these ideas have not yet been tested using empirical data. Specifically, a major knowledge gap resides in understading which aspects of structure determine which aspects of function [@Thompson2012]. We are now at a point in which there is considerable understanding on the attributes of interaction networks (REF, REF, REF). Even further, we now have a substantial understanding of how these attributes vary along different types of gradients [@Pellissier2017; @Tylianakis2016]. Especially, in the case of pollination, we have ample knowledge on the attributes that shape these mutualistic interactions at the community level, such as a prevalence of nested structures (REF) or the presence of asymmetric specialization as a pervasive feature [@Vazquez2004]. The time is thus ripe to use this knowledge to explore relationships between community structure and ecosystem functioning, with special emphasis being placed on the underlying mechanisms that drive these relationships.
+Indeed, theoretical research has long suggested that the structure of a community has an effect for ecosystem functioning (reviewed in [@Thompson2012]). This line of research, primarliy driven by food-web studies, has greatly advanced theory, but these ideas have not yet been tested using empirical data [(but see Poisot and Gravel Ecol Let?)](). Specifically, a major knowledge gap resides in understading which aspects of structure determine which aspects of function [@Thompson2012]. We are now at a point in which there is considerable understanding on the attributes characterizing mutualistic interaction networks ([Bacompte and H¿JOrdano AREES review]() REF, REF, REF) and we have a substantial understanding of how these attributes vary along different types of gradients [@Pellissier2017; @Tylianakis2016]. Especially, in the case of pollination, we have ample knowledge on the attributes that shape these mutualistic interactions at the community level, such as a prevalence of nested structures ([Bascompte et al 2013 PNAS]()) or the presence of asymmetric specialization as a pervasive feature [@Vazquez2004]. However, how the structure formed by this network of interactions afects key ecosystem functions such as plant reproduction remains untested [(Winfree BAAE opinion paper is good to cite "Global change, biodiversity, and ecosystem services: What can we learn from 6 studies of pollinators?")](). The time is thus ripe to use this knowledge to explore relationships between community structure and ecosystem functioning, with special emphasis being placed on the underlying mechanisms that drive these relationships.
 
-Here, we present one of the first efforts linking pollinator visitation and plant reproductive success at the community level. To this end, we use a well-replicated dataset encompassing 16 well-resolved networks coupled with data on the reproductive success of 19 plant species recorded at Mediterranean shrub ecosystems within the area of influence of Doñana National Park in SW Spain. Our study focuses on understanding whether adding information on the structure of the community to previously-used simple visitation metrics (e.g., number of pollinator species visiting a plant species) aids in better explaining the differences observed in community-wide reproductive success. In doing so, we conducted our analyses focusing on reproductive success at two different levels: (i) at the species level by considering the effect of the position of a focal species within the larger network and its impact on its individual reproductive success and (ii) at the community level, by evaluating how attributes that describe the whole community might affect average values of reproductive success. 
+Here, we present one of the first efforts linking pollinator visitation and plant reproductive success at the community level. To this end, we use a well-replicated dataset encompassing 16 well-resolved networks coupled with data on the reproductive success of 19 plant species recorded at Mediterranean shrub ecosystems within the area of influence of Doñana National Park in SW Spain. Our study focuses on understanding whether adding information on the structure of the community to previously-used simple visitation metrics (e.g., number of pollinator species visiting a plant species) aids in better explaining the differences observed in community-wide reproductive success. In doing so, we conducted our analyses focusing on reproductive success at two different levels: (i) at the species level by considering the effect of the position of a focal species within the larger network and its impact on its individual reproductive success and (ii) at the community level, by evaluating how attributes that describe the whole community might affect average values of reproductive success [and equity acorss species.]() 
 
 Our results suggest that for prediction purposes, information on simple visitation metrics, particularly regarding the diversity of pollinators that visit a plant species, is sufficient. However, we find that a mechanisitic understanding of the pathways through which differences in pollinator diversity translate into changes in reproductive success requires additional information on network structure, notably information on the complementarity between the functions performed by different pollinator species. 
+
+[IB: this intro is brilliant!]()
 
 # METHODS
 
 _Plant pollinator interactions_
 
-Our study was conducted in SW Spain within the area of influence of Doñana National Park (Figure 1?). Here, we surveyed 16 Mediterranean woodland patches, located within a XXX m2 area and with an average distance of XX km between them (min= XX, max= XX). [SHOULD WE SAY SOMETHING ABOUT THE MATRIX SURROUNDING THESE SITES OR THE TYPE OF VEGETATION PRESENT IN THEM???] Each site was surveyed 7 times during the flowering season of 2015?? (February-July???) following a 100-m x 2 m transect for 30 mins. Along each transect, we identified all plant species and recorded all the flower visitors (IS IT JUST BEES AND HOVERFLIES?) that legitimately visited them. Floral visitors (from now on referred to as pollinators) that could not be identified in the field were captured, stored and identified in the laboratory by FdPM with the aid of experts in the different taxonomic groups (see acknowledgements). All surveys were done under similar weather conditions, avoiding windy or rainy days. 
+Our study was conducted in SW Spain within the area of influence of Doñana National Park (Figure 1?). Here, we surveyed 16 Mediterranean woodland patches, located within a XXX m2 area and with an average distance of XX km between them (min= XX, max= XX). [SHOULD WE SAY SOMETHING ABOUT THE MATRIX SURROUNDING THESE SITES OR THE TYPE OF VEGETATION PRESENT IN THEM??? IB: I don't think is relevant. ASK CURRO ABOUT THE NUMBERS ABOVE.]() Each site was surveyed 7 times during the flowering season of 2015 (from February to May) following a 100-m x 2 m transect for 30 mins. Along each transect, we identified all plant species and recorded all the flower visitors [IS IT JUST BEES AND HOVERFLIES? IB: NO, ALL VISITORS!]() that legitimately visited them. Floral visitors (from now on referred to as pollinators) that could not be identified in the field were captured, stored and identified in the laboratory by FdPM with the aid of experts in the different taxonomic groups (see acknowledgements). All surveys were done under similar weather conditions, avoiding windy or rainy days. 
 
 _Plant reproductive success_
 
-Within each site, we marked between 2 and 12 individuals (6.49 +- 2.37) of 1 to 6 plant species (4.06 +- 1.69), depending on the availability and presence of flowers during the first sampling event. For each individual, we counted the number of flowers at the beginning of the season and recorded fruit set, the number of seeds per fruit (for 2-36 fruits, 11.17 +- 6.84) and average seed weight at the end of the season???. Our survey included a total of 19 plant species across our 16 sites. 
+Within each site, we marked between 2 and 12 individuals (6.49 +- 2.37) of 1 [NB: Which site has only one species!]() to 6 plant species (4.06 +- 1.69), depending on the availability and presence of flowers during the sampling events. For each individual, we counted the number of flowers at each sampling point and recorded fruit set, the number of seeds per fruit (for 2-36 fruits, 11.17 +- 6.84) and average seed weight per fruit at the end of the season. Our survey included a total of 19 different plant species across our 16 sites. 
 
 #DATA ANALYSES
 
@@ -92,7 +94,7 @@ At the species level, we focused on attributes defining the position of a focal 
 
 _Community-level network analysis_
 
-At the community level, we followed the same logic as the one presented at the species level. Thus, we also calculated two network metrics providing complementary non-redundant information. In this case we focused on (i) nestedness and (ii) functional complementarity. Nestedness is the property by which specialists interact with a subset of the species that generalists interact with (REF). Although there is an ongoing debate in the literature, some studies have found that nested networks are more stable and resilient to perturbations because nestedness implies a certain level of redundancy and thus the possibility for functional replacement in the case of species loss (REF). However, plant reproductive success depends on the delivery of conspecific pollen and thus of a certain level of specialization or niche divergence (reviewed in [@Brosi2016]). Yet at present we do not know how the interplay between redundancy and complementarity in species roles determines reproductive success.
+At the community level, we followed the same logic as the one presented at the species level. Thus, we also calculated two network metrics providing complementary non-redundant information. In this case we focused on (i) nestedness and (ii) functional complementarity. Nestedness is the property by which specialists interact with a subset of the species that generalists interact with ([Bascompte et al 2003 PNAS]). Although there is an ongoing debate in the literature, some studies have found that nested networks are more stable and resilient to perturbations because nestedness implies a certain level of redundancy and thus the possibility for functional replacement in the case of species loss (REF). [We used the widely accepted NODF metric to calculate Nestedness]() However, plant reproductive success depends on the delivery of conspecific pollen and thus of a certain level of specialization or niche divergence (reviewed in [@Brosi2016]). Yet at present we do not know how the interplay between redundancy and complementarity in species roles determines reproductive success. [To calculate functional complmentariey we used ...](). All network analysis were perfeormed using bipartite package.
 
 Many network attributes vary with network size and complexity [@Bluthgen2006]. In the case of nestedness, we know it can be affected by network size and connectance (REF). An approach that is often used to correct for this, is to use null models and to compare null-model corrected nestedness values across different networks. However, this approach has been recently shown to present the same issues, as z-scores also change with network size and connectance [@Song2017]. Given the dependence of nestedness on network size and connectance, we followed the advice of these researchers by using a normalized value of nestedness, NODFc, calculated as XXXX, where XXXXX [INCLUDE FORMULA AND DEFINE CONCEPTS], which is independent of network size and thus comparable across different networks [@Song2017]. All network metrics were calculated using package bipartite [@Dormann2009].
 
@@ -102,9 +104,9 @@ In order to evaluate whether adding information on community structure improves 
 
 At the species level, model 1 included as explanatory variables the diversity of pollinator species visiting a focal plant and the total number of visits received by that plant species; while model 2, added the two network attributes calculated at the species level: average niche overlap and centrality. In this case, we included plant species nested within site as a random effect to account for the non-independence of several individuals measured for the same plant species within each site. The diversity of pollinator species visiting a focal plant was approximated using the plant´s normalised degree, i.e., the number of links with different pollinator species a plant has, scaled by the number of possible partners [@Dormann2009].
 
-At the community level, we upscaled our species-level analyses. In this case, model 1 included total pollinator diversity and the total number of visits received by all plants within the community as explanatory variables. Model 2, in turn, added information on community structure by including nestedness and functional complementarity as explanatory variables. As response variable we had the average reproductive success for the whole community (i.e., average fruitset, average number of seeds per fruit previously scaled for each species, average fruit and seed weight). We thus, had a single value per site and no random effects are needed in this case.
+At the community level, we upscaled our species-level analyses. In this case, model 1 included total pollinator diversity and the total number of visits received by all plants within the community as explanatory variables. Model 2, in turn, added information on community structure by including nestedness and functional complementarity as explanatory variables. As response variable we had the average reproductive success for the whole community (i.e., average fruitset, average number of seeds per fruit previously scaled for each species, and average fruit and seed weight [IB: also scaled?]()). We thus, had a single value per site and no random effects are needed in this case.
 
-Average values of reproductive success at the community level can be driven to a large extent by a single plant species. Yet, what will determine the persistence of a diverse plant community, is the presence of some sort of “equity” in reproductive success across the whole community. We therefore calculated a measure of equity in reproductive success at the community level as the proportion of plant species within a site that is at 50% of the maximum value of fruitset recorded for that plant species within our sampling. We repeated this using 25% and 75% thresholds. We then used the same framework as before and fit the same models 1 and 2 as the ones used at the community level, but using equity in reproductive success as the response variable. 
+Average values of reproductive success at the community level can be driven to a large extent by a single plant species. Yet, what will determine the persistence of a diverse plant community, is the presence of some sort of “equity” in reproductive success across the whole community. We therefore calculated a measure of equity in reproductive success at the community level as the proportion of plant species within a site that is at 50% of the maximum value of fruitset recorded for that plant species within our sampling. We repeated this using 25% and 75% thresholds. We then used the same framework as before and fit the same models 1 and 2 as the ones used at the community level, but using equity in reproductive success as the response variable. [Here is unclear how the proportion is calculated. This is: average fruit set per species is > 50%? Or as we discussed a more coplex option can be: % of species which > 50 % of individuals had seed set > 50%. Now that I see this I would only used if we gain a lot, otherwise is too complicated. Also, I removed species present is only one (or two) sites for this analysis, because the % was forces to be 1. If you kept this in your analysis, should be explained]().
 
 We used information criterion methods to find the best model for each case and selected the ones with the lowest Akaike Information Criterion (AIC) value. Differences in AIC values < 2, were not considered enough to select one model over the other [@Burnham2011].
 
@@ -112,12 +114,12 @@ _Simulating the effect of community structure as sample size increases_
 
 Finally, we tested whether the importance of community structure in explaining differences in reproductive success increases with the number of plant species being considered. We expect that when only one plant species is considered, then the importance of community structure will be negligible, while we expect this importance to increase as more plant species are considered (up to a maximum number of 6 species which is the maximum we have measured in our study at a particular site).
 
-To test this, we ran a simple simulation in which the number of species increased randomly at each time step and calculated equity in reproductive success. Instead of drawing plants randomly for each run, we tested all possible combinations for each plant number level and network, as this number is low (n = X x X = 63 possible combiations overall for the network with the largest dataset). Increasing sampling events in our simulation would only result in repeated combinations. Then, we tested the overall relationship between equity in reproductive success and both community-level network metrics we measured: nestedness and functional complementarity within our simulated communities. To this end, for each species number level, we randomly combined the generated equity values across the 16 communities as to obtain one random value per species. Finally, for each of such combinations we extracted the model estimate from a linear model relating equity in relation with functional complementarity and averaged all estimates from 1,000 simulated combinations per number of plants considered. We expect that the more plants considered, the larger the resulting average estimates will be. Note that we only interpret the mean effects, as the variance among different plant number of species depends on the initial number of combinations.
+To test this, we ran a simple simulation in which the number of species considered increased at each time step and for each time step we re-calculated equity in reproductive success. Instead of drawing plant species randomly for each run, we tested all possible combinations for each plant number level and network, as the number of combinations is low (e.g. for n = 3 plant selected out of 6 there is only 20 possible combiations). Then, we tested the overall relationship between equity in reproductive success and both community-level network metrics we measured: nestedness and functional complementarity within our simulated communities. To this end, for each species number level considered, we randomly selected one of the generated equity values across each of the 16 communities, regress this against our netrok level predictors and extracted the model estimates. We averaged all estimates from 1,000 simulated combinations per number of plants considered. We expect that the more plants considered, the larger the resulting average estimates will be. Note that we only interpret the mean effects, as the variance among different plant number of species depends on the initial number of combinations.
 
 
 #RESULTS
 
-Within our sampling we recorded `r nrow(d)` pollinator individuals belonging to 57 species of plants and 277 species of pollinators. Within the pollinator community XX% of species were solitary bees, XX% hoverflies, 20% honeybees, and XX%% other??
+Within our sampling we recorded `r nrow(d)` pollinator individuals belonging to 57 species of plants and 277 species of pollinators. Within the pollinator community XX% of species were solitary bees, XX% hoverflies, 20% honeybees, and XX%% other?? [Curro can calculate this if needed]()
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=9}
 
@@ -132,10 +134,15 @@ library(BeeFunData)
 #devtools::install_github("jonocarroll/mathpix") #package to include mathematical formulas
 library(mathpix)
 
+
 library(plyr)
 
 
 d<-all_interactions
+#head(d)
+#I just realized here we are using all data available. 
+#This is ok, but a few rare interactions are taken outside the transect (which can be removed?), and we are including focal 3' observations, which can be explained in methods.
+#d <- subset(d, subset = Out != "out") #SHould we do that?
 f<-fruitset
 s<-seedset
 
@@ -204,7 +211,7 @@ library(grid)
 d2<-table(d$Site_ID, d$Pollinator_gen_sp)
 d3<-as.data.frame.array(d2)
 
-d4 <- t(d3[,1:277])
+d4 <- t(d3[,1:ncol(d3)]) #I updated this to use defensive programming.
 #head(d4)
 #str(d4)
 d5<-as.data.frame(d4)
@@ -344,7 +351,7 @@ grid.draw(rbind(ggplotGrob(poll), ggplotGrob(plant), ggplotGrob(link), size = "l
 
 ### Species-level analyses
 
-At the species level, our results show that in the case of fruitset, both model 1 and model 2 are equally good in explaining the variability observed (i.e.,$\Delta AIC<2$), and therefore we cannot select one over the other. This is despite the fact that model 2 has a greater number of variables and should be penalized for the added complexity it represents. We will thus comment results only for model 2, which in the case of fruitset shows a positive effect of the diversity of species visiting a focal plant species (measured using the species´normalised degree, Fig. XX) as well as a positive effect of the centrality of the focal plant on its fruitset. 
+At the species level, our results show that in the case of fruitset, both model 1 and model 2 are equally good in explaining the variability observed when accounting for model complexity (i.e.,$\Delta AIC<2$), and therefore we cannot select one over the other. Given that model 2 has a greater number of variables which penalize for the added complexity, we will thus comment results only for model 2, which in the case of fruitset shows a positive effect of the diversity of species visiting a focal plant species (measured using the species´normalised degree, Fig. XX) as well as a positive effect of the centrality of the focal plant on its fruitset. 
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
 
@@ -415,7 +422,7 @@ for(i in 1:length(sites)){
  
   web <- table(temp2$Pollinator_gen_sp, temp2$Plant_gen_sp)
 
-  ni<-niche.overlap(web, method="morisita")
+  ni<-niche.overlap(web, method="morisita") #THIS SHOULD BE EXPLAINED IN METHODS
   df <- melt(as.matrix(ni), varnames = c("row", "col"))
   df$row<-as.character(df$row)
   df$col<-as.character(df$col)
@@ -489,19 +496,19 @@ library(bbmle)  #to select best model based on AIC
 library(ggplot2)
 library(DHARMa) #to check for problems in residuals
  
- m1<-glmer(tot.fruitset ~  norm_degree.sc + tot.visits.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="binomial", data=f2_scaled)
+m1<-glmer(tot.fruitset ~  norm_degree.sc + tot.visits.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="binomial", data=f2_scaled)
 
- summary(m1)
+summary(m1)
  
 
- vif(m1)  #check for correlations between variables included in model
+vif(m1)  #check for correlations between variables included in model
  
  
- m2<-glmer(tot.fruitset ~  norm_degree.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="binomial", data=f2_scaled)
+m2<-glmer(tot.fruitset ~  norm_degree.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="binomial", data=f2_scaled)
  
- summary(m2) #both norm degree and weigh closeness have intervals not overlapping 0
+summary(m2) #both norm degree and weigh closeness have intervals not overlapping 0
  
- vif(m2)
+vif(m2)
  
 
 #select best model based on AIC 
@@ -527,6 +534,7 @@ summ<-round(coefs.m2,digits=2)
 
 #devtools::install_github("hohenstein/remef")  USE THIS PACKAGE TO DO PARTIAL RESIDUAL PLOTS OF SIGNIFICANT VARIABLES
 
+#devtools::install_github("hohenstein/remef")
 library(remef)
 y_partial_norm <- remef(m2, fix= c( "tot.visits.sc", "weigh_closeness.sc", "niche.overlap.sc"), ran = "all", inverse = F)
 #With this we remove the influece of x2 and the random effects from the dependent variable
@@ -567,7 +575,7 @@ plot_grid(pl1, pl1b, labels = c("A", "B"))
 Figure X. Partial residual plots showing the effect of a) pollinator species diversity (approximated using normalized degree) and b) species centrality on fruitset for each of the plant species considered. Dots represent each of the individuals sampled for each species within each site.
 
 
-For all other measures of reproductive success considered (i.e., the number of seeds per fruit, fruit and seed weight), the best model based on its AIC value was model 1, i.e., the model that only included simple visitation metrics (in this case, the diversity of visiting pollinators and the total number of visits received by a focal plant species). In this case, we find that none of the variables included within our model explain the differences observed.
+For all other measures of reproductive success considered (i.e., the number of seeds per fruit, fruit and seed weight), the best model based on its AIC value was model 1, i.e., the model that only included simple visitation metrics (in this case, the diversity of visiting pollinators and the total number of visits received by a focal plant species). However, none of the variables included within our model explain the differences observed. [show in sup mat?]()
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
 ##ahora con seed set
@@ -1033,6 +1041,7 @@ Figure X. Partial residual plots showing the effect of community-level pollinato
 ### Equity in fruitset
 
 When evaluating the effect of differences in community composition and structure for equity in reproductive success across the different individuals within a species and site we find that both model 1 and model 2 are equally good (i.e.,$\Delta AIC<2$) and thus we cannot select one over the other. Specifically, regarding the results for model 2, we find a significant and positive effect of nestedness for equity between individuals of a species (Table X, Fig. X). This effect that we find when using a 50% threshold of productivity (i.e., when looking at plant species that are producing 50% of the maximum fruitset observed for the area), is however not maintained when using 25 and 75% thresholds. In particular, when using a 25% threshold we find model 1 is the best model and none of the variables considered are able to explain the differences observed. Contrastingly in the case of the 75% threshold, we find again that both model 1 and 2 are equally plausible but in this case we find a positive effect of functional complementarity between pollinators for equity in fruitset across individuals within a species.
+[this is interesting, as selfing rates I expect to be ~ 40%... In any case I am confused now on this calculation]()
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
 
@@ -1065,8 +1074,6 @@ f3$fruit.prop<-f3$tot.fruitset/f3$fruit.max
 f5<-subset(f3, f3$fruit.prop>0.5)
 f5$no_rows<-rep(1, nrow(f5))
 head(f5)
-
-#NOTE TO SELF: Here is where we want to subsample 1 to 6 species per site to test the idea of increasing plants, complementarity increase.
 
 #for each site here is the number of sps whose fruitset exceeds 50% of maximum fruitset observed in the whole study area
 f6<- aggregate(no_rows ~ Site_ID + Plant.sp, f5, length)
@@ -1133,11 +1140,10 @@ pl.th_ <-ggplot(f6,  aes(x=nodf.song.sc, y=y_partial_eq_inv ))+
 #pl.th_ #oh yeah!
 
 #now 75% threshold
+#head(f3)
 f5.75<-subset(f3, f3$fruit.prop>0.75)
 f5.75$no_rows<-rep(1, nrow(f5.75))
 head(f5.75)
-
-#NOTE TO SELF: Here is where we want to subsample 1 to 6 species per site to test the idea of increasing plants, complementarity increase.
 
 #for each site here is the number of sps whose fruitset exceeds 50% of maximum fruitset observed in the whole study area
 f6.75<- aggregate(no_rows ~ Site_ID + Plant.sp, f5.75, length)
@@ -1207,8 +1213,6 @@ plot_grid(pl.th_, pl.th_75, labels = c("A", "B"))
 f5.25<-subset(f3, f3$fruit.prop>0.25)
 f5.25$no_rows<-rep(1, nrow(f5.25))
 head(f5.25)
-
-#NOTE TO SELF: Here is where we want to subsample 1 to 6 species per site to test the idea of increasing plants, complementarity increase.
 
 #for each site here is the number of sps whose fruitset exceeds 50% of maximum fruitset observed in the whole study area
 f6.25<- aggregate(no_rows ~ Site_ID + Plant.sp, f5.25, length)
@@ -1282,8 +1286,6 @@ f4$fruit.prop<-f4$mean.fruitset/f4$fruit.max
 f4b<-subset(f4, f4$fruit.prop>0.5)
 f4b$no_rows<-rep(1, nrow(f4b))
 head(f4b)
-
-#NOTE TO SELF: Here is where we want to subsample 1 to 6 species per site to test the idea of increasing plants, complementarity increase.
 
 #for each site here is the number of sps whose fruitset exceeds 50% of maximum fruitset observed in the whole study area
 f4c<- aggregate(no_rows ~ Site_ID, f4b, length)
@@ -1524,8 +1526,7 @@ Now, we ask if the effect of niche complementariety increases with the number of
 I ALSO INCLUDED HERE NESTEDNESS WHICH STARTS AS LESS IMPORTANT AND THEN BECOMES MORE IMPORTANT WITH NO ASYMPTOTE.
 
 ONE QUESTION, WHY DO WE DO THIS SIMULATION ONLY FOR EQUITY AND NOT ALSO FOR AVERAGE REP SUCCESS?
-
-
+Because i do not expect the average to change as dramatically when considering more species. 
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
 
@@ -1624,7 +1625,7 @@ for (i in unique(combinatorials_all$Plant_number_level)){
   estimate[i] <- m$coefficients[2]
   }
 
-plot(unique(combinatorials_all$Plant_number_level) , estimate, las = 1, ylim = c(0, 0.1) ,
+plot(unique(combinatorials_all$Plant_number_level) , estimate, las = 1, ylim = c(-0.01, 0.1) ,
      ylab = "importance of niche partitioning", xlab = "number of plants considered")
 
 
@@ -1666,7 +1667,7 @@ for (i in 1:length(unique(combinatorials_all$Plant_number_level))){ # over level
   } #close iteration
   #unique(estimate_k) #only 5 unique ombinations for n = 5. All negative. highly influenced by one data point of low niche part and equ = 1. "CotitodeSantaTeresa"
   #subset(f4, Site_ID == "CotitodeSantaTeresa") #Super high values!
-  estimate_mean <- aggregate(estimate ~ level, estimate_k, mean)
+  estimate_mean <- aggregate(estimate ~ level, data = estimate_k, FUN = "mean")
   estimate_i[i,1] <- estimate_mean$level
   estimate_i[i,2] <- estimate_mean$estimate
   }
@@ -1692,11 +1693,13 @@ plot(estimate_i$level, estimate_i$estimate, las = 1,
 
 The relationship between community structure and ecosystem function has been long suggested, yet the specific mechanisms by which structure influences function remain elusive. Our results show that different aspects of community structure affect different dimensions of functioning. In particular, we find that the functional complementarity between pollinators, a measure of the overlap in the niches of different species in terms of plant coverage, has an important effect for direct measures of reproductive success (e.g., fruitset). However, we also find that nestedness, a measure of the redundancy in ecological functions between pollinators is important in determining a stable and equitable function across whole communities.
 
-One of the first conclusions we can extract from the fact that in most cases both of the models we considered (i.e., the simple model based on visitation metrics and the more complex one including community structure metrics) were equally good, is that for simple predictive purposes, simple visitation metrics, such as the diversity of pollinators visiting a plant, might be enough. Yet, a mechanistic understanding of the underlying processes requires that we take into account measures of community structure. 
+One of the first conclusions we can extract from the fact that in most cases both of the models we considered (i.e., the simple model based on visitation metrics and the more complex one including community structure metrics) were equally good, is that for simple predictive purposes, simple visitation metrics, such as the diversity of pollinators visiting a plant, might be enough [cite Garibaldi papers using them](). Yet, a mechanistic understanding of the underlying processes requires that we take into account measures of community structure. 
 
 Consistent with previous studies in artificial [@Frund2013] and natural [@Fontaine2005] communities, we find that functional complementarity is very important in determining differences in reproductive outputs. Indeed, this reflects the fact that reproductive success in plant species requires of the delivery of conspecific pollen and thus of a certain degree of specialization amongst pollinator species on a particular plant resource in order to avoid the negative effects of inter-specific pollen deposition (e.g., pollen loss [@Flanagan2009] or interference with conspecific pollen [@Morales2008]). 
 
 Nevertheless, we also find that redundancy in pollinator functions is also important in determining a certain stability in the pollination service across a larger number of individuals within a plant species. Indeed, our results also support previous accounts of the importance of nestedness for plant-pollinator communities [@Bascompte2003] as it ensures that reproductive success is distributed amongst a larger number of individuals, thus ensuring the maintenance of a greater genetic diversity in natural populations. This aspect of reproductive, which is seldom taken into account, is however of great importance, as genetic diversity will ensure the resilience of populations to further change. 
+
+Paragraph somewhere about the importance of how you measure functioning (average vs equity).
 
 Our findings show that the analysis of natural communities of interacting species using network analysis not only represents an ideal way of visualizing and grasping the complexity present, but also represents a manner of mechanisitically understanding differences observed across individuals and/or species. 
 
