@@ -65,7 +65,7 @@ The few pollination studies that have analysed the effects of changing pollinato
 
 Indeed, theoretical research has long suggested that the structure of a community has an effect for ecosystem functioning (reviewed in [@Thompson2012]). This line of research, primarliy driven by food-web studies, has greatly advanced theory, but these ideas have not yet been tested using empirical data (but see [@Poisot2013]). Specifically, a major knowledge gap resides in understading which aspects of structure determine which aspects of function [@Thompson2012]. We are now at a point in which there is considerable understanding on the attributes characterizing mutualistic interaction networks [@Bascompte2007b] and we have a substantial understanding of how these attributes vary along different types of gradients [@Pellissier2017; @Tylianakis2016]. Especially, in the case of pollination, we have ample knowledge on the attributes that shape these mutualistic interactions at the community level, such as a prevalence of nested structures [Bascompte et al 2013 PNAS] or the presence of asymmetric specialization as a pervasive feature [@Vazquez2004]. However, how the structure shaping this network of interactions affects key ecosystem functions such as plant reproduction remains untested [@Winfree2013]. The time is thus ripe to use this knowledge to explore relationships between community structure and ecosystem functioning, with special emphasis being placed on the underlying mechanisms that drive these relationships.
 
-Here, we present one of the first efforts linking pollinator visitation and plant reproductive success at the community level. To this end, we use a well-replicated dataset encompassing 16 well-resolved plant-pollinator interaction networks coupled with data on the reproductive success of 19 plant species recorded at Mediterranean shrub ecosystems within the area of influence of Doñana National Park in SW Spain. Our study focuses on understanding whether adding information on the structure of the community to previously-used simple visitation metrics (e.g., number of pollinator species visiting a plant species) aids in better explaining the differences observed in community-wide reproductive success. In doing so, we conducted our analyses focusing on reproductive success at two different levels: (i) at the species level by considering the effect of the position of a focal species within the larger network and its impact on its individual reproductive success, and (ii) at the community level, by evaluating how attributes that describe the whole community might affect average values of reproductive success. In addition, we evaluate whether community structure helps us explain differences in equity in reproductive success across individuals within a species and species within a community as a measure of evenness and [stability in the pollination service??]() 
+Here, we present one of the first efforts linking pollinator visitation and plant reproductive success at the community level. To this end, we use a well-replicated dataset encompassing 16 well-resolved plant-pollinator interaction networks coupled with data on the reproductive success of 19 plant species recorded at Mediterranean shrub ecosystems within the area of influence of Doñana National Park in SW Spain. Our study focuses on understanding whether adding information on the structure of the community to previously-used simple visitation metrics (e.g., number and diversity of pollinator species visiting a plant species) aids in better explaining the differences observed in community-wide reproductive success. In doing so, we conducted our analyses focusing on reproductive success at two different levels: (i) at the species level by considering the effect of the position of a focal species within the larger network and its impact on its individual reproductive success, and (ii) at the community level, by evaluating how attributes that describe the whole community might affect average values of reproductive success. In addition, we evaluate whether community structure helps us explain differences in equity in reproductive success across individuals within a species and species within a community as a measure of evenness and [stability in the pollination service??]() 
 
 Our results suggest that for prediction purposes, information on simple visitation metrics, particularly regarding the diversity of pollinators that visit a plant species, is sufficient. However, we find that a mechanisitic understanding of the pathways through which differences in pollinator diversity translate into changes in reproductive success requires additional information on network structure, notably information on the complementarity between the functions performed and the niches occupied by different pollinator species. 
 
@@ -93,7 +93,7 @@ At the species level, we focused on attributes defining the position of a focal 
 
 _Community-level network analysis_
 
-At the community level, we followed the same logic as the one presented at the species level. Thus, we also calculated two network metrics providing complementary non-redundant information. In this case we focused on (i) nestedness and (ii) niche complementarity. Nestedness is the property by which specialists interact with a subset of the species that generalists interact with [@Bascompte2003]. Although there is an ongoing debate in the literature, some studies have found that nested networks are more stable and resilient to perturbations because nestedness promotes a greater diversity by minimizing competition among species in a community [@Bastolla2009]. However, many network attributes vary with network size and complexity [@Bluthgen2006]. In the case of nestedness, we know it can be affected by network size and connectance [@Song2017]. An approach that is often used to correct for this, is to use null models and to compare null-model corrected nestedness values across different networks. However, this approach has been recently shown to present the same issues, as z-scores also change with network size and connectance [@Song2017]. We thus followed the advice provided by Song et al. (2017) by using a normalized value of the widely-used nestedness metric NODF [@Almeida-Neto2011], $NODF_c$. This normalized value is calculated as $NODF_c = NODF_n/(C * log(S))$, where C is connectance, S is network size and $NODF_n = NODF/max(NODF)$, which is independent of network size and thus comparable across different networks [@Song2017].
+At the community level, we followed the same logic as the one presented at the species level. Thus, we also calculated two network metrics providing complementary non-redundant information. In this case we focused on (i) nestedness and (ii) niche complementarity. Nestedness is the property by which specialists interact with a subset of the species that generalists interact with [@Bascompte2003]. Although there is an ongoing debate in the literature, some studies have found that nested networks are more stable and resilient to perturbations because nestedness promotes a greater diversity by minimizing competition among species in a community [@Bastolla2009]. However, many network attributes vary with network size and complexity [@Bluthgen2006]. In the case of nestedness, we know it can be affected by network size and connectance [@Song2017]. An approach that is often used to correct for this, is to use null models and to compare null-model corrected nestedness values across different networks. However, this approach has been recently shown to present the same issues, as z-scores also change with network size and connectance [@Song2017]. We thus followed the advice provided by Song et al. (2017) by using a normalized value of the widely-used nestedness metric NODF [@Almeida-Neto2011], $NODF_c$. This normalized value is calculated as $NODF_c = NODF_n/(C * log(S))$, where C is connectance, S is network size and $NODF_n = NODF/max(NODF)$, which is independent of network size and thus comparable across different networks [@Song2017].[See new paper by Benno simons updating Song method :(]()
 
 Nevertheless, plant reproductive success depends on the delivery of conspecific pollen and thus of a certain level of specialization or niche divergence (reviewed in [@Brosi2016]). Yet at present we do not know how the interplay between redundancy and complementarity in species roles determines reproductive success. To calculate niche complmentarity we used a community-level measure defined as the total branch length of a functional dendrogram based on qualitative differences in visitor assemblages between plants [@Devoto2012; @Petchey2007a]. All network metrics were calculated using package bipartite [@Dormann2009].
 
@@ -146,7 +146,7 @@ d<-all_interactions
 #head(d)
 #I just realized here we are using all data available. 
 #This is ok, but a few rare interactions are taken outside the transect (which can be removed?), and we are including focal 3' observations, which can be explained in methods.
-#d <- subset(d, subset = Out != "out") #SHould we do that?
+#d <- subset(d, subset = Out != "out") #Should we do that?
 f<-fruitset
 s<-seedset
 
@@ -1056,18 +1056,23 @@ When evaluating the effect of differences in community composition and structure
 
 range01 <- function(x){(x-min(x))/(max(x)-min(x))}
 f2_scaled_fruit <- f2 %>% group_by(Plant.sp) %>% mutate(tot.fruitset = range01(tot.fruitset))
+f2_scaled_fruit2 <- f2 %>% group_by(Plant.sp) %>% mutate(tot.fruitset = scale(tot.fruitset, center = TRUE, scale = TRUE))
 
 #calculate average normalized fruitset values per site to have one unique value per site
 f.ag.pr <- ddply(f2_scaled_fruit, c("Site_ID", "Plant.sp", "nodf.song", "functional.comp.poll", "species.poll"), 
               summarise, tot.visits    = sum(tot.visits),
               mean.fruitset = mean(tot.fruitset))
-
+f.ag.pr2 <- ddply(f2_scaled_fruit2, c("Site_ID", "Plant.sp", "nodf.song", "functional.comp.poll", "species.poll"), 
+              summarise, tot.visits    = sum(tot.visits),
+              mean.fruitset = mean(tot.fruitset))
+hist(f.ag.pr2$mean.fruitset)
 #select species with normalized values >0.5
 f.ag_scaledb<-subset(f.ag.pr, f.ag.pr$mean.fruitset>0.50)
+f.ag_scaledb2<-subset(f.ag.pr2, f.ag.pr$mean.fruitset>0)
 
 #for each site here is the number of sps whose fruitset exceeds 50% of maximum fruitset observed in the whole study area
-f.ag_scaledb$no_rows<-rep(1, nrow(f.ag_scaledb))
-f4c<- aggregate(no_rows ~ Site_ID, f.ag_scaledb, length)
+f.ag_scaledb2$no_rows<-rep(1, nrow(f.ag_scaledb2))
+f4c<- aggregate(no_rows ~ Site_ID, f.ag_scaledb2, length)
 head(f4c)
 
 #because when calculating thresholds, sites with 6 plants can score up to 6, but sites with 4 sites can score max = 4 we corrected for this doing % above threshold, and no number. 
@@ -1094,12 +1099,27 @@ f4e$tot.visits<-f.agg$tot.visits[match(f4e$Site_ID, f.agg$Site_ID)]
 
 f4e$species.pl<-out.site$species.pl[match(f4e$Site_ID, out.site$Site_id)]
 #scale all variables
-
 f4e$nodf.song.sc <- scale(f4e$nodf.song, center = T, scale = T)
 f4e$functional.comp.poll.sc <- scale(f4e$functional.comp.poll, center = T, scale = T)
 f4e$species.poll.sc <- scale(f4e$species.poll, center = T, scale = T)
 f4e$tot.visits.sc <- scale(f4e$tot.visits, center = T, scale = T)
 f4e$species.pl.sc <- scale(f4e$species.pl, center = T, scale = T)
+
+#Nacho depart##
+#plot
+plot(f4e$equity ~ f4e$functional.comp.poll.sc, las = 1)
+#WARNING! Fails, because f4 (as calculated below) removes plants with n = 1 across trials). Hence 1.6 value...
+
+m1 <- glm(equity ~  functional.comp.poll.sc , family="binomial", data=f4e)
+m2 <- glm(cbind(no_rows, total.plant.numb) ~  functional.comp.poll.sc , family="binomial", data=f4e)
+m3 <- glm(equity ~  functional.comp.poll.sc , weights = total.plant.numb, family="binomial", data=f4e)
+
+summary(m1)
+summary(m2)
+summary(m3)
+#bah...
+####
+
 
 #fit two models
  m1.eq.comm<-glm(equity ~  species.poll.sc + tot.visits.sc , family="binomial", data=f4e)
@@ -1271,7 +1291,7 @@ table(f4$Plant.sp)
 
 #I am removing them here.
 f4 <- subset(f4, !Plant.sp %in% c("Astragalus lusitanicus", "Cistus albidus", "Anchusa azurea"))
-#Alternative, we use raw values (not dividing by max.)
+#Alternative, we use raw values (not dividing by max. and scale. Thos will take value of 0, which is equally arbitrary...)
 
 #Ainhoa, another question, this is a mean per species, right? So, for some species we may have more than one value. 
 
