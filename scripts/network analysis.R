@@ -27,7 +27,7 @@ data(single_visits)
 
 #analysis...----
 
-setwd("~/Dropbox/Beefun/Beefun/functioning")
+#setwd("~/Dropbox/Beefun/Beefun/functioning")
 
 d<-all_interactions
 f<-fruitset
@@ -35,7 +35,7 @@ s<-seedset
 si<-single_visits
 
 #we will calculate nestedness based on paper by Song et al 2017 Journal of ANimal ecology based on NODF and its
-#correction by max NODF as NODFc = NODFn/(C  log(S)), where NODFn = NODF/max(NODF).
+#correction by max NODF as NODFc = NODFn/(C * log(S)), where NODFn = NODF/max(NODF).
 #to this end we use the toolbox provided with their paper
 
 source('toolbox.R') #load the toolbox
@@ -83,13 +83,17 @@ outsp.pl.site <- data.frame(Site_id = NA, species=NA,  norm_degree = NA,strength
 
 
 webs <- list()
+#Sites working: c(1:5,7:14) #fails for 6, 15 & 16.
 for(i in 1:length(sites)){
+  print(i)
   temp <- subset(d, Site_ID == sites[i])
   # for(j in 1:length(rounds)){
   #   temp2 <- subset(temp, Round == rounds[j])
   #   if (nrow(temp2) == 0) next
   
-  web <- table(temp$Plant_gen_sp, temp$Pollinator_gen_sp)
+  web <- table(temp$Plant_gen_sp, temp$Pollinator_gen_sp) #WOW, this ignores frequency!!
+  #AINHOA, ANY MERIC USES FREQUENCY? If SO, FREQUENCY HERE IS INCIDENCE; NOT VISITATION.
+  #I AM FINE USING THIS, BUT SHOULD BE CLEAR IN TEXT.
   web2<-as.data.frame.array(web)
   #p1<-plotweb(web)
   spntw <- try(specieslevel(web), TRUE)
@@ -102,44 +106,41 @@ for(i in 1:length(sites)){
   
   #null model 
   nulls <- try(nullmodel(web, N=100, method="r2d"), TRUE)
-  ntw.null <- try(sapply(nulls, networklevel), TRUE)
+  #NACHO comments this out because is slow and is not needed, right?
+  #FEEL FREE TO BRING THEM BACK
+  #ntw.null <- try(sapply(nulls, networklevel), TRUE)
   
   #null value of modularity
-  modules.nulls <- try(sapply(nulls, computeModules), TRUE)
-  like.nulls <- try(sapply(modules.nulls, function(x) x@likelihood), TRUE)
-  z <- try((mod@likelihood - mean(like.nulls))/sd(like.nulls), TRUE)
+  #modules.nulls <- try(sapply(nulls, computeModules), TRUE)
+  #like.nulls <- try(sapply(modules.nulls, function(x) x@likelihood), TRUE)
+  #z <- try((mod@likelihood - mean(like.nulls))/sd(like.nulls), TRUE)
   
   #song et al nestedness corrected with NODF max
-
-#ESTA ES LA PARTE QUE TIENES QUE MIRAR NACHO
-NODF <- nestedness_NODF(web) # this calculates the raw value of NODF, ESTO VIENE DEL PAPER DE SONG
-
-#ESTA ES LA PARTE AÑADIDA QUE VIENE DEL PAPER DE SIMMONS, EL CALCULO DEL MAX NODF. PARA ELLO
-#EN LA WEB NO PUEDE HABER COLUMNAS O FILAS QUE SUMEN TODO 0 ASI QUE QUITO ESAS PRIMERO.
-#PERO LUEGO SI EL NUMERO DE LINKS>NUMERO COLUMNAS + NUMERO FILAS SE PARA. Y EN ALGUNOS CASOS
-#DE ALGUNAS DE NUESTRAS REDES ESO PASA PORQUE NO TENEMOS SOLO 0 Y 1 
-
-#devtools::install_github("CHoeppke/maxnodf")
-library(maxnodf)
-#remove all columns and rows with all values=0
-web3<-web[, colSums(web != 0) > 0]
-web4<-web3[rowSums(web3[, -1] > 0) != 0, ]
-max_NODF <- maxnodf(web=web4, quality=2) # this calculates the maximum value of NODF for that network, based on SImmons correction of Song
-
-#ESTO VUELVE A SER PARTE DEL SONG ORIGINAL
-combined_NODF <- comb_nest(web,NODF,max_NODF$max_nodf) # this calculates the combined NODF statistic as described in the manuscript
-  
+  #devtools::install_github("CHoeppke/maxnodf")
+  library(maxnodf)
+  #remove all columns and rows with all values=0
+  web3 <- web[, colSums(web != 0) > 0] 
+  web4 <- web3[rowSums(web3[, -1] > 0) != 0, ] #I THINK THIS SHOULD BE DONE PRIOR TO ANY ANALYSIS
+  #I THINK bipartite REMOVES EMPTY ROW/COLUMNS ALREADY, BUT NOT SONG NODF; FOR EXAMPLE!
+  #web4[web4 > 0] = 1 #also making it bnary for NODF, but I don't think is needed.
+  NODF <- nestedness_NODF(web4) # this calculates the raw value of NODF as in Song
+   if(i %in% c(6,15,16)){ #For sites wchich don't comply, use Song. Only three sites.
+     max_NODF <- max_nest(web4)
+     combined_NODF <- comb_nest(web4,NODF,max_NODF) # this calculates the combined NODF statistic as described in the manuscript
+   } else {
+     max_NODF <- maxnodf(web=web4, quality=2) # this calculates the maximum value of NODF for that network, based on SImmons correction of Song
+     print(paste("Simmons = ", max_NODF$max_nodf, ", Song = ", max_nest(web4)))
+     combined_NODF <- comb_nest(web4,NODF,max_NODF$max_nodf) # this calculates the combined NODF statistic as described in the manuscript
+   }
   
   #species-level c and z values for plants and poll
-  
   cz<-try(czvalues(mod, level="higher", weighted=TRUE), TRUE)
   cz.pl<-try(czvalues(mod, level="lower", weighted=TRUE), TRUE)
   
   # spec<-getspe(web)
-  
-  
   n <- nrow(out.site)
-  webs[[n]] <- web
+  webs[[n]] <- web4 #I think we want to save web4, which is the used one.
+  #Why NA NA are keeped? 
   n2 <- nrow(outsp.site)
   n3 <- nrow(outsp.pl.site)
   
@@ -157,8 +158,6 @@ combined_NODF <- comb_nest(web,NODF,max_NODF$max_nodf) # this calculates the com
   # out.site[n + 1,24] <- try((ntw[16] - mean(ntw.null[15,1:100])/sd(ntw.null[15,1:100])), TRUE)
   # out.site[n + 1,25] <- try((ntw[18] - mean(ntw.null[16,1:100])/sd(ntw.null[16,1:100])), TRUE)
   
-  
-  
   outsp.site[n2+seq(nrow(spntw$`higher level`)),1] <- as.character(sites[i])
   # outsp[n2+seq(nrow(spntw$`higher level`)),2] <- as.character(rounds[j])
   outsp.site[n2+seq(nrow(spntw$`higher level`)),2] <- try(as.character(rownames(spntw$`higher level`)), TRUE)
@@ -169,8 +168,6 @@ combined_NODF <- comb_nest(web,NODF,max_NODF$max_nodf) # this calculates the com
   outsp.site[n2+seq(nrow(spntw$`higher level`)),9:10] <- try(c(cz$c,
                                                                cz$z), TRUE)
   # outsp[n2+seq(nrow(web)),12] <- spec #calculates specificity
-  
-  
   
   outsp.pl.site[n3+seq(nrow(spntw$`lower level`)),1] <- as.character(sites[i])
   # outsp.pl[n2+seq(nrow(spntw$`lower level`)),2] <- as.character(rounds[j])
@@ -202,7 +199,7 @@ write.table(outsp.pl.site[2:209,], file= "SITE_plant_species_level_metrics.csv",
 
 --------------------------------------------------------------------------
 #Repeat analyses removing out of transect observations of rare specimens
-
+#NOT UPDATED
 d.sinout <- subset(d, !Out %in% c("out"))
 
 
