@@ -396,6 +396,7 @@ link<-ggiNEXT.iNEXT(rar3, color.var="site", se=FALSE) + ylab("Link richness") + 
 
 d.vis<-ddply(d, c("Site_ID", "Plant_gen_sp"), summarise,
             tot.visits= sum(Frequency))
+#Here you use visits. Which I agree.
   
 d.vis$j<-paste(d.vis$Site_ID, d.vis$Plant_gen_sp)
 
@@ -413,7 +414,9 @@ for(i in 1:length(sites)){
   temp2<-droplevels(temp)
  
   web <- table(temp2$Pollinator_gen_sp, temp2$Plant_gen_sp)
-
+  #SAME HERE, We are assuming INCIDENCE. No Visitation rates.
+  #colSums(web)
+  #rowSums(web)
   ni<-niche.overlap(web, method="morisita") #THIS SHOULD BE EXPLAINED IN METHODS
   df <- melt(as.matrix(ni), varnames = c("row", "col"))
   df$row<-as.character(df$row)
