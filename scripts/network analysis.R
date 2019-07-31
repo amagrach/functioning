@@ -90,6 +90,7 @@ for(i in 1:length(sites)){
   #   if (nrow(temp2) == 0) next
   
   web <- table(temp$Plant_gen_sp, temp$Pollinator_gen_sp)
+
   web2<-as.data.frame.array(web)
   #p1<-plotweb(web)
   spntw <- try(specieslevel(web), TRUE)
@@ -119,16 +120,16 @@ NODF <- nestedness_NODF(web) # this calculates the raw value of NODF, ESTO VIENE
 #PERO LUEGO SI EL NUMERO DE LINKS>NUMERO COLUMNAS + NUMERO FILAS SE PARA. Y EN ALGUNOS CASOS
 #DE ALGUNAS DE NUESTRAS REDES ESO PASA PORQUE NO TENEMOS SOLO 0 Y 1 
 
-#devtools::install_github("CHoeppke/maxnodf")
-library(maxnodf)
-#remove all columns and rows with all values=0
-web3<-web[, colSums(web != 0) > 0]
-web4<-web3[rowSums(web3[, -1] > 0) != 0, ]
-max_NODF <- maxnodf(web=web4, quality=2) # this calculates the maximum value of NODF for that network, based on SImmons correction of Song
-
+# #devtools::install_github("CHoeppke/maxnodf")
+# library(maxnodf)
+# #remove all columns and rows with all values=0
+# web3<-web[, colSums(web != 0) > 0]
+# web4<-web3[rowSums(web3[, -1] > 0) != 0, ]
+# max_NODF <- maxnodf(web=web4, quality=2) # this calculates the maximum value of NODF for that network, based on SImmons correction of Song
+max_NODF<-max_nest(web)
 #ESTO VUELVE A SER PARTE DEL SONG ORIGINAL
-combined_NODF <- comb_nest(web,NODF,max_NODF$max_nodf) # this calculates the combined NODF statistic as described in the manuscript
-  
+#combined_NODF <- comb_nest(web,NODF,max_NODF$max_nodf) # this calculates the combined NODF statistic as described in the manuscript
+combined_NODF <- comb_nest(web,NODF,max_NODF)
   
   #species-level c and z values for plants and poll
   
@@ -256,11 +257,19 @@ for(i in 1:length(sites.sinout)){
   
   #song et al nestedness corrected with NODF max
   
+  source('toolbox.R') #load the toolbox
+  
+  
+  
   NODF <- nestedness_NODF(web) # this calculates the raw value of NODF
-  #devtools::install_github("CHoeppke/maxnodf")
-  library(maxnodf)
-  max_NODF <- maxnodf(web=web, quality=2) # this calculates the maximum value of NODF for that network, based on SImmons correction of Song
+  max_NODF <- max_nest(web)
   combined_NODF <- comb_nest(web,NODF,max_NODF) # this calculates the combined NODF statistic as described in the manuscript
+  
+  #simmons change
+   #devtools::install_github("CHoeppke/maxnodf")
+  #library(maxnodf)
+  #max_NODF <- maxnodf(web=web, quality=2) # this calculates the maximum value of NODF for that network, based on SImmons correction of Song
+  #combined_NODF <- comb_nest(web,NODF,max_NODF) # this calculates the combined NODF statistic as described in the manuscript
   
   
   #species-level c and z values for plants and poll
