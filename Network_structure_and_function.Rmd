@@ -156,7 +156,7 @@ foc3<-ddply(foc2, c("Site_ID"), summarise,
 library(betapart)
 d.sub<-subset(d, d$Out=="transect") #keep only plants surveyed in transects, remove focals
 d.beta<-table(d.sub$Site_ID, d.sub$Plant_gen_sp)
-d.beta[d.beta>1]<-1 #make it binary
+d.beta[d.beta>1]<-1 
 d.betadiv<-mean(betadiver(d.beta, method = 11)) 
 #summary(betadiver(d.beta, method = 11)) #max value 0.66.
 ```
@@ -543,7 +543,6 @@ Table1A<-round(coefs.m2[,1:3],digits=2)
 rownames(Table1A)<-c("(Intercept)", "Pollinator richness", "Total number of visits", "Centrality", "Plant niche overlap")
 #at the end of the paper
 
-#plot significant variables, in this case centrality and visits, do partial residual plots to show the effect of that variable in isolation of the others
 
 #devtools::install_github("hohenstein/remef")  USE THIS PACKAGE TO DO PARTIAL RESIDUAL PLOTS OF SIGNIFICANT VARIABLES
 
@@ -561,9 +560,6 @@ Figure2a<-ggplot(m2@frame,  aes(x=m2@frame$weigh_closeness.sc, y=y_partial_weigh
   scale_fill_discrete(name="Plant species") +  theme(legend.text = element_text(size = 14, face = "italic"), legend.title = element_text(size=15, face = "bold"), legend.direction = "vertical") + guides(fill=guide_legend(ncol=4))
 
 #Figure2a
-
-
-
 
 ```
 
@@ -775,14 +771,6 @@ m2.fruit.net<-glmmTMB(mean.fruitset ~  species.poll.sc + tot.visits.sc + nodf.so
 summary(m2.fruit.net)
 
 
-#removing one point with large number of visits to see if this is driving the effect of total number of visits 
-novis<-subset(f.agg, f.agg$tot.visits.sc<2)
- 
- m2.fruit.novis<-glmmTMB(mean.fruitset ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="beta_family", data=novis)
- 
- summary(m2.fruit.novis) #still non-overlapping values
-
-
 #select best model based on AIC 
 
 AICtab(m1.fruit.net, m2.fruit.net) #Almost as good. With this, you cannot say one is better than the other one. The take home message would be: if interested in predictions, go for simplicity. If interested in mechanisms, niche part is a mechanism to take into account. And actually m2 has better predictive ability (better R2 see below)
@@ -974,10 +962,6 @@ pltest <- ggplot(s.comm,  aes(x=species.poll.sc, y= restest)) +
   xlab("Pollinator richness") +      
   ylab("Fruit weight (g)") + theme_bw()  + #theme (legend.position= "none") +
   theme(text = element_text(size = 18), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1), face="bold")) 
-
-
- # crPlots(m1.fruitw.net, smooth=FALSE, terms = ~  species.poll.sc, main = "", ylab = "Fruit weight (g)", col.lines= "black", pch=16, col= "darkgrey",  cex=4, cex.axis=1.2, cex.lab=1.5, lwd=3, grid=FALSE, lty="solid",
- #        xlab = "Pollinator richness") #end of paper
  
 
 
@@ -1035,7 +1019,6 @@ pltest2 <- ggplot(s.comm,  aes(x=species.poll.sc, y= restest2)) +
   ylab("Seed weight (g)") + theme_bw()  + #theme (legend.position= "none") +
   theme(text = element_text(size = 18), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1), face="bold")) 
 
-# crPlots(m1.seedw.net, smooth=FALSE,  main = "", ylab = "Mean seed weight", col.lines= "black", pch=19, col= "black", bg = "darkgrey", cex=2, cex.axis=1.2, cex.lab=1.5)
 
 
 Figure4<-plot_grid(pltest, pltest2, labels = c("A", "B"), nrow=1)  
@@ -1226,8 +1209,7 @@ f4 <- ddply(f3, c("Site_ID", "Plant.sp"), summarise,
                          mean.fruitset    = mean(tot.fruitset))
 
 table(f4$Plant.sp)
-#Astragalus lusitanicus and Cistus albidus is causing problems later on. It has a very low fruit set, but as there is only one value, when correcting for max fruit set, gets a value of 1. Both are in Cotito... This is problematic. Similar with Anchusa azurea. 
-
+#Astragalus lusitanicus and Cistus albidus are causing problems because they have very low fruit set, but as there is only one value, when correcting for max fruit set, gets a value of 1. 
 #I am removing them here.
 f4 <- subset(f4, !Plant.sp %in% c("Astragalus lusitanicus", "Cistus albidus", "Anchusa azurea"))
 
