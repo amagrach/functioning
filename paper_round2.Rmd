@@ -186,8 +186,8 @@ s.fruitnum<-ddply(s, c("Site_ID", "Plant.sp"), summarise,
 
 _Plant reproductive success_
 
-Within each site, we marked between 3 and `r max(f.inds$tot.inds)` individuals (mean $\pm$ SD: `r round(mean(f.inds$tot.inds), digits=2)` $\pm$ `r round(sd(f.inds$tot.inds), digits=2)`) belonging to `r min(tableS1$tot.sps)` to `r max(tableS1$tot.sps)` plant species (mean $\pm$ SD:`r round(mean(tableS1$tot.sps), digits=2)` $\pm$ `r round(sd(tableS1$tot.sps), digits=2)`), depending on the availability and presence of flowers during the sampling events. For each individual, at the end of the season, we 
-recorded fruit set (i.e. the proportion of flowers that set fruit), the average number of seeds per fruit and the average fruit and seed weight per fruit (`r min(s.fruitnum$tot.fruits)`-`r max(s.fruitnum$tot.fruits)` fruits subsampled, mean $\pm$ SD: `r round(mean(s.fruitnum$tot.fruits), digits=2)` $\pm$ `r round(sd(s.fruitnum$tot.fruits), digits=2)`). Our survey included a total of `r nlevels(f2$Plant.sp)` different plant species across our `r nlevels(f2$Site_ID)` sites. Plants species were selected based on their availability, with sampling being focused on the most abundant plant species. The values at the species level were then averaged per site to calculate unique reproductive success measures at the site level. [X % of the plant species depend on pollinators to maximize their reproduction (Table SX).]()
+Within each site, we marked between 3 and `r max(f.inds$tot.inds)` individuals (mean $\pm$ SD: `r round(mean(f.inds$tot.inds), digits=2)` $\pm$ `r round(sd(f.inds$tot.inds), digits=2)`, Table S2) belonging to `r min(tableS1$tot.sps)` to `r max(tableS1$tot.sps)` plant species (mean $\pm$ SD:`r round(mean(tableS1$tot.sps), digits=2)` $\pm$ `r round(sd(tableS1$tot.sps), digits=2)`, Table S1), depending on the availability and presence of flowers during the sampling events. For each individual, at the end of the season, we 
+recorded fruit set (i.e. the proportion of flowers that set fruit), the average number of seeds per fruit and the average fruit and seed weight per fruit (`r min(s.fruitnum$tot.fruits)`-`r max(s.fruitnum$tot.fruits)` fruits subsampled, mean $\pm$ SD: `r round(mean(s.fruitnum$tot.fruits), digits=2)` $\pm$ `r round(sd(s.fruitnum$tot.fruits), digits=2)`, Table S3). Our survey included a total of `r nlevels(f2$Plant.sp)` different plant species across our `r nlevels(f2$Site_ID)` sites. Plants species were selected based on their availability, with sampling being focused on the most abundant plant species. The values at the species level were then averaged per site to calculate unique reproductive success measures at the site level. 68% of the plant species depend on pollinators to maximize their reproduction (Table S4).
 
 _Data analyses_
 
@@ -211,7 +211,7 @@ At the site level, we followed the same logic as the one presented at the specie
 
   Niche complementarity metrics are important because plant reproductive success depends on the delivery of conspecific pollen and thus of a certain level of specialization or niche divergence (reviewed in [@Brosi2016]). To calculate niche complementarity, we used a community-level measure defined as the total branch length of a functional dendrogram based on qualitative differences measured using a Euclidean distance in visitor assemblages between plants [@Devoto2012; @Petchey2007a]. All network metrics were calculated using package bipartite [@Dormann2009].
 
-  All of these metrics were calculated using all the data as well as for the subset of the data excluding interactions observed outside of sampling periods. Differences between results are minimal for both and thus we will only present results for the analysis using the full dataset (see Table S11A-H for results removing observations out of transect). 
+  All of these metrics were calculated using all the data as well as for the subset of the data excluding interactions observed outside of sampling periods. Differences between results are minimal for both and thus we will only present results for the analysis using the full dataset (see Table S12A-H for results removing observations out of transect). 
 
 
 _Statistical analyses_
@@ -701,8 +701,8 @@ AICtab(m1.seed.w, m2.seed.w)
 
 
 # extract estimates and st error for m1 and present them in paper
-tableS4<-round(summary(m1.seed.w)$coefficients$cond[,1:3], digits=2)
-rownames(tableS4)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
+tableS5<-round(summary(m1.seed.w)$coefficients$cond[,1:3], digits=2) #ch
+rownames(tableS5)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
 
 
 #FRUIT WEIGHT
@@ -724,11 +724,11 @@ AICtab(m1.fruit.w, m2.fruit.w)
 
 
 # extract estimates and st error for m2 and present them in paper
-tableS5<-round(summary(m2.fruit.w)$coefficients$cond[,1:3], digits=2)
-rownames(tableS5)<-c("(Intercept)", "Pollinator richness", "Total number of visits", "Centrality", "Plant niche overlap") 
+tableS6<-round(summary(m2.fruit.w)$coefficients$cond[,1:3], digits=2)#ch
+rownames(tableS6)<-c("(Intercept)", "Pollinator richness", "Total number of visits", "Centrality", "Plant niche overlap") 
 
 ```
- For all other measures of reproductive success considered (i.e., fruit and seed weight), both models had very similar fits, with ($\Delta AIC=2.2$) and 2, respectively. However, none of the variables included within our model explain the differences observed (Tables S4-S5). 
+ For all other measures of reproductive success considered (i.e., fruit and seed weight), both models had very similar fits, with ($\Delta AIC=2.2$) and 2, respectively. However, none of the variables included within our model explain the differences observed (Tables S5-S6). 
 
 _Site-level analyses_
 
@@ -923,7 +923,7 @@ Figure3<-plot_grid(pl3, pl2, pl6, labels = c("A", "B", "C"), nrow=1)
 ```
 
 
-At the site level, we find different patterns for fruit set and the number of seeds per fruit as compared to those for fruit and seed weight. In the case of fruit set and the number of seeds per fruit, we find that both model 1 and 2 are equally good in describing the differences observed when penalizing for model complexity (i.e.,$\Delta AIC<2$; [@Burnham2002]). This suggests model 2 is a good model despite its added complexity, and actually shows a substantially better predictive ability than model 1 (R^2 = `r round(r2.m2, 2)` for model 2 versus `r round(r2.m1, 2)` for model 1 in the case of fruit set and R^2 = `r round(r2.m2.seed,2)` for model 2 versus `r round(r2.m1.seed, 2)` for model 1 in the case of the number of seeds per fruit) and therefore we will comment results for this model only. In particular, we find that both fruit set and the number of seeds per fruit are positively related to niche complementarity between pollinators (Tables 2, Fig. 3). Additionally, we find a negative effect of site-level pollinator richness on average fruit set (Table 2A, Fig. 3). 
+At the site level, we find different patterns for fruit set and the number of seeds per fruit as compared to those for fruit and seed weight. In the case of fruit set and the number of seeds per fruit, we find that both model 1 and 2 are equally good in describing the differences observed when penalizing for model complexity (i.e.,$\Delta AIC<2$; [@Burnham2002a]). This suggests model 2 is a good model despite its added complexity, and actually shows a substantially better predictive ability than model 1 (R^2 = `r round(r2.m2, 2)` for model 2 versus `r round(r2.m1, 2)` for model 1 in the case of fruit set and R^2 = `r round(r2.m2.seed,2)` for model 2 versus `r round(r2.m1.seed, 2)` for model 1 in the case of the number of seeds per fruit) and therefore we will comment results for this model only. In particular, we find that both fruit set and the number of seeds per fruit are positively related to niche complementarity between pollinators (Tables 2, Fig. 3). Additionally, we find a negative effect of site-level pollinator richness on average fruit set (Table 2A, Fig. 3). 
 
 
 
@@ -957,8 +957,8 @@ r2.fruitw2<-r.squaredGLMM(m2.fruitw.net)
 
 
 #save table with results for paper
-tableS6<-round(summary(m1.fruitw.net)$coef[,1:3], digits=2)
-rownames(tableS6)<-c("(Intercept)", "Pollinator species diversity", "Total number of visits")#end of paper
+tableS7<-round(summary(m1.fruitw.net)$coef[,1:3], digits=2)#ch
+rownames(tableS7)<-c("(Intercept)", "Pollinator species diversity", "Total number of visits")#end of paper
 
 
 
@@ -1018,8 +1018,8 @@ r2.seedw2<-r.squaredGLMM(m2.seedw.net)
 confint(m1.seedw.net)
 
 #save table with results for paper
-tableS7<-round(summary(m1.seedw.net)$coef[,1:3], digits=2)
-rownames(tableS7) <-c("(Intercept)", "Pollinator species diversity", "Total number of visits")#end of paper
+tableS8<-round(summary(m1.seedw.net)$coef[,1:3], digits=2)#ch
+rownames(tableS8) <-c("(Intercept)", "Pollinator species diversity", "Total number of visits")#end of paper
 
 
 predtest2<-summary(m1.seedw.net)$coefficients[1]+ (summary(m1.seedw.net)$coefficients[2] * s.comm$species.poll.sc) + (summary(m1.seedw.net)$coefficients[3] * mean(s.comm$tot.visits.sc)) 
@@ -1043,11 +1043,11 @@ Figure4<-plot_grid(pltest, pltest2, labels = c("A", "B"), nrow=1)
 
 ```
 
-  Contrastingly, in the case of weight variables (fruit and seed weight), in both cases we find that the best model is model 1, i.e., that only including simple visitation metrics (R^2 = `r round(r2.fruitw1[2], 2)` in the case of fruit weight and `r round(r2.seedw1[2], 2)` in the case of seed weight). Here, we find a consistent positive effect of site-level pollinator richness for both weight descriptors (Tables S6-S7, Fig. 4).  
+  Contrastingly, in the case of weight variables (fruit and seed weight), in both cases we find that the best model is model 1, i.e., that only including simple visitation metrics (R^2 = `r round(r2.fruitw1[2], 2)` in the case of fruit weight and `r round(r2.seedw1[2], 2)` in the case of seed weight). Here, we find a consistent positive effect of site-level pollinator richness for both weight descriptors (Tables S7-S8, Fig. 4).  
 
 _Equity in fruitset_
 
-When evaluating the effect of differences in community composition and network structure for equity in reproductive success across the different species within a community we find that model 1 is the best model for all the thresholds considered (50^th, 25^th and 75^th percentiles). Here, none of the variables considered are able to explain differences observed in equity across sites (Tables S8, S9, S10).
+When evaluating the effect of differences in community composition and network structure for equity in reproductive success across the different species within a community we find that model 1 is the best model for all the thresholds considered (50^th, 25^th and 75^th percentiles). Here, none of the variables considered are able to explain differences observed in equity across sites (Tables S9, S10, S11).
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, results='hide'}
 
@@ -1096,8 +1096,8 @@ AICtab(m1.eq.comm, m2.eq.comm) #m1 is best no variables significant
 
 
 #save table with results for paper, both models are equally good so save both tables
-tableS8<-round(summary(m1.eq.comm)$coef[,1:3], digits=2)
-rownames(tableS8)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
+tableS9<-round(summary(m1.eq.comm)$coef[,1:3], digits=2)#ch
+rownames(tableS9)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
 
 
 #test for problems in residuals
@@ -1151,8 +1151,8 @@ summary(m2.eq.comm75)
 AICtab(m1.eq.comm75, m2.eq.comm75) #m1 is best no variables significant
 
 
-tableS9<-round(summary(m1.eq.comm75)$coef[,1:3], digits=2)
-rownames(tableS9)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
+tableS10<-round(summary(m1.eq.comm75)$coef[,1:3], digits=2)#ch
+rownames(tableS10)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
 
 
 
@@ -1209,8 +1209,8 @@ summary(m2.eq.comm25)
 AICtab(m1.eq.comm25, m2.eq.comm25) #m1 is best no variables significant
 
 
-tableS10<-round(summary(m1.eq.comm25)$coef[,1:3], digits=2)
-rownames(tableS10)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
+tableS11<-round(summary(m1.eq.comm25)$coef[,1:3], digits=2)#ch
+rownames(tableS11)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
 
 ```
 
@@ -1583,40 +1583,40 @@ kable(tableS3, caption = "Table S3. Number of fruits per plant species sampled a
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
 
-tableS4<-round(summary(m1.seed.w)$coefficients$cond[,1:3], digits=2)
-rownames(tableS4)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
-kable(tableS4, caption="Table S4. Results of GLMM showing effect of simple visitation metrics on species-level average seed weight based on best model selected.")
-
-tableS5<-round(summary(m1.fruit.w)$coefficients$cond[,1:3], digits=2)
+tableS5<-round(summary(m1.seed.w)$coefficients$cond[,1:3], digits=2)
 rownames(tableS5)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
-kable(tableS5, caption="Table S5. Results of GLMM showing effect of simple visitation metrics on species-level average fruit weight based on best model selected.")
+kable(tableS5, caption="Table S5. Results of GLMM showing effect of simple visitation metrics on species-level average seed weight based on best model selected.")
+
+tableS6<-round(summary(m1.fruit.w)$coefficients$cond[,1:3], digits=2)
+rownames(tableS6)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
+kable(tableS6, caption="Table S6. Results of GLMM showing effect of simple visitation metrics on species-level average fruit weight based on best model selected.")
 ```
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
 
-tableS6<-round(summary(m1.fruitw.net)$coef[,1:3], digits=2)
-rownames(tableS6)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
+tableS7<-round(summary(m1.fruitw.net)$coef[,1:3], digits=2)
+rownames(tableS7)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
 
-kable(tableS6, caption="Table S6. Results of GLM showing effect of simple visitation metrics on site-level average fruit weight based on best model selected.")
+kable(tableS7, caption="Table S7. Results of GLM showing effect of simple visitation metrics on site-level average fruit weight based on best model selected.")
 ```
 
 
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
 #save table with results for paper
-tableS7<-round(summary(m1.seedw.net)$coef[,1:3], digits=2)
-rownames(tableS7) <-c("(Intercept)", "Pollinator richness", "Total number of visits")
+tableS8<-round(summary(m1.seedw.net)$coef[,1:3], digits=2)
+rownames(tableS8) <-c("(Intercept)", "Pollinator richness", "Total number of visits")
 
-kable(tableS7, caption="Table S7. Results of GLM showing effect of simple visitation metrics on site-level average seed weight based on best model selected.")
+kable(tableS8, caption="Table S8. Results of GLM showing effect of simple visitation metrics on site-level average seed weight based on best model selected.")
 ```
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
 
-kable(tableS8, caption="Table S8. Results of GLM showing effect of simple visitation metrics on equity in reproductive success across plant species within a site based on best model selected (0.50 threshold).")
+kable(tableS9, caption="Table S9. Results of GLM showing effect of simple visitation metrics on equity in reproductive success across plant species within a site based on best model selected (0.50 threshold).")
 
-kable(tableS9, caption="Table S9. Results of GLM showing effect of simple visitation metrics on equity in reproductive success across plant species within a site based on best model selected (0.75 threshold).")
+kable(tableS10, caption="Table S10. Results of GLM showing effect of simple visitation metrics on equity in reproductive success across plant species within a site based on best model selected (0.75 threshold).")
 
-kable(tableS10, caption="Table S10. Results of GLM showing effect of simple visitation metrics on equity in reproductive success across plant species within a site based on best model selected (0.25 threshold).")
+kable(tableS11, caption="Table S11. Results of GLM showing effect of simple visitation metrics on equity in reproductive success across plant species within a site based on best model selected (0.25 threshold).")
 ```
 
 \newpage
