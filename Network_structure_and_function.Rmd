@@ -1372,6 +1372,10 @@ The existence of relationships between interaction network structure and ecosyst
 
   In summary, our findings show that the analysis of natural communities of interacting species using network analysis not only represents an ideal way of visualizing and grasping the complexity present within these communities. Rather, it also represents a manner of mechanistically understanding differences observed across the reproductive success of individuals and/or species while linking them to potential ecological mechanisms. 
 
+**Data accessibility**
+
+All the data used is available https://zenodo.org/account/settings/github/repository/ibartomeus/BeeFunData 
+and the code used to generate all results can be found at https://doi.org/10.5281/zenodo.3364037.
 
 **Acknowledgements**
 
