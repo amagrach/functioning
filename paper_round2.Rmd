@@ -160,6 +160,10 @@ d.beta[d.beta>1]<-1 #make it binary
 d.betadiv<-beta.multi(d.beta)
 sor<-d.betadiv[3]
 
+#Alternativelly, as I am not understanding betapart.
+#using vegan classic apporach.
+mean(betadiver(d.beta, method = 11)) #this is theoretically the mean of soerensens across sites according to vegan. A bit lower. 0.41.
+summary(betadiver(d.beta, method = 11)) #max value 0.66.
 ```
 
 
