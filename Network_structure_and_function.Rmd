@@ -13,13 +13,15 @@ bibliography: library.bib
 
 **Niche complementarity between pollinators increases community-level plant reproductive success**
 
-Ainhoa Magrach^1^, Francisco P. Molina^2^, Ignasi Bartomeus^2^
+Ainhoa Magrach^1^ ^2^, Francisco P. Molina^3^, Ignasi Bartomeus^3^
 
 Short running title: Network structure effects on ecosystem functioning
 
 ^1^Basque Centre for Climate Change-BC3, Edif. Sede 1, 1º, Parque Científico UPV-EHU, Barrio Sarriena s/n, 48940, Leioa, Spain
 
-^2Estación Biológica de Doñana (EBD-CSIC), Avda. Américo Vespucio 26, Isla de la Cartuja, 41092, Sevilla, Spain
+^2^IKERBASQUE, Basque Foundation for Science, María Díaz de Haro 3, 48013, Bilbao, Spain
+
+^3^Estación Biológica de Doñana (EBD-CSIC), Avda. Américo Vespucio 26, Isla de la Cartuja, 41092, Sevilla, Spain
 
 
 Type of article: Letter
