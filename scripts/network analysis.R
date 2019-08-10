@@ -37,12 +37,7 @@ for(i in 1:length(sites)){
   temp <- subset(d, Site_ID == sites[i])
   
   
-  # 
-  # temp2<-droplevels(ddply(temp, c("Plant_gen_sp", "Pollinator_gen_sp"), 
-  #               summarise,
-  #               tot.visits= sum(Frequency)))
-  # 
-  # web<-as.data.frame.matrix(xtabs(tot.visits ~ Plant_gen_sp + Pollinator_gen_sp, temp2))
+
   web<-table(temp$Plant_gen_sp, temp$Pollinator_gen_sp)
   
    #p1<-plotweb(web)
@@ -51,7 +46,7 @@ for(i in 1:length(sites)){
   if(isTRUE(class(spntw)=="try-error")) {next} 
   
   #song et al nestedness corrected with NODF max by Simmons et al
-  #web2<-table(temp2$Plant_gen_sp, temp2$Pollinator_gen_sp) #song uses incidence so we calculate the table with incidence rather than freq here
+  
   #remove all columns and rows with all values=0
   web3 <- web[, colSums(web != 0) > 0] 
   web4 <- web3[rowSums(web3[, -1] > 0) != 0, ]
@@ -66,10 +61,7 @@ for(i in 1:length(sites)){
       combined_NODF <- comb_nest(web4,NODF,max_NODF$max_nodf) # this calculates the combined NODF statistic as described in the manuscript
     }
   
-   # NODF <- nestedness_NODF(web4) # this calculates the raw value of NODF as in Song
-   # max_NODF <- max_nest(web4)
-   # combined_NODF <- comb_nest(web4,NODF,max_NODF)
-  # 
+   
   
   n <- nrow(out.site)
   webs[[n]] <- web4  
