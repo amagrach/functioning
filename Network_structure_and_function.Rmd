@@ -43,7 +43,7 @@ Keywords: nestedness, niche complementary, fruitset, pollination, plant-pollinat
 
 **Abstract**
 
-Declines in pollinator diversity and abundance have been reported across different regions, with implications for the reproductive success of plant species. However, research has focused primarily on pairwise plant-pollinator interactions, largely overlooking community-level dynamics. Yet species do not interact in isolation, they are embedded within larger networks whose structure can affect pollinator functional roles and, ultimately, the pollination services they deliver to plants. Here, we present one of the first efforts linking pollinator visitation to plant reproduction from a community-wide perspective using a well-replicated dataset encompassing 16 well-resolved plant-pollinator networks and data on reproductive success for 19 plant species from Mediterranean shrub ecosystems. We find that models including information on simple visitation metrics alone are good in explaining the variability in reproductive success observed. However, insights into the mechanisms through which differences in pollinator diversity translate into changes in reproductive success require additional information on network structure, particularly that reflecting niche complementarity between pollinators. Specifically, we find a positive effect of increasing niche complementarity between pollinators on plant reproductive success. 
+Declines in pollinator diversity and abundance have been reported across different regions, with implications for the reproductive success of plant species. However, research has focused primarily on pairwise plant-pollinator interactions, largely overlooking community-level dynamics. Here, we present one of the first efforts linking pollinator visitation to plant reproduction from a community-wide perspective using a well-replicated dataset encompassing 16 well-resolved plant-pollinator networks and data on reproductive success for 19 plant species from Mediterranean shrub ecosystems. We find that models including simple visitation metrics are good in explaining the variability in reproductive success observed. However, insights into the mechanisms through which differences in pollinator diversity translate into changes in reproductive success require additional information on network structure. Specifically, we find a positive effect of increasing niche complementarity between pollinators on plant reproductive success. This shows that maintaining communities with a diversity of species but also of functions is paramount to preserving natural ecosystems.
 
 \nextpage
 
@@ -56,7 +56,7 @@ Pollinators provide key services to plants by facilitating pollen flow between i
 
   The few pollination studies that have analysed the effects of changing pollinator diversity for reproductive success at the community level have done so using mainly experimental setups. As an example, a study that experimentally recreated a plant community with 9 plant species and differing levels of pollinator diversity across different enclosures, found that not only pollinator species diversity had an effect for average reproductive success, but that plant-pollinator interaction structure also had an important effect [@Frund2013]. In particular, these authors found that niche complementarity between pollinators, in terms of plant species and temperature coverage (a measure of the overlap in the use of plant resources and optimum temperature activity) had a positive effect for average seed set at the community level [@Frund2013]. This provides added information on the effects of biodiversity for ecosystem functioning, suggesting that not only the diversity of species present, but also the diversity of roles and ways in which a community is structured, are determinant factors.
 
-  Indeed, theoretical research has long suggested that the structure of multitrophic communities has an effect for ecosystem functioning (reviewed in [@Thompson2012]). This line of research, rooted in niche theory and revamped by food-web studies [@Godoy2018; @Macarthur1967; @May1972a; @Tilman1982], has greatly advanced theory, but these ideas have not yet been tested using empirical data (but see [@Poisot2013]). Specifically, a major knowledge gap resides in understanding which aspects of structure determine which aspects of function [@Thompson2012]. This is because although a network perspective has promised to encapsulate complex ecological mechanisms occurring at the community level – such as indirect interactions [@Abrams1998; @Holt1977] or niche overlap [@Woodward2002]- less attention has been given to the ways in which these mechanisms relate to observed ecosystem processes [@Bluthgen2010a]. In contrast, we are now at a point in which there is considerable understanding on the attributes characterizing mutualistic interaction networks [@Bascompte2007a]. Especially, in the case of pollination, we have ample knowledge on the attributes that shape these mutualistic interactions at the community level. Amongst them is the prevalence of nested structures, i.e., arrangements where specialist species interact with a subset of the species that generalists interact with [@Bascompte2003] and which is thought to promote species diversity [@Bastolla2009]; or the relatively high extent of complementary specialization at the community scale, which may be directly related to key ecosystem functions [@Bluthgen2011]. However, the mechanisms by which these potential pathways affect plant reproduction remain to be understood [@Winfree2013]. The time is thus ripe to use the existing knowledge around plant-pollinator network structures to explore the relationship between network structure and ecosystem functioning empirically, with special emphasis being placed on the underlying ecological mechanisms that drive these relationships.
+  Indeed, theoretical research has long suggested that the structure of multitrophic communities has an effect for ecosystem functioning (reviewed in [@Thompson2012]). This line of research, rooted in niche theory and revamped by food-web studies [@Godoy2018; @Macarthur1967; @May1972a; @Tilman1982], has greatly advanced theory, but these ideas have not yet been tested using empirical data (but see [@Poisot2013]). Specifically, a major knowledge gap resides in understanding which aspects of structure determine which aspects of function [@Thompson2012]. This is because although a network perspective has promised to encapsulate complex ecological mechanisms occurring at the community level – such as indirect interactions [@Abrams1998; @Holt1977] or niche overlap [@Woodward2002]- less attention has been given to the ways in which these mechanisms relate to observed ecosystem processes [@Bluthgen2010a]. In contrast, we are now at a point in which there is considerable understanding on the attributes characterizing mutualistic interaction networks [@Bascompte2007a]. Especially, in the case of pollination, we have ample knowledge on the attributes that shape these mutualistic interactions at the community level. Amongst them is the prevalence of nested structures, i.e., arrangements where specialist species interact with a subset of the species that generalists interact with [@Bascompte2003] and which is thought to promote species diversity [@Bastolla2009]; or the relatively high extent of complementary specialization at the community scale, which may be directly related to key ecosystem functions [@Bluthgen2011]. However, the mechanisms by which these attributes affect plant reproduction remain to be understood [@Winfree2013]. The time is thus ripe to use the existing knowledge around plant-pollinator network structures to explore the relationship between network structure and ecosystem functioning empirically, with special emphasis being placed on the underlying ecological mechanisms that drive these relationships.
 
   Here, we present one of the first efforts linking pollinator visitation and plant reproductive success at the community level using empirical data on plant-pollinator interaction networks and plant reproductive success. To this end, we use a well-replicated dataset encompassing 16 well-resolved plant-pollinator interaction networks coupled with data on the reproductive success of 19 plant species recorded in Mediterranean shrub ecosystems. Our study focuses on understanding whether adding information on selected interaction network structure indices to previously used simple visitation metrics (e.g., the number and diversity of pollinator species visiting a plant species) aids in better explaining the differences observed in community-wide reproductive success. In doing so, we conducted our analyses focusing on reproductive success at two different levels: (i) at the species level by considering the effect of the position of a focal species within the larger network and its impact on its individual reproductive success, and (ii) at the site level, by evaluating how attributes that describe the whole site might affect average values of reproductive success. Specifically, our study focuses on how the interplay between niche complementarity and redundancy determines reproductive success. Plant reproductive success requires of the delivery of conspecific pollen and thus of a certain degree of niche complementarity [@Bluthgen2011]. Yet, greater values of nestedness, which imply redundancy in species functions, are thought to promote species diversity [@Bastolla2009] and stability [@Thebault2010a] within plant-pollinator networks. At present, we do not know how either of these network characteristics affects the functions performed by pollinators. Finally, in addition to average values, we also evaluate whether network structure helps explain differences in equity in reproductive success across species within a community, as a measure of evenness in the pollination service delivered.
 
@@ -201,7 +201,7 @@ In order to evaluate the completeness of our sampling of the pollinator and plan
 _Species-level network analysis_
 
 At the species level, we focused on attributes defining the position of a focal plant species within the larger community. As such, we considered two metrics providing complementary non-redundant information: (i) average niche overlap in terms of pollinators between a focal plant species and each of the other plant species in the community, which estimates the potential indirect interactions between different plant species through shared resources (in this case pollinators), and (ii) centrality, which depicts the importance of the role played by a plant species within the larger community (as resource for a large number of pollinator species) and its contribution to network cohesiveness. 
- Niche overlap was calculated as the average overlap in pollinator species visiting a focal plant and each of the other plants in the community using the Morisita overlap index, a measure of similarity between two sets of data [@Zhang2016]. As a measure of centrality, we used weighted closeness centrality, which represents the number of shortest paths going through a focal plant based on a unipartite projection of the bipartite plant-pollinator network using a weighted representation of the network [@Dormann2009]. Here, links between plant species represent shared pollinator species.  
+ Niche overlap was calculated as the average overlap in pollinator species visiting a focal plant and each of the other plants in the community using the Morisita overlap index, a measure of similarity between two sets of data [@Zhang2016]. As a measure of centrality, we used weighted closeness centrality, which represents the number of shortest paths going through a focal plant based on a unipartite projection of the bipartite plant-pollinator network using a weighted representation of the network [@Dormann2009]. With this method, links between plant species represent shared pollinator species.  
  
 
 _Site-level network analysis_
@@ -217,9 +217,9 @@ At the site level, we followed the same logic as the one presented at the specie
 
 _Statistical analyses_
 
-In order to evaluate whether adding information on network structure improves our ability to explain differences in reproductive success - both at the species and the site level - we used generalized linear (GLMs) and generalized linear mixed models (GLMMs). In both cases (species and site-level models) we fit two types of models: (i) model 1, that only included simple visitation metrics and (ii) model 2 that additionally included information on network structure. These models are meant to be additive, so that the network metrics included are intended to complement rather than substitute the simple metrics traditionally used.  
+In order to evaluate whether adding information on network structure improves our ability to explain differences in reproductive success - both at the species and the site level - we used generalized linear (GLMs) and generalized linear mixed models (GLMMs) respectively. In both cases (species and site-level models) we fit two types of models: (i) model 1, that only included simple visitation metrics and (ii) model 2 that additionally included information on network structure. These models are meant to be additive, so that the network metrics included are intended to complement rather than substitute the simple metrics traditionally used.  
 
-  At the species level, response variables included the fruit set for different individuals of each species analyzed using a binomial distribution, the average number of seeds per fruit analyzed using a normal distribution, and the average values of fruit and seed weight fitted to Poisson distributions. The number of seeds per fruit was centered and scaled (i.e., we subtracted column means and divided by standard deviation) to allow meaningful comparisons across species with contrasting life histories. As explanatory variables, model 1 included pollinator richness, and the total number of visits received by each plant species; while model 2 added the two network attributes calculated at the species level: average plant niche overlap and centrality. For both models, we included plant species nested within site and site as random effects to account for the non-independence of several individuals measured per species and site.  
+  At the species level, response variables included the fruit set for different individuals of each species analyzed using a binomial distribution and the average number of seeds per fruit, the average fruit and seed weight fitted using normal distributions. The number of seeds per fruit was centered and scaled (i.e., we subtracted column means and divided by standard deviation) to allow meaningful comparisons across species with contrasting life histories. As explanatory variables, model 1 included pollinator richness, and the total number of visits received by each plant species; while model 2 added the two network attributes calculated at the species level: average plant niche overlap and centrality. For both models, we included plant species nested within site and site as random effects to account for the non-independence of several individuals measured per species and site.  
   
 	At the site level, we upscaled our species-level analyses. As response variables we had the average reproductive success per site (i.e., average fruit set analyzed using a binomial distribution, average number of seeds per fruit and average fruit and seed weight using a normal distribution). We thus had a single value per site and no random effects are needed. In this case, model 1 included total pollinator richness and total pollinator abundance (i.e. number of visits received by all plants within the community) as explanatory variables. Model 2, in turn, added information on network structure by including nestedness and pollinator niche complementarity as explanatory variables. 
 
@@ -555,7 +555,7 @@ y_partial_weigh_inv<-exp(y_partial_weigh)/(1+exp(y_partial_weigh))
 
 Figure2a<-ggplot(m2@frame,  aes(x=m2@frame$weigh_closeness.sc, y=y_partial_weigh_inv, color= Plant.sp)) +    
   geom_point(size=2.5, shape=21,color = "black", aes(fill=factor(Plant.sp))) + 
-  stat_smooth(method=lm,  size=1, se=TRUE, color = "black", alpha=0.4) + 
+  stat_smooth(method=glm,  method.args = list(family = "binomial"), size=1, se=TRUE, color = "black", alpha=0.4) + 
   xlab("Centrality") +      
   ylab("Fruit set ") + theme_bw()  + theme (legend.position= "bottom") +
   theme(text = element_text(size = 18), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1.3), face="bold")) + 
@@ -682,12 +682,12 @@ Figure2 <- plot_grid( prow, legend_b, ncol = 1, rel_heights = c(2, 1))#al final 
 
 #SEED WEIGHT
 
-m1.seed.w<-glmmTMB(mean.seedw ~  pollspsperplant.sc + tot.visits.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="poisson", data=s3)
+m1.seed.w<-glmmTMB(mean.seedw ~  pollspsperplant.sc + tot.visits.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="gaussian", data=s3)
 
 summary(m1.seed.w)
  
  
-m2.seed.w<-glmmTMB(mean.seedw ~  pollspsperplant.sc + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID)+ (1|Site_ID), family="poisson", data=s3)
+m2.seed.w<-glmmTMB(mean.seedw ~  pollspsperplant.sc + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID)+ (1|Site_ID), family="gaussian", data=s3)
  
 summary(m2.seed.w)
  
@@ -704,13 +704,13 @@ rownames(tableS5)<-c("(Intercept)", "Pollinator richness", "Total number of visi
 
 #FRUIT WEIGHT
 
-m1.fruit.w<-glmmTMB(mean.fruitweight ~  pollspsperplant.sc + tot.visits.sc  + (1|Plant.sp:Site_ID)+ (1|Site_ID), family="poisson", data=s3)
+
+m1.fruit.w<-glmmTMB(mean.fruitweight ~  pollspsperplant.sc + tot.visits.sc  + (1|Plant.sp:Site_ID)+ (1|Site_ID), family="gaussian", data=s3)
 
 summary(m1.fruit.w)
- 
 
 
-m2.fruit.w<-glmmTMB(mean.fruitweight ~  pollspsperplant.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="poisson", data=s3)
+m2.fruit.w<-glmmTMB(mean.fruitweight ~  pollspsperplant.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="gaussian", data=s3)
  
 summary(m2.fruit.w)
  
@@ -721,11 +721,11 @@ AICtab(m1.fruit.w, m2.fruit.w)
 
 
 # extract estimates and st error for m2 and present them in paper
-tableS6<-round(summary(m2.fruit.w)$coefficients$cond[,1:3], digits=2)#ch
-rownames(tableS6)<-c("(Intercept)", "Pollinator richness", "Total number of visits", "Centrality", "Plant niche overlap") 
+tableS6<-round(summary(m1.fruit.w)$coefficients$cond[,1:3], digits=2)#ch
+rownames(tableS6)<-c("(Intercept)", "Pollinator richness", "Total number of visits") 
 
 ```
- For all other measures of reproductive success considered (i.e., fruit and seed weight), both models had very similar fits, with ($\Delta AIC=2.2$) and 2, respectively. However, none of the variables included within our model explain the differences observed (Tables S5-S6). 
+ For all other measures of reproductive success considered (i.e., fruit and seed weight), model 1 showed the best fit. However, none of the variables included within our model explain the differences observed (Tables S5-S6). 
 
 _Site-level analyses_
 
@@ -946,8 +946,8 @@ r2.fruitw2<-r.squaredGLMM(m2.fruitw.net)
 
 
 #save table with results for paper
-tableS7<-round(summary(m1.fruitw.net)$coef[,1:3], digits=2)#ch
-rownames(tableS7)<-c("(Intercept)", "Pollinator species diversity", "Total number of visits")#end of paper
+tableS7A<-round(summary(m1.fruitw.net)$coef[,1:3], digits=2)#ch
+rownames(tableS7A)<-c("(Intercept)", "Pollinator species diversity", "Total number of visits")#end of paper
 
 
 
@@ -966,6 +966,50 @@ pltest <- ggplot(s.comm,  aes(x=species.poll.sc, y= restest)) +
   theme(text = element_text(size = 18), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1), face="bold")) 
  
 
+
+#There is one point that has a larger pollinator diversity than the rest. To test if this point by itself might be driving the whole relationship we are repeating analyses removing this one point.
+
+
+s.comm2<-subset(s.comm ,s.comm$species.poll.sc<1.9)
+
+
+m1.fruitw.net2<-lm(mean.fruitweight ~  species.poll.sc + tot.visits.sc, family="gaussian", data=s.comm2)
+
+summary(m1.fruitw.net2)
+
+vif(m1.fruitw.net2)
+
+m2.fruitw.net2<-lm(mean.fruitweight ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=s.comm2)
+
+summary(m2.fruitw.net2)
+
+vif(m2.fruitw.net2)
+
+#select best model based on AIC 
+
+AICtab(m1.fruitw.net2, m2.fruitw.net2)
+
+
+
+#save table with results for paper
+tableS7B<-round(summary(m1.fruitw.net2)$coef[,1:3], digits=2)#ch
+rownames(tableS7B)<-c("(Intercept)", "Pollinator species diversity", "Total number of visits")#end of paper
+
+
+
+predtestb<-summary(m1.fruitw.net2)$coefficients[1]+ (summary(m1.fruitw.net2)$coefficients[2] * s.comm2$species.poll.sc) + (summary(m1.fruitw.net2)$coefficients[3] * mean(s.comm2$tot.visits.sc)) 
+
+restestb<-predtestb-s.comm2$mean.fruitweight
+
+
+
+pltestb <- ggplot(s.comm2,  aes(x=species.poll.sc, y= restestb)) +    
+  geom_point(size=2.5, shape=21, color="black", fill="darkgrey") + 
+  stat_smooth(method = 'lm', size=1, se=TRUE, color = "black", alpha=0.4) +
+  #ylim(0.3,0.9) +
+  xlab("Pollinator richness") +      
+  ylab("Fruit weight (g)") + theme_bw()  + #theme (legend.position= "none") +
+  theme(text = element_text(size = 18), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1), face="bold")) 
 
 ```
 
@@ -1000,11 +1044,11 @@ r2.seedw1<-r.squaredGLMM(m1.seedw.net)
 r2.seedw2<-r.squaredGLMM(m2.seedw.net)
 
 
-confint(m1.seedw.net)
+#confint(m1.seedw.net)
 
 #save table with results for paper
-tableS8<-round(summary(m1.seedw.net)$coef[,1:3], digits=2)#ch
-rownames(tableS8) <-c("(Intercept)", "Pollinator species diversity", "Total number of visits")#end of paper
+tableS8A<-round(summary(m1.seedw.net)$coef[,1:3], digits=2)#ch
+rownames(tableS8A) <-c("(Intercept)", "Pollinator species diversity", "Total number of visits")#end of paper
 
 
 predtest2<-summary(m1.seedw.net)$coefficients[1]+ (summary(m1.seedw.net)$coefficients[2] * s.comm$species.poll.sc) + (summary(m1.seedw.net)$coefficients[3] * mean(s.comm$tot.visits.sc)) 
@@ -1025,9 +1069,56 @@ pltest2 <- ggplot(s.comm,  aes(x=species.poll.sc, y= restest2)) +
 
 Figure4<-plot_grid(pltest, pltest2, labels = c("A", "B"), nrow=1)  
 
+
+
+#Repeat analyses but removing one site that has a particularly large pollinator richness value to test whether this point might be driving the relationship by itself.
+
+
+m1.seedw.net2<-glm(mean.seedweight ~  species.poll.sc + tot.visits.sc, family="gaussian", data=s.comm2)
+
+summary(m1.seedw.net2)
+
+
+vif(m1.seedw.net2)
+
+m2.seedw.net2<-glm(mean.seedweight ~  species.poll.sc + tot.visits.sc + nodf.song.sc + functional.comp.poll.sc, family="gaussian", data=s.comm2)
+
+summary(m2.seedw.net2)
+
+vif(m2.seedw.net2)
+
+#select best model based on AIC 
+
+AICtab(m1.seedw.net2, m2.seedw.net2) #m1 is better
+
+
+#save table with results for paper
+tableS8B<-round(summary(m1.seedw.net2)$coef[,1:3], digits=2)#ch
+rownames(tableS8B) <-c("(Intercept)", "Pollinator species diversity", "Total number of visits")#end of paper
+
+
+predtest2b<-summary(m1.seedw.net2)$coefficients[1]+ (summary(m1.seedw.net2)$coefficients[2] * s.comm2$species.poll.sc) + (summary(m1.seedw.net2)$coefficients[3] * mean(s.comm2$tot.visits.sc)) 
+
+restest2b<-predtest2b-s.comm2$mean.seedweight
+
+
+
+pltest2.sub <- ggplot(s.comm2,  aes(x=species.poll.sc, y= restest2b)) +    
+  geom_point(size=2.5, shape=21, color="black", fill="darkgrey") + 
+  stat_smooth(method = 'glm', size=1, se=TRUE, color = "black", alpha=0.4) +
+  #ylim(0.3,0.9) +
+  xlab("Pollinator richness") +      
+  ylab("Seed weight (g)") + theme_bw()  + #theme (legend.position= "none") +
+  theme(text = element_text(size = 18), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1), face="bold")) 
+
+
+
+FigureS3<-plot_grid(pltestb, pltest2.sub, labels = c("A", "B"), nrow=1)  
+
+
 ```
 
-  Contrastingly, in the case of weight variables (fruit and seed weight), in both cases we find that the best model is model 1, i.e., that only including simple visitation metrics (R^2 = `r round(r2.fruitw1[2], 2)` in the case of fruit weight and `r round(r2.seedw1[2], 2)` in the case of seed weight). Here, we find a consistent positive effect of site-level pollinator richness for both weight descriptors (Tables S7-S8, Fig. 4).  
+  Contrastingly, in the case of weight variables (fruit and seed weight), in both cases we find that the best model is model 1, i.e., that only including simple visitation metrics (R^2 = `r round(r2.fruitw1[2], 2)` in the case of fruit weight and `r round(r2.seedw1[2], 2)` in the case of seed weight). Here, we find a consistent positive effect of site-level pollinator richness for both weight descriptors (Tables S7A-S8A, Fig. 4). This effect is maintained even after removing a site that has a particularly large pollinator richness value (Tables S7B-S8B, Fig. S3). 
 
 _Equity in fruitset_
 
@@ -1471,7 +1562,7 @@ print(sp_map, vp = viewport(0.8335, 0.6812, width = 0.35, height = 0.35))
 
 \newpage
 
-```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=6, fig.width=9}
+```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=9, fig.width=9}
 
 #FIGURE 2
 Figure2
@@ -1522,15 +1613,23 @@ Figure5
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=13, fig.width=7}
 
-#######FIG S1 SAMPLING COMPLETENESS 
+#######FIG S2 SAMPLING COMPLETENESS 
 #FigureS2<-plot_grid( poll, plant, link, ncol = 1)
-#FigureS2
+FigureS2
 
 # save_plot("figures/FigureS1.tiff", figures1,
 #            base_height = 13, base_width = 7)
 ```
 
 **Figure S2.** Accumulation curves of pollinator, plant and plant-pollinator link richness with increasing sampling effort up to 100% sample coverage. Solid lines and points indicate observed richness while dashed lines show expected richness at increasing sample size, (i.e., extrapolated). 
+
+```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=3, fig.width=10}
+
+FigureS3
+
+```
+
+**Figure S3.** Figure S3. Partial residual plots showing the effect of pollinator richness on site-level average A) fruit and B) seed weight. Here, a site with a particularly large pollinator richness value is removed to test whether it might be driving the significant relationship. Dots represent values for each site (N=15 sites).
 
 \newpage
 
@@ -1581,20 +1680,34 @@ kable(tableS6, caption="Table S6. Results of GLMM showing effect of simple visit
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
 
-tableS7<-round(summary(m1.fruitw.net)$coef[,1:3], digits=2)
+tableS7A<-round(summary(m1.fruitw.net)$coef[,1:3], digits=2)
 rownames(tableS7)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
 
-kable(tableS7, caption="Table S7. Results of GLM showing effect of simple visitation metrics on site-level average fruit weight based on best model selected.")
+kable(tableS7A, caption="Table S7. Results of GLM showing effect of simple visitation metrics on A) site-level average fruit weight based on best model selected and B) the same analysis removing one site that has a particularly large pollinator richness value to test whether this point might be driving the relationship.")
 ```
 
+```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
 
+tableS7B<-round(summary(m1.fruitw.net2)$coef[,1:3], digits=2)
+rownames(tableS7B)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
+
+kable(tableS7B, caption="Table S7. Results of GLM showing effect of simple visitation metrics on A) site-level average fruit weight based on best model selected and B) the same analysis removing one site that has a particularly large pollinator richness value to test whether this point might be driving the relationship.")
+```
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
 #save table with results for paper
-tableS8<-round(summary(m1.seedw.net)$coef[,1:3], digits=2)
-rownames(tableS8) <-c("(Intercept)", "Pollinator richness", "Total number of visits")
+tableS8A<-round(summary(m1.seedw.net)$coef[,1:3], digits=2)
+rownames(tableS8A) <-c("(Intercept)", "Pollinator richness", "Total number of visits")
 
-kable(tableS8, caption="Table S8. Results of GLM showing effect of simple visitation metrics on site-level average seed weight based on best model selected.")
+kable(tableS8A, caption="Results of GLM showing effect of simple visitation metrics on A) site-level average seed weight based on best model selected and B) the same analysis removing one site that has a particularly large pollinator richness value to test whether this point might be driving the relationship.")
+```
+
+```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}
+#save table with results for paper
+tableS8B<-round(summary(m1.seedw.net2)$coef[,1:3], digits=2)
+rownames(tableS8B) <-c("(Intercept)", "Pollinator richness", "Total number of visits")
+
+kable(tableS8B, caption="Results of GLM showing effect of simple visitation metrics on A) site-level average seed weight based on best model selected and B) the same analysis removing one site that has a particularly large pollinator richness value to test whether this point might be driving the relationship.")
 ```
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5}

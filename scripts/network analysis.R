@@ -9,6 +9,7 @@ source('toolbox.R') #load the toolbox from Song et al paper
 #devtools::install_github("CHoeppke/maxnodf")
 library(maxnodf)#load improved algorithm from Simmons et al
 library(plyr)
+library(nnet)
 
 d<-all_interactions
 
