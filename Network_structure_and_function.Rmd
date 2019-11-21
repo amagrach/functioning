@@ -43,7 +43,7 @@ Keywords: nestedness, niche complementary, fruitset, pollination, plant-pollinat
 
 **Abstract**
 
-Declines in pollinator diversity and abundance have been reported across different regions, with implications for the reproductive success of plant species. However, research has focused primarily on pairwise plant-pollinator interactions, largely overlooking community-level dynamics. Here, we present one of the first efforts linking pollinator visitation to plant reproduction from a community-wide perspective using a well-replicated dataset encompassing 16 well-resolved plant-pollinator networks and data on reproductive success for 19 plant species from Mediterranean shrub ecosystems. We find that models including simple visitation metrics are good in explaining the variability in reproductive success observed. However, insights into the mechanisms through which differences in pollinator diversity translate into changes in reproductive success require additional information on network structure. Specifically, we find a positive effect of increasing niche complementarity between pollinators on plant reproductive success. This shows that maintaining communities with a diversity of species but also of functions is paramount to preserving natural ecosystems.
+Declines in pollinator diversity and abundance have been reported across different regions, with implications for the reproductive success of plant species. However, research has focused primarily on pairwise plant-pollinator interactions, largely overlooking community-level dynamics. Here, we present one of the first efforts linking pollinator visitation to plant reproduction from a community-wide perspective using a well-replicated dataset encompassing 16 well-resolved plant-pollinator networks and data on reproductive success for 19 plant species from Mediterranean shrub ecosystems. We find that models including simple visitation metrics are sufficient to explain the variability in reproductive success observed. However, insights into the mechanisms through which differences in pollinator diversity translate into changes in reproductive success require additional information on network structure. Specifically, we find a positive effect of increasing niche complementarity between pollinators on plant reproductive success. This shows that maintaining communities with a diversity of species but also of functions is paramount to preserving natural ecosystems.
 
 \nextpage
 
@@ -208,7 +208,7 @@ _Site-level network analysis_
 
 At the site level, we followed the same logic as the one presented at the species level. Thus, we also calculated two network metrics providing complementary non-redundant information. In this case we focused on (i) nestedness and (ii) pollinator niche complementarity. 
 
-  Nestedness is the property by which specialists interact with a subset of the species that generalists interact with [@Bascompte2003]. Although there is an ongoing debate in the literature, some studies have found that nested networks are more stable and resilient to perturbations because nestedness promotes a greater diversity by minimizing competition among species in a community [@Bastolla2009]. However, many network attributes vary with network size and complexity [@Bluthgen2006]. In the case of nestedness, we know it can be affected by network size and connectance [@Song2017a]. An approach that is often used to correct for this, is to use null models and to compare null-model corrected nestedness values across different networks. However, this approach has been recently shown to present the same issues, as z-scores also change with network size and connectance [@Song2017a]. We thus followed the advice provided by Song et al. (2017) by using a normalized value of the widely-used nestedness metric NODF [@Almeida-Neto2011], $NODF_c$. This normalized value is calculated as $NODF_c = NODF_n/(C * log(S))$, where C is connectance and S is network size. $NODF_n$ is calculated as $NODF/max(NODF)$, which is independent of network size and thus comparable across different networks [@Song2017a]. To calculate max(NODF) we used a recently corrected version of the algorithm [@Simmons2019a] in all but three sites, where the condition that the number of links>number of species was not met and thus precluded us from using this new version. 
+  Nestedness is the property by which specialists interact with a subset of the species that generalists interact with [@Bascompte2003]. Although there is an ongoing debate in the literature, some studies have found that nested networks are more stable and resilient to perturbations because nestedness promotes a greater diversity by minimizing competition among species in a community [@Bastolla2009]. However, many network attributes vary with network size and complexity [@Bluthgen2006]. In the case of nestedness, we know it can be affected by network size and connectance [@Song2017a]. An approach that is often used to correct for this, is to use null models and to compare null-model corrected nestedness values across different networks. However, this approach has been recently shown to present the same issues, as z-scores also change with network size and connectance [@Song2017a]. We thus followed the advice provided by Song et al. (2017) by using a normalized value of the widely-used nestedness metric NODF [@Almeida-Neto2011], $NODF_c$. This normalized value is calculated as $NODF_c = NODF_n/(C * log(S))$, where C is connectance and S is network size. $NODF_n$ is calculated as $NODF/max(NODF)$, which is independent of network size and thus comparable across different networks [@Song2017a]. To calculate max(NODF) we used a recently corrected version of the algorithm [@Simmons2019a] in all but three sites, where the condition that the number of links>number of species was not met and thus precluded us from using this new version. Results did not change qualitatively when using the uncorrected version of the algorithm for all sites.
 
   Niche complementarity metrics are important because plant reproductive success depends on the delivery of conspecific pollen and thus of a certain level of specialization or niche divergence (reviewed in [@Brosi2016]). To calculate niche complementarity, we used a community-level measure defined as the total branch length of a functional dendrogram based on qualitative differences measured using a Euclidean distance in visitor assemblages between plants [@Devoto2012; @Petchey2007a]. All network metrics were calculated using package bipartite [@Dormann2009].
 
@@ -540,7 +540,7 @@ r2<-rsquared(c(m2, m1)) #check R^2 values for both models
 
 # extract estimates and st errors to present in table
 coefs.m2 <- data.frame(coef(summary(m2)))
-coefs.m2
+#coefs.m2
 Table1A<-round(coefs.m2[,1:3],digits=2)
 rownames(Table1A)<-c("(Intercept)", "Pollinator richness", "Total number of visits", "Centrality", "Plant niche overlap")
 #at the end of the paper
@@ -634,9 +634,10 @@ r2b<-rsquared(c(m2.seed, m1.seed)) #check R^2 values for both models
 
 # extract estimates and st errors to present in table
 coefs.m2.seed <- data.frame(coef(summary(m2.seed)))
-coefs.m2.seed
+#coefs.m2.seed
 Table1B<-round(coefs.m2.seed,digits=2)
 rownames(Table1B)<-c("(Intercept)", "Pollinator richness", "Total number of visits", "Centrality", "Plant niche overlap")
+
 
 #plot significant variables
 y_partial_norm_seed <- remef(m2.seed, fix= c("pollspsperplant.sc", "tot.visits.sc", "weigh_closeness.sc"), ran = "all")
@@ -682,12 +683,12 @@ Figure2 <- plot_grid( prow, legend_b, ncol = 1, rel_heights = c(2, 1))#al final 
 
 #SEED WEIGHT
 
-m1.seed.w<-glmmTMB(mean.seedw ~  pollspsperplant.sc + tot.visits.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="gaussian", data=s3)
+m1.seed.w<-glmer(mean.seedw ~  pollspsperplant.sc + tot.visits.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="gaussian", data=s3)
 
 summary(m1.seed.w)
  
  
-m2.seed.w<-glmmTMB(mean.seedw ~  pollspsperplant.sc + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID)+ (1|Site_ID), family="gaussian", data=s3)
+m2.seed.w<-glmer(mean.seedw ~  pollspsperplant.sc + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID)+ (1|Site_ID), family="gaussian", data=s3)
  
 summary(m2.seed.w)
  
@@ -698,19 +699,19 @@ AICtab(m1.seed.w, m2.seed.w)
 
 
 # extract estimates and st error for m1 and present them in paper
-tableS5<-round(summary(m1.seed.w)$coefficients$cond[,1:3], digits=2) #ch
+coefs.m1.seed.w <- data.frame(coef(summary(m1.seed.w)))
+tableS5<-round(coefs.m1.seed.w,digits=2)
 rownames(tableS5)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
-
 
 #FRUIT WEIGHT
 
 
-m1.fruit.w<-glmmTMB(mean.fruitweight ~  pollspsperplant.sc + tot.visits.sc  + (1|Plant.sp:Site_ID)+ (1|Site_ID), family="gaussian", data=s3)
+m1.fruit.w<-glmer(mean.fruitweight ~  pollspsperplant.sc + tot.visits.sc  + (1|Plant.sp:Site_ID)+ (1|Site_ID), family="gaussian", data=s3)
 
 summary(m1.fruit.w)
 
 
-m2.fruit.w<-glmmTMB(mean.fruitweight ~  pollspsperplant.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="gaussian", data=s3)
+m2.fruit.w<-glmer(mean.fruitweight ~  pollspsperplant.sc  + tot.visits.sc + weigh_closeness.sc + niche.overlap.sc  + (1|Plant.sp:Site_ID) + (1|Site_ID), family="gaussian", data=s3)
  
 summary(m2.fruit.w)
  
@@ -721,8 +722,11 @@ AICtab(m1.fruit.w, m2.fruit.w)
 
 
 # extract estimates and st error for m2 and present them in paper
-tableS6<-round(summary(m1.fruit.w)$coefficients$cond[,1:3], digits=2)#ch
-rownames(tableS6)<-c("(Intercept)", "Pollinator richness", "Total number of visits") 
+coefs.m1.fruit.w <- data.frame(coef(summary(m1.fruit.w)))
+tableS6<-round(coefs.m1.fruit.w,digits=2)
+rownames(tableS6)<-c("(Intercept)", "Pollinator richness", "Total number of visits")
+
+FigureS3<-plot_summs(m2, m2.seed, m1.fruit.w, m1.seed.w, level=0.95, scale = TRUE, model.names = c("Fruit set", "Number of seeds", "Fruit weight", "Seed weight"), legend.title = "Response variables", cex.axis=2)
 
 ```
  For all other measures of reproductive success considered (i.e., fruit and seed weight), model 1 showed the best fit. However, none of the variables included within our model explain the differences observed (Tables S5-S6). 
@@ -825,7 +829,7 @@ pl3 <- ggplot(f.agg,  aes(x=species.poll.sc, y= res.tr2)) +
         ylab("Fruit set") + theme_bw()  + #theme (legend.position= "none") +
         theme(text = element_text(size = 18), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1), face="bold")) 
 
-
+FigureS4A<-plot_model(m2.fruit.net, title="Fruit set")
 ```
 
 
@@ -909,6 +913,8 @@ pl6<-ggplot(s.comm,  aes(x=functional.comp.poll.sc, y=mean.seedset))+
 
 
 Figure3<-plot_grid(pl3, pl2, pl6, labels = c("A", "B", "C"), nrow=1)  
+
+FigureS4B<-plot_model(m2.seed.net, title="Number of seeds")
 ```
 
 
@@ -1113,12 +1119,16 @@ pltest2.sub <- ggplot(s.comm2,  aes(x=species.poll.sc, y= restest2b)) +
 
 
 
-FigureS3<-plot_grid(pltestb, pltest2.sub, labels = c("A", "B"), nrow=1)  
+FigureS5<-plot_grid(pltestb, pltest2.sub, labels = c("A", "B"), nrow=1)  
 
 
+
+FigureS4C<-plot_summs(m1.fruitw.net, m1.seedw.net, level=0.95, scale = TRUE, model.names = c("Fruit weight", "Seed weight"), legend.title = "Response variables")
+
+#FigureS4<-plot_grid(FigureS4A, FigureS4B, FigureS4C, labels = c("A", "B", "C"), nrow=3)  
 ```
 
-  Contrastingly, in the case of weight variables (fruit and seed weight), in both cases we find that the best model is model 1, i.e., that only including simple visitation metrics (R^2 = `r round(r2.fruitw1[2], 2)` in the case of fruit weight and `r round(r2.seedw1[2], 2)` in the case of seed weight). Here, we find a consistent positive effect of site-level pollinator richness for both weight descriptors (Tables S7A-S8A, Fig. 4). This effect is maintained even after removing a site that has a particularly large pollinator richness value (Tables S7B-S8B, Fig. S3). 
+  Contrastingly, in the case of weight variables (fruit and seed weight), in both cases we find that the best model is model 1, i.e., that only including simple visitation metrics (R^2 = `r round(r2.fruitw1[2], 2)` in the case of fruit weight and `r round(r2.seedw1[2], 2)` in the case of seed weight). Here, we find a consistent positive effect of site-level pollinator richness for both weight descriptors (Tables S7A-S8A, Fig. 4). This effect is maintained even after removing a site that has a particularly large pollinator richness value (Tables S7B-S8B, Fig. S5). 
 
 _Equity in fruitset_
 
@@ -1623,13 +1633,30 @@ FigureS2
 
 **Figure S2.** Accumulation curves of pollinator, plant and plant-pollinator link richness with increasing sampling effort up to 100% sample coverage. Solid lines and points indicate observed richness while dashed lines show expected richness at increasing sample size, (i.e., extrapolated). 
 
-```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=3, fig.width=10}
+```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5, fig.width=8}
 
 FigureS3
 
 ```
+**Figure S3.** Forest plots showing confidence intervals for all coefficients included in species-level models. 
 
-**Figure S3.** Figure S3. Partial residual plots showing the effect of pollinator richness on site-level average A) fruit and B) seed weight. Here, a site with a particularly large pollinator richness value is removed to test whether it might be driving the significant relationship. Dots represent values for each site (N=15 sites).
+
+```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=15, fig.width=8}
+
+FigureS4A
+FigureS4B
+FigureS4C
+
+```
+**Figure S4.** Forest plots showing confidence intervals for all coefficients included in site-level models, A) fruit set, B) number of seeds per fruit and C) fruit and seed weight. 
+
+```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=3, fig.width=10}
+
+FigureS5
+
+```
+
+**Figure S5.** Figure S5. Partial residual plots showing the effect of pollinator richness on site-level average A) fruit and B) seed weight. Here, a site with a particularly large pollinator richness value is removed to test whether it might be driving the significant relationship. Dots represent values for each site (N=15 sites).
 
 \newpage
 
