@@ -1,5 +1,5 @@
 ---
-title: Niche complementarity between pollinators increases community-level plant reproductive success 
+title: Niche complementarity among pollinators increases community-level plant reproductive success 
 author: "Magrach, A, Molina, FP, Bartomeus, I"
 csl: ecology-letters.csl
 output:
@@ -11,7 +11,7 @@ editor options:
 bibliography: library.bib
 ---
 
-**Niche complementarity between pollinators increases community-level plant reproductive success**
+**Niche complementarity among pollinators increases community-level plant reproductive success**
 
 Ainhoa Magrach^1^ ^2^, Francisco P. Molina^3^, Ignasi Bartomeus^3^
 
@@ -52,7 +52,7 @@ Declines in pollinator diversity and abundance have been reported across differe
 
 Pollinators provide key services to plants by facilitating pollen flow between individuals. The recent declining trends found for some pollinator species in some regions of the planet ([@Potts2010; @I.2019]) have led many researchers to focus on the functional impacts of these changes in pollinator diversity, with a major focus being placed on the consequences for plant reproductive success [@Biesmeijer2006]. 
 
-  Many research efforts have targeted the reproductive success of individual plant species [@Albrecht2012; @doi:10.1111/1365-2745.13055], and used relatively simple visitation metrics (e.g., the number of pollinator species that visit a plant or the number of visits they perform) to explain the differences observed across different plant individuals. Contrastingly, community-level analyses remain scarce [@Bennett2018]. Yet plants and pollinators do not interact in isolation, but rather are embedded within larger networks of interactions encompassing other plant and pollinator species. We are thus missing an important part of the picture, which includes the direct interactions between the whole ensemble of plants and pollinators, but also the indirect interactions between species within one guild (e.g., plants) through their shared resources [@Carvalheiro2014; @Lazaro2014; @Mayfield2017; @Pauw2013; @Johnson2019]. Understanding how changes in pollinator diversity and interaction structure affect whole community assemblages is thus a major challenge that requires attention.
+  Many research efforts have targeted the reproductive success of individual plant species [@Albrecht2012; @doi:10.1111/1365-2745.13055], and used relatively simple visitation metrics (e.g., the number of pollinator species that visit a plant or the number of visits they perform) to explain the differences observed across different plant individuals. Contrastingly, community-level analyses remain scarce [@Bennett2018]. Yet plants and pollinators do not interact in isolation, but rather are embedded within larger networks of interactions encompassing other plant and pollinator species. We are thus missing an important part of the picture, which includes the direct interactions between the whole ensemble of plants and pollinators, but also the indirect interactions between species within one guild (e.g., plants) through their shared resources [@Carvalheiro2014; @Lazaro2014; @Mayfield2017; @Pauw2013; @Johnson2019]. Understanding how changes in pollinator diversity and interaction structure affect whole community functioning is thus a major challenge that requires attention.
 
   The few pollination studies that have analysed the effects of changing pollinator diversity for reproductive success at the community level have done so using mainly experimental setups. As an example, a study that experimentally recreated a plant community with 9 plant species and differing levels of pollinator diversity across different enclosures, found that not only pollinator species diversity had an effect for average reproductive success, but that plant-pollinator interaction structure also had an important effect [@Frund2013]. In particular, these authors found that niche complementarity between pollinators, in terms of plant species and temperature coverage (a measure of the overlap in the use of plant resources and optimum temperature activity) had a positive effect for average seed set at the community level [@Frund2013]. This provides added information on the effects of biodiversity for ecosystem functioning, suggesting that not only the diversity of species present, but also the diversity of roles and ways in which a community is structured, are determinant factors.
 
@@ -97,7 +97,7 @@ library(glmmTMB)
 library(vegan)
 library(piecewiseSEM)
 library(MuMIn)
-
+library(jtools)
 
 
 #LOAD ALL DATA
@@ -1464,7 +1464,7 @@ and the code used to generate all results can be found at https://doi.org/10.528
 
 **Acknowledgements**
 
-The authors would like to thank Oscar Aguado for identifying pollinator species. We would also like to acknowledge the efforts of the editor Cédric Gaucherel, as well as those of Michael Lattorff, Nicolas Deguines, and three anonymous reviewers who provided very helpful comments and suggestions in a previous version of this manuscript. AM received funding from a Juan de la Cierva (IJCI-2014-22558) and Ikerbasque fellowships. IB acknowledges funding from MSC-PCIG14-GA-2013-631653 BeeFun Project. We thank Doñana’s Singular Scientific-Technical Infrastructure (ICTS-RBD) for access to the park.
+The authors would like to thank Oscar Aguado for identifying pollinator species. We would also like to acknowledge the efforts of the editor Cédric Gaucherel, as well as those of Michael Lattorff, Nicolas Deguines, Alberto Pascual, and three anonymous reviewers who provided very helpful comments and suggestions in a previous version of this manuscript. AM received funding from a Juan de la Cierva (IJCI-2014-22558) and Ikerbasque fellowships. IB acknowledges funding from MSC-PCIG14-GA-2013-631653 BeeFun Project. We thank Doñana’s Singular Scientific-Technical Infrastructure (ICTS-RBD) for access to the park.
 
 
 
@@ -1489,11 +1489,11 @@ knitr::kable(list(Table2A, Table2B), caption = "**Table 2**. Results of GLM show
 
 **Figure legends**
 
-**Figure 1.** Map showing location of 16 study sites. Inset shows location of study area within SW Spain.
+**Figure 1.** Map showing location of 16 Mediterranean woodland patches where plant-pollinator interactions were surveyed from February to May 2015. Inset shows location of study area within SW Spain.
 
-**Figure 2**. Partial residual plot showing the effect of a single predictor for the relationship between A) plant species centrality and fruit set for each of the plant species considered and B) plant niche overlap and average number of seeds per fruit. Dots represent each of the individuals sampled for each species within each site.
+**Figure 2**. Partial residual plots showing the effect of the single predictor which best explains the variability in species-level reproductive success. A) Shows the effect of plant species centrality on the fruit set of each of the plant species considered and B) shows the effect of plant niche overlap on the average number of seeds per fruit. Dots represent each of the individuals sampled for each species within each site.
 
-**Figure 3.** Partial residual plots showing the effect of A) pollinator richness, and B) niche complementarity between pollinator species on site-level average fruitset and C) niche complementarity between pollinator species on the average number of seeds per fruit at the site level. Dots represent average values of fruit set at the level of the community for all plant species considered (N=16 sites).
+**Figure 3.** Partial residual plots showing the effect of the single predictor which best explains the variability in site-level reproductive success. A) Shows the effect of pollinator richness, and B) of niche complementarity among pollinator species on site-level average fruit set. C) Shows the effect of niche complementarity among pollinator species on the average number of seeds per fruit at the site level. Dots represent average values of fruit set at the level of the community for all plant species considered (N=16 sites).
 
 **Figure 4.** Partial residual plots showing the effect of pollinator richness on site-level average A) fruit and B) seed weight. Dots represent values for each site (N=16 sites).
 
@@ -1638,7 +1638,7 @@ FigureS2
 FigureS3
 
 ```
-**Figure S3.** Forest plots showing confidence intervals for all coefficients included in species-level models. 
+**Figure S3.** Forest plots showing 95% confidence intervals for all coefficients included in species-level models. 
 
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=15, fig.width=8}
@@ -1648,7 +1648,7 @@ FigureS4B
 FigureS4C
 
 ```
-**Figure S4.** Forest plots showing confidence intervals for all coefficients included in site-level models, A) fruit set, B) number of seeds per fruit and C) fruit and seed weight. 
+**Figure S4.** Forest plots showing 95% confidence intervals for all coefficients included in site-level models, A) fruit set, B) number of seeds per fruit and C) fruit and seed weight. 
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=3, fig.width=10}
 
