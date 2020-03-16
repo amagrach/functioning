@@ -24,19 +24,6 @@ seeddis<-distance(as.vector(s.comm$mean.seedset), method="euclidean")
 seedwdis<-distance(as.vector(s.comm$mean.seedweight), method="euclidean")
 fruitwdis<-distance(as.vector(s.comm$mean.fruitweight), method="euclidean")
 
-#relationship among matrices
-Nested_dist <- mantel(xydis ~ nesteddis, nperm=1000)
-Funct_dist <- mantel(xydis ~ functdis, nperm=1000)
-Rich_dist <- mantel(richdis ~ xydis, nperm=1000)
-Vis_dist <- mantel(visdis ~ xydis, nperm=1000)
-Fruit_dist <- mantel(fruitdis ~ xydis, nperm=1000)
-Seed_dist <- mantel(seeddis ~ xydis, nperm=1000)
-Seedw_dist <- mantel(seedwdis ~ xydis, nperm=1000)
-Fruitw_dist <- mantel(fruitwdis ~ xydis, nperm=1000)
-
-Varmantel <- cbind(Nested_dist,Funct_dist, Rich_dist, Vis_dist, Fruit_dist, Seed_dist, Seedw_dist, Fruitw_dist)
-Varmantel
-
 
 #correlograms
 Nestcor=mgram(nesteddis, xydis, nperm=10000, nboot=100, nclass=7)
