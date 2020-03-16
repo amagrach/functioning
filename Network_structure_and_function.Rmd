@@ -26,14 +26,14 @@ Short running title: Network structure effects on ecosystem functioning
 
 Type of article: Letter
 
-Words in Abstract: 170 words
+Words in Abstract: 147 words
 
-Words in main text (excluding abstract, acknowledgements, references, table and figure legends): 5,302
+Words in main text (excluding abstract, acknowledgements, references, table and figure legends): 5,272
 
 
-Number of references: 60
+Number of references: 67
 
-Number of figures, tables and text boxes: 7
+Number of figures, tables and text boxes: 5
 
 Corresponding author: ainhoa.magrach@bc3research.org, nacho.bartomeus@gmail.com
 
@@ -209,9 +209,9 @@ At the species level, we focused on attributes defining the position of a focal 
 
 _Site-level network analysis_
 
-At the site level, we followed the same logic as the one presented at the species level. Thus, we also calculated two network metrics providing complementary non-redundant information. In this case we focused on a metric that measures the redundancy in the plants visited by different pollinators, nestedness, and another one, not correlated with the previous one, measuring the complementarity in the plant species visited by the different pollinator species, pollinator niche complementarity 
+At the site level, we followed the same logic as the one presented at the species level. Thus, we also calculated two network metrics providing complementary non-redundant information. In this case we focused on a metric that measures the redundancy in the plants visited by different pollinators, nestedness, and another one, not correlated with the previous one, measuring the complementarity in the plant species visited by the different pollinator species, pollinator niche complementarity. 
 
-  Nestedness is the property by which specialists interact with a subset of the species that generalists interact with [@Bascompte2003]. Although there is an ongoing debate in the literature (e.g., [@James2012]), some theoretical studies have found that nested networks are more stable and resilient to perturbations because nestedness promotes a greater diversity by minimizing competition among species in a community [@Bastolla2009]. However, many network attributes vary with network size and complexity [@Bluthgen2006]. In the case of nestedness, we know it can be affected by network size and connectance [@Song2017a]. An approach that is often used to correct for this, is to use null models and to compare null-model corrected nestedness values across different networks. However, this approach has been shown to present the same issues, as z-scores also change with network size and connectance [@Song2017a]. We thus followed the advice provided by Song et al. (2017) by using a normalized value of the widely-used nestedness metric NODF based on binary matrices [@Almeida-Neto2011], $NODF_c$. This normalized value is calculated as $NODF_c = NODF_n/(C * log(S))$, where C is connectance and S is network size, calculated as $S = \sqrt(ncol(web)*nrow(web))$. $NODF_n$ is calculated as $NODF/max(NODF)$, which is independent of network size and thus comparable across different networks [@Song2017a]. To calculate max(NODF) we used a corrected version of the algorithm [@Simmons2019a] whenever possible. Results did not change qualitatively when using the uncorrected version of the algorithm for all sites.
+  Nestedness is the property by which specialists interact with a subset of the species that generalists interact with [@Bascompte2003]. Although there is an ongoing debate in the literature (e.g., [@James2012]), some theoretical studies have found that nested networks are more stable and resilient to perturbations because nestedness promotes a greater diversity by minimizing competition among species in a community [@Bastolla2009]. However, many network attributes vary with network size and complexity [@Bluthgen2006]. In the case of nestedness, we know it can be affected by network size and connectance [@Song2017a]. An approach that is often used to correct for this, is to use null models and to compare null-model corrected nestedness values across different networks. However, this approach has been shown to present the same issues, as z-scores also change with network size and connectance [@Song2017a]. We thus followed the advice provided by Song et al. (2017) by using a normalized value of the widely-used nestedness metric NODF based on binary matrices [@Almeida-Neto2011], $NODF_c$. This normalized value is calculated as $NODF_c = NODF_n/(C * log(S))$, where C is connectance and S is network size, calculated as $S = \sqrt(ncol(web)*nrow(web))$. $NODF_n$ is calculated as $NODF/max(NODF)$, which is independent of network size and thus comparable across different networks [@Song2017a]. To calculate max(NODF) we used a corrected version of the algorithm [@Simmons2019a] whenever possible. Results did not change qualitatively when using the uncorrected version of the algorithm for all sites as both are highly correlated (Spearman correlation = 0.94).
 
  To calculate niche complementarity, we used a community-level measure defined as the total branch length of a dendrogram based on qualitative differences in visitor assemblages between plants [@Devoto2012; @Petchey2007a]. All network metrics were calculated using package bipartite [@Dormann2009].
 
@@ -399,7 +399,7 @@ link<-ggiNEXT.iNEXT(rar3, color.var="site", se=FALSE) + ylab("Link richness") + 
 # grid.newpage()
 # grid.draw(rbind(ggplotGrob(poll), ggplotGrob(plant), ggplotGrob(link), size = "last"))
 
-FigureS2<-cowplot::plot_grid( poll, plant, link, ncol = 1)
+FigureS3<-cowplot::plot_grid( poll, plant, link, ncol = 1)
 
 ```
 
@@ -593,7 +593,7 @@ y_partial_weigh <- remef(m2, fix= c( "rel.visits.sc", "pollspsperplant.sc", "nic
 #With this we remove the influece of x2 and the random effects from the dependent variable
 y_partial_weigh_inv<-exp(y_partial_weigh)/(1+exp(y_partial_weigh))
 
-Figure2a<-ggplot(m2@frame,  aes(x=m2@frame$weigh_closeness.sc, y=y_partial_weigh_inv, color= Plant.sp)) +    
+Figure1a<-ggplot(m2@frame,  aes(x=m2@frame$weigh_closeness.sc, y=y_partial_weigh_inv, color= Plant.sp)) +    
   geom_point(size=2.5, shape=21,color = "black", aes(fill=factor(Plant.sp))) + 
   stat_smooth(method=glm,  method.args = list(family = "binomial"), size=1, se=TRUE, color = "black", alpha=0.4) + 
   xlab("Centrality") +      
@@ -601,13 +601,13 @@ Figure2a<-ggplot(m2@frame,  aes(x=m2@frame$weigh_closeness.sc, y=y_partial_weigh
   theme(text = element_text(size = 18), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1.3), face="bold")) + 
   scale_fill_discrete(name="Plant species") +  theme(legend.text = element_text(size = 14, face = "italic"), legend.title = element_text(size=15, face = "bold"), legend.direction = "vertical") + guides(fill=guide_legend(ncol=4))
 
-#Figure2a
+#Figure1a
 
 y_partial_weigh2 <- remef(m2, fix= c( "weigh_closeness.sc", "pollspsperplant.sc", "niche.overlap.sc"), ran = "all", inverse = F)
 #With this we remove the influece of x2 and the random effects from the dependent variable
 y_partial_weigh_inv2<-exp(y_partial_weigh2)/(1+exp(y_partial_weigh2))
 
-FigureS4<-ggplot(m2@frame,  aes(x=m2@frame$rel.visits.sc, y=y_partial_weigh_inv, color= Plant.sp)) +
+FigureS5<-ggplot(m2@frame,  aes(x=m2@frame$rel.visits.sc, y=y_partial_weigh_inv, color= Plant.sp)) +
   geom_point(size=2.5, shape=21,color = "black", aes(fill=factor(Plant.sp))) +
   stat_smooth(method=glm,  method.args = list(family = "binomial"), size=1, se=TRUE, color = "black", alpha=0.4) +
   xlab("Relative number of visits") +
@@ -734,7 +734,7 @@ y_partial_norm_seed <- remef(m2.seed, fix= c("pollspsperplant.sc", "rel.visits.s
 #With this we remove the influece of x2 and the random effects from the dependent variable
 
 
-Figure2b<-ggplot(m2.seed@frame,  aes(x=m2.seed@frame$niche.overlap.sc, y=y_partial_norm_seed, color= Plant.sp)) +    
+Figure1b<-ggplot(m2.seed@frame,  aes(x=m2.seed@frame$niche.overlap.sc, y=y_partial_norm_seed, color= Plant.sp)) +    
   geom_point(size=2.5, shape=21, colour="black", aes(fill=factor(Plant.sp))) + stat_smooth(method=lm,  size=1, se=TRUE, color = "black", alpha=0.4) + 
   #geom_smooth(method=lm, linetype= "dashed", size=0.7, se=FALSE, alpha=0.8) +
   xlab("Niche overlap") +      
@@ -742,14 +742,14 @@ Figure2b<-ggplot(m2.seed@frame,  aes(x=m2.seed@frame$niche.overlap.sc, y=y_parti
   theme(text = element_text(size = 18), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1.3), face="bold")) + 
   scale_fill_discrete(name="Plant species") +  theme(legend.text = element_text(size = 6, face = "italic"), legend.title = element_text(size=11, face = "bold"))
 
-#Figure2c
+#Figure1b
 
 
 #how to have two plots with same legend
 
 
-prow <- cowplot::plot_grid( Figure2a + theme(legend.position="none"),
-                   Figure2b + theme(legend.position="none"),
+prow <- cowplot::plot_grid( Figure1a + theme(legend.position="none"),
+                   Figure1b + theme(legend.position="none"),
                    align = 'vh',
                    labels = c("A", "B"),
                    hjust = -1,
@@ -757,13 +757,13 @@ prow <- cowplot::plot_grid( Figure2a + theme(legend.position="none"),
 )
 
 # extract the legend from one of the plots
-legend_b <- get_legend(Figure2a + theme(legend.position="right"))
+legend_b <- get_legend(Figure1a + theme(legend.position="right"))
 
 # add the legend underneath the row we made earlier. Give it 10% of the height
 # of one plot (via rel_heights).
-Figure2 <- cowplot::plot_grid( prow, legend_b, ncol = 1, rel_heights = c(2, 1))#al final del paper
+Figure1 <- cowplot::plot_grid( prow, legend_b, ncol = 1, rel_heights = c(2, 1))#al final del paper
 
-FigureS3<-plot_summs(m2, m2.seed, level=0.95, scale = TRUE, model.names = c("Fruit set", "Number of seeds"), legend.title = "Response variables", cex.axis=2)
+FigureS4<-plot_summs(m2, m2.seed, level=0.95, scale = TRUE, model.names = c("Fruit set", "Number of seeds"), legend.title = "Response variables", cex.axis=2)
 
 ```
 
@@ -928,7 +928,7 @@ pl3 <- ggplot(f.agg,  aes(x=species.poll.sc, y= res.tr2)) +
         ylab("Fruit set") + theme_bw()  + #theme (legend.position= "none") +
         theme(text = element_text(size = 18), axis.text=element_text(size=rel(1)), axis.title=element_text(size=rel(1), face="bold")) 
 
-FigureS5A<-plot_model(m2.fruit.net, title="Fruit set")
+FigureS6A<-plot_model(m2.fruit.net, title="Fruit set")
 ```
 
 
@@ -1014,9 +1014,9 @@ pl6<-ggplot(s.comm,  aes(x=functional.comp.poll.sc, y=mean.seedset))+
 #pl6
 
 
-Figure3<-cowplot::plot_grid(pl3, pl2, pl6, labels = c("A", "B", "C"), nrow=1)  
+Figure2<-cowplot::plot_grid(pl3, pl2, pl6, labels = c("A", "B", "C"), nrow=1)  
 
-FigureS5B<-plot_model(m2.seed.net, title="Number of seeds")
+FigureS6B<-plot_model(m2.seed.net, title="Number of seeds")
 ```
 
 
@@ -1180,7 +1180,7 @@ pltest2 <- ggplot(s.comm,  aes(x=species.poll.sc, y= restest2)) +
 
 
 
-FigureS6<-cowplot::plot_grid(pltest, pltest2, labels = c("A", "B"), nrow=1)  
+FigureS7<-cowplot::plot_grid(pltest, pltest2, labels = c("A", "B"), nrow=1)  
 
 
 
@@ -1228,11 +1228,11 @@ pltest2.sub <- ggplot(s.comm2,  aes(x=species.poll.sc, y= restest2b)) +
 
 
 
-FigureS7<-cowplot::plot_grid(pltestb, pltest2.sub, labels = c("A", "B"), nrow=1)  
+FigureS8<-cowplot::plot_grid(pltestb, pltest2.sub, labels = c("A", "B"), nrow=1)  
 
 
 
-FigureS5C<-plot_summs(m1.fruitw.net, m1.seedw.net, level=0.95, scale = TRUE, model.names = c("Fruit weight", "Seed weight"), legend.title = "Response variables")
+FigureS6C<-plot_summs(m1.fruitw.net, m1.seedw.net, level=0.95, scale = TRUE, model.names = c("Fruit weight", "Seed weight"), legend.title = "Response variables")
 
 #FigureS4<-plot_grid(FigureS4A, FigureS4B, FigureS4C, labels = c("A", "B", "C"), nrow=3)  
 ```
@@ -1548,7 +1548,7 @@ estimate_i
     # ylab = "importance of niche partitioning", xlab = "number of plants considered")
 
 
-Figure4<-ggplot(estimate_i,  aes(x=level, y=estimate)) +    
+Figure3<-ggplot(estimate_i,  aes(x=level, y=estimate)) +    
   geom_point(size=4) + 
   xlab("Number of plant species considered") +      
   ylab("Importance of niche complementarity") + theme_bw()  +
@@ -1611,7 +1611,7 @@ knitr::kable(list(Table2A, Table2B), caption = "**Table 2**. Results of GLM show
 
 **Figure legends**
 
-**Figure 1**. Figure 2. Partial residual plots showing the effect of the single predictor which best explains the variability in species-level reproductive success. A) shows the effect of plant species centrality on the fruit set of each of the plant species considered and B) shows the effect of plant niche overlap on its average number of seeds per fruit. Dots represent each of the individuals sampled for each species within each site.
+**Figure 1**. Partial residual plots showing the effect of the single predictor which best explains the variability in species-level reproductive success. A) shows the effect of plant species centrality on the fruit set of each of the plant species considered and B) shows the effect of plant niche overlap on its average number of seeds per fruit. Dots represent each of the individuals sampled for each species within each site.
 
 **Figure 2.** Partial residual plots showing the effect of the single predictor which best explains the variability in site-level reproductive success. A) Shows the effect of pollinator richness, and B) of niche complementarity among pollinator species on site-level average fruit set. C) Shows the effect of niche complementarity among pollinator species on the average number of seeds per fruit at the site level. Dots represent average values of fruit set at the level of the community for all plant species considered (N=16 sites).
 
@@ -1625,8 +1625,8 @@ knitr::kable(list(Table2A, Table2B), caption = "**Table 2**. Results of GLM show
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=9, fig.width=9}
 
-#FIGURE 2
-Figure2
+#FIGURE 1
+Figure1
 
    # save_plot("figures/Figure2.tiff", Figure2,
    #           base_height = 6, base_width = 9)
@@ -1638,8 +1638,8 @@ Figure2
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=3, fig.width=11}
 
-#FIGURE 3
-Figure3
+#FIGURE 2
+Figure2
 
     # save_plot("figures/Figure3.tiff", Figure3,
     #           base_height = 3, base_width = 11)
@@ -1651,7 +1651,7 @@ Figure3
 
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5, fig.width=8}
-Figure4
+Figure3
 ```
 **Figure 3.** 
 
@@ -1665,7 +1665,7 @@ Figure4
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=7, fig.width=10}
 
-#FIGURE 1
+#FIGURE S1
 
 
 mydf <- read.csv("site_coordinates.csv")
@@ -1733,10 +1733,74 @@ print(sp_map, vp = viewport(0.8335, 0.6812, width = 0.35, height = 0.35))
 **Figure S1.** Map showing location of 16 Mediterranean woodland patches where plant-pollinator interactions were surveyed from February to May 2015. Inset shows location of study area within SW Spain.
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=13, fig.width=7}
+#Figure S2 is autocorrelation analysis
+
+library(BeeFunData)
+
+si<-BeeFunData::sites #lat long data for sites 
+
+f.agg$lat<-si$latitude[match(f.agg$Site_ID, si$Site_ID)]
+f.agg$lon<-si$longitude[match(f.agg$Site_ID, si$Site_ID)]
+
+s.comm$lat<-si$latitude[match(s.comm$Site_ID, si$Site_ID)]
+s.comm$lon<-si$longitude[match(s.comm$Site_ID, si$Site_ID)]
+
+library(ecodist)
+
+#distance matrices
+xy <- cbind(as.vector(f.agg$lat), as.vector(f.agg$long))
+xydis <-distance(xy, method="euclidean")
+
+nesteddis<-distance(as.vector(f.agg$nodf.song), method="euclidean")
+functdis<-distance(as.vector(f.agg$functional.comp.poll), method="euclidean")
+richdis<-distance(as.vector(f.agg$species.poll), method="euclidean")
+fruitdis<-distance(as.vector(f.agg$mean.fruitset), method="euclidean")
+visdis<-distance(as.vector(f.agg$tot.visits), method="euclidean")
+seeddis<-distance(as.vector(s.comm$mean.seedset), method="euclidean")
+seedwdis<-distance(as.vector(s.comm$mean.seedweight), method="euclidean")
+fruitwdis<-distance(as.vector(s.comm$mean.fruitweight), method="euclidean")
+
+
+#correlograms
+Nestcor=mgram(nesteddis, xydis, nperm=10000, nboot=100, nclass=7)
+plot(Nestcor, main="Nestedness")
+
+Functcor=mgram(functdis, xydis, nperm=10000, nboot=100, nclass=7)
+plot(Functcor, main="Pollinator niche complementarity")
+
+Richcor=mgram(richdis, xydis, nperm=10000, nboot=100, nclass=7)
+plot(Richcor, main="Pollinator species richness")
+
+Viscor=mgram(visdis, xydis, nperm=10000, nboot=100, nclass=7)
+plot(Viscor, main="Total visits")
+
+Fruitcor=mgram(fruitdis, xydis, nperm=10000, nboot=100, nclass=7)
+plot(Fruitcor, main="Fruitset")
+
+Seedcor=mgram(seeddis, xydis, nperm=10000, nboot=100, nclass=7)
+plot(Seedcor, main="Seeds per fruit")
+
+Seedwcor=mgram(seedwdis, xydis, nperm=10000, nboot=100, nclass=7)
+plot(Seedwcor, main="Seed weight")
+
+Fruitwcor=mgram(fruitwdis, xydis, nperm=10000, nboot=100, nclass=7)
+plot(Fruitwcor, main="Fruit weight")
+
+par(mfrow=c(3,3))
+plot(Nestcor, main="Nestedness");plot(Functcor, main="Pollinator niche complementarity");
+plot(Richcor, main="Pollinator species richness");plot(Viscor, main="Total visits");
+plot(Fruitcor, main="Fruit set"); plot(Seedcor, main="Seeds per fruit"); plot(Seedwcor, main="Seed weight");
+plot(Fruitwcor, main="Fruit weight")
+
+
+```
+**Figure S2.**Mantel correlograms showing a low spatial autocorrelation for the different variables included in the analyses. 
+
+```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=13, fig.width=7}
 
 #######FIG S2 SAMPLING COMPLETENESS 
 #FigureS2<-plot_grid( poll, plant, link, ncol = 1)
-FigureS2
+FigureS3
 
 # save_plot("figures/FigureS1.tiff", figures1,
 #            base_height = 13, base_width = 7)
@@ -1746,7 +1810,7 @@ FigureS2
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5, fig.width=8}
 
-FigureS3
+FigureS4
 
 ```
 **Figure S4.** Forest plots showing 95% confidence intervals for all coefficients included in species-level models. 
@@ -1754,7 +1818,7 @@ FigureS3
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=5, fig.width=8}
 
-FigureS4
+FigureS5
 
 ```
 **Figure S5.** Scatterplot showing the effect of the relative number of visits received by a focal plant on its reproductive success. Relationship is largely driven by one species with a particularly large value of relative visits and removing this point leads to no effect of visitation rate. 
@@ -1762,9 +1826,9 @@ FigureS4
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=15, fig.width=8}
 
-FigureS5A
-FigureS5B
-FigureS5C
+FigureS6A
+FigureS6B
+FigureS6C
 
 ```
 **Figure S6.** Forest plots showing 95% confidence intervals for all coefficients included in site-level models, A) fruit set, B) number of seeds per fruit and C) fruit and seed weight. 
@@ -1772,7 +1836,7 @@ FigureS5C
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=3, fig.width=10}
 
 #FIGURE 4
-FigureS6
+FigureS7
 # 
 # save_plot("figures/Figure4.tiff", Figure4,
 #              base_height = 5, base_width = 10)
@@ -1781,11 +1845,11 @@ FigureS6
 
 ```{r, include=TRUE, echo = FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=3, fig.width=10}
 
-FigureS7
+FigureS8
 
 ```
 
-**Figure S8.** Figure S7. Partial residual plots showing the effect of pollinator richness on site-level average A) fruit and B) seed weight. Here, a site with a particularly large pollinator richness value is removed to test whether it might be driving the significant relationship. Dots represent values for each site (N=15 sites).
+**Figure S8.** Partial residual plots showing the effect of pollinator richness on site-level average A) fruit and B) seed weight. Here, a site with a particularly large pollinator richness value is removed to test whether it might be driving the significant relationship. Dots represent values for each site (N=15 sites).
 
 \newpage
 
