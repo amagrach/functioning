@@ -26,12 +26,12 @@ out.site <- data.frame(Site_id = NA,
                        functional.comp.poll=NA, functional.comp.plant=NA, 
                        nodf.song=NA, nodf.song2=NA)
 
-outsp.site <- data.frame(Site_id = NA, species=NA,  norm_degree = NA,
-                         weigh_closeness=NA, d=NA)
+outsp.site <- data.frame(Site_id = NA, species=NA,  norm_degree = NA, nested.rank=NA, strength =NA,
+                         weigh_closeness=NA, d=NA, nested_contribution=NA)
 
 
-outsp.pl.site <- data.frame(Site_id = NA, species=NA,  norm_degree = NA,
-                            weigh_closeness=NA, d=NA)
+outsp.pl.site <- data.frame(Site_id = NA, species=NA,  norm_degree = NA, nested.rank=NA,strength =NA,
+                            weigh_closeness=NA, d=NA, nested_contribution=NA)
 
 
 
@@ -46,6 +46,7 @@ for(i in 1:length(sites)){
   
    #p1<-plotweb(web)
   spntw <- try(specieslevel(web), TRUE)
+ 
   ntw <- networklevel(web)
   if(isTRUE(class(spntw)=="try-error")) {next} 
   
@@ -54,6 +55,8 @@ for(i in 1:length(sites)){
   #remove all columns and rows with all values=0
   web3 <- web[, colSums(web != 0) > 0] 
   web4 <- web3[rowSums(web3 > 0) != 0, ]
+  
+  nestedcontr<-nestedcontribution(web4, nsimul=99)
   
    NODF <- nestedness_NODF(web4) # this calculates the raw value of NODF as in Song
     if(i %in% c(1,2,4, 5,6,7,8, 10,11,12,14, 15,16)){ #For sites wchich don't comply, use Song. 
@@ -82,17 +85,23 @@ for(i in 1:length(sites)){
  
   outsp.site[n2+seq(nrow(spntw$`higher level`)),1] <- as.character(sites[i])
   outsp.site[n2+seq(nrow(spntw$`higher level`)),2] <- try(as.character(rownames(spntw$`higher level`)), TRUE)
-  outsp.site[n2+seq(nrow(spntw$`higher level`)),3:5] <- try(c(spntw$`higher level`[2], 
+  outsp.site[n2+seq(nrow(spntw$`higher level`)),3:7] <- try(c(spntw$`higher level`[2], 
+                                                              spntw$`higher level`[5],
+                                                              spntw$`higher level`[3],
                                                               spntw$`higher level`[14],
                                                               spntw$`higher level`[20]), TRUE)
+  outsp.site[n2+seq(nrow(spntw$`higher level`)),8]<-nestedcontr$`higher level` #other way around
 
 
   
   outsp.pl.site[n3+seq(nrow(spntw$`lower level`)),1] <- as.character(sites[i])
   outsp.pl.site[n3+seq(nrow(spntw$`lower level`)),2] <- try(as.character(rownames(spntw$`lower level`)), TRUE)
-  outsp.pl.site[n3+seq(nrow(spntw$`lower level`)),3:5] <- try(c(spntw$`lower level`[2], 
+  outsp.pl.site[n3+seq(nrow(spntw$`lower level`)),3:7] <- try(c(spntw$`lower level`[2], 
+                                                                spntw$`lower level`[5],
+                                                                spntw$`lower level`[3],
                                                                  spntw$`lower level`[14],
                                                                 spntw$`lower level`[20]), TRUE)
+  outsp.pl.site[n3+seq(nrow(spntw$`lower level`)),8]<-nestedcontr$`lower level` #other way around
 
 }  
 
