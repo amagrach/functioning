@@ -16,6 +16,8 @@ d<-all_interactions
 dtrans<-subset(d, d$Out=="transect")
 dtrans<-droplevels(dtrans)
 
+
+
 ##1st create a bipartite matrix for each site MERGING ALL ROUNDS TOGETHER and extract a set of metrics at the network level
 
 sites <- unique(dtrans$Site_ID)
